@@ -1,4 +1,4 @@
-[[toc]]
+![](./img/1.jpeg)
 ## vuePress初学
 ::: tip
 这是一个提示
