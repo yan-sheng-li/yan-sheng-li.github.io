@@ -1,6 +1,6 @@
-# 课程设计/毕设：Springboot+Bootstrap实现 图书馆选座管理系统
+# 一、图书馆选座管理系统
 
-[[toc]]
+> 课程设计/毕设：Springboot+Bootstrap实现
 
 ## 大体要求
 
@@ -135,11 +135,4 @@
 <img src="http://cdn.qiniu.liyansheng.top/typora/image-20231224231224390.png" alt="image-20231224231224390" style="zoom:67%;" />
 
 
-## 开发过程和挑战
-
-在系统开发过程中，我们遇到了一些挑战，比如实现灵活的预约系统和有效管理用户违规情况。然而，通过合理的决策和充分利用Spring Boot的特性，我们成功解决了这些挑战。此外，权限系统没有使用spring scurity 和shiro，而是选择轻量级权限认证系统SA-token，经过这次实践，用起来很是很丝滑的。页面搭建使用的是bootstrap5，相比与其他的layui，elementUI  感觉更容易上手。
-
-## 未来展望
-
-展望未来，座位管理系统可以进一步完善，比如**实时座位可用性更新、用户通知功能以及增加分析功能**以提升用户体验。
 

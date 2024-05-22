@@ -1,4 +1,4 @@
-![](./img/1.jpeg)
+![](http://cdn.qiniu.liyansheng.top/img/ad2.jpg)
 ::: tip
 持续更新中
 :::

@@ -4,8 +4,21 @@ module.exports = {
     themeConfig: {
       nav: [
         { text: '首页', link: '/' },
-        { text: '项目列表', link: '/project/list/' },
+        { text: '项目一览', link: '/project/' },
         { text: '博客', link: 'http://liyansheng.top/' }
-      ]
+      ],
+
+      sidebar: {
+        '/project/': [
+          {
+            title: '已完结',
+            collapsable: false,
+            children: [
+              'sams',
+              'supermarket_sys'
+            ]
+          }
+        ]
+      }
     }
   }
