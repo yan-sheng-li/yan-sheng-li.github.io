@@ -15,7 +15,10 @@ module.exports = {
             collapsable: false,
             children: [
               'sams',
-              'supermarket_sys'
+              'supermarket_sys',
+              'bookinfo_sys',
+              'meeting_sys',
+              'song_sys'
             ]
           }
         ]
