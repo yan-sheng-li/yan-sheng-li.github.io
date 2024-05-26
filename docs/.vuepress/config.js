@@ -29,6 +29,15 @@ module.exports = {
               'stu_status',
               'school_help'
             ]
+          },
+          {
+            title: '预更新',
+            collapsable: false,
+            children: [
+              'travel_ease',
+              'readVerse',
+              'lend_book'
+            ]
           }
         ]
       }
