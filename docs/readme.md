@@ -3,7 +3,8 @@
 持续更新中
 :::
 
-## [点我，查看全栈-项目一览😀](/project)
+## [点我，查看全站-项目😀](/project)
 
 
-###  <Badge text="beta" type="warning"/> <Badge text="默认主题"/>
+###  <Badge text="beta" type="warning"/> <Badge text="新发布"/>
+

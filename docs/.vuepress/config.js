@@ -27,7 +27,10 @@ module.exports = {
               'goods_sys',
               'parking_sys',
               'stu_status',
-              'school_help'
+              'school_help',
+              'lend_book_console',
+              'lend_book',
+              'rent_car'
             ]
           },
           {
@@ -36,7 +39,9 @@ module.exports = {
             children: [
               'travel_ease',
               'readVerse',
-              'lend_book'
+              'personal_sys',
+              'stu_score'
+              
             ]
           }
         ]
