@@ -1,5 +1,5 @@
 module.exports = {
-    title: '技术探索空间',
+    title: '👨‍💻木子-空间',
     description: '实用技术要点汇总',
     themeConfig: {
       nav: [
@@ -11,7 +11,7 @@ module.exports = {
       sidebar: {
         '/project/': [
           {
-            title: '已完结',
+            title: '------✅已完结------',
             collapsable: false,
             children: [
               'sams',
@@ -31,7 +31,7 @@ module.exports = {
             ]
           },
           {
-            title: '预更新',
+            title: '🎉预更新',
             collapsable: false,
             children: [
               'travel_ease',
