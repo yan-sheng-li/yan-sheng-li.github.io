@@ -19,16 +19,16 @@
 
 > 登录认证
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0903e16096d640b5b497dedb241523d1.png)
+![](http://cdn.qiniu.liyansheng.top/img/0903e16096d640b5b497dedb241523d1.png)
 > 游戏列表
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e184249f4f2b4442885a03b08a67d3b5.png)
+![](http://cdn.qiniu.liyansheng.top/img/e184249f4f2b4442885a03b08a67d3b5.png)
 > 游戏预约
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dfa7c9543100400f88101077522c0ae2.png)
+![](http://cdn.qiniu.liyansheng.top/img/dfa7c9543100400f88101077522c0ae2.png)
 > 系统公告
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3c22442fcd084b51bf54d2f0b9da5b14.png)
+![](http://cdn.qiniu.liyansheng.top/img/3c22442fcd084b51bf54d2f0b9da5b14.png)
 等等，以上展示部分效果，具体可以将项目代码拉下来本地启动试一下
 
 
