@@ -18,7 +18,15 @@ module.exports = {
               'supermarket_sys',
               'bookinfo_sys',
               'meeting_sys',
-              'song_sys'
+              'vbos',
+              'song_sys',
+              'bank_atm',
+              'game_sys',
+              'task_sys',
+              'book_simple',
+              'goods_sys',
+              'parking_sys',
+              'stu_status'
             ]
           }
         ]
