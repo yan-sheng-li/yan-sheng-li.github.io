@@ -28,16 +28,16 @@
 ## 效果图
 > 主界面
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7f0bfaf035c245ecae2fcbc6652016f7.png)
+![](http://cdn.qiniu.liyansheng.top/img/7f0bfaf035c245ecae2fcbc6652016f7.png)
 > 公告
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1317f371b23a4daebb2457ed19e703ce.png)
+![](http://cdn.qiniu.liyansheng.top/img/1317f371b23a4daebb2457ed19e703ce.png)
 > 留言
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7104ee8bace747568a6faa3ec851af09.png)
+![](http://cdn.qiniu.liyansheng.top/img/7104ee8bace747568a6faa3ec851af09.png)
 > 留言列表
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f4568631f55b47158a1d94104d1d4337.png)
+![](http://cdn.qiniu.liyansheng.top/img/f4568631f55b47158a1d94104d1d4337.png)
 
 
 以上展示部分操作，更多细节可以下载源码来实践一下。
