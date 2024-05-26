@@ -34,15 +34,9 @@
 歌曲查询：
 ![在这里插入图片描述](http://cdn.qiniu.liyansheng.top/typora/7367b080b3fb43459b686ae07b97b4b2.png)
 
-## 源码
+## 源码👇
+![](http://cdn.qiniu.liyansheng.top/img/2993badf87150e4734bcdff74fe29588.png)
 
-**以上是部分演示，代码有亿点点多，就不在这里贴出代码了，详细的可以下载源码来自己看一下哦！**
-
-::: tip
-**完整源码获取**：
-微信扫描弹出的二维码关注 <font color='blue'>编程亿点有趣</font>公众号，回复关键字 <font color='red'>歌曲系统</font> ，即可获取源码。
-:::
+![](http://cdn.qiniu.liyansheng.top/img/20240526172245.png)
 
 [项目起不来？有bug？点我远程协助！](http://liyansheng.top/remote_help/)
-
-**更多课程设计作品请关注公众号获取哦**

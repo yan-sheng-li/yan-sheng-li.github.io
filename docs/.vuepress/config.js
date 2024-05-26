@@ -26,7 +26,8 @@ module.exports = {
               'book_simple',
               'goods_sys',
               'parking_sys',
-              'stu_status'
+              'stu_status',
+              'school_help'
             ]
           }
         ]

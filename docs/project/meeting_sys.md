@@ -53,14 +53,8 @@
     ![](http://cdn.qiniu.liyansheng.top/typora/image-20220701124055136.png)
     
 
-## 源码
+## 源码👇
+![](http://cdn.qiniu.liyansheng.top/img/2993badf87150e4734bcdff74fe29588.png)
 
-以上是部分演示，代码有亿点点多，就不在这里贴出代码了，详细的可以下载源码来自己看一下哦！
-
-
-`码云`获取：
-
-**https://gitee.com/yan-sheng-li/meeting.git**
-
-------
+![](http://cdn.qiniu.liyansheng.top/img/20240526172108.png)
 
