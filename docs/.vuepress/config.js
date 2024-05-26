@@ -31,7 +31,7 @@ module.exports = {
             ]
           },
           {
-            title: '🎉预更新',
+            title: '------🎉预更新------',
             collapsable: false,
             children: [
               'travel_ease',
