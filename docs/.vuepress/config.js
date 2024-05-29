@@ -1,11 +1,21 @@
 module.exports = {
     title: '👨‍💻木子-空间',
+    head: [
+      // 访问统计
+      ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-VTCF7WPSRK' }],
+      ['script', {}, `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VTCF7WPSRK');
+      `],
+    ],
     description: '实用技术要点汇总',
     themeConfig: {
       nav: [
-        { text: '首页', link: '/' },
-        { text: '项目一览', link: '/project/' },
-        { text: '博客', link: 'http://liyansheng.top/' }
+        { text: '🏠首页', link: '/' },
+        { text: '📦项目大全', link: '/project/' },
+        { text: '🐞远程调试', link: 'http://liyansheng.top/remote_help/' }
       ],
 
       sidebar: {
@@ -41,7 +51,6 @@ module.exports = {
               'readVerse',
               'personal_sys',
               'stu_score'
-              
             ]
           }
         ]
