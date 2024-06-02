@@ -40,7 +40,8 @@ module.exports = {
               'school_help',
               'lend_book_console',
               'lend_book',
-              'rent_car'
+              'rent_car',
+              'sport_meeting'
             ]
           },
           {
