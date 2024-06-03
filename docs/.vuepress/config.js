@@ -41,7 +41,8 @@ module.exports = {
               'lend_book_console',
               'lend_book',
               'rent_car',
-              'sport_meeting'
+              'sport_meeting',
+              'hospital_mini'
             ]
           },
           {
