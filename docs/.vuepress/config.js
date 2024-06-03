@@ -42,6 +42,9 @@ module.exports = {
               'lend_book',
               'rent_car',
               'sport_meeting',
+              'book_py',
+              'ticket_py',
+              'atm_py',
               'hospital_mini'
             ]
           },
