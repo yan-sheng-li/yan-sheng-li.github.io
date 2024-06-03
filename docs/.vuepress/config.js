@@ -45,7 +45,8 @@ module.exports = {
               'book_py',
               'ticket_py',
               'atm_py',
-              'hospital_mini'
+              'hospital_mini',
+              'face_api'
             ]
           },
           {
