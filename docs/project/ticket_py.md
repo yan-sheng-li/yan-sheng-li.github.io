@@ -1,4 +1,4 @@
-# 📚航空订票管理系统（python）
+# 🛫航空订票管理系统（python）
 > 在本教程中，我们将创建一个基本的航空订票管理系统GUI应用，用户可以通过图形界面执行各种操作。我们将使用Python编程语言和Tkinter库来实现此应用。
 
 ![](http://cdn.qiniu.liyansheng.top/img/0e63f8440eb241f488a6050b53b31e1c.png)
