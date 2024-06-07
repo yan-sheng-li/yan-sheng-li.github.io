@@ -47,7 +47,9 @@ module.exports = {
               'atm_py',
               'hospital_mini',
               'face_api',
-              'sport_equipment'
+              'sport_equipment',
+              'Reptiles_douban'
+              
             ]
           },
           {
