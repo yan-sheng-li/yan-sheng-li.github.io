@@ -5,38 +5,37 @@
 - 数据库：MySQL
 - 依赖：JDBC
 - 交互：Swing
+- 编码：GBK
 
-## 实现功能
-- 管理员登录
-- 进货
-- 售货
-- 信息查询（库存、进货、售货）
+## 要点
+- 登录认证
+- 进货记录
+- 售货自动结算
+- 多条件信息查询（库存、进货、售货）
 
 ## 效果图
 
-登录验证：
+> 登录验证：
 
-<img src="https://picture-1302879452.cos.ap-guangzhou.myqcloud.com/img/login.gif" style="zoom:50%;" />
+![](http://cdn.qiniu.liyansheng.top/img/20240609010458.png)
 
-界面一览：
+> 界面一览：
 
-<img src="https://picture-1302879452.cos.ap-guangzhou.myqcloud.com/img/exit.gif" style="zoom:50%;" />
+![](http://cdn.qiniu.liyansheng.top/img/20240609010516.png)
 
-进货：
+> 进货：
 
-<img src="https://picture-1302879452.cos.ap-guangzhou.myqcloud.com/img/in.gif" style="zoom:50%;" />
+![](http://cdn.qiniu.liyansheng.top/img/20240609010538.png)
 
-售货：
+> 售货：
 
-<img src="https://picture-1302879452.cos.ap-guangzhou.myqcloud.com/img/sell.gif" style="zoom:50%;" />
+![](http://cdn.qiniu.liyansheng.top/img/20240609010607.png)
 
-查询：
+> 查询：
 
-<img src="https://picture-1302879452.cos.ap-guangzhou.myqcloud.com/img/find.gif" style="zoom:50%;" />
+![](http://cdn.qiniu.liyansheng.top/img/20240609010636.png)
 
-退出：
 
-<img src="https://picture-1302879452.cos.ap-guangzhou.myqcloud.com/img/exit.gif" style="zoom:50%;" />
 
 以上是部分演示，代码有亿点点多，就不在这里展示代码了，详细的可以下载源码来自己看一下哦！
 
