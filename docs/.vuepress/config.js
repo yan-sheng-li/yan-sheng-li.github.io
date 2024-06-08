@@ -21,15 +21,17 @@ module.exports = {
       sidebar: {
         '/project/': [
           {
-            title: '------✅已完结------',
+            title: '------💖已完结------',
             collapsable: false,
             children: [
               'sams',
               'supermarket_sys',
               'bookinfo_sys',
               'meeting_sys',
+              'mall_seler',
               'vbos',
               'song_sys',
+              'student_score',
               'bank_atm',
               'game_sys',
               'task_sys',
@@ -49,7 +51,9 @@ module.exports = {
               'face_api',
               'sport_equipment',
               'Reptiles_douban',
-              'personal_sys'
+              'personal_sys',
+              'attendance_sys'
+              
             ]
           },
           {
