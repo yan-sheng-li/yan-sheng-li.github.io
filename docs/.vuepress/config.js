@@ -62,7 +62,6 @@ module.exports = {
             children: [
               'travel_ease',
               'readVerse',
-              'stu_score'
             ]
           }
         ]
