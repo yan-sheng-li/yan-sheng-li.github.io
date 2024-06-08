@@ -48,8 +48,8 @@ module.exports = {
               'hospital_mini',
               'face_api',
               'sport_equipment',
-              'Reptiles_douban'
-              
+              'Reptiles_douban',
+              'personal_sys'
             ]
           },
           {
@@ -58,7 +58,6 @@ module.exports = {
             children: [
               'travel_ease',
               'readVerse',
-              'personal_sys',
               'stu_score'
             ]
           }
