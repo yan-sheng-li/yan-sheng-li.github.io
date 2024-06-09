@@ -54,8 +54,8 @@ module.exports = {
               'personal_sys',
               'attendance_sys',
               'file_share',
-              'easy_book_web'
-              
+              'easy_book_web',
+              'lend_book_web'
             ]
           },
           {
