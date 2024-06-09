@@ -53,7 +53,8 @@ module.exports = {
               'Reptiles_douban',
               'personal_sys',
               'attendance_sys',
-              'file_share'
+              'file_share',
+              'easy_book_web'
               
             ]
           },
