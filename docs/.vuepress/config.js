@@ -52,7 +52,8 @@ module.exports = {
               'sport_equipment',
               'Reptiles_douban',
               'personal_sys',
-              'attendance_sys'
+              'attendance_sys',
+              'file_share'
               
             ]
           },
