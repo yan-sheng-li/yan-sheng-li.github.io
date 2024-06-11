@@ -21,15 +21,13 @@ module.exports = {
       sidebar: {
         '/project/': [
           {
-            title: '------💖已完结------',
+            title: '------Java------',
             collapsable: false,
             children: [
-              'sams',
               'supermarket_sys',
               'bookinfo_sys',
               'meeting_sys',
               'mall_seler',
-              'vbos',
               'song_sys',
               'student_score',
               'bank_atm',
@@ -39,31 +37,44 @@ module.exports = {
               'goods_sys',
               'parking_sys',
               'stu_status',
-              'school_help',
               'lend_book_console',
               'lend_book',
-              'rent_car',
-              'sport_meeting',
-              'book_py',
-              'ticket_py',
-              'atm_py',
-              'hospital_mini',
-              'face_api',
               'sport_equipment',
-              'Reptiles_douban',
               'personal_sys',
               'attendance_sys',
-              'file_share',
+            ]
+          },
+          {
+            title: '------Web------',
+            collapsable: false,
+            children: [
+              'sams',
+              'vbos',
+              'rent_car',
+              'readVerse',
+              'face_api',
               'easy_book_web',
+              'file_share',
+              'school_help',
+              'sport_meeting',
               'lend_book_web'
             ]
           },
           {
-            title: '------🎉预更新------',
+            title: '------Python------',
             collapsable: false,
             children: [
-              'travel_ease',
-              'readVerse',
+              'book_py',
+              'ticket_py',
+              'atm_py',
+              'Reptiles_douban'
+            ]
+          },
+          {
+            title: '------小程序------',
+            collapsable: false,
+            children: [
+              'hospital_mini',
             ]
           }
         ]
