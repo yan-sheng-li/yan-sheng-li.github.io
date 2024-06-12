@@ -57,7 +57,8 @@ module.exports = {
               'file_share',
               'school_help',
               'sport_meeting',
-              'lend_book_web'
+              'lend_book_web',
+              'stu_club'
             ]
           },
           {
