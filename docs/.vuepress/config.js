@@ -69,7 +69,8 @@ module.exports = {
               'book_py',
               'ticket_py',
               'atm_py',
-              'Reptiles_douban'
+              'Reptiles_douban',
+              'Participle_analysis'
             ]
           },
           {
