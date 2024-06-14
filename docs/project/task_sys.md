@@ -70,8 +70,12 @@
 
 以上展示了部分效果图，具体可获取源码自行调试查看。
 
-## 源码获取
+## 源码
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240127230329955.png)
 
-![](http://cdn.qiniu.liyansheng.top/typora/ad.jpg)
+## 配套报告
+::: warning
+![](http://cdn.qiniu.liyansheng.top/img/报告预览123.jpg)
+![](http://cdn.qiniu.liyansheng.top/img/20240614230609.png)
+:::
