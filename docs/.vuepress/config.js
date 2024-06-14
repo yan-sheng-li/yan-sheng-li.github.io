@@ -14,7 +14,7 @@ module.exports = {
     themeConfig: {
       nav: [
         // { text: '🏠首页', link: '/' },
-        { text: '💪博主帮一手', link: 'https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC' },
+        { text: '🎧呼叫博主', link: 'https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC' },
         { text: '📦项目大全', link: '/project/' },
         { text: '🐞远程调试', link: 'http://liyansheng.top/remote_help/' }
       ],
