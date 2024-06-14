@@ -59,7 +59,8 @@ module.exports = {
               'school_help',
               'sport_meeting',
               'lend_book_web',
-              'stu_club'
+              'stu_club',
+              'hotel_boot'
             ]
           },
           {
