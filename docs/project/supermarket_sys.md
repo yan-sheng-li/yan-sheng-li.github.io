@@ -45,3 +45,9 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240526170926.png)
 
 
+## 配套报告
+
+::: warning
+![](http://cdn.qiniu.liyansheng.top/img/报告预览.png)
+![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-15_00-07-14.png)
+:::

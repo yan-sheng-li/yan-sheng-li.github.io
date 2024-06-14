@@ -229,7 +229,12 @@ id  isbn  书名  作者  出版社  馆藏数量
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240527005122.png)
 
+## 配套报告
 
+::: warning
+![](http://cdn.qiniu.liyansheng.top/img/报告预览图.png)
+![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-15_00-22-44.png)
+:::
 
 
 
