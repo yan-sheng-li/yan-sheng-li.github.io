@@ -116,7 +116,13 @@
 以上展示部分，更多页面效果可以拿到源码后自己尝试！
 ## 源码
 
-<img src="http://cdn.qiniu.liyansheng.top/typora/image-20231224231224390.png" alt="image-20231224231224390" style="zoom:67%;" />
+![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-38-53.png)
 
+## 配套报告
+
+::: warning
+![](http://cdn.qiniu.liyansheng.top/img/报告预ere览图.jpg)
+![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-33-19.png)
+:::
 
 

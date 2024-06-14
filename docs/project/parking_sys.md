@@ -61,5 +61,10 @@
 ## 源码获取
 
 ![image-20240108192430453](http://cdn.qiniu.liyansheng.top/typora/image-20240108192430453.png)
-## 其他
-![](http://cdn.qiniu.liyansheng.top/typora/ad.jpg)
+
+## 配套报告
+
+::: warning
+![](http://cdn.qiniu.liyansheng.top/img/报告预览432.jpg)
+![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-26-20.png)
+:::

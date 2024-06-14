@@ -44,4 +44,9 @@
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240526172245.png)
 
-[项目起不来？有bug？点我远程协助！](http://liyansheng.top/remote_help/)
+## 配套报告
+
+::: warning
+![](http://cdn.qiniu.liyansheng.top/img/展111示3.png)
+![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-53-19.png)
+:::
