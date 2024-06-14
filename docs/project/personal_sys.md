@@ -39,3 +39,9 @@
 
 ## 程序
 ![](http://cdn.qiniu.liyansheng.top/img/20240608145545.png)
+
+## 配套报告
+::: warning
+![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-08_01-44-00.png)
+![](http://cdn.qiniu.liyansheng.top/img/20240614225258.png)
+:::

@@ -33,8 +33,13 @@
 ## 程序
 ![](http://cdn.qiniu.liyansheng.top/img/20240606185229.png)
 
-## [远程调试，点我](http://blog.liyansheng.top/remote_help)
 
+
+## 配套报告
+::: warning
+![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-06_22-59-02.png)
+![](http://cdn.qiniu.liyansheng.top/img/20240614230025.png)
+:::
 
 
 
