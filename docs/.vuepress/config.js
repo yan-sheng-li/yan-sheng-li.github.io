@@ -43,6 +43,7 @@ module.exports = {
               'sport_equipment',
               'personal_sys',
               'attendance_sys',
+              'class_book'
             ]
           },
           {
