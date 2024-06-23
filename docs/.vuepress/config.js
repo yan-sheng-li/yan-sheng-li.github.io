@@ -22,7 +22,14 @@ module.exports = {
       sidebar: {
         '/project/': [
           {
-            title: '------Java------',
+            // title: '------------',
+            collapsable: false,
+            children: [
+              'customized'
+            ]
+          },
+          {
+            title: '------Java GUI------',
             collapsable: false,
             children: [
               'supermarket_sys',
@@ -47,7 +54,7 @@ module.exports = {
             ]
           },
           {
-            title: '------Web------',
+            title: '------Java Web------',
             collapsable: false,
             children: [
               'sams',
