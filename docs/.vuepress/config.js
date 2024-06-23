@@ -68,7 +68,8 @@ module.exports = {
               'sport_meeting',
               'lend_book_web',
               'stu_club',
-              'hotel_boot'
+              'hotel_boot',
+              'ordering_meal_web'
             ]
           },
           {
