@@ -69,7 +69,8 @@ module.exports = {
               'lend_book_web',
               'stu_club',
               'hotel_boot',
-              'ordering_meal_web'
+              'ordering_meal_web',
+              'bookstore_vue'
             ]
           },
           {
