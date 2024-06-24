@@ -1,7 +1,7 @@
 
 
+![](http://cdn.qiniu.liyansheng.top/img/388f8e087eaa5fa164254a47aab3c45.jpg)
 
-![](http://cdn.qiniu.liyansheng.top/img/20240426856744.jpeg)
 # 👈左侧菜单，浏览不同项目
 
 ::: tip
