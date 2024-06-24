@@ -1,5 +1,7 @@
 # 😁微友圈
 
+<MyGlobalComponent />
+
 ## 需求分析
 
 

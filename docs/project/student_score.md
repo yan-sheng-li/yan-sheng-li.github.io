@@ -1,4 +1,7 @@
 # 🙎‍♂️学生成绩管理系统
+
+<MyGlobalComponent />
+
 ## 环境
 
 - JDK8

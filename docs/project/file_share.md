@@ -1,5 +1,7 @@
 # 📁文件上传下载-加密
 
+<MyGlobalComponent />
+
 ## 技术栈
 - SpringBoot
 - MySQL

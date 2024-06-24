@@ -1,5 +1,7 @@
 # 🏪超市信息管理系统
 
+<MyGlobalComponent />
+
 ## 技术栈
 - 开发语言：Java
 - 数据库：MySQL

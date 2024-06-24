@@ -1,6 +1,8 @@
 
 # 🏢会议预约管理系统
 
+<MyGlobalComponent />
+
 
 ## 开发环境
 

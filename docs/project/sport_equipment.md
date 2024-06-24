@@ -1,4 +1,7 @@
 # 🏀体育器材借还管理系统
+
+<MyGlobalComponent />
+
 ##  技术栈
 - Java语言
 - MySQL数据库

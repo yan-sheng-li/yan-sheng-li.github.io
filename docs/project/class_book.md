@@ -1,5 +1,7 @@
 # 📗班级通讯录管理
 
+<MyGlobalComponent />
+
 ## 选用技术
 - Java
 - mysql

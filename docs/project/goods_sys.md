@@ -1,5 +1,7 @@
 # 🍿商品信息管理系统
 
+<MyGlobalComponent />
+
 
 ## 选用技术栈
 

@@ -1,5 +1,7 @@
 # 🏫图书馆选座管理系统
 
+<MyGlobalComponent />
+
 > 课程设计/毕设：Springboot+Bootstrap实现
 
 

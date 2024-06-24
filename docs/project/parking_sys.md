@@ -1,5 +1,7 @@
 # 🚗停车场管理系统
 
+<MyGlobalComponent />
+
 
 ## 运用技术
 

@@ -1,5 +1,7 @@
 # 📚图书借阅管理
 
+<MyGlobalComponent />
+
 
 
 ## 概况

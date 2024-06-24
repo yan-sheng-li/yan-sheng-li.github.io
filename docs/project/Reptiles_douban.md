@@ -1,5 +1,7 @@
 # 🐞爬虫-可视化-豆瓣电影数据
 
+<MyGlobalComponent />
+
 ![image-20240607153947167](http://cdn.qiniu.liyansheng.top/img/image-20240607153947167.png)
 
 ## 环境配置与准备工作

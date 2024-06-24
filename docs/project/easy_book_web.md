@@ -1,5 +1,7 @@
 # 📚简单web图书管理
 
+<MyGlobalComponent />
+
 ## 技术栈
 - springboot
 - thymeleaf

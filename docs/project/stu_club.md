@@ -1,4 +1,7 @@
 # 😁大学生社团管理系统
+
+<MyGlobalComponent />
+
 ::: warning
 ### 友链供稿
 

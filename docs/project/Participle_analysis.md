@@ -2,6 +2,8 @@
 
 # 📙小说分词统计-数据可视化
 
+<MyGlobalComponent />
+
 
 ## 步骤概览
 

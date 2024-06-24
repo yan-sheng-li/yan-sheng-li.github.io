@@ -1,4 +1,7 @@
 # ✅考勤打卡管理系统
+
+<MyGlobalComponent />
+
 ## 环境
 
 - JDK8

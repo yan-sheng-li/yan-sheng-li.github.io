@@ -1,4 +1,7 @@
 # 🙎‍♂️销售人员信息管理系统
+
+<MyGlobalComponent />
+
 ## 环境说明
 - JDK8
 - MySQL8

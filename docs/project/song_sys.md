@@ -1,5 +1,7 @@
 # 🎶歌单管理系统
 
+<MyGlobalComponent />
+
 ## 开发环境与工具
 
 - 开发工具：IDEA社区版

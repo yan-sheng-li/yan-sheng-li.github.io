@@ -1,4 +1,7 @@
 # 🏥医院就诊排队
+
+<MyGlobalComponent />
+
 ## 后端
 - Java
 - MySQL

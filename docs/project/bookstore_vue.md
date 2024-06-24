@@ -1,12 +1,8 @@
 # 🏬图书-购物商城
 
-![WeChat](https://img.shields.io/badge/公众号-《编程亿点有趣》-brightgreen)
-<!-- [![](https://img.shields.io/badge/👩‍💻木子-博客-00dfbf)](http://www.liyansheng.top/) -->
-[![](https://img.shields.io/badge/👩‍💻木子-空间-blue)](https://yan-sheng-li.github.io/project/)
-[![CSDN](https://img.shields.io/badge/CSDN-博客-red)](https://blog.csdn.net/weixin_44107140)
-[![Gitee](https://img.shields.io/badge/Gitee-码云-orange)](https://gitee.com/yan-sheng-li)
-[![oschaina](https://img.shields.io/badge/oschaina-开源中国-279c59)](https://my.oschina.net/u/5021863)
-[![](https://img.shields.io/badge/点我-进Q群：619298035-18a2ea)](https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC)
+
+<MyGlobalComponent />
+
 
 ## 技术栈
 - SpringBoot

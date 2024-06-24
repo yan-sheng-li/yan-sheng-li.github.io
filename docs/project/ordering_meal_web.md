@@ -1,5 +1,7 @@
 # 🍜点餐服务系统
 
+<MyGlobalComponent />
+
 
 ## 技术栈
 - SpringBoot

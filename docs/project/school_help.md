@@ -1,6 +1,8 @@
 
 # 🏫校园任务互助平台
 
+<MyGlobalComponent />
+
 
 
 ## 项目背景
