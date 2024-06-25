@@ -72,7 +72,8 @@ module.exports = {
               'stu_club',
               'hotel_boot',
               'ordering_meal_web',
-              'bookstore_vue'
+              'bookstore_vue',
+              'social_circle_web'
             ]
           },
           {
