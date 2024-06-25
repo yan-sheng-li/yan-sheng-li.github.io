@@ -52,7 +52,8 @@ module.exports = {
               'attendance_sys',
               'class_book',
               'visit-appointment-gui',
-              'ball_player'
+              'ball_player',
+              'teacher_info_sys_console'
             ]
           },
           {
