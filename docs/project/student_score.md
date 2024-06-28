@@ -22,7 +22,8 @@
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240104133353779.png)
 
 ## 程序
-![](http://cdn.qiniu.liyansheng.top/img/2993badf87150e4734bcdff74fe29588.png)
+<gzh />
+
 ![](http://cdn.qiniu.liyansheng.top/img/20240609010314.png)
 
 

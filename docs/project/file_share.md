@@ -27,7 +27,8 @@
 
 
 ## 源码获取
-![](http://cdn.qiniu.liyansheng.top/img/2993badf87150e4734bcdff74fe29588.png)
+<gzh />
+
 ![](http://cdn.qiniu.liyansheng.top/img/20240609164727.png)
 
 ::: danger

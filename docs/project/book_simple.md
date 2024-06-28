@@ -36,5 +36,6 @@
 以上展示部分效果，具体操作可以将源码拉下来，自己实践一下。
 
 ## 源码👇
-![](http://cdn.qiniu.liyansheng.top/img/2993badf87150e4734bcdff74fe29588.png)
+<gzh />
+
 ![](http://cdn.qiniu.liyansheng.top/img/20240526171517.png)

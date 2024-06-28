@@ -42,7 +42,7 @@
 ![在这里插入图片描述](http://cdn.qiniu.liyansheng.top/typora/7367b080b3fb43459b686ae07b97b4b2.png)
 
 ## 源码👇
-![](http://cdn.qiniu.liyansheng.top/img/2993badf87150e4734bcdff74fe29588.png)
+<gzh />
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240526172245.png)
 
