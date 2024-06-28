@@ -53,7 +53,8 @@ module.exports = {
               'class_book',
               'visit-appointment-gui',
               'ball_player',
-              'teacher_info_sys_console'
+              'teacher_info_sys_console',
+              'hotel_gui'
             ]
           },
           {

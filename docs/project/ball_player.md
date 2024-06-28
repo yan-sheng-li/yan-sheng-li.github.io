@@ -20,10 +20,9 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240624221207.png)
 
 ## 源码
-:::tip 👇回复关键字
-运动信息
-:::
 <gzh />
+---
+![](http://cdn.qiniu.liyansheng.top/img/20240629012751.png)
 
 
 
