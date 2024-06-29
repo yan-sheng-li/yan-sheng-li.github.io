@@ -1,4 +1,4 @@
-# 🛌酒店客房信息管理
+# 🛌酒店客房管理
 <MyGlobalComponent />
 ## 技术栈
 - Java

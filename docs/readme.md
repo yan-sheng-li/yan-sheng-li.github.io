@@ -2,6 +2,7 @@
 ::: tip
 持续更新中
 ::: -->
+<ScrollingNotice />
 ![](http://cdn.qiniu.liyansheng.top/img/mini.png)
 # [📦项目大全](/project)
 # [🐞远程调试](http://liyansheng.top/remote_help/)

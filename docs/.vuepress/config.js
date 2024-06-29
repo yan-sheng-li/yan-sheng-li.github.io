@@ -54,7 +54,8 @@ module.exports = {
               'visit-appointment-gui',
               'ball_player',
               'teacher_info_sys_console',
-              'hotel_gui'
+              'hotel_gui',
+              'hotel_gui_plus'
             ]
           },
           {

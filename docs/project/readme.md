@@ -3,7 +3,6 @@
 # 👈左侧，切换项目
 
 ::: tip
-<MyGlobalComponent />
 持续更新中....🚀
 :::
 ![](http://cdn.qiniu.liyansheng.top/img/_20240624135030-ezgif.com-png-to-webp-converter.webp)
