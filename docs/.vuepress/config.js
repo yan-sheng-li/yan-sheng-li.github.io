@@ -55,7 +55,8 @@ module.exports = {
               'ball_player',
               'teacher_info_sys_console',
               'hotel_gui',
-              'hotel_gui_plus'
+              'hotel_gui_plus',
+              'library_gui'
             ]
           },
           {
@@ -77,6 +78,8 @@ module.exports = {
               'ordering_meal_web',
               'bookstore_vue',
               'social_circle_web'
+              
+              
             ]
           },
           {
