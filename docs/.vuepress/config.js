@@ -56,7 +56,8 @@ module.exports = {
               'teacher_info_sys_console',
               'hotel_gui',
               'hotel_gui_plus',
-              'library_gui'
+              'library_gui',
+              'course_mate_gui'
             ]
           },
           {
