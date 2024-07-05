@@ -58,7 +58,8 @@ module.exports = {
               'hotel_gui_plus',
               'library_gui',
               'course_mate_gui',
-              'express_print'
+              'express_print',
+              'snake_game'
             ]
           },
           {
@@ -81,7 +82,8 @@ module.exports = {
               'bookstore_vue',
               'social_circle_web',
               'flower_store',
-              'news_web'
+              'news_web',
+              
               
               
             ]
