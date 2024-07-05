@@ -57,7 +57,8 @@ module.exports = {
               'hotel_gui',
               'hotel_gui_plus',
               'library_gui',
-              'course_mate_gui'
+              'course_mate_gui',
+              'express_print'
             ]
           },
           {
