@@ -79,7 +79,8 @@ module.exports = {
               'hotel_boot',
               'ordering_meal_web',
               'bookstore_vue',
-              'social_circle_web'
+              'social_circle_web',
+              'flower_store'
               
               
             ]
