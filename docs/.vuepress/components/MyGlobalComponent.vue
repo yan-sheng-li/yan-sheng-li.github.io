@@ -15,7 +15,7 @@ export default {
           <a href="https://blog.csdn.net/weixin_44107140"><img src="https://img.shields.io/badge/CSDN-博客-red" alt="CSDN"></a>
           <a href="https://gitee.com/yan-sheng-li"><img src="https://img.shields.io/badge/Gitee-码云-orange" alt="Gitee"></a>
           <a href="https://my.oschina.net/u/5021863"><img src="https://img.shields.io/badge/oschaina-开源中国-279c59" alt="oschaina"></a>
-          <a href="https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC"><img src="https://img.shields.io/badge/点我-Q作者：619298035-18a2ea" alt="QQ Group"></a>
+          <a href="https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC"><img src="https://img.shields.io/badge/Q作者-获取资源：619298035-18a2ea" alt="QQ Group"></a>
         </div>
       `;
     }

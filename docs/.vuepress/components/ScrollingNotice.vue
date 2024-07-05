@@ -2,7 +2,7 @@
     <div class="scrolling-notice">
         <marquee behavior="scroll" direction="left" scrollamount="10">
             <!-- 这里放你的通告内容 -->
-            <span style="color: red;">提示：本站所有项目均可二改扩展，使其更贴近您的需求；如果没有你要的课题，也可找我定做，欢迎滴滴😀！</span>
+            <span style="color: red;">提示：本站所有项目均可二改扩展，源码获取方式看文末；如果没有你要的课题，也可找我定做，欢迎滴滴😀！</span>
         </marquee>
     </div>
 </template>

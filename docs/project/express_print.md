@@ -1,5 +1,7 @@
 # 🖨打印单管理系统
 
+<MyGlobalComponent />
+
 ## 技术栈
 - Java
 - MySQL
