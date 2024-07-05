@@ -80,7 +80,8 @@ module.exports = {
               'ordering_meal_web',
               'bookstore_vue',
               'social_circle_web',
-              'flower_store'
+              'flower_store',
+              'news_web'
               
               
             ]
