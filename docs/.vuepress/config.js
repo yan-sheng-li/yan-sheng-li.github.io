@@ -61,7 +61,8 @@ module.exports = {
               'express_print',
               'snake_game',
               'car_ease',
-              'score_sys'
+              'score_sys',
+              'stu_info'
             
             ]
           },
@@ -85,7 +86,8 @@ module.exports = {
               'bookstore_vue',
               'social_circle_web',
               'flower_store',
-              'news_web',
+              'news_web'
+              
               
               
               

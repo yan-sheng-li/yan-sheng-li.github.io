@@ -1,5 +1,7 @@
 # 👩‍🎓学生成绩管理2
 
+<MyGlobalComponent />
+
 ## 技术栈
 - Java
 - MySQL
