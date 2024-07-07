@@ -63,7 +63,8 @@ module.exports = {
               'car_ease',
               'score_sys',
               'stu_info',
-              'book_lend'
+              'book_lend',
+              'wage_sys'
             
             ]
           },
