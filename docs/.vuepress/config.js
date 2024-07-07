@@ -65,7 +65,8 @@ module.exports = {
               'stu_info',
               'book_lend',
               'wage_sys',
-              'prop_ease'
+              'prop_ease',
+              'select_course_sys'
             
             ]
           },
