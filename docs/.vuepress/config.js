@@ -59,7 +59,8 @@ module.exports = {
               'library_gui',
               'course_mate_gui',
               'express_print',
-              'snake_game'
+              'snake_game',
+              'car_ease'
             ]
           },
           {
