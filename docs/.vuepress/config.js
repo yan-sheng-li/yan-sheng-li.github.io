@@ -64,7 +64,8 @@ module.exports = {
               'score_sys',
               'stu_info',
               'book_lend',
-              'wage_sys'
+              'wage_sys',
+              'prop_ease'
             
             ]
           },
