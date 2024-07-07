@@ -62,7 +62,8 @@ module.exports = {
               'snake_game',
               'car_ease',
               'score_sys',
-              'stu_info'
+              'stu_info',
+              'book_lend'
             
             ]
           },
