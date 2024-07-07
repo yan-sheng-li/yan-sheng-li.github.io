@@ -60,7 +60,9 @@ module.exports = {
               'course_mate_gui',
               'express_print',
               'snake_game',
-              'car_ease'
+              'car_ease',
+              'score_sys'
+            
             ]
           },
           {
