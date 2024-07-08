@@ -1,4 +1,4 @@
-# 📚图书进销管理系统
+# 📚图书进销管理系统*
 
 <MyGlobalComponent />
 

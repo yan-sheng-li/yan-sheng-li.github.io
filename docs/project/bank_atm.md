@@ -1,4 +1,4 @@
-# 🏦模拟银行ATM系统
+# 🏦模拟银行ATM系统*
 
 <MyGlobalComponent />
 

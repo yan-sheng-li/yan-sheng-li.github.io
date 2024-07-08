@@ -1,4 +1,4 @@
-# 😁微友圈
+# 😁微友圈*
 
 <MyGlobalComponent />
 

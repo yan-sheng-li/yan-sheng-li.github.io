@@ -1,4 +1,4 @@
-# 🏪超市信息管理系统
+# 🏪超市信息管理系统*
 
 <MyGlobalComponent />
 

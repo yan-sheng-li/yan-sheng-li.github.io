@@ -1,4 +1,4 @@
-# 🎶歌单管理系统
+# 🎶歌单管理系统*
 
 <MyGlobalComponent />
 
