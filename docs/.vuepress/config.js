@@ -91,7 +91,8 @@ module.exports = {
               'social_circle_web',
               'flower_store',
               'news_web',
-              'employee_butler'
+              'employee_butler',
+              'party_member'
               
               
               
