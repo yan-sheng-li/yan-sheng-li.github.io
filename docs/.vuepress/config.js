@@ -92,7 +92,8 @@ module.exports = {
               'flower_store',
               'news_web',
               'employee_butler',
-              'party_member'
+              'party_member',
+              'book_info_web'
               
               
               
