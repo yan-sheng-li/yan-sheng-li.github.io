@@ -90,7 +90,8 @@ module.exports = {
               'bookstore_vue',
               'social_circle_web',
               'flower_store',
-              'news_web'
+              'news_web',
+              'employee_butler'
               
               
               
