@@ -1,5 +1,7 @@
 # 👔人事管理系统
 
+<MyGlobalComponent />
+
 ## 技术栈
 - SpringBoot
 - Mysql
