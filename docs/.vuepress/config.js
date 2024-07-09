@@ -93,7 +93,8 @@ module.exports = {
               'news_web',
               'employee_butler',
               'party_member',
-              'book_info_web'
+              'book_info_web',
+              'ticket_tune'
               
               
               
