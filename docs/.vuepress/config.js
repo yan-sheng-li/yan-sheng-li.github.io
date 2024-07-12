@@ -67,7 +67,8 @@ module.exports = {
               'wage_sys',
               'prop_ease',
               'select_course_sys',
-              'parcel_manager'
+              'parcel_manager',
+              'tourpal_manager'
             ]
           },
           {
