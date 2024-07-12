@@ -94,7 +94,8 @@ module.exports = {
               'employee_butler',
               'party_member',
               'book_info_web',
-              'ticket_tune'
+              'ticket_tune',
+              'work_connect'
               
               
               
