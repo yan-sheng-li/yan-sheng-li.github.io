@@ -10,7 +10,7 @@ module.exports = {
         gtag('config', 'G-VTCF7WPSRK');
       `],
     ],
-    description: '实用技术要点汇总',
+    description: '各类项目汇总,涵盖JavaGUI,servlet+jsp,SSM,SpringBoot+Vue,Python,微信小程序...',
     themeConfig: {
       nav: [
         // { text: '🏠首页', link: '/' },
