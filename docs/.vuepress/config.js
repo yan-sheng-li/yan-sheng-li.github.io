@@ -95,7 +95,8 @@ module.exports = {
               'party_member',
               'book_info_web',
               'ticket_tune',
-              'work_connect'
+              'work_connect',
+              'carrer_cloud'
               
               
               
