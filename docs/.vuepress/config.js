@@ -66,8 +66,8 @@ module.exports = {
               'book_lend',
               'wage_sys',
               'prop_ease',
-              'select_course_sys'
-            
+              'select_course_sys',
+              'parcel_manager'
             ]
           },
           {
