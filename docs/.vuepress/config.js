@@ -1,5 +1,5 @@
 module.exports = {
-    title: '👨‍💻木子-空间',
+    title: '木子-空间',
     head: [
       // 访问统计
       ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-VTCF7WPSRK' }],
@@ -123,6 +123,7 @@ module.exports = {
             ]
           }
         ]
-      }
+      },
+      logo: 'https://files.codelife.cc/blog/avatar/641952bc46f825e26b36fde6.jpeg?t=1709970504540&x-oss-process=image/resize,limit_0,m_fill,w_40,h_40/quality,q_92/format,webp',
     }
   }
