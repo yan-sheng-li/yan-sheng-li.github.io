@@ -97,7 +97,8 @@ module.exports = {
               'book_info_web',
               'ticket_tune',
               'work_connect',
-              'carrer_cloud'
+              'carrer_cloud',
+              'travel_ease'
               
               
               
