@@ -18,6 +18,7 @@ module.exports = {
         text: '💻编程笔记',
         items: [
           { text: 'Java', link: '/Java/' },
+          { text: 'Java EE', link: '/Javaee/' },
           { text: 'MySQL', link: '/MySQL/' },
           { text: 'SpringBoot', link: '/springboot/' },
           { text: 'VuePress', link: '/vuepress/' },
@@ -213,6 +214,15 @@ module.exports = {
           collapsable: false,
           children: [
             '基础练习'
+          ]
+        },
+      ],
+      '/Javaee/': [
+        {
+          title: 'JavaEE',
+          collapsable: false,
+          children: [
+            '基础写法'
           ]
         },
       ],
