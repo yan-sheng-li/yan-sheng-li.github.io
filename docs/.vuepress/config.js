@@ -12,15 +12,30 @@ module.exports = {
   ],
   description: '各类项目汇总,涵盖JavaGUI,servlet+jsp,SSM,SpringBoot+Vue,Python,微信小程序...',
   themeConfig: {
-    nav: [      
+    logo: 'https://files.codelife.cc/blog/avatar/641952bc46f825e26b36fde6.jpeg?t=1709970504540&x-oss-process=image/resize,limit_0,m_fill,w_40,h_40/quality,q_92/format,webp',
+    nav: [
       {
-        text: '🎧呼叫作者',
+        text: '💻编程笔记',
         items: [
-          { text: '一键私聊', link: 'https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC' },
-          { text: 'QQ：1761724207', link: 'http://cdn.qiniu.liyansheng.top/img/20240715004059.png' },
-          { text: '微信：17641244340', link: 'http://cdn.qiniu.liyansheng.top/img/20240715004147.png' },
-
+          { text: 'Java', link: '/Java/' },
+          { text: 'MySQL', link: '/MySQL/' },
+          { text: 'SpringBoot', link: '/springboot/' },
+          { text: 'VuePress', link: '/vuepress/' },
+          { text: 'Swing', link: '/swing/' },
+          { text: 'Git', link: '/Git/' },
+          { text: 'Python', link: '/Python/' },
+          { text: 'Js库集', link: '/Js/' },
+          {
+            text: 'report',
+            items: [
+              { text: '一般', link: '/report/' },
+            ]
+          },
         ]
+      },
+      {
+        text: '📦项目合集',
+        link: '/project/'
       },
       {
         text: '💪可帮操作',
@@ -34,19 +49,167 @@ module.exports = {
         ]
       },
       {
-        text: '📖关于我',
+        text: '🚀关于我',
         items: [
-          { text: '随笔录', link: 'https://yan-sheng-li.github.io/note/' },
-          { text: '木子博客', link: 'http://www.liyansheng.top/' },
-          { text: 'CSDN博客', link: 'https://blog.csdn.net/weixin_44107140' },
-          { text: 'GitHub', link: 'https://github.com/yan-sheng-li' },
-          { text: 'Gitee', link: 'https://gitee.com/yan-sheng-li' },
-          { text: '公众号《编程亿点有趣》', link: 'http://cdn.qiniu.liyansheng.top/img/2-ezgif.com-png-to-webp-converter.webp' }
+          {
+            text: '联系方式',
+            items: [
+              { text: '一键私聊', link: 'https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC' },
+              { text: 'QQ：1761724207', link: 'http://cdn.qiniu.liyansheng.top/img/20240715004059.png' },
+              { text: '微信：17641244340', link: 'http://cdn.qiniu.liyansheng.top/img/20240715004147.png' },
+            ]
+          },
+          {
+            text: '更多',
+            items: [
+              { text: '📗木子博客', link: 'http://www.liyansheng.top/' },
+              { text: '📙CSDN博客', link: 'https://blog.csdn.net/weixin_44107140' },
+              { text: 'GitHub', link: 'https://github.com/yan-sheng-li' },
+              { text: 'Gitee', link: 'https://gitee.com/yan-sheng-li' },
+              { text: '公众号《编程亿点有趣》', link: 'http://cdn.qiniu.liyansheng.top/img/2-ezgif.com-png-to-webp-converter.webp' }
+            ]
+          }
+        ]
+      },
+      {
+        text: '💖爱好',
+        items: [
+          { text: '吉他（探索中）', link: '/guitar/' },
         ]
       },
     ],
 
     sidebar: {
+      '/swing/': [
+        {
+          title: 'swing',
+          collapsable: false,
+          children: [
+            '使用 Java Swing 和 XChart 创建多种图表',
+            '使用 JComboBox 在 Java Swing 中创建下拉列表',
+            '表格获取勾选行',
+            '实现简单的CRUD',
+            '日期时间选择器',
+            'table表格数据导出',
+            '表格数据导出到excel表格',
+            'ResultSet导出到execl表格',
+            '表格自定义颜色',
+            '动态时间显示到窗口',
+            'excel数据导入到MySQL',
+            '主题美化'
+          ]
+        },
+      ],
+      '/vuepress/': [
+        {
+          title: 'VuePress',
+          collapsable: false,
+          children: [
+            'Github部署',
+            '创建多级导航菜单',
+            '上次更新时间',
+            'Git仓库和编辑链接'
+          ]
+        },
+      ],
+      '/springboot/': [
+        {
+          title: 'SpringBoot',
+          collapsable: false,
+          children: [
+            '项目打jar包-docker部署',
+            '整合knife4j',
+            '远程仓库源',
+            '常规整合',
+          ]
+        },
+        {
+          title: '问题杂症',
+          collapsable: false,
+          children: [
+            '打包的jar启动报错问题'
+          ]
+        },
+      ],
+      '/MySQL/': [
+        {
+          title: 'MySQL',
+          collapsable: false,
+          children: [
+            '应用安装.md',
+            'MySQL配置文件',
+
+          ]
+        },
+      ],
+      '/Java/': [
+        {
+          title: 'Java',
+          collapsable: false,
+          children: [
+            'JDBC常用方法封装',
+            '使用JFileChooser'
+          ]
+        },
+      ],
+      '/Git/': [
+        {
+          title: 'Git',
+          collapsable: false,
+          children: [
+            'git快速入门',
+            '分支改进'
+          ]
+        },
+      ],
+      '/Python/': [
+        {
+          title: 'Python',
+          collapsable: false,
+          children: [
+            '常用技法'
+          ]
+        },
+      ],
+      '/Js/': [
+        {
+          title: 'Js库集',
+          collapsable: false,
+          children: [
+            '随机头像生成',
+            'sweetalert2',
+            'slidejs幻灯片',
+            'bootstrap table插件'
+          ]
+        },
+        {
+          title: '片段',
+          collapsable: false,
+          children: [
+            '记录网页浏览时长',
+            '实现网页弹幕'
+          ]
+        },
+      ],
+      '/report/': [
+        {
+          title: 'Report',
+          collapsable: false,
+          children: [
+            '用例图画法',
+            '参考文献'
+          ]
+        },
+      ],
+      '/guitar/': [
+        {
+          title: '吉他',
+          collapsable: false,
+          children: [
+            '基础练习'
+          ]
+        },
+      ],
       '/project/': [
         {
           // title: '------------',
@@ -126,10 +289,6 @@ module.exports = {
             'work_connect',
             'carrer_cloud',
             'travel_ease'
-
-
-
-
           ]
         },
         {
@@ -150,8 +309,7 @@ module.exports = {
             'hospital_mini',
           ]
         }
-      ]
+      ],
     },
-    logo: 'https://files.codelife.cc/blog/avatar/641952bc46f825e26b36fde6.jpeg?t=1709970504540&x-oss-process=image/resize,limit_0,m_fill,w_40,h_40/quality,q_92/format,webp',
   }
 }
