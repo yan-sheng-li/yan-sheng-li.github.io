@@ -27,6 +27,7 @@ module.exports = {
           { text: 'Git', link: '/Git/' },
           { text: 'Python', link: '/Python/' },
           { text: 'Js库集', link: '/Js/' },
+          { text: 'Bootstrap', link: '/bootstrap/' },
           {
             text: 'report',
             items: [
@@ -42,12 +43,7 @@ module.exports = {
       {
         text: '💪可帮操作',
         items: [
-          { text: '远程调试', link: 'http://www.liyansheng.top/remote_help/' },
-          { text: '程序定做', link: 'http://www.liyansheng.top/remote_help/' },
-          { text: '源码讲解', link: 'http://www.liyansheng.top/remote_help/' },
-          { text: '文档代写', link: 'http://www.liyansheng.top/remote_help/' },
-          { text: '项目二改', link: 'http://www.liyansheng.top/remote_help/' },
-          { text: '软件安装', link: 'http://www.liyansheng.top/remote_help/' },
+          { text: '远程调试', link: 'https://www.liyansheng.top/blog/remote_help/' },
         ]
       },
       {
@@ -237,6 +233,15 @@ module.exports = {
           collapsable: false,
           children: [
             'myabtis-plus动态组合SQL'
+          ]
+        },
+      ],
+      '/bootstrap/': [
+        {
+          title: 'Bootstrap',
+          collapsable: false,
+          children: [
+            '常用组件笔记'
           ]
         },
       ],
