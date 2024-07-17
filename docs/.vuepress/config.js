@@ -63,7 +63,7 @@ module.exports = {
           {
             text: '更多',
             items: [
-              { text: '📗木子博客', link: 'http://www.liyansheng.top/' },
+              { text: '📗木子博客', link: 'http://www.liyansheng.top/blog' },
               { text: '📙CSDN博客', link: 'https://blog.csdn.net/weixin_44107140' },
               { text: 'GitHub', link: 'https://github.com/yan-sheng-li' },
               { text: 'Gitee', link: 'https://gitee.com/yan-sheng-li' },
