@@ -21,6 +21,7 @@ module.exports = {
           { text: 'Java EE', link: '/Javaee/' },
           { text: 'MySQL', link: '/MySQL/' },
           { text: 'SpringBoot', link: '/springboot/' },
+          { text: 'Myabtis', link: '/myabtis/' },
           { text: 'VuePress', link: '/vuepress/' },
           { text: 'Swing', link: '/swing/' },
           { text: 'Git', link: '/Git/' },
@@ -97,7 +98,8 @@ module.exports = {
             '表格自定义颜色',
             '动态时间显示到窗口',
             'excel数据导入到MySQL',
-            '主题美化'
+            '主题美化',
+            '文件操作-简易'
           ]
         },
       ],
@@ -125,7 +127,9 @@ module.exports = {
             '常规整合',
             '全局异常处理',
             '定时任务',
-            '请求转发'
+            '请求转发',
+            '兼容JSP页面',
+            '整合sa-token权限控制'
 
           ]
         },
@@ -222,7 +226,17 @@ module.exports = {
           title: 'JavaEE',
           collapsable: false,
           children: [
-            '基础写法'
+            '基础写法',
+            '实操案例'
+          ]
+        },
+      ],
+      '/myabtis/': [
+        {
+          title: 'Myabtis',
+          collapsable: false,
+          children: [
+            'myabtis-plus动态组合SQL'
           ]
         },
       ],
