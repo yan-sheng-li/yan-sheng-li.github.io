@@ -25,6 +25,7 @@ module.exports = {
           { text: 'VuePress', link: '/vuepress/' },
           { text: 'Swing', link: '/swing/' },
           { text: 'Git', link: '/Git/' },
+          { text: 'Docker', link: '/docker/' },
           { text: 'Python', link: '/Python/' },
           { text: 'Js库集', link: '/Js/' },
           { text: 'Bootstrap', link: '/bootstrap/' },
@@ -242,6 +243,15 @@ module.exports = {
           collapsable: false,
           children: [
             '常用组件笔记'
+          ]
+        },
+      ],
+      '/docker/': [
+        {
+          title: 'Docker',
+          collapsable: false,
+          children: [
+            '镜像加速'
           ]
         },
       ],
