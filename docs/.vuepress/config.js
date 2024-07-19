@@ -190,7 +190,8 @@ module.exports = {
             'bootstrap table插件',
             '前端实用代码块',
             'Leaflet-地图应用',
-            'Jodit富文本编辑器'
+            'Jodit富文本编辑器',
+            'select2下拉选择组件'
           ]
         },
         {
