@@ -191,7 +191,8 @@ module.exports = {
             '前端实用代码块',
             'Leaflet-地图应用',
             'Jodit富文本编辑器',
-            'select2下拉选择组件'
+            'select2下拉选择组件',
+            '网页静态表格数据导出'
           ]
         },
         {
