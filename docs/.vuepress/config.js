@@ -188,12 +188,19 @@ module.exports = {
             'sweetalert2',
             'slidejs幻灯片',
             'bootstrap table插件',
-            '前端实用代码块',
             'Leaflet-地图应用',
             'Jodit富文本编辑器',
             'select2下拉选择组件',
             '网页静态表格数据导出',
-            'viewjs点击图片放大预览'
+            'viewjs点击图片放大预览',
+            '消息弹窗',
+            'fullcalendar日历组件',
+            'bs-stepper步进组件库',
+            'timeagojs时间xxx前',
+            'driverjs页面引导',
+            'FullPagejs图片全面屏网页',
+            '基于JQuery的步骤条'
+
           ]
         },
         {
@@ -202,7 +209,12 @@ module.exports = {
           children: [
             '记录网页浏览时长',
             '实现网页弹幕',
-            '登录页-模板'
+            '登录页-模板',
+            '首页-模板',
+            '页面-组件-自由拖放',
+            '文字-转-头像',
+            '单html页面-vue-案例',
+            '单html页面-elementUI-案例'
           ]
         },
       ],
