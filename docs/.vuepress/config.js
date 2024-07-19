@@ -187,7 +187,9 @@ module.exports = {
             '随机头像生成',
             'sweetalert2',
             'slidejs幻灯片',
-            'bootstrap table插件'
+            'bootstrap table插件',
+            '前端实用代码块',
+            'Leaflet-地图应用'
           ]
         },
         {
