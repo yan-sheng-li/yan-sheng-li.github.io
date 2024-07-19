@@ -189,7 +189,8 @@ module.exports = {
             'slidejs幻灯片',
             'bootstrap table插件',
             '前端实用代码块',
-            'Leaflet-地图应用'
+            'Leaflet-地图应用',
+            'Jodit富文本编辑器'
           ]
         },
         {
@@ -197,7 +198,8 @@ module.exports = {
           collapsable: false,
           children: [
             '记录网页浏览时长',
-            '实现网页弹幕'
+            '实现网页弹幕',
+            '登录页-模板'
           ]
         },
       ],
