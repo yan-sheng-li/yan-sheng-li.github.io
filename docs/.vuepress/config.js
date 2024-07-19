@@ -303,7 +303,8 @@ module.exports = {
             'prop_ease',
             'select_course_sys',
             'parcel_manager',
-            'tourpal_manager'
+            'tourpal_manager',
+            'classroom_manager'
           ]
         },
         {
