@@ -5,7 +5,7 @@ module.exports = {
       'dynamic-title',
       {
         showIcon: '/favicon.ico',
-        showText: '\(@^0^@)/ 欢迎回来！',
+        showText: '\(@^0^@)/ 欢迎回来！！',
         hideIcon: '/failure.ico',
         hideText: '(っ °Д °;)っ 不要走呀！',
         recoverTime: 2000,
