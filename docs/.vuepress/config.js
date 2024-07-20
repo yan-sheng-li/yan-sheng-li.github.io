@@ -237,7 +237,8 @@ module.exports = {
             '页面-组件-自由拖放',
             '文字-转-头像',
             '单html页面-vue-案例',
-            '单html页面-elementUI-案例'
+            '单html页面-elementUI-案例',
+            '404页面-模板'
           ]
         },
       ],
