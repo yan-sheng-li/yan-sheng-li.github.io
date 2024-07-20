@@ -27,7 +27,7 @@ module.exports = {
     ['meta', { name: 'description', content: '项目，笔记，教程，找起来更快捷方便！' }],
     ['meta', { name: 'keywords', content: '编程知识, 项目案例, 技术文档,难点解析' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'baidu-site-verification', content: '你的百度验证代码' }]
+    ['meta', { name: 'baidu-site-verification', content: 'codeva-ZjLnH1tXq1' }]
   ],
   description: '各类项目汇总,涵盖JavaGUI,servlet+jsp,SSM,SpringBoot+Vue,Python,微信小程序...',
   themeConfig: {
