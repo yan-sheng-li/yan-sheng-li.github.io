@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^1.9.10"
+    "vuepress": "^1.9.10",
+    "vuepress-plugin-cursor-effects": "^1.1.6"
   }
 }

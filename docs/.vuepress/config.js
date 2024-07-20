@@ -1,5 +1,6 @@
 module.exports = {
   title: '木子-空间',
+  plugins: ['cursor-effects'],
   head: [
     // 访问统计
     ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-VTCF7WPSRK' }],
@@ -109,7 +110,8 @@ module.exports = {
             '创建多级导航菜单',
             '上次更新时间',
             'Git仓库和编辑链接',
-            '自定义访问域名'
+            '自定义访问域名',
+            '光标点击爆炸效果'
           ]
         },
       ],
