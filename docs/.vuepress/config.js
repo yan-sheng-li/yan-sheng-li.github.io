@@ -1,6 +1,17 @@
 module.exports = {
   title: '木子-空间',
-  plugins: ['cursor-effects'],
+  plugins: ['cursor-effects',
+    [
+      'dynamic-title',
+      {
+         showIcon: '/favicon.ico',
+         showText: '༼ つ ◕_◕ ༽つ欢迎回来！',
+         hideIcon: '/failure.ico',
+         hideText: '(っ °Д °;)っ不要走呀！',
+         recoverTime: 2000,
+      },
+   ],
+  ],
   head: [
     // 访问统计
     ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-VTCF7WPSRK' }],
@@ -111,7 +122,8 @@ module.exports = {
             '上次更新时间',
             'Git仓库和编辑链接',
             '自定义访问域名',
-            '光标点击爆炸效果'
+            '光标点击爆炸效果',
+            '标签页自定义-进入离开问候'
           ]
         },
       ],
