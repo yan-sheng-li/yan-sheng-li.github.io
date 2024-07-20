@@ -15,5 +15,8 @@
     "vuepress-plugin-cursor-effects": "^1.1.6",
     "vuepress-plugin-dynamic-title": "^1.0.0",
     "vuepress-plugin-go-top": "^1.0.4"
+  },
+  "dependencies": {
+    "vuepress-plugin-reading-progress": "^1.0.10"
   }
 }
