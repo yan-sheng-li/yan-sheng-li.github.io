@@ -1,16 +1,19 @@
 module.exports = {
   title: '木子-空间',
-  plugins: ['cursor-effects','go-top','reading-progress',
+  plugins: ['cursor-effects', 'go-top', 'reading-progress',
     [
       'dynamic-title',
       {
-         showIcon: '/favicon.ico',
-         showText: '༼ つ ◕_◕ ༽つ欢迎回来！',
-         hideIcon: '/failure.ico',
-         hideText: '(っ °Д °;)っ不要走呀！',
-         recoverTime: 2000,
+        showIcon: '/favicon.ico',
+        showText: '༼ つ ◕_◕ ༽つ欢迎回来！',
+        hideIcon: '/failure.ico',
+        hideText: '(っ °Д °;)っ不要走呀！',
+        recoverTime: 2000,
       },
-   ],
+    ],
+    ['sitemap', {
+      hostname: 'http://www.liyansheng.top'
+    }]
   ],
   head: [
     // 访问统计
@@ -21,6 +24,10 @@ module.exports = {
         gtag('js', new Date());
         gtag('config', 'G-VTCF7WPSRK');
       `],
+    ['meta', { name: 'description', content: '项目，笔记，教程，找起来更快捷方便！' }],
+    ['meta', { name: 'keywords', content: '编程知识, 项目案例, 技术文档,难点解析' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { name: 'baidu-site-verification', content: '你的百度验证代码' }]
   ],
   description: '各类项目汇总,涵盖JavaGUI,servlet+jsp,SSM,SpringBoot+Vue,Python,微信小程序...',
   themeConfig: {
