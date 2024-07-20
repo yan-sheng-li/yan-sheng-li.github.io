@@ -1,6 +1,6 @@
 module.exports = {
   title: '木子-空间',
-  plugins: ['cursor-effects',
+  plugins: ['cursor-effects','go-top',
     [
       'dynamic-title',
       {
