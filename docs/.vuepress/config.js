@@ -35,22 +35,47 @@ module.exports = {
     logo: 'https://files.codelife.cc/blog/avatar/641952bc46f825e26b36fde6.jpeg?t=1709970504540&x-oss-process=image/resize,limit_0,m_fill,w_40,h_40/quality,q_92/format,webp',
     nav: [
       {
-        text: '💻编程笔记',
+        text: '💻 编程笔记',
         items: [
-          { text: 'Java', link: '/Java/' },
-          { text: 'Java EE', link: '/Javaee/' },
-          { text: 'MySQL', link: '/MySQL/' },
-          { text: 'SpringBoot', link: '/springboot/' },
-          { text: 'Myabtis', link: '/myabtis/' },
-          { text: 'VuePress', link: '/vuepress/' },
-          { text: 'Swing', link: '/swing/' },
-          { text: 'Git', link: '/Git/' },
-          { text: 'Docker', link: '/docker/' },
-          { text: 'Python', link: '/Python/' },
-          { text: 'Js库集', link: '/Js/' },
-          { text: 'Bootstrap', link: '/bootstrap/' },
           {
-            text: 'report',
+            text: 'Java',
+            items: [
+              { text: 'Java SE', link: '/Java/' },
+              { text: 'Java EE', link: '/Javaee/' },
+              { text: 'Spring Boot', link: '/springboot/' },
+              { text: 'MyBatis', link: '/mybatis/' }, // 修正拼写错误
+              { text: 'Swing', link: '/swing/' },
+            ]
+          },
+          {
+            text: '数据库',
+            items: [
+              { text: 'MySQL', link: '/MySQL/' },
+            ]
+          },
+          {
+            text: '前端',
+            items: [
+              { text: 'VuePress', link: '/vuepress/' },
+              { text: 'JavaScript库', link: '/Js/' }, // 修改标题更具体
+              { text: 'Bootstrap', link: '/bootstrap/' },
+            ]
+          },
+          {
+            text: '版本控制与容器化',
+            items: [
+              { text: 'Git', link: '/Git/' },
+              { text: 'Docker', link: '/docker/' },
+            ]
+          },
+          {
+            text: '其他编程语言',
+            items: [
+              { text: 'Python', link: '/Python/' },
+            ]
+          },
+          {
+            text: 'Report',
             items: [
               { text: '一般', link: '/report/' },
             ]
@@ -274,12 +299,12 @@ module.exports = {
           ]
         },
       ],
-      '/myabtis/': [
+      '/mybatis/': [
         {
-          title: 'Myabtis',
+          title: 'Mybatis',
           collapsable: false,
           children: [
-            'myabtis-plus动态组合SQL'
+            'mybatis-plus动态组合SQL'
           ]
         },
       ],
