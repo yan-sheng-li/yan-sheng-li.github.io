@@ -181,7 +181,8 @@ module.exports = {
             '整合sa-token权限控制',
             '数据导入导出',
             '绑定配置文件中变量',
-            'Thymeleaf和JavaScript在前后端交互中获取后端值'
+            'Thymeleaf和JavaScript在前后端交互中获取后端值',
+            '整合IK分词器'
 
           ]
         },
