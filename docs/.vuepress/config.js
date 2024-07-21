@@ -59,6 +59,7 @@ module.exports = {
               { text: 'VuePress', link: '/vuepress/' },
               { text: 'JavaScript库', link: '/Js/' }, // 修改标题更具体
               { text: 'Bootstrap', link: '/bootstrap/' },
+              { text: 'Vue', link: '/vue/' },
             ]
           },
           {
@@ -177,7 +178,8 @@ module.exports = {
             '定时任务',
             '请求转发',
             '兼容JSP页面',
-            '整合sa-token权限控制'
+            '整合sa-token权限控制',
+            '数据导入导出'
 
           ]
         },
@@ -198,6 +200,15 @@ module.exports = {
             '应用安装.md',
             'MySQL配置文件',
 
+          ]
+        },
+      ],
+      '/vue/': [
+        {
+          title: 'Vue',
+          collapsable: false,
+          children: [
+            '深入理解Vuex'
           ]
         },
       ],
