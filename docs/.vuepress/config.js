@@ -218,7 +218,7 @@ module.exports = {
           collapsable: false,
           children: [
             'JDBC常用方法封装',
-            '使用JFileChooser'
+            '使用JFileChooser',
           ]
         },
       ],
@@ -306,7 +306,8 @@ module.exports = {
           collapsable: false,
           children: [
             '基础写法',
-            '实操案例'
+            '实操案例',
+            '对象属性复制'
           ]
         },
       ],
