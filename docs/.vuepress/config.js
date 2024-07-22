@@ -74,7 +74,8 @@ module.exports = {
             items: [
               { text: 'Python', link: '/Python/' },
               { text: 'ElasticSearch', link: '/ElasticSearch/' },
-              { text: 'Kafka', link: '/kafka/' }
+              { text: 'Kafka', link: '/kafka/' },
+              { text: 'Linux', link: '/Linux/' },
             ]
           },
           {
@@ -218,6 +219,9 @@ module.exports = {
           children: [
             '应用安装.md',
             'MySQL配置文件',
+            '全文搜索',
+            '密码重置',
+            '设置字符编码集'
 
           ]
         },
@@ -228,6 +232,17 @@ module.exports = {
           collapsable: false,
           children: [
             '容器启动'
+          ]
+        },
+      ],
+      '/Linux/': [
+        {
+          title: 'Linux',
+          collapsable: false,
+          children: [
+            '初学shell常用操作',
+            '玩转Linux虚拟机',
+            'pm2进程管理工具'
           ]
         },
       ],
