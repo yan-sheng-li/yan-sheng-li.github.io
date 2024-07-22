@@ -74,6 +74,7 @@ module.exports = {
             items: [
               { text: 'Python', link: '/Python/' },
               { text: 'ElasticSearch', link: '/ElasticSearch/' },
+              { text: 'Kafka', link: '/kafka/' }
             ]
           },
           {
@@ -217,6 +218,15 @@ module.exports = {
             '应用安装.md',
             'MySQL配置文件',
 
+          ]
+        },
+      ],
+      '/kafka/': [
+        {
+          title: 'Kafka',
+          collapsable: false,
+          children: [
+            '容器启动'
           ]
         },
       ],
