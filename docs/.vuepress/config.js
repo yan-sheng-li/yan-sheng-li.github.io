@@ -264,7 +264,9 @@ module.exports = {
             'timeagojs时间xxx前',
             'driverjs页面引导',
             'FullPagejs图片全面屏网页',
-            '基于JQuery的步骤条'
+            '基于JQuery的步骤条',
+            'Dropzonejs实现文件上传',
+            'flatpicker时间选择'
 
           ]
         },
