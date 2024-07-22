@@ -70,9 +70,10 @@ module.exports = {
             ]
           },
           {
-            text: '其他编程语言',
+            text: '其他',
             items: [
               { text: 'Python', link: '/Python/' },
+              { text: 'ElasticSearch', link: '/ElasticSearch/' },
             ]
           },
           {
@@ -246,6 +247,15 @@ module.exports = {
           children: [
             'git快速入门',
             '分支改进'
+          ]
+        },
+      ],
+      '/ElasticSearch/': [
+        {
+          title: 'ElasticSearch',
+          collapsable: false,
+          children: [
+            '快速入门与部署'
           ]
         },
       ],
