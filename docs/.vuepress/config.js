@@ -199,7 +199,8 @@ module.exports = {
             '绑定配置文件中变量',
             'Thymeleaf和JavaScript在前后端交互中获取后端值',
             '整合IK分词器',
-            '整合kafka'
+            '整合kafka',
+            'thymeleaf常用语法'
 
           ]
         },
@@ -251,7 +252,8 @@ module.exports = {
           title: 'Vue',
           collapsable: false,
           children: [
-            '深入理解Vuex'
+            '深入理解Vuex',
+            'VueRouter的meta属性'
           ]
         },
       ],
