@@ -76,6 +76,7 @@ module.exports = {
               { text: 'ElasticSearch', link: '/ElasticSearch/' },
               { text: 'Kafka', link: '/kafka/' },
               { text: 'Linux', link: '/Linux/' },
+              { text: '微信小程序', link: '/微信小程序/' }
             ]
           },
           {
@@ -234,6 +235,15 @@ module.exports = {
           collapsable: false,
           children: [
             '容器启动'
+          ]
+        },
+      ],
+      '/微信小程序/': [
+        {
+          title: '微信小程序',
+          collapsable: false,
+          children: [
+            '微信登录'
           ]
         },
       ],
