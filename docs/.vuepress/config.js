@@ -88,9 +88,22 @@ module.exports = {
         link: '/project/'
       },
       {
-        text: '💪可帮操作',
+        text: '⚙工具环境',
         items: [
-          { text: '远程调试', link: 'https://www.liyansheng.top/blog/remote_help/' },
+          {
+            text: '远程调试',
+            items: [
+              { text: '点我', link: 'https://www.liyansheng.top/blog/remote_help/' },
+            ]
+          },
+          {
+            text: '专题',
+            items: [
+              { text: '编程篇', link: '/tool/' },
+              { text: '在线篇', link: '/online/' },
+              { text: '素材篇', link: '/source/' },
+            ]
+          },
         ]
       },
       {
@@ -323,6 +336,15 @@ module.exports = {
           collapsable: false,
           children: [
             'mybatis-plus动态组合SQL'
+          ]
+        },
+      ],
+      '/tool/': [
+        {
+          title: 'IDEA',
+          collapsable: false,
+          children: [
+            '整合Docker'
           ]
         },
       ],
