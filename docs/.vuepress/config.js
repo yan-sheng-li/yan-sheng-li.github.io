@@ -263,8 +263,7 @@ module.exports = {
           title: 'Vue',
           collapsable: false,
           children: [
-            '深入理解Vuex',
-            'VueRouter的meta属性'
+            '深入理解Vuex'
           ]
         },
       ],
