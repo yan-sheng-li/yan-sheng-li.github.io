@@ -200,7 +200,8 @@ module.exports = {
             'Thymeleaf和JavaScript在前后端交互中获取后端值',
             '整合IK分词器',
             '整合kafka',
-            'thymeleaf常用语法'
+            'thymeleaf常用语法',
+            '配置文件加密'
 
           ]
         },
