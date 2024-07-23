@@ -328,7 +328,8 @@ module.exports = {
             'FullPagejs图片全面屏网页',
             '基于JQuery的步骤条',
             'Dropzonejs实现文件上传',
-            'flatpicker时间选择'
+            'flatpicker时间选择',
+            '三级地图跳转'
 
           ]
         },
