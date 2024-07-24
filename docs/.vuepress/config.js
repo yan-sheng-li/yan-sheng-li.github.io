@@ -221,11 +221,12 @@ module.exports = {
           title: 'MySQL',
           collapsable: false,
           children: [
-            '应用安装.md',
+            '应用安装',
             'MySQL配置文件',
             '全文搜索',
             '密码重置',
-            '设置字符编码集'
+            '设置字符编码集',
+            '外键约束行为'
 
           ]
         },
