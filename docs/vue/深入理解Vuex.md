@@ -192,6 +192,66 @@ export default {
 };
 </script>
 ```
+
+## 案例
+```js
+// src/store/index.js
+
+import Vue from 'vue';
+import Vuex from 'vuex';
+
+Vue.use(Vuex);
+
+export default new Vuex.Store({
+  state: {
+    user: null,
+    isLoggedIn: false,
+    discount:null
+  },
+  mutations: {
+    setUser(state, user) {
+      state.user = user;
+      state.isLoggedIn = !!user;
+    },
+    logout(state) {
+      state.user = null;
+      state.isLoggedIn = false;
+    },
+    setDiscount(state,discount){
+      state.discount=discount
+    }
+  },
+  actions: {
+    login({ commit }, user) {
+      // 假设这里执行了登录逻辑，并成功获取到用户数据
+      commit('setUser', user);
+    },
+    setUserRole({ commit }, role) {
+      const user = { role: role };
+      commit('setUser', user);
+    },
+    login2({ commit }, { token, role }) {
+      const user = { token, role };
+      commit('setUser', user);
+    },
+    logout({ commit }) {
+      commit('logout');
+    }
+  },
+  getters: {
+    currentUser(state) {
+      return state.user;
+    },
+    isLoggedIn(state) {
+      return state.isLoggedIn;
+    },
+    todayDiscount(state){
+      return state.discount;
+    }
+
+  }
+});
+```
 ## 总结
 
 通过结合使用 Vuex 的 state、mutations、actions 和 getters，我们可以有效地管理 Vue.js 应用的状态：
