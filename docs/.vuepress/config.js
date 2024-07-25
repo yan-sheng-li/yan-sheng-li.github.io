@@ -267,7 +267,8 @@ module.exports = {
           title: 'Vue',
           collapsable: false,
           children: [
-            '深入理解Vuex'
+            '深入理解Vuex',
+            '自定义axios'
           ]
         },
       ],
