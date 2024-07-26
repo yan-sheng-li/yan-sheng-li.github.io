@@ -290,7 +290,8 @@ module.exports = {
           collapsable: false,
           children: [
             'git快速入门',
-            '分支改进'
+            '分支改进',
+            '本地初始库与远程库已有库合并'
           ]
         },
       ],
