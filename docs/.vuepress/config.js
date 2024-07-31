@@ -137,6 +137,7 @@ module.exports = {
         text: '💖爱好',
         items: [
           { text: '吉他（探索中）', link: '/guitar/' },
+          { text: '曲谱', link: '/qupu/' },
         ]
       },
     ],
@@ -372,6 +373,15 @@ module.exports = {
           collapsable: false,
           children: [
             '基础练习'
+          ]
+        },
+      ],
+      '/qupu/': [
+        {
+          title: '曲谱',
+          collapsable: false,
+          children: [
+            '许巍-故乡-G调'
           ]
         },
       ],
