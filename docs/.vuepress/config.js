@@ -382,7 +382,9 @@ module.exports = {
           title: '曲谱',
           collapsable: false,
           children: [
-            '许巍-故乡-G调'
+            '许巍-故乡-G调',
+            '刘若英-后来-C调',
+            '许巍-蓝莲花-D调'
           ]
         },
       ],
