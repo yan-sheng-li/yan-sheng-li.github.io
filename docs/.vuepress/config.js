@@ -273,7 +273,8 @@ module.exports = {
           children: [
             '深入理解Vuex',
             '自定义axios',
-            'map三级下钻'
+            'map三级下钻',
+            '整合应用VueLeaflet'
           ]
         },
       ],
