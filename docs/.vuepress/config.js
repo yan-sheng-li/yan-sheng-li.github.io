@@ -530,7 +530,8 @@ module.exports = {
             'ticket_py',
             'atm_py',
             'Reptiles_douban',
-            'Participle_analysis'
+            'Participle_analysis',
+            '简历模板批量采集'
           ]
         },
         {
