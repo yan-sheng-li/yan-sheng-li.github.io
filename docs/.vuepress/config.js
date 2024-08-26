@@ -32,7 +32,7 @@ module.exports = {
   ],
   description: '各类项目汇总,涵盖JavaGUI,servlet+jsp,SSM,SpringBoot+Vue,Python,微信小程序...',
   themeConfig: {
-    logo: 'https://files.codelife.cc/blog/avatar/641952bc46f825e26b36fde6.jpeg?t=1709970504540&x-oss-process=image/resize,limit_0,m_fill,w_40,h_40/quality,q_92/format,webp',
+    logo: 'http://cdn.qiniu.liyansheng.top/img/微信图片_20240826190120.jpg',
     nav: [
       {
         text: '💻 编程笔记',
