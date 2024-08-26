@@ -519,7 +519,8 @@ module.exports = {
             'ticket_tune',
             'work_connect',
             'carrer_cloud',
-            'travel_ease'
+            'travel_ease',
+            '虚拟空调自由'
           ]
         },
         {
