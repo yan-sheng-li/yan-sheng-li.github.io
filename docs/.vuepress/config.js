@@ -376,7 +376,8 @@ module.exports = {
           title: '吉他',
           collapsable: false,
           children: [
-            '基础练习'
+            '基础练习',
+            '音阶'
           ]
         },
       ],
