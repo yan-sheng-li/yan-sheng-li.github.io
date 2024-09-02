@@ -108,15 +108,6 @@ input {
     margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 10px 0;
-}
-
 button {
     margin-top: 5px;
     padding: 5px 10px;
