@@ -5,6 +5,7 @@ import gzh from './components/gzh.vue'
 import ScrollingNotice from './components/ScrollingNotice.vue'
 import CustomFooter from './components/CustomFooter.vue'
 import S from './components/s.vue'
+import Cook from './components/Cook.vue'
 
 
 
@@ -13,6 +14,7 @@ export default ({ Vue }) => {
   Vue.component('MyGlobalComponent', MyGlobalComponent);
   Vue.component('gzh', gzh)
   Vue.component('S', S)
+  Vue.component('Cook', Cook)
   Vue.component('ScrollingNotice', ScrollingNotice)
   Vue.component('CustomFooter', CustomFooter)
 }

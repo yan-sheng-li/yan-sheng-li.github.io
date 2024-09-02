@@ -138,6 +138,7 @@ module.exports = {
         items: [
           { text: '吉他（探索中）', link: '/guitar/' },
           { text: '曲谱', link: '/qupu/' },
+          { text: '菜谱', link: '/cooking/' },
         ]
       },
     ],
