@@ -20,7 +20,7 @@
       return {
         searchQuery: '', // 搜索框中的输入内容
         dishes: [
-          { name: '五花肉炒辣椒', image: 'http://cdn.qiniu.liyansheng.top/img/a6ca23455bc46cdaac869a0f84b604f.jpg' },
+          { name: '五花肉炒辣椒', image: 'http://cdn.qiniu.liyansheng.top/img/微信图片_20240903002906.jpg' },
           { name: '宫保鸡丁', image: 'http://cdn.qiniu.liyansheng.top/img/微信图片_20240902105757.jpg' },
           { name: '牛柳炒土豆条', image: 'http://cdn.qiniu.liyansheng.top/img/微信图片_20240902110701.jpg' },
           { name: '干锅土豆片', image: 'http://cdn.qiniu.liyansheng.top/img/微信图片_20240902110703.jpg' },
