@@ -1,7 +1,17 @@
 module.exports = {
   title: '木子-空间',
   plugins: ['cursor-effects', 'go-top', 'reading-progress',require('./my-plugin'),
-    'vuepress-plugin-copy-code','@vuepress/plugin-medium-zoom',
+    'vuepress-plugin-copy-code',
+    [
+      '@vuepress/plugin-medium-zoom',
+      {
+        selector: 'img',  // 选择器，应用于哪些图片
+        options: {
+          margin: 16,       // 图片缩放时与页面边缘的最小距离
+          scrollOffset: 0,  // 滚动偏移量，默认为 40
+        },
+      },
+    ],
     [
       'dynamic-title',
       {
