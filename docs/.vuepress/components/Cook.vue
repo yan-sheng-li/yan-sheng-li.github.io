@@ -50,6 +50,10 @@
           {name:'娃娃菜焖豆腐',image:'http://cdn.qiniu.liyansheng.top/img/微信图片_202409021108142.jpg'},
           {name:'凉拌豆腐皮',image:'http://cdn.qiniu.liyansheng.top/img/微信图片_202409021108151.jpg'},
           {name:'洋葱炒牛肉',image:'http://cdn.qiniu.liyansheng.top/img/微信图片_202409021108152.jpg'},
+          {name:'香辣鸡爪',image:'http://cdn.qiniu.liyansheng.top/img/微信图片_202409031711141.jpg'},
+          {name:'腰缠万贯虾',image:'http://cdn.qiniu.liyansheng.top/img/微信图片_20240903171114.jpg'},
+          {name:'红烧猪蹄',image:'http://cdn.qiniu.liyansheng.top/img/微信图片_20240903171113.jpg'},
+          {name:'红糖小面饼',image:'http://cdn.qiniu.liyansheng.top/img/微信图片_20240903171052.jpg'},
         //   {name:'',image:''},
           // 更多菜品
         ],
