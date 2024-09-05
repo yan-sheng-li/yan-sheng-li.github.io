@@ -129,6 +129,7 @@ module.exports = {
               { text: '一键私聊', link: 'https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC' },
               { text: '加QQ', link: 'http://cdn.qiniu.liyansheng.top/img/20240715004059.png' },
               { text: '加微信', link: 'http://cdn.qiniu.liyansheng.top/img/20240715004147.png' },
+              { text: '打赏支持', link: 'http://cdn.qiniu.liyansheng.top/img/微信图片_20240905220703.jpg' },
             ]
           },
           {
