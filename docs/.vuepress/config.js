@@ -503,7 +503,8 @@ module.exports = {
             'select_course_sys',
             'parcel_manager',
             'tourpal_manager',
-            'classroom_manager'
+            'classroom_manager',
+            '电子日历记事本'
           ]
         },
         {
