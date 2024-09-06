@@ -70,6 +70,8 @@ export default {
                 { name: '人事管理系统Web', link: '链接: https://pan.baidu.com/s/128GNoKBy_C8w9YZvBypb8g?pwd=iks5 提取码: iks5' },
                 { name: '图书管理web简单版', link: '链接: https://pan.baidu.com/s/1j-dTMeHsMQ99tNeZTZ60qQ?pwd=bmwi 提取码: bmwi' },
                 { name: '简历模板批量采集-Python', link: '链接: https://pan.baidu.com/s/1Nnui88KhNBxYEZvH3pL5ew?pwd=a636 提取码: a636' },
+                { name: '图书借阅-控制台版-源码', link: '链接: https://pan.baidu.com/s/1TRPdfKdLvhOSwZN1QWOftg?pwd=gedf 提取码: gedf' },
+
             ], // 资源对象数组
         };
     },
