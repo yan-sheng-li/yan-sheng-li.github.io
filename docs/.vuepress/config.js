@@ -121,7 +121,7 @@ module.exports = {
         ]
       },
       {
-        text: '🚀关于我',
+        text: '🚀了解作者',
         items: [
           {
             text: '联系方式',
@@ -133,7 +133,7 @@ module.exports = {
             ]
           },
           {
-            text: '更多',
+            text: '足迹',
             items: [
               { text: '📗木子博客', link: 'http://www.liyansheng.top/blog' },
               { text: '📙CSDN博客', link: 'https://blog.csdn.net/weixin_44107140' },
