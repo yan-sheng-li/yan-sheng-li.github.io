@@ -556,6 +556,13 @@ module.exports = {
           children: [
             'hospital_mini',
           ]
+        },
+        {
+          title: '------其他定制------',
+          collapsable: false,
+          children: [
+            '微信与支付宝的收款码二合一',
+          ]
         }
       ],
     },
