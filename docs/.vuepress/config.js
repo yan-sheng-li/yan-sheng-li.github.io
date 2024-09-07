@@ -1,6 +1,6 @@
 module.exports = {
   title: '木子-空间',
-  plugins: ['cursor-effects', 'go-top', 'reading-progress',require('./my-plugin'),
+  plugins: ['cursor-effects', 'go-top', 'reading-progress', require('./my-plugin'),
     'vuepress-plugin-copy-code',
     [
       '@vuepress/plugin-medium-zoom',
@@ -44,6 +44,10 @@ module.exports = {
   themeConfig: {
     logo: 'http://cdn.qiniu.liyansheng.top/img/微信图片_20240826190120.jpg',
     nav: [
+      {
+        text: '精品网址',
+        link: '/collection/'
+      },
       {
         text: '💻 编程笔记',
         items: [
@@ -145,7 +149,7 @@ module.exports = {
         ]
       },
       {
-        text: '💖爱好',
+        text: '💖兴趣爱好',
         items: [
           { text: '吉他（探索中）', link: '/guitar/' },
           { text: '曲谱', link: '/qupu/' },
@@ -403,7 +407,7 @@ module.exports = {
             '刘若英-后来-C调',
             '许巍-蓝莲花-D调',
             '朴树-平凡之路-G调'
-          
+
           ]
         },
       ],
@@ -460,6 +464,14 @@ module.exports = {
           collapsable: false,
           children: [
             'customized'
+          ]
+        },
+        {
+          title: '------其他定制------',
+          collapsable: false,
+          children: [
+            '微信与支付宝的收款码二合一',
+            '博客or个人站点or网站-搭建'
           ]
         },
         {
@@ -557,13 +569,7 @@ module.exports = {
             'hospital_mini',
           ]
         },
-        {
-          title: '------其他定制------',
-          collapsable: false,
-          children: [
-            '微信与支付宝的收款码二合一',
-          ]
-        }
+
       ],
     },
   }
