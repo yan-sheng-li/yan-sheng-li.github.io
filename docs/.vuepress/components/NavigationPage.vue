@@ -37,8 +37,24 @@ export default {
         {
           name: '开发者资源',
           links: [
-            { title: 'MDN 文档', url: 'https://developer.mozilla.org', image: 'https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png' },
-            { title: '掘金', url: 'https://juejin.cn', image: 'https://lf-web-assets.juejin.cn/obj/juejin-web/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg' }
+            { title: '掘金', url: 'https://juejin.cn', image: 'https://lf-web-assets.juejin.cn/obj/juejin-web/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg' },
+            { title: 'codeimg', url: 'https://codeimg.io/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909111037.png' },
+            { title: 'cdnjs', url: 'https://cdnjs.com/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909111111.png' },
+            { title: 'jsdelivr', url: 'https://www.jsdelivr.com/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909111208.png' },
+            { title: 'StackBlitz(在线IDE)', url: 'https://stackblitz.com/', image: '' },
+            { title: '站长素材', url: 'https://sc.chinaz.com/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909111438.png' },
+            { title: 'CodePen', url: 'https://codepen.io/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909111702.png' },
+            { title: '在线加密传输文件', url: 'https://wormhole.app/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909111734.png' },
+          ]
+        },
+        {
+          name: '设计与素材',
+          links: [
+          // { title: '', url: '', image: '' }
+            { title: '彼岸壁纸', url: 'http://www.netbian.com/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909110044.png' },
+            { title: '暖糖壁纸', url: 'https://www.nuantang.net/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909110214.png' },
+            { title: 'PNG素材', url: 'https://www.pngsucai.com/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909110728.png' },
+            { title: '极简壁纸', url: 'https://bz.zzzmh.cn/index', image: 'http://cdn.qiniu.liyansheng.top/img/20240909110819.png' },
           ]
         }
       ]
@@ -90,4 +106,5 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 </style>
