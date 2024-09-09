@@ -516,7 +516,8 @@ module.exports = {
             'parcel_manager',
             'tourpal_manager',
             'classroom_manager',
-            '电子日历记事本'
+            '电子日历记事本',
+            '在线聊天室'
           ]
         },
         {
