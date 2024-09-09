@@ -517,7 +517,8 @@ module.exports = {
             'tourpal_manager',
             'classroom_manager',
             '电子日历记事本',
-            '在线聊天室'
+            '在线聊天室',
+            '在线聊天室-2.0'
           ]
         },
         {
