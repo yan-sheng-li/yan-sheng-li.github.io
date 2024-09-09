@@ -71,6 +71,8 @@ export default {
                 { name: '图书管理web简单版', link: '链接: https://pan.baidu.com/s/1j-dTMeHsMQ99tNeZTZ60qQ?pwd=bmwi 提取码: bmwi' },
                 { name: '简历模板批量采集-Python', link: '链接: https://pan.baidu.com/s/1Nnui88KhNBxYEZvH3pL5ew?pwd=a636 提取码: a636' },
                 { name: '图书借阅-控制台版-源码', link: '链接: https://pan.baidu.com/s/1TRPdfKdLvhOSwZN1QWOftg?pwd=gedf 提取码: gedf' },
+                {name:'在线聊天室-源码',link:'链接: https://pan.baidu.com/s/1iBkgxvmCpgA4d9aenrz2_Q?pwd=v6i7 提取码: v6i7'},
+                {name:'在线聊天室2.0-源码',link:'链接: https://pan.baidu.com/s/1PA8vBBqQ-1pjftJWfFpupg?pwd=bq6z 提取码: bq6z'}
 
             ], // 资源对象数组
         };
