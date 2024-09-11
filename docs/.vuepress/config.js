@@ -551,7 +551,8 @@ module.exports = {
             'work_connect',
             'carrer_cloud',
             'travel_ease',
-            '虚拟空调自由'
+            '虚拟空调自由',
+            '体质检测管理系统'
           ]
         },
         {
