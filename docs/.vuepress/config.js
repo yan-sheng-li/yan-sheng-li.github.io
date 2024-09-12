@@ -125,7 +125,7 @@ module.exports = {
         ]
       },
       {
-        text: '🚀了解作者',
+        text: '🚀滴滴作者',
         items: [
           {
             text: '联系方式',
