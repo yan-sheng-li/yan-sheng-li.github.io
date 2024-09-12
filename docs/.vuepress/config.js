@@ -384,7 +384,8 @@ module.exports = {
           collapsable: false,
           children: [
             '用例图画法',
-            '参考文献'
+            '参考文献',
+            '课程设计报告-模板'
           ]
         },
       ],
