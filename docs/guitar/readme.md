@@ -4,3 +4,5 @@
 [在线-节拍器](https://metronome-online.com/zh)
 
 [自定义-鼓机](https://wambox.net/)
+
+[在线-本地录音](/vuepage/LocalRecording)
