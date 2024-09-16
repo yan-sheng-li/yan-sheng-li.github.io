@@ -1,10 +1,15 @@
 <template>
     <div id="app">
       <h1>本地录音功能</h1>
+      <p>提示：【空格键】录制/暂停，【回车键】播放，【BackSpace键】删除当前录音</p>
       <button @click="startRecording">开始录音</button>
       <button @click="stopRecording">停止录音</button>
       <p v-if="isRecording">正在录音...</p> <!-- 添加的提示文本 -->
+      <br>
+      <hr>
       <audio v-if="audioUrl" :src="audioUrl" controls></audio>
+      <hr>
+      <br>
       <a v-if="downloadUrl" :href="downloadUrl" download="recording.wav">下载录音</a>
     </div>
   </template>
