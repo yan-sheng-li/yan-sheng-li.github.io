@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@vuepress/plugin-medium-zoom": "^1.9.10",
+    "qrcode": "^1.5.4",
     "vuepress-plugin-copy-code": "^0.0.1",
     "vuepress-plugin-reading-progress": "^1.0.10",
     "vuepress-plugin-sitemap": "^2.3.1"
