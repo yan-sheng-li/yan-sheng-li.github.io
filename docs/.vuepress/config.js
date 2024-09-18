@@ -396,7 +396,8 @@ module.exports = {
           collapsable: false,
           children: [
             '基础练习',
-            '音阶'
+            '音阶',
+            '节奏'
           ]
         },
       ],
