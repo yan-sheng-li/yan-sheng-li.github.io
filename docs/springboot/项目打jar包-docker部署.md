@@ -66,7 +66,7 @@ FROM openjdk:latest
 WORKDIR /app
 
 # 将本地的 JAR 文件复制到容器内
-COPY your-application.jar /app/your-application.jar
+COPY ./target/your-application.jar /app/your-application.jar
 
 # 指定容器启动时要执行的命令
 CMD ["java", "-jar", "your-application.jar"]
@@ -79,6 +79,15 @@ CMD ["java", "-jar", "your-application.jar"]
 
 ```shell
 #!/bin/bash
+
+echo "检查更新"
+git pull
+# 项目清理
+mvn clean
+echo "清理上次打包文件..."
+echo "开始重新项目打包..."
+mvn package
+echo "项目打包完成！"
 
 # 定义容器名称和镜像名称【都小写】
 container_name="your-container-name"
@@ -104,7 +113,7 @@ docker build -t $image_name .
 
 # 启动容器
 echo "Starting container $container_name..."
-docker run -d --name $container_name $image_name
+docker run -d -p 8082:8080 --name $container_name $image_name
 
 echo "Container $container_name started successfully."
 
