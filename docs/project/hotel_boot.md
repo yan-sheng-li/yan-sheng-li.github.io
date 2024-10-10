@@ -5,7 +5,7 @@
 ::: warning
 ### 友链供稿
 
-<font size=10>**[👉点我查看](http://blog.liyansheng.top/project/hotel_boot/)**</font>。
+<font size=10>**[👉点我查看](https://www.liyansheng.top/blog/project/hotel_boot/)**</font>。
 
 
 :::
