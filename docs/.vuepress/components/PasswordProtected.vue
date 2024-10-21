@@ -4,9 +4,10 @@
         <slot></slot>
       </div>
       <div v-else>
-        <h3>完整内容请👇</h3>
-        <input v-model="password" type="password" placeholder="输入秘钥：1234" />
-        <button @click="checkPassword">提交</button>
+        <h3>完整内容，请输入 👇</h3>
+        <h2 style="background-color:yellow;color: red;">秘钥:1234  </h2>
+        <input v-model="password" type="password" placeholder="请输入..." />
+        <button @click="checkPassword">确定</button>
         <p v-if="errorMessage" style="color: red;font-size: 30px;">{{ errorMessage }}</p>
       </div>
     </div>
