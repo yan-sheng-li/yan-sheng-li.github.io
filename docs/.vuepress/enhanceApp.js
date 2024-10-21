@@ -7,12 +7,13 @@ import CustomFooter from './components/CustomFooter.vue'
 import S from './components/s.vue'
 import Cook from './components/Cook.vue'
 import PasswordProtected from './components/PasswordProtected.vue'
-import ClientOnlySlideVerify from './client-only-slide-verify'
 import SlideVerify from 'vue-monoplasty-slide-verify';
+import SlideProtected from './components/SlideProtected.vue'
 
 
 
-export default ({ Vue ,isServer }) => {
+
+export default ({ Vue  }) => {
   // 全局注册组件
   Vue.component('MyGlobalComponent', MyGlobalComponent);
   Vue.component('gzh', gzh)
@@ -22,7 +23,5 @@ export default ({ Vue ,isServer }) => {
   Vue.component('ScrollingNotice', ScrollingNotice)
   Vue.component('CustomFooter', CustomFooter)
   Vue.use(SlideVerify);
-  if (!isServer) {
-    Vue.component('SlideProtected', ClientOnlySlideVerify)
-  }
+  Vue.component('SlideProtected', SlideProtected)
 }
