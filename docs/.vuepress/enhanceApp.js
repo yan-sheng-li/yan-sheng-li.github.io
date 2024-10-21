@@ -7,6 +7,8 @@ import CustomFooter from './components/CustomFooter.vue'
 import S from './components/s.vue'
 import Cook from './components/Cook.vue'
 import PasswordProtected from './components/PasswordProtected.vue'
+import SlideProtected from './components/SlideProtected.vue'
+import SlideVerify from 'vue-monoplasty-slide-verify';
 
 
 
@@ -19,4 +21,6 @@ export default ({ Vue }) => {
   Vue.component('Cook', Cook)
   Vue.component('ScrollingNotice', ScrollingNotice)
   Vue.component('CustomFooter', CustomFooter)
+  Vue.component('SlideProtected', SlideProtected)
+  Vue.use(SlideVerify);
 }

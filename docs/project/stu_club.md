@@ -2,7 +2,7 @@
 
 
 
-<PasswordProtected>
+<SlideProtected>
 
 <MyGlobalComponent />
 
@@ -49,4 +49,4 @@
 ## 程序
 ![](http://cdn.qiniu.liyansheng.top/img/image-20241021151459201.png)
 
-</PasswordProtected>
+</SlideProtected>
