@@ -50,11 +50,16 @@ export default {
         {
           name: '设计与素材',
           links: [
-          // { title: '', url: '', image: '' }
             { title: '彼岸壁纸', url: 'http://www.netbian.com/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909110044.png' },
             { title: '暖糖壁纸', url: 'https://www.nuantang.net/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909110214.png' },
             { title: 'PNG素材', url: 'https://www.pngsucai.com/', image: 'http://cdn.qiniu.liyansheng.top/img/20240909110728.png' },
             { title: '极简壁纸', url: 'https://bz.zzzmh.cn/index', image: 'http://cdn.qiniu.liyansheng.top/img/20240909110819.png' },
+          ]
+        },
+        {
+          name: '找资源',
+          links: [
+            { title: '盘搜搜', url: 'https://www.yunso.net/', image: 'http://cdn.qiniu.liyansheng.top/img/20241025225452.png' },
           ]
         }
       ]
