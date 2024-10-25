@@ -52,3 +52,12 @@
 | [1Panel](https://1panel.cn/ ) | 可视化操作Linux | 方便      |
 | [pm2](https://pm2.keymetrics.io/)| 进程管理工具| 上手简单|
 | [谷歌站点访问记录](https://analytics.google.com/analytics/web/)| 站点分析| 易集成|
+
+
+## 电脑日常工具
+| 名称 | 地址|
+|------|-------
+| 蓝奏云盘| https://pc.woozooo.com/account.php?action=login&ref=/mydisk.php 
+| 办公office绿色版| 链接：https://pan.xunlei.com/s/VOA0oLSMHeRjra28V_RetdpQA1?pwd=9hsa# 
+| VMware 绿色版| 链接：https://pan.xunlei.com/s/VOA0oY5pim1UQkseOPcBR952A1?pwd=d3if# 
+| Typora免费版 | 链接: https://pan.baidu.com/s/1qFgkG7z9FPfTCAeg9yRCHw?pwd=bruh 提取码: bruh
