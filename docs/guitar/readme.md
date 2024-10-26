@@ -5,7 +5,7 @@
 
 [自定义-鼓机](https://wambox.net/)
 
-<!-- [在线-本地录音](/vuepage/LocalRecording) -->
+[在线-录音](https://vocalremover.org/zh/voice-recorder)
 
 [在线-鼓声](https://www.musicca.com/zh/drum-machine?data=70-n-44-a--5acegikmo6em7ai-)
 
@@ -17,3 +17,4 @@
 [有谱么](https://yopu.co/)
 
 [歌曲多，伴奏也多](https://5sing.kugou.com/index.html)
+
