@@ -61,3 +61,4 @@
 | 办公office绿色版| 链接：https://pan.xunlei.com/s/VOA0oLSMHeRjra28V_RetdpQA1?pwd=9hsa# 
 | VMware 绿色版| 链接：https://pan.xunlei.com/s/VOA0oY5pim1UQkseOPcBR952A1?pwd=d3if# 
 | Typora免费版 | 链接: https://pan.baidu.com/s/1qFgkG7z9FPfTCAeg9yRCHw?pwd=bruh 提取码: bruh
+| 纯净装机系统| [https://www.chunjingban.net/](https://www.chunjingban.net/)

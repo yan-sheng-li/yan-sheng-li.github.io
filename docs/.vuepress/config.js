@@ -115,13 +115,11 @@ module.exports = {
             ]
           },
           {
-            text: '专题',
+            text: '酷玩机',
             items: [
-              { text: '编程篇', link: '/tool/' },
-              { text: '在线篇', link: '/online/' },
-              { text: '素材篇', link: '/source/' },
+              { text: '科学上网', link: '/tool/' },
             ]
-          },
+          }
         ]
       },
       {
@@ -401,7 +399,8 @@ module.exports = {
             '基础练习',
             '音阶',
             '节奏',
-            '音阶练习曲'
+            '音阶练习曲',
+            '流行歌简谱'
           ]
         },
       ],
@@ -440,11 +439,18 @@ module.exports = {
         },
       ],
       '/tool/': [
+        // {
+        //   title: 'IDEA',
+        //   collapsable: false,
+        //   children: [
+        //     '整合Docker'
+        //   ]
+        // },
         {
-          title: 'IDEA',
+          title: 'vpn',
           collapsable: false,
           children: [
-            '整合Docker'
+            'VPN'
           ]
         },
       ],
