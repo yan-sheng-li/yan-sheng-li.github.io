@@ -10,7 +10,7 @@
 
 每个月有免费额度，不太稳定，凑合用
 
-[ＩＫＵＵＵ　ＶＰＮ](https://ikuuu.pw/)
+[IKUUU](https://ikuuu.pw/)
 
 ## 方案３
 
@@ -20,4 +20,20 @@
 
 ## 工具
 
-推荐　[ｃｌａｓｈ](https://clashforwindows.org/clash-for-windows-official/)
+推荐　
+[Clash](https://clashforwindows.org/clash-for-windows-official/)
+
+
+## 方案4
+工具使用 [【hiddify】有win版，安卓版，和mac版](https://github.com/hiddify/hiddify-next/releases)
+
+免费节点可订阅
+
+[AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes?tab=readme-ov-file)
+
+[V2RayAggregator](https://github.com/mahdibland/V2RayAggregator?tab=readme-ov-file)
+
+[V2ray-Config](https://github.com/barry-far/V2ray-Configs?tab=readme-ov-file)
+
+
+
