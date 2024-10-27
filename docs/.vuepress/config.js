@@ -117,7 +117,8 @@ module.exports = {
           {
             text: '酷玩机',
             items: [
-              { text: '科学上网', link: '/tool/' },
+              { text: '科学上网', link: '/tool/VPN.html' },
+              { text: '浏览器插件', link: '/tool/Plugins.html' },
             ]
           }
         ]
@@ -450,7 +451,8 @@ module.exports = {
           title: 'vpn',
           collapsable: false,
           children: [
-            'VPN'
+            'VPN',
+            'Plugins'
           ]
         },
       ],
