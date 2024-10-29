@@ -42,6 +42,7 @@ module.exports = {
   ],
   description: '各类项目汇总,涵盖JavaGUI,servlet+jsp,SSM,SpringBoot+Vue,Python,微信小程序...',
   themeConfig: {
+    lastUpdated: 'Last Updated', // 或者用其他自定义提示文字
     logo: 'http://cdn.qiniu.liyansheng.top/img/微信图片_20240826190120.jpg',
     nav: [
       {
