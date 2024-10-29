@@ -117,8 +117,9 @@ module.exports = {
           {
             text: '酷玩机',
             items: [
-              { text: '科学上网', link: '/tool/VPN.html' },
-              { text: '浏览器插件', link: '/tool/Plugins.html' },
+              { text: '科学上网', link: '/tool/VPN' },
+              { text: '浏览器插件', link: '/tool/Plugins' },
+              { text: '免费看电视', link: '/tool/freeTv' },
             ]
           }
         ]
@@ -436,23 +437,6 @@ module.exports = {
           collapsable: false,
           children: [
             'mybatis-plus动态组合SQL'
-          ]
-        },
-      ],
-      '/tool/': [
-        // {
-        //   title: 'IDEA',
-        //   collapsable: false,
-        //   children: [
-        //     '整合Docker'
-        //   ]
-        // },
-        {
-          title: 'vpn',
-          collapsable: false,
-          children: [
-            'VPN',
-            'Plugins'
           ]
         },
       ],
