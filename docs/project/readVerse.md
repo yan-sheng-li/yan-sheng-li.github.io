@@ -1,4 +1,4 @@
-# 📕在线小说网
+# 📕在线小说网 <Badge type="warning" text="毕设" vertical="top" />
 
 <MyGlobalComponent />
 

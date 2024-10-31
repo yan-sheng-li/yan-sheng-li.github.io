@@ -1,4 +1,4 @@
-# 👩‍🎓就业信息管理系统
+# 👩‍🎓就业信息管理系统 <Badge type="warning" text="毕设" vertical="top" />
 
 <MyGlobalComponent />
 

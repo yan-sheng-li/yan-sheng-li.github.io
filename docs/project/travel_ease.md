@@ -1,4 +1,4 @@
-# 🚝在线旅游网站
+# 🚝在线旅游网站 <Badge type="warning" text="毕设" vertical="top" />
 
 <MyGlobalComponent />
 

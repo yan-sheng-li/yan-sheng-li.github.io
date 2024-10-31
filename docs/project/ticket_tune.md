@@ -1,4 +1,4 @@
-# 🎙演唱会售票系统
+# 🎙演唱会售票系统 <Badge type="warning" text="毕设" vertical="top" />
 
 <MyGlobalComponent />
 

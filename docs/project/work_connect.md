@@ -1,4 +1,4 @@
-# 🔐家务接发管家系统
+# 🔐家务接发管家系统 <Badge type="warning" text="毕设" vertical="top" />
 
 <MyGlobalComponent />
 

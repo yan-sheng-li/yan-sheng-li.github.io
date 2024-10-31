@@ -1,4 +1,4 @@
-# 😁大学生社团管理系统
+# 😁大学生社团管理系统 <Badge type="warning" text="毕设" vertical="top" />
 
 
 
