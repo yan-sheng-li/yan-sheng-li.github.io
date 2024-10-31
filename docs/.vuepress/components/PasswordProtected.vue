@@ -4,10 +4,10 @@
         <slot></slot>
       </div>
       <div v-else>
-        <h3>完整内容，请输入 👇</h3>
-        <h2 style="background-color:yellow;color: red;">秘钥:1234  </h2>
-        <input v-model="password" type="password" placeholder="请输入..." />
-        <button @click="checkPassword">确定</button>
+        <h3></h3>
+        <h2 style="background-color:yellow;color: red;">关注公众号，回复【芝麻开门】，即可获取【口令】 </h2>
+        <input v-model="password" type="password" placeholder="请输入口令~" />
+        <button @click="checkPassword">👈确认口令</button>
         <p v-if="errorMessage" style="color: red;font-size: 30px;">{{ errorMessage }}</p>
       </div>
     </div>
@@ -24,12 +24,12 @@
     },
     methods: {
       checkPassword() {
-        const correctPassword = '1234';
+        const correctPassword = '202410';
         if (this.password === correctPassword) {
           this.isAuthorized = true;
           this.errorMessage = '';
         } else {
-          this.errorMessage = '秘钥不正确😲请重试。';
+          this.errorMessage = '口令不对😲请重试。';
         }
       },
     },
