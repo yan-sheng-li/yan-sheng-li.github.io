@@ -477,7 +477,7 @@ module.exports = {
           ]
         },
         {
-          title: '------Java GUI------',
+          title: '------Java------',
           collapsable: false,
           children: [
             'supermarket_sys',
@@ -513,6 +513,7 @@ module.exports = {
             'stu_info',
             'book_lend',
             'wage_sys',
+            '影院购票管理系统',
             'prop_ease',
             'select_course_sys',
             'parcel_manager',
