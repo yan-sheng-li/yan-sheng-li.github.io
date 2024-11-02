@@ -9,7 +9,7 @@
 
 [在线-鼓声](https://www.musicca.com/zh/drum-machine?data=70-n-44-a--5acegikmo6em7ai-)
 
-[在线-随心所欲生成伴奏！可自定和弦、节奏、音色、速度](https://www.onemotion.com/chord-player/)
+[在线-随心所欲生成伴奏！可自定和弦、节奏、音色、速度](https://www.musicca.com/zh/chord-player)
 
 
 [牛人乐谱](https://www.yoga-8.com/pages/index/home)

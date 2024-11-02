@@ -118,9 +118,9 @@ module.exports = {
           {
             text: '酷玩机',
             items: [
-              { text: '科学上网', link: '/tool/VPN' },
+              { text: '科学上网', link: '/blog/posts/40617.html' },
               { text: '浏览器插件', link: '/tool/Plugins' },
-              { text: '免费看电视', link: '/tool/freeTv' },
+              { text: '免费看电视', link: '/blog/posts/18883.html' },
             ]
           }
         ]
