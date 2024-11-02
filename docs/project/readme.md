@@ -1,10 +1,10 @@
 
 <ScrollingNotice />
-# 👈左侧，切换项目
+# 👈左侧边栏，切换项目
 
 <template>
   <div id="carousel-container">
-    <carousel-3d :autoplay="true" :autoplay-timeout="3000" :width="400" :height="270" :display="3" :perspective="35" :space="200">
+    <carousel-3d :autoplay="true" :autoplay-timeout="2500" :width="400" :height="270" :display="3" :perspective="35" :space="200">
       <slide v-for="(slide, i) in slides" :index="i" :key="i">
         <!-- 使用插槽来定制每张幻灯片 -->
         <template v-slot="{ index, isCurrent, leftIndex, rightIndex }">
@@ -17,6 +17,13 @@
     </carousel-3d>
   </div>
 </template>
+
+[一键联系博主](https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC)
+
+[加QQ](http://cdn.qiniu.liyansheng.top/img/20240715004059.png)
+
+[加微信](http://cdn.qiniu.liyansheng.top/img/20240715004147.png)
+
 
 <script>
 import { Carousel3d, Slide } from "vue-carousel-3d";

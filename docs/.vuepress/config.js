@@ -461,13 +461,6 @@ module.exports = {
       ],
       '/project/': [
         {
-          // title: '------------',
-          collapsable: false,
-          children: [
-            'customized'
-          ]
-        },
-        {
           title: '------定制------',
           collapsable: false,
           children: [
