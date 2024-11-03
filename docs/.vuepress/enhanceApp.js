@@ -9,7 +9,6 @@ import Cook from './components/Cook.vue'
 import PasswordProtected from './components/PasswordProtected.vue'
 import SlideVerify from 'vue-monoplasty-slide-verify';
 import SlideProtected from './components/SlideProtected.vue'
-import Carousel3d   from 'vue-carousel-3d';
 
 
 
@@ -24,6 +23,5 @@ export default ({ Vue  }) => {
   Vue.component('ScrollingNotice', ScrollingNotice)
   Vue.component('CustomFooter', CustomFooter)
   Vue.use(SlideVerify);
-  Vue.use(Carousel3d);
   Vue.component('SlideProtected', SlideProtected)
 }
