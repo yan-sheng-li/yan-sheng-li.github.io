@@ -4,6 +4,7 @@
 
 <template>
   <div id="carousel-container">
+  <client-only>
     <carousel-3d :autoplay="true" :autoplay-timeout="2500" :width="400" :height="270" :display="3" :perspective="35" :space="200">
       <slide v-for="(slide, i) in slides" :index="i" :key="i">
         <!-- 使用插槽来定制每张幻灯片 -->
@@ -15,6 +16,7 @@
         </template>
       </slide>
     </carousel-3d>
+  </client-only>
   </div>
 </template>
 
