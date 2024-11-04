@@ -580,6 +580,13 @@ module.exports = {
             'hospital_mini',
           ]
         },
+        {
+          title: '------个性------',
+          collapsable: false,
+          children: [
+            '网页中添加看板娘',
+          ]
+        },
 
       ],
     },
