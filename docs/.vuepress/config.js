@@ -91,7 +91,8 @@ module.exports = {
               { text: 'ElasticSearch', link: '/ElasticSearch/' },
               { text: 'Kafka', link: '/kafka/' },
               { text: 'Linux', link: '/Linux/' },
-              { text: '微信小程序', link: '/微信小程序/' }
+              { text: '微信小程序', link: '/微信小程序/' },
+              { text: 'Node', link: '/Node/' }
             ]
           },
           {
@@ -337,7 +338,8 @@ module.exports = {
           title: 'Python',
           collapsable: false,
           children: [
-            '常用技法'
+            '常用技法',
+            '基于Flask写API'
           ]
         },
       ],
@@ -392,6 +394,16 @@ module.exports = {
             '用例图画法',
             '参考文献',
             '课程设计报告-模板'
+          ]
+        },
+      ],
+      '/Node/': [
+        {
+          title: 'Node相关',
+          collapsable: false,
+          children: [
+            '测试',
+            '快速写API'
           ]
         },
       ],
