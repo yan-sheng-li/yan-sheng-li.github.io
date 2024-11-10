@@ -9,6 +9,7 @@ import Cook from './components/Cook.vue'
 import PasswordProtected from './components/PasswordProtected.vue'
 import SlideVerify from 'vue-monoplasty-slide-verify';
 import SlideProtected from './components/SlideProtected.vue'
+import FloatingImage from './components/FloatingImage.vue'
 
 
 
@@ -24,4 +25,5 @@ export default ({ Vue  }) => {
   Vue.component('CustomFooter', CustomFooter)
   Vue.use(SlideVerify);
   Vue.component('SlideProtected', SlideProtected)
+  Vue.component('FloatingImage', FloatingImage)
 }
