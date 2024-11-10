@@ -14,5 +14,6 @@
 - 基于hexo搭建，移步[http://www.liyansheng.top/blog/](http://www.liyansheng.top/blog/)预览效果
 ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-09-08_01-06-36.png)
 
-## 定制
-![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-09-08_01-23-55.png)
+
+
+<FloatingImage src="http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-09-08_01-23-55.png" alt="扫码获取" />
