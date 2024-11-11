@@ -308,7 +308,8 @@ module.exports = {
           children: [
             'JDBC常用方法封装',
             '使用JFileChooser',
-            '文字转化图片'
+            '文字转化图片',
+            '普通项目打jar'
           ]
         },
       ],
