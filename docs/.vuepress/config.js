@@ -567,6 +567,7 @@ module.exports = {
             'carrer_cloud',
             'travel_ease',
             '虚拟空调自由',
+            '博客系统',
             '体质检测管理系统',
             '酒店管理系统',
             '教材领取管理系统',
