@@ -108,20 +108,19 @@ module.exports = {
         link: '/project/'
       },
       {
+        text: '远程调试',
+        link: 'https://www.liyansheng.top/blog/remote_help/'
+      },
+      {
         text: '⚙工具环境',
         items: [
           {
-            text: '远程调试',
-            items: [
-              { text: '点我', link: 'https://www.liyansheng.top/blog/remote_help/' },
-            ]
-          },
-          {
             text: '酷玩机',
             items: [
-              { text: '科学上网', link: '/blog/posts/40617.html' },
+              { text: '科学上网', link: 'https://www.liyansheng.top/blog/posts/40617.html' },
               { text: '浏览器插件', link: '/tool/Plugins' },
-              { text: '免费看电视', link: '/blog/posts/18883.html' },
+              { text: '免费看电视', link: 'https://www.liyansheng.top/blog/posts/18883.html' },
+              { text: '搭建内网穿透', link: 'https://www.liyansheng.top/blog/posts/57913.html' },
             ]
           }
         ]
