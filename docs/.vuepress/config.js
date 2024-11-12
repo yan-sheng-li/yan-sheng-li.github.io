@@ -320,6 +320,7 @@ module.exports = {
           children: [
             'git快速入门',
             '分支改进',
+            '通过 GitHub 托管静态文件',
             '本地初始库与远程库已有库合并'
           ]
         },
