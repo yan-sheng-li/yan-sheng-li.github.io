@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: http://cdn.qiniu.liyansheng.top/img/pngsucai_5912822_27e612.png
+heroImage: http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png
 heroText: 木子-空间 
 tagline: 项目，笔记，教程，找起来更快捷方便！🚀
 actionText: Go →
