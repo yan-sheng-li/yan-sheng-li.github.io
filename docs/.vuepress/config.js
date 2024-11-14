@@ -1,5 +1,5 @@
 module.exports = {
-  title: '木子-空间',
+  title: '木子空间',
   plugins: ['cursor-effects', 'go-top', 'reading-progress', require('./my-plugin'),
     'vuepress-plugin-copy-code',
     [
