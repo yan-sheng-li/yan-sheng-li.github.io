@@ -1,6 +1,7 @@
 ## 收录
 - 必应 [前往](https://www.bing.com/webmasters/home?siteUrl=https://www.liyansheng.top)
 - 谷歌 [前往](https://search.google.com/search-console?resource_id=https%3A%2F%2Fwww.liyansheng.top%2F)
+- 百度 [前往](https://ziyuan.baidu.com/dashboard/index?site=https://www.liyansheng.top/)
 
 ## 安装部署
 
