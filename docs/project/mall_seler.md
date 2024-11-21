@@ -1,4 +1,4 @@
-# 🙎‍♂️销售人员信息管理系统
+# 🙎‍♂️销售人员信息管理系统*
 
 <MyGlobalComponent />
 
@@ -33,5 +33,36 @@
 
 ## 程序
 ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-09_00-13-25.png)
+
+## 对应报告
+
+<details>
+  <summary>点击查看【目录大纲】</summary>
+
+1. 一、实验目的
+2. 二、项目背景
+3. 三、开发环境
+4. 四、需求分析
+5. 五、系统架构
+总体架构
+功能模块
+系统流程
+6. 六、数据库设计
+ER 分析
+逻辑设计
+建表 SQL
+7. 七、系统实现
+项目结构
+实现效果
+8. 八、关键代码
+9. 九、总结
+10. 十、参考文献
+
+</details>
+
+
+![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-11-22_01-39-41.png)
+![](http://cdn.qiniu.liyansheng.top/img/20241122015235.png)
+
 
 
