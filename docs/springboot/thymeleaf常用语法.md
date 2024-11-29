@@ -88,3 +88,17 @@
 
  ###    自定义标签库：
         th:*、th:each、th:if 等：Thymeleaf 还支持使用自定义标签库，可以通过这些标签来扩展 Thymeleaf 的功能。
+
+
+###  拼接简化
+原：
+
+```
+th:onclick="'getOrder('+${i.id}+')'"
+```
+
+可以这样写：
+
+```
+th:onclick="|del(${user.id})|"
+```
