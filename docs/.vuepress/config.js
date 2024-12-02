@@ -406,8 +406,9 @@ module.exports = {
           title: 'Node相关',
           collapsable: false,
           children: [
-            '测试',
-            '快速写API'
+            // '测试',
+            // '快速写API',
+            '常用命令'
           ]
         },
       ],
