@@ -405,6 +405,13 @@ module.exports = {
             '404页面-模板'
           ]
         },
+        {
+          title: '小知识',
+          collapsable: false,
+          children: [
+            '解构赋值'
+          ]
+        },
       ],
       '/report/': [
         {
