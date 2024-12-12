@@ -32,4 +32,7 @@ export default ({ Vue  }) => {
 }
 
 import $ from "jquery";
-window.$ = $;
+
+if (typeof window !== "undefined") {
+  window.$ = $;
+}
