@@ -10,6 +10,8 @@ import PasswordProtected from './components/PasswordProtected.vue'
 import SlideVerify from 'vue-monoplasty-slide-verify';
 import SlideProtected from './components/SlideProtected.vue'
 import FloatingImage from './components/FloatingImage.vue'
+import PaymentButton from './components/PaymentButton.vue'
+
 
 
 
@@ -25,5 +27,9 @@ export default ({ Vue  }) => {
   Vue.component('CustomFooter', CustomFooter)
   Vue.use(SlideVerify);
   Vue.component('SlideProtected', SlideProtected)
-  Vue.component('FloatingImage', FloatingImage)
+  Vue.component('FloatingImage', FloatingImage);
+  Vue.component('PaymentButton', PaymentButton)
 }
+
+import $ from "jquery";
+window.$ = $;

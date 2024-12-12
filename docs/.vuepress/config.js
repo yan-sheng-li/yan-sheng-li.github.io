@@ -106,7 +106,7 @@ module.exports = {
               { text: 'Kafka', link: '/kafka/' },
               { text: 'Linux', link: '/Linux/' },
               { text: '微信小程序', link: '/微信小程序/' },
-              { text: 'Node', link: '/Node/' }
+              { text: 'Node', link: '/node/' }
             ]
           },
           {
@@ -424,7 +424,7 @@ module.exports = {
           ]
         },
       ],
-      '/Node/': [
+      '/node/': [
         {
           title: 'Node相关',
           collapsable: false,
