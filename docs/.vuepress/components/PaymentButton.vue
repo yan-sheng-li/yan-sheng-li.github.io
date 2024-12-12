@@ -1,6 +1,6 @@
 <template>
     <div class="payment-container">
-      <!-- 按钮 -->
+      <!-- 获取产品按钮 -->
       <button @click="fetchProductData" class="payment-button">
         {{ buttonText }}
       </button>
@@ -9,7 +9,7 @@
       <div v-if="showCard" class="product-card">
         <h2>{{ product.name }}</h2>
         <p><strong>描述：</strong>{{ product.description }}</p>
-        <p><strong>价格：</strong>{{ product.price }}</p>
+        <p><strong>价格：</strong>¥{{ product.price }}</p>
         <button @click="initiatePayment" class="order-button">点击下单</button>
       </div>
   
@@ -18,19 +18,27 @@
       <!-- 提示信息 -->
       <p v-if="msg" class="message">{{ msg }}</p>
   
-      <!-- 支付二维码 -->
-      <div v-if="qrCodeUrl" class="qr-code">
-        <p><strong>订单号:</strong> {{ orderId }}</p>
-        <img :src="qrCodeUrl" alt="Pay QR Code" />
-        <p>请扫码支付</p>
-        <button @click="checkPaymentStatus" class="check-payment-button">我已支付</button>
+      <!-- 支付二维码区域 -->
+      <div v-if="qrCodeUrl" class="qr-code-wrapper">
+        <div class="qr-code-header">
+          <img src="http://cdn.qiniu.liyansheng.top/img/wxpay.png" alt="微信支付" class="wechat-icon" />
+          <p>微信支付</p>
+        </div>
+        <div class="qr-code-container">
+          <p><strong>订单号:</strong> {{ orderId }}</p>
+          <img :src="qrCodeUrl" alt="支付二维码" class="qr-code" />
+          <p>请使用微信扫描二维码支付</p>
+          <button @click="checkPaymentStatus" class="check-payment-button">我已支付，点击获取</button>
+        </div>
       </div>
   
-      <!-- 支付状态 -->
+      <!-- 支付状态区域 -->
       <div v-if="paymentStatus" class="payment-status">
-        <p>{{ paymentStatus }}</p>
+        <p class="message">{{ paymentStatus }}
+
+        </p>
         <hr />
-        <h3 v-if="productUrl" class="download-link">下载链接：<a :href="productUrl" target="_blank">{{ productUrl }}</a></h3>
+        <h3 v-if="productUrl" class="download-link">下载地址：{{productUrl}}</h3>
       </div>
     </div>
   </template>
@@ -49,10 +57,10 @@
     },
     data() {
       return {
-        baseUrl: "http://liyansheng.top:8084", // 定义基础URL变量
+        baseUrl: "https://mini.liyansheng.top/v1",
         productUrl: null,
         qrCodeUrl: "",
-        orderId: null, // 存储订单ID
+        orderId: null,
         paymentStatus: null,
         msg: null,
         product: {
@@ -60,32 +68,26 @@
           name: "",
           description: "",
           price: null,
-          downloadUrl: "",
-          createdAt: "",
-          updatedAt: "",
         },
-        showCard: false, // 控制卡片是否显示
+        showCard: false,
       };
     },
     methods: {
-      // 获取产品信息
       fetchProductData() {
-        $.get(this.baseUrl + "/v1/products/" + this.productId).then((res) => {
+        $.get(this.baseUrl + "/products/" + this.productId).then((res) => {
           this.product = res;
           this.showCard = true;
         });
       },
-      // 创建订单
       initiatePayment() {
-        $.get(this.baseUrl + "/v1/orders/create/" + this.productId).then((res) => {
+        $.get(this.baseUrl + "/orders/create/" + this.productId).then((res) => {
           this.orderId = res.orderId;
           this.msg = res.msg;
           this.qrCodeUrl = res.QRcode_url;
         });
       },
-      // 检查支付状态
       checkPaymentStatus() {
-        $.get(this.baseUrl + "/v1/orders/status/" + this.orderId).then((res) => {
+        $.get(this.baseUrl + "/orders/status/" + this.orderId).then((res) => {
           this.paymentStatus = res.msg;
           this.productUrl = res.url;
         });
@@ -109,7 +111,7 @@
   .payment-button,
   .order-button,
   .check-payment-button {
-    background-color: #409eff;
+    background-color: #07c160;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -122,7 +124,7 @@
   .payment-button:hover,
   .order-button:hover,
   .check-payment-button:hover {
-    background-color: #66b1ff;
+    background-color: #05a14e;
   }
   
   .product-card {
@@ -134,7 +136,36 @@
     margin-top: 20px;
   }
   
-  .qr-code img {
+  .qr-code-wrapper {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #e6f7f2;
+    border-radius: 10px;
+    background-color: #f6ffed;
+  }
+  
+  .qr-code-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .wechat-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  .qr-code-container {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .qr-code {
     width: 200px;
     height: 200px;
     margin-top: 10px;
@@ -143,13 +174,14 @@
   }
   
   .payment-status {
+    color: blue;
     margin-top: 20px;
     font-weight: bold;
     text-align: center;
   }
   
   .download-link a {
-    color: #409eff;
+    color: #07c160;
     text-decoration: none;
   }
   
