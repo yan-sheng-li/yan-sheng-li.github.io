@@ -41,7 +41,6 @@
       <div v-if="productUrl">
         <p style="color: black;">下载地址👇</p>
         <div style="border: 1px solid red;padding: 5px;">
-
           <h3 class="download-link">{{ productUrl }}</h3>
         </div>
       </div>
@@ -98,7 +97,10 @@ export default {
         this.orderId = res.orderId;
         this.msg = res.msg;
         this.qrCodeUrl = res.QRcode_url;
-      });
+        $('.order-button').hide();
+      }).catch((err) => {
+        console.error("Error fetching product data:", err);
+      })
     },
     checkPaymentStatus() {
       $.get(this.baseUrl + "/orders/status/" + this.orderId).then((res) => {
