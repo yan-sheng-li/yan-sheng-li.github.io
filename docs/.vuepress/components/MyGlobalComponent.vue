@@ -15,7 +15,6 @@ export default {
           <a href="https://blog.csdn.net/weixin_44107140"><img src="https://img.shields.io/badge/CSDN-博客-red" alt="CSDN"></a>
           <a href="https://gitee.com/yan-sheng-li"><img src="https://img.shields.io/badge/Gitee-码云-orange" alt="Gitee"></a>
           <a href="https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC"><img src="https://img.shields.io/badge/Q群-619298035-18a2ea" alt="QQ Group"></a>
-          <a href="http://www.liyansheng.top/blog/install/" target="_blank"><img src="https://img.shields.io/badge/软件环境-安装指引-b00fdd" alt="Space"></a>
           <img src="https://img.shields.io/badge/QQ-1761724207-29a1db" alt="WeChat">
           <img src="https://img.shields.io/badge/微信-17641244340-07c261" alt="WeChat">
         </div>
