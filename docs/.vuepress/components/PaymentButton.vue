@@ -34,11 +34,15 @@
 
     <!-- 支付状态区域 -->
     <div v-if="paymentStatus" class="payment-status">
-      <p class="message">{{ paymentStatus }}
+      <p class="message">{{ paymentStatus }}  <span style="color: blueviolet;">如遇异常，请联系作者！</span>
 
       </p>
       <hr />
-      <h3 v-if="productUrl" class="download-link">下载地址：{{ productUrl }}</h3>
+      <p style="color: black;">下载地址👇</p>
+      <div style="border: 1px solid red;padding: 5px;">
+        
+        <h3 v-if="productUrl" class="download-link">{{ productUrl }}</h3>
+      </div>
     </div>
   </div>
 </template>
@@ -78,6 +82,7 @@ export default {
         .then((res) => {
           this.product = res;
           this.showCard = true;
+          this.msg=""
         })
         .catch((err) => {
           console.error("Error fetching product data:", err);
