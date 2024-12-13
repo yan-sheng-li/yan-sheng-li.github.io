@@ -28,7 +28,7 @@
         <p><strong>订单号:</strong> {{ orderId }}</p>
         <img :src="qrCodeUrl" alt="支付二维码" class="qr-code" />
         <p>请使用微信扫描二维码支付</p>
-        <button @click="checkPaymentStatus" class="check-payment-button">我已支付，点击获取</button>
+        <button @click="checkPaymentStatus" class="check-payment-button">我已支付，点击获取资源</button>
       </div>
     </div>
 
