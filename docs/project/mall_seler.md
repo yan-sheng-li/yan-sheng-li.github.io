@@ -32,7 +32,8 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240608212751.png)
 
 ## 程序
-![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-09_00-13-25.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-09_00-13-25.png) -->
+<PaymentButton :productId="144" />
 
 ## 对应报告
 
@@ -62,7 +63,7 @@ ER 分析
 
 
 ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-11-22_01-39-41.png)
-![](http://cdn.qiniu.liyansheng.top/img/20241122015235.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20241122015235.png) -->
 
-
+<PaymentButton :productId="145" :buttonText="'点我获取-报告'"/>
 

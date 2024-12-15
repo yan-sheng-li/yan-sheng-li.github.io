@@ -50,4 +50,6 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240712182006.png)
 
 ## 程序
-![](http://cdn.qiniu.liyansheng.top/img/20240712184837.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240712184837.png) -->
+
+<PaymentButton :productId="130" />

@@ -4,3 +4,5 @@
 <S/>
 
 <PaymentButton :productId="101" />
+
+<PaymentButton :productId="129" :buttonText="'点我获取-报告'"/>

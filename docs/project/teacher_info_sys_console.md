@@ -95,4 +95,5 @@
 ```
 
 ## 程序
-![](http://cdn.qiniu.liyansheng.top/img/20240625212114.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240625212114.png) -->
+<PaymentButton :productId="170" />

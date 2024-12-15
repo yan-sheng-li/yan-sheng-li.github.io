@@ -50,5 +50,6 @@
 
 ::: warning
 ![](http://cdn.qiniu.liyansheng.top/img/展111示3.png)
-![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-53-19.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-53-19.png) -->
 :::
+<PaymentButton :productId="162" :buttonText="'点我获取-报告'"/>

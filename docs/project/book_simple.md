@@ -41,7 +41,7 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240526171517.png)
 
 
-## 对应报告
+<!-- ## 对应报告
 
 <details>
   <summary>点击查看【目录大纲】</summary>
@@ -68,6 +68,10 @@ ER 分析
 </details>
 
 
-![](http://cdn.qiniu.liyansheng.top/img/20241122162929.png)
-![](http://cdn.qiniu.liyansheng.top/img/20241122162915.png)
+![](http://cdn.qiniu.liyansheng.top/img/20241122162929.png) -->
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20241122162915.png) -->
+
+<PaymentButton :productId="126" :buttonText="'点我获取-报告'"/>
+
+
 

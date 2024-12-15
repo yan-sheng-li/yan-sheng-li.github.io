@@ -31,5 +31,6 @@
 ## 配套报告
 :::warning
 ![](http://cdn.qiniu.liyansheng.top/img/20240704124812.png)
-![](http://cdn.qiniu.liyansheng.top/img/20240704124654.png)
+
 :::
+<PaymentButton :productId="133" :buttonText="'点我获取-报告'"/>

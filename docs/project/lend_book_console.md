@@ -235,9 +235,9 @@ id  isbn  书名  作者  出版社  馆藏数量
 
 ::: warning
 ![](http://cdn.qiniu.liyansheng.top/img/报告预览图.png)
-![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-15_00-22-44.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-15_00-22-44.png) -->
 :::
 
-
+<PaymentButton :productId="139" :buttonText="'点我获取-报告'"/>
 
 

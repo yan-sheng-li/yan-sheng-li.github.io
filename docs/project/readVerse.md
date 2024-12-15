@@ -43,4 +43,5 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240611103355.png)
 
 ## 程序
-![](http://cdn.qiniu.liyansheng.top/img/20240713010953.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240713010953.png) -->
+<PaymentButton :productId="155" />

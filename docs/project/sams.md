@@ -118,13 +118,15 @@
 以上展示部分，更多页面效果可以拿到源码后自己尝试！
 ## 源码
 
-![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-38-53.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-38-53.png) -->
+<PaymentButton :productId="158" />
 
 ## 配套报告
 
 ::: warning
 ![](http://cdn.qiniu.liyansheng.top/img/报告预ere览图.jpg)
-![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-33-19.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-33-19.png) -->
 :::
+<PaymentButton :productId="159" :buttonText="'点我获取-报告'"/>
 
 

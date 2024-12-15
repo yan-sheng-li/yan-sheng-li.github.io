@@ -58,11 +58,12 @@
 ## 源码👇
 <gzh />
 
-![](http://cdn.qiniu.liyansheng.top/img/20240526172108.png)
+![](http://cdn.qiniu.liyansheng.top/img/20240526172108.png) 
 
 ## 配套报告
 
 ::: warning
 ![](http://cdn.qiniu.liyansheng.top/img/报告123123123预览图.png)
-![](http://cdn.qiniu.liyansheng.top/img/20240909211104.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240909211104.png) -->
 :::
+<PaymentButton :productId="146" :buttonText="'点我获取-报告'"/>

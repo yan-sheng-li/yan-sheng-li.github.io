@@ -40,4 +40,6 @@
 
 ## 源码👇
 
-![](http://cdn.qiniu.liyansheng.top/img/7fcabcdda28d93cf36b80d2ec63c0491.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/7fcabcdda28d93cf36b80d2ec63c0491.png) -->
+
+<PaymentButton :productId="125" />

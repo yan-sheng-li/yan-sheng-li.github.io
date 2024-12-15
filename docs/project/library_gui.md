@@ -28,11 +28,11 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240703200128.png)
 
 ## 程序
-![](http://cdn.qiniu.liyansheng.top/img/20240703205529.png)
+<PaymentButton :productId="142" />
 
 
 ## 配套报告
 :::warning
 ![](http://cdn.qiniu.liyansheng.top/img/20240704180950.png)
-![](http://cdn.qiniu.liyansheng.top/img/20240704180935.png)
 :::
+<PaymentButton :productId="143" :buttonText="'点我获取-报告'"/>

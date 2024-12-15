@@ -34,15 +34,15 @@
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240606184129.png)
 ## 程序
-![](http://cdn.qiniu.liyansheng.top/img/20240606185229.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240606185229.png) -->
 
-
+<PaymentButton :productId="163" />
 
 ## 配套报告
 ::: warning
 ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-06_22-59-02.png)
-![](http://cdn.qiniu.liyansheng.top/img/20240614230025.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240614230025.png) -->
 :::
 
-
+<PaymentButton :productId="164" :buttonText="'点我获取-报告'"/>
 

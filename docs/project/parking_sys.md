@@ -68,5 +68,6 @@
 
 ::: warning
 ![](http://cdn.qiniu.liyansheng.top/img/报告预览432.jpg)
-![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-26-20.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-26-20.png) -->
 :::
+<PaymentButton :productId="149" :buttonText="'点我获取-报告'"/>

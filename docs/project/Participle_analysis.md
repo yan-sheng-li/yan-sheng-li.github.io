@@ -42,7 +42,8 @@ pip install jieba matplotlib
 
 ## 程序
 
-![](http://cdn.qiniu.liyansheng.top/img/20240613122923.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240613122923.png) -->
 
+<PaymentButton :productId="150" />
 
 

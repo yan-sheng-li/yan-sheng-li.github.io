@@ -26,5 +26,7 @@
 ## [需要远程调试，点我😀](http://blog.liyansheng.top/remote_help/)
 
 ## 源码👇
-![](http://cdn.qiniu.liyansheng.top/img/20240602231331.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240602231331.png) -->
+
+<PaymentButton :productId="165" />
 

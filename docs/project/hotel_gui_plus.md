@@ -25,4 +25,5 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240629155334.png)
 
 ## 程序
-![](http://cdn.qiniu.liyansheng.top/img/20240629161341.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240629161341.png) -->
+<PaymentButton :productId="138" />

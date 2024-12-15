@@ -32,7 +32,5 @@
 
 
 ## 源码
-:::warning
-联系作者发你~
-:::
 
+<PaymentButton :productId="124" />

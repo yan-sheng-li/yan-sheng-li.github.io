@@ -79,5 +79,7 @@
 ## 配套报告
 ::: warning
 ![](http://cdn.qiniu.liyansheng.top/img/报告预览123.jpg)
-![](http://cdn.qiniu.liyansheng.top/img/20240614230609.png)
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240614230609.png) -->
 :::
+
+<PaymentButton :productId="169" :buttonText="'点我获取-报告'"/>
