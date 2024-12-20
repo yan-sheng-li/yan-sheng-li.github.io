@@ -38,21 +38,7 @@ module.exports = {
     ['meta', { name: 'description', content: '项目，笔记，教程，找起来更快捷方便！' }],
     ['meta', { name: 'keywords', content: '编程知识, 项目案例, 技术文档,难点解析' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'baidu-site-verification', content: 'codeva-ZjLnH1tXq1' }],
-    // 添加V5智能客服脚本
-    ['script', { type: 'text/javascript' }, `
-          (function (w, d, s, i, v, j, b) {
-            w[i] = w[i] || function () {
-              (w[i].v = w[i].v || []).push(arguments)
-            };
-            j = d.createElement(s),
-              b = d.getElementsByTagName(s)[0];
-            j.async = true;
-            j.charset = "UTF-8";
-            j.src = "https://www.v5kf.com/207439/32a4f0301b87a/v5kf.js";
-            b.parentNode.insertBefore(j, b);
-          })(window, document, "script", "V5CHAT");
-        `]
+    ['meta', { name: 'baidu-site-verification', content: 'codeva-ZjLnH1tXq1' }]
   ],
   description: '各类项目汇总,涵盖JavaGUI,servlet+jsp,SSM,SpringBoot+Vue,Python,微信小程序...',
   themeConfig: {
