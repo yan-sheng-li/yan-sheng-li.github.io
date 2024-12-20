@@ -28,7 +28,7 @@
         <p><strong>订单号:</strong> {{ orderId }}</p>
         <img :src="qrCodeUrl" alt="支付二维码" class="qr-code" />
         <p>请使用微信扫描二维码支付</p>
-        <button @click="checkPaymentStatus" class="check-payment-button">我已支付，点击获取资源</button>
+        <button @click="checkPaymentStatus" class="check-payment-button">支付后，点我-获取资源</button>
       </div>
     </div>
 
@@ -57,7 +57,7 @@ export default {
     },
     buttonText: {
       type: String,
-      default: "点我获取源码",
+      default: "点我-获取源码",
     },
   },
   data() {
