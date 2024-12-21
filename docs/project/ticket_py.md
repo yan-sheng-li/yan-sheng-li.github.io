@@ -41,6 +41,6 @@
 
 这个简单的航空订票系统通过Tkinter库提供的简单易用的GUI工具，为用户提供了便捷的航班管理和预订服务。
 ## 源码👇
-<!-- ![](http://cdn.qiniu.liyansheng.top/img/57d2962d107dec444e7bd527c35c4b38.png) -->
+![](http://cdn.qiniu.liyansheng.top/img/57d2962d107dec444e7bd527c35c4b38.png)
 
-<PaymentButton :productId="171" />
+<!-- <PaymentButton :productId="171" /> -->
