@@ -350,6 +350,13 @@ module.exports = {
             '基于Flask写API'
           ]
         },
+        {
+          title: '爬虫',
+          collapsable: false,
+          children: [
+            'BeautifulSoup运用',
+          ]
+        },
       ],
       '/Js/': [
         {
