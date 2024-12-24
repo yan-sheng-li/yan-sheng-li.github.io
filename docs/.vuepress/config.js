@@ -108,7 +108,7 @@ module.exports = {
         link: '/project/'
       },
       {
-        text: '远程调试',
+        text: '🔥远程调试🔥',
         link: 'https://www.liyansheng.top/blog/remote_help/'
       },
       {
