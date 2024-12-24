@@ -2,6 +2,10 @@
 
 <MyGlobalComponent />
 
+:::danger
+本版本为【原始版】，[【重做版】-点我查看](/project/supermarket_sys_plus)
+:::
+
 ## 技术栈
 - 开发语言：Java
 - 数据库：MySQL

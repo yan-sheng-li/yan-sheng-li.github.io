@@ -522,6 +522,7 @@ module.exports = {
           collapsable: false,
           children: [
             'supermarket_sys',
+            'supermarket_sys_plus',
             'bookinfo_sys',
             'meeting_sys',
             'mall_seler',
