@@ -538,6 +538,7 @@ module.exports = {
             'goods_sys',
             'parking_sys',
             'stu_status',
+            'stu_status2',
             'lend_book_console',
             'lend_book',
             'sport_equipment',
