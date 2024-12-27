@@ -303,7 +303,8 @@ module.exports = {
             'map三级下钻',
             '整合应用VueLeaflet',
             '二维码生成器应用',
-            '集成滑动验证码'
+            '集成滑动验证码',
+            '词云图echarts-wordcloud'
           ]
         },
       ],
