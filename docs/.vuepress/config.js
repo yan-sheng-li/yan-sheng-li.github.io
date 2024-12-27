@@ -358,6 +358,7 @@ module.exports = {
           collapsable: false,
           children: [
             'PyEcharts',
+            'Matplotlib'
           ]
         },
         {
