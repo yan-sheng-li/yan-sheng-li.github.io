@@ -354,6 +354,13 @@ module.exports = {
           ]
         },
         {
+          title: '数据可视化',
+          collapsable: false,
+          children: [
+            'PyEcharts',
+          ]
+        },
+        {
           title: '爬虫',
           collapsable: false,
           children: [
