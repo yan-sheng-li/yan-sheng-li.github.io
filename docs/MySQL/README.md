@@ -24,3 +24,6 @@
 [mysql8](https://mvnrepository.com/artifact/com.mysql/mysql-connector-j)
 
 [mysql5](https://mvnrepository.com/artifact/mysql/mysql-connector-java)
+
+## JDBC乱码解决
+在连接 MySQL 数据库时，可以通过在 JDBC URL 中添加字符集参数来设置字符集。对于你的连接 URL，可以在其末尾添加 characterEncoding=UTF-8 参数。
