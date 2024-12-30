@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目展示页面</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="https://www.liyansheng.top/cdn/watermark.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fb;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .search {
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+
+        .search input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .buttons button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .buttons button.active {
+            background-color: #0056b3;
+        }
+
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #f1f1f1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card .content {
+            padding: 20px;
+        }
+
+        .card .content h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 0 0 10px;
+            font-weight: 600;
+        }
+
+        .card .content p {
+            font-size: 14px;
+            color: #777;
+            margin: 0 0 15px;
+        }
+
+        .tags {
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tags span {
+            background-color: #e7f3ff;
+            color: #007BFF;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .details {
+            margin-top: 12px;
+            color: #007BFF;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        .details:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="container">
+        <!-- 固定在页面顶部的搜索框和分类按钮 -->
+        <div class="sticky-header">
+            <!-- 搜索框 -->
+            <div class="search">
+                <input v-model="searchQuery" type="text" placeholder="搜索项目名称...">
+            </div>
+
+            <!-- 分类按钮 -->
+            <div class="buttons">
+                <button v-for="category in categories" :key="category" @click="filterByCategory(category)"
+                    :class="{ active: selectedCategory === category }">
+                    {{ category }}
+                </button>
+                <button @click="filterByCategory('')" :class="{ active: selectedCategory === '' }">全部</button>
+            </div>
+        </div>
+
+        <!-- 项目卡片 -->
+        <div class="grid">
+            <div class="card" v-for="project in filteredProjects" :key="project.id">
+                <a :href="project.detailLink" target="_blank" class="details">
+                    <img :src="project.cover" :alt="project.name">
+                    <div class="content">
+                        <h3>{{ project.name }}</h3>
+                        <p>分类: {{ project.category }}</p>
+                        <div class="tags">
+                            <span v-for="tag in project.tags" :key="tag">{{ tag }}</span>
+                        </div>
+                        查看详情
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    searchQuery: '',
+                    selectedCategory: '',
+                    projects: [
+                        {
+                            id: 1,
+                            name: '项目 A',
+                            tags: ['标签1', '标签2'],
+                            category: '分类1',
+                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240609010458.png',
+                            detailLink: '#',
+                        },
+                        {
+                            id: 2,
+                            name: '项目 B',
+                            tags: ['标签3'],
+                            category: '分类2',
+                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241224132125590.png',
+                            detailLink: '#',
+                        },
+                        {
+                            id: 3,
+                            name: '项目 C',
+                            tags: ['标签4', '标签5'],
+                            category: '分类1',
+                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20220611202946279.png',
+                            detailLink: '#',
+                        },
+                        {
+                            id: 4,
+                            name: '项目 B',
+                            tags: ['标签3'],
+                            category: '分类2',
+                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241224132125590.png',
+                            detailLink: '#',
+                        },
+                        {
+                            id: 5,
+                            name: '项目 C',
+                            tags: ['标签4', '标签5'],
+                            category: '分类1',
+                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20220611202946279.png',
+                            detailLink: '#',
+                        },
+                    ],
+                };
+            },
+            computed: {
+                categories() {
+                    return [...new Set(this.projects.map(project => project.category))];
+                },
+                filteredProjects() {
+                    return this.projects.filter(project => {
+                        const matchesSearch = project.name.includes(this.searchQuery);
+                        const matchesCategory = !this.selectedCategory || project.category === this.selectedCategory;
+                        return matchesSearch && matchesCategory;
+                    });
+                },
+            },
+            methods: {
+                filterByCategory(category) {
+                    this.selectedCategory = category;
+                },
+            },
+        });
+
+        app.mount('#app');
+    </script>
+</body>
+
+</html>
