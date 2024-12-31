@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>项目展示页面</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
-    <script src="https://www.liyansheng.top/cdn/watermark.js"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -83,8 +82,8 @@
         }
 
         .card {
-            background: #fff;
-            border: 1px solid #f1f1f1;
+            background: #e3ecee;
+            border: 1px solid #88def3;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -179,6 +178,7 @@
                         <div class="tags">
                             <span v-for="tag in project.tags" :key="tag">{{ tag }}</span>
                         </div>
+                        <br/>
                         查看详情
                 </a>
             </div>
