@@ -174,7 +174,7 @@
                     <img :src="project.cover" :alt="project.name">
                     <div class="content">
                         <h3>{{ project.name }}</h3>
-                        <p>分类: {{ project.category }}</p>
+                        <!-- <p>分类: {{ project.category }}</p> -->
                         <div class="tags">
                             <span v-for="tag in project.tags" :key="tag">{{ tag }}</span>
                         </div>
@@ -195,43 +195,51 @@
                     projects: [
                         {
                             id: 1,
-                            name: '项目 A',
-                            tags: ['标签1', '标签2'],
-                            category: '分类1',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240609010458.png',
-                            detailLink: '#',
+                            name: '超市信息管理系统',
+                            tags: ['Swing', 'MySQL','有报告(可选)'],
+                            category: 'Java GUI项目',
+                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240609010516.png',
+                            detailLink: 'https://www.liyansheng.top/project/supermarket_sys.html',
                         },
                         {
                             id: 2,
-                            name: '项目 B',
-                            tags: ['标签3'],
-                            category: '分类2',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241224132125590.png',
-                            detailLink: '#',
+                            name: '图书进销管理系统',
+                            tags: ['Swing', 'MySQL','有报告(可选)'],
+                            category: 'Java GUI项目',
+                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20220611203036093.png',
+                            detailLink: 'https://www.liyansheng.top/project/bookinfo_sys.html',
                         },
                         {
                             id: 3,
-                            name: '项目 C',
-                            tags: ['标签4', '标签5'],
-                            category: '分类1',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20220611202946279.png',
-                            detailLink: '#',
+                            name: '超市商品管理系统',
+                            tags: ['Swing', 'MySQL'],
+                            category: 'Java GUI项目',
+                            cover: 'http://cdn.qiniu.liyansheng.top/img/20241231112804.png',
+                            detailLink: 'https://www.liyansheng.top/project/supermarket_sys_plus.html',
                         },
                         {
                             id: 4,
-                            name: '项目 B',
-                            tags: ['标签3'],
-                            category: '分类2',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241224132125590.png',
-                            detailLink: '#',
+                            name: '会议预约管理系统',
+                            tags: ['Swing', 'MySQL','有报告(可选)'],
+                            category: 'Java GUI项目',
+                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20220701123918560.png',
+                            detailLink: 'https://www.liyansheng.top/project/meeting_sys.html',
                         },
                         {
                             id: 5,
-                            name: '项目 C',
-                            tags: ['标签4', '标签5'],
-                            category: '分类1',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20220611202946279.png',
-                            detailLink: '#',
+                            name: '销售人员信息管理系统',
+                            tags: ['Swing', 'MySQL','有报告(可选)'],
+                            category: 'Java GUI项目',
+                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240608212108.png',
+                            detailLink: 'https://www.liyansheng.top/project/mall_seler.html',
+                        },
+                        {
+                            id: 6,
+                            name: '歌单管理系统',
+                            tags: ['Swing', 'MySQL','有报告(可选)'],
+                            category: 'Java GUI项目',
+                            cover: 'http://cdn.qiniu.liyansheng.top/typora/dd8547549e30444c895dd68a8c42c6d1.png',
+                            detailLink: 'https://www.liyansheng.top/project/song_sys.html',
                         },
                     ],
                 };
