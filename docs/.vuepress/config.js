@@ -592,6 +592,7 @@ module.exports = {
             '外聘教师管理系统',
             '餐厅下单助手系统',
             '体验场地预约管理系统'
+
           ]
         },
         {
@@ -641,7 +642,9 @@ module.exports = {
             'atm_py',
             'Reptiles_douban',
             'Participle_analysis',
-            '简历模板批量采集'
+            '简历模板批量采集',
+            '飞机大战-小游戏',
+            '切水果-小游戏'
           ]
         },
         {
