@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>远程调试-排队状态</title>
+    <title>服务-排队预约</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -93,11 +93,12 @@
     <div id="app">
         <div class="container">
             <div class="header">
-                <h1>远程操作-排队状态</h1>
+                <h1>服务接待-排队状态</h1>
                 <div >
                     <img src="http://cdn.qiniu.liyansheng.top/img/undraw_programming_65t2.png" style="width: 40%;" alt="">
                 </div>
-                <p><a href="https://www.liyansheng.top/blog/remote_help/">点我预约</a></p>
+                <p><a href="https://www.liyansheng.top/blog/remote_help/">需要远程调试?点我预约</a></p>
+                <p><a href="https://www.liyansheng.top/blog/all/">找项目?点我</a></p>
             </div>
             <div v-for="(customer, index) in queue" :key="customer.id" class="queue-item"
                 :class="{ 'highlight-item': index === 0 }">
