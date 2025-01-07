@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>项目展示页面</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,7 +49,7 @@
         }
 
         .buttons {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
@@ -63,7 +63,7 @@
             cursor: pointer;
             background-color: #007bff;
             color: white;
-            font-size: 16px;
+            font-size: 13px;
             transition: background-color 0.3s;
         }
 
@@ -150,6 +150,15 @@
 
 <body>
     <div id="app" class="container">
+        <div style="text-align: center;">
+            <span>
+                <h3 style="display: inline-block;">项目</h3>
+                <img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" alt=""
+                    style="width: 10%; height: auto; display: inline-block;">
+                    <h3 style="display: inline-block;">搜搜</h3>
+            </span>
+        </div>
+        
         <!-- 固定在页面顶部的搜索框和分类按钮 -->
         <div class="sticky-header">
             <!-- 搜索框 -->
@@ -174,786 +183,32 @@
                     <img :src="project.cover" :alt="project.name">
                     <div class="content">
                         <h3>{{ project.name }}</h3>
-                        <!-- <p>分类: {{ project.category }}</p> -->
                         <div class="tags">
                             <span v-for="tag in project.tags" :key="tag">{{ tag }}</span>
                         </div>
-                        <br/>
+                        <br />
                         查看详情
                 </a>
             </div>
         </div>
     </div>
-    </div>
 
     <script>
-        const app = Vue.createApp({
+        new Vue({
+            el: '#app',
             data() {
                 return {
                     searchQuery: '',
                     selectedCategory: '',
-                    projects: [
-                        {
-                            id: 1,
-                            name: '超市信息管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240609010516.png',
-                            detailLink: 'https://www.liyansheng.top/project/supermarket_sys.html',
-                        },
-                        {
-                            id: 2,
-                            name: '图书进销管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20220611203036093.png',
-                            detailLink: 'https://www.liyansheng.top/project/bookinfo_sys.html',
-                        },
-                        {
-                            id: 3,
-                            name: '超市商品管理系统-重制版',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20241231112804.png',
-                            detailLink: 'https://www.liyansheng.top/project/supermarket_sys_plus.html',
-                        },
-                        {
-                            id: 4,
-                            name: '会议预约管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20220701123918560.png',
-                            detailLink: 'https://www.liyansheng.top/project/meeting_sys.html',
-                        },
-                        {
-                            id: 5,
-                            name: '销售人员信息管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240608212108.png',
-                            detailLink: 'https://www.liyansheng.top/project/mall_seler.html',
-                        },
-                        {
-                            id: 6,
-                            name: '歌单管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/dd8547549e30444c895dd68a8c42c6d1.png',
-                            detailLink: 'https://www.liyansheng.top/project/song_sys.html',
-                        },
-                        {
-                            id: 7,
-                            name: '学生成绩管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20240104133353779.png',
-                            detailLink: 'https://www.liyansheng.top/project/student_score.html',
-                        },
-                        {
-                            id: 8,
-                            name: '模拟银行ATM系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20240110174732028.png',
-                            detailLink: 'https://www.liyansheng.top/project/bank_atm.html',
-                        },
-                        {
-                            id: 9,
-                            name: '游戏信息管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/e184249f4f2b4442885a03b08a67d3b5.png',
-                            detailLink: 'https://www.liyansheng.top/project/game_sys.html',
-                        },
-                        {
-                            id: 10,
-                            name: '考勤任务签到管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20240127222904437.png',
-                            detailLink: 'https://www.liyansheng.top/project/task_sys.html',
-                        },
-                        {
-                            id: 11,
-                            name: '图书信息管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/2aa4261d5cbc4dd9adf3cb884ffe7468.png',
-                            detailLink: 'https://www.liyansheng.top/project/book_simple.html',
-                        },
-                        {
-                            id: 12,
-                            name: '商品信息管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/c5eb2e84fd1e4861ae77d99c359963a4.png',
-                            detailLink: 'https://www.liyansheng.top/project/goods_sys.html',
-                        },
-                        {
-                            id: 13,
-                            name: '停车场管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/wps3.jpg',
-                            detailLink: 'https://www.liyansheng.top/project/parking_sys.html',
-                        },
-                        {
-                            id: 14,
-                            name: '学籍管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/7f0bfaf035c245ecae2fcbc6652016f7.png',
-                            detailLink: 'https://www.liyansheng.top/project/stu_status.html',
-                        },
-                        {
-                            id: 15,
-                            name: '学籍管理系统-重制版',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20241225175135.png',
-                            detailLink: 'https://www.liyansheng.top/project/stu_status2.html',
-                        },
-                        {
-                            id: 16,
-                            name: '图书借阅管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java 控制台交互项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20241231114810.png',
-                            detailLink: 'https://www.liyansheng.top/project/lend_book_console.html',
-                        },
-                        {
-                            id: 17,
-                            name: '图书借阅管理',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/67b19112ed7a3d7e7704fa4e6e5f4bd5.jpeg',
-                            detailLink: 'https://www.liyansheng.top/project/lend_book.html',
-                        },
-                        {
-                            id: 18,
-                            name: '体育器材借还管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240606182141.png',
-                            detailLink: 'https://www.liyansheng.top/project/sport_equipment.html',
-                        },
-                        {
-                            id: 19,
-                            name: '人事管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240607202636.png',
-                            detailLink: 'https://www.liyansheng.top/project/personal_sys.html',
-                        },
-                        {
-                            id: 1001,
-                            name: '项目二次改造',
-                            tags: ['功能增删', 'bug解决'],
-                            category: '其他',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/debug3.jpg',
-                            detailLink: 'https://www.liyansheng.top/blog/remote_help/',
-                        },
-                        {
-                            id: 20,
-                            name: '考勤打卡管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/1717834793380.png',
-                            detailLink: 'https://www.liyansheng.top/project/attendance_sys.html',
-                        },
-                        {
-                            id: 21,
-                            name: '班级通讯录管理',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240619230851.png',
-                            detailLink: 'https://www.liyansheng.top/project/class_book.html',
-                        },
-                        {
-                            id: 22,
-                            name: '就诊预约信息管理',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240624193840.png',
-                            detailLink: 'https://www.liyansheng.top/project/visit-appointment-gui.html',
-                        },
-                        {
-                            id: 23,
-                            name: '运动员信息管理',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240624221207.png',
-                            detailLink: 'https://www.liyansheng.top/project/ball_player.html',
-                        },
-                        {
-                            id: 24,
-                            name: '教师信息管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java 控制台交互项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20241231115642.png',
-                            detailLink: 'https://www.liyansheng.top/project/teacher_info_sys_console.html',
-                        },
-                        {
-                            id: 999,
-                            name: '远程调试',
-                            tags: ['不成功全额退', '各种项目'],
-                            category: '其他',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/debug2.png',
-                            detailLink: 'https://www.liyansheng.top/blog/remote_help/',
-                        },
-                        {
-                            id: 25,
-                            name: '酒店客房管理',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240629011057.png',
-                            detailLink: 'https://www.liyansheng.top/project/hotel_gui.html',
-                        },
-                        {
-                            id: 26,
-                            name: '酒店客房管理-2.0',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240629155317.png',
-                            detailLink: 'https://www.liyansheng.top/project/hotel_gui_plus.html',
-                        },
-                        {
-                            id: 27,
-                            name: '图书资源管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240703195844.png',
-                            detailLink: 'https://www.liyansheng.top/project/library_gui.html',
-                        },
-                        {
-                            id: 28,
-                            name: '选课管理系统',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240704011654.png',
-                            detailLink: 'https://www.liyansheng.top/project/course_mate_gui.html',
-                        },
-                        {
-                            id: 29,
-                            name: '打印单管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240705143531.png',
-                            detailLink: 'https://www.liyansheng.top/project/express_print.html',
-                        },
-                        {
-                            id: 30,
-                            name: '贪吃蛇小游戏',
-                            tags: ['Swing'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240705164444.png',
-                            detailLink: 'https://www.liyansheng.top/project/snake_game.html',
-                        },
-
-                        {
-                            id: 31,
-                            name: '二手车交易管理',
-                            tags: ['Swing', 'MySQL','有报告(可选)'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240707161813.png',
-                            detailLink: 'https://www.liyansheng.top/project/car_ease.html',
-                        },
-                        {
-                            id: 32,
-                            name: '学生成绩管理2',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240707171242.png',
-                            detailLink: 'https://www.liyansheng.top/project/score_sys.html',
-                        },
-                        {
-                            id: 33,
-                            name: '学生信息管理',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240707173752.png',
-                            detailLink: 'https://www.liyansheng.top/project/stu_info.html',
-                        },
-
-                        {
-                            id: 34,
-                            name: '图书借阅系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240606020632.png',
-                            detailLink: 'https://www.liyansheng.top/project/book_lend.html',
-                        },
-                        {
-                            id: 35,
-                            name: '工资发放管理',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20240105192311040.png',
-                            detailLink: 'https://www.liyansheng.top/project/wage_sys.html',
-                        },
-                        {
-                            id: 36,
-                            name: '影院购票管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241101232621963.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E5%BD%B1%E9%99%A2%E8%B4%AD%E7%A5%A8%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F.html',
-                        },
-                        {
-                            id: 37,
-                            name: '物业缴费管理',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240707231212.png',
-                            detailLink: 'https://www.liyansheng.top/project/prop_ease.html',
-                        },
-
-                        {
-                            id: 38,
-                            name: '学生选课系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240708000316.png',
-                            detailLink: 'https://www.liyansheng.top/project/select_course_sys.html',
-                        },
-                        {
-                            id: 39,
-                            name: '快递驿站管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240712142815.png',
-                            detailLink: 'https://www.liyansheng.top/project/parcel_manager.html',
-                        },
-                        {
-                            id: 40,
-                            name: '旅游套餐管理',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240713002332.png',
-                            detailLink: 'https://www.liyansheng.top/project/tourpal_manager.html',
-                        },
-                        {
-                            id: 41,
-                            name: '教室管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240719164024.png',
-                            detailLink: 'https://www.liyansheng.top/project/classroom_manager.html',
-                        },
-                        {
-                            id: 42,
-                            name: '电子日历记事本',
-                            tags: ['Swing'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240903175807.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E7%94%B5%E5%AD%90%E6%97%A5%E5%8E%86%E8%AE%B0%E4%BA%8B%E6%9C%AC.html',
-                        },
-                        {
-                            id: 43,
-                            name: '在线聊天室',
-                            tags: ['Swing','socket通信'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240909120427.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E5%AE%A4.html#%E6%8A%80%E6%9C%AF%E6%A0%88',
-                        },
-                        {
-                            id: 44,
-                            name: '在线聊天室-2.0',
-                            tags: ['Swing','socket通信'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240910011113.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E5%AE%A4-2.0.html#%E6%8A%80%E6%9C%AF%E6%A0%88',
-                        },
-                        {
-                            id: 45,
-                            name: '贪吃蛇-窗口游戏',
-                            tags: ['Swing'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241012115017379.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E8%B4%AA%E5%90%83%E8%9B%87-%E7%AA%97%E5%8F%A3%E6%B8%B8%E6%88%8F.html#%E6%95%88%E6%9E%9C%E5%9B%BE',
-                        },
-
-                        {
-                            id: 46,
-                            name: '扫雷小游戏',
-                            tags: ['Swing'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241020235133208.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E6%89%AB%E9%9B%B7-%E5%B0%8F%E6%B8%B8%E6%88%8F.html#%E6%95%88%E6%9E%9C',
-                        },
-                        {
-                            id: 47,
-                            name: '扫雷小游戏-2.0',
-                            tags: ['Swing'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241020235929110.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E6%89%AB%E9%9B%B7-%E5%B0%8F%E6%B8%B8%E6%88%8F-2.0.html#%E6%95%88%E6%9E%9C%E5%9B%BE',
-                        },
-                        {
-                            id: 48,
-                            name: '仓储管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241101163346510.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E4%BB%93%E5%82%A8%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F.html#%E8%A6%81%E7%82%B9',
-                        },
-
-                        {
-                            id: 49,
-                            name: '学生信息管理2',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241029014222559.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%862.html#%E6%8A%80%E6%9C%AF%E6%A0%88',
-                        },
-                        {
-                            id: 50,
-                            name: '模拟购物系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241031145128749.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E6%A8%A1%E6%8B%9F%E8%B4%AD%E7%89%A9%E7%B3%BB%E7%BB%9F.html#%E8%A6%81%E7%82%B9',
-                        },
-                        {
-                            id: 51,
-                            name: '项目讲解',
-                            tags: ['Swing', 'MySQL'],
-                            category: '其他',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20241231125413.png',
-                            detailLink: 'xhttps://www.liyansheng.top/blog/remote_help',
-                        },
-                        {
-                            id: 52,
-                            name: '汽车租赁管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241031214842709.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E6%B1%BD%E8%BD%A6%E7%A7%9F%E8%B5%81%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F.html#%E6%95%88%E6%9E%9C%E5%9B%BE',
-                        },
-                        {
-                            id: 53,
-                            name: '医院病房管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241113175824872.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E5%8C%BB%E9%99%A2%E7%97%85%E6%88%BF%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F.html',
-                        },
-                        {
-                            id: 1000,
-                            name: '项目定做',
-                            tags: ['Java项目', 'Web项目','微信小程序','Python项目','爬虫','大数据分析','Vue项目','JSP+Servlet项目','SSM项目'],
-                            category: '其他',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/DM_20241118184856_001-removebg-preview.png',
-                            detailLink: 'https://www.liyansheng.top/blog/remote_help/',
-                        },
-                        {
-                            id: 54,
-                            name: '图书借阅管理',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241114222747825.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E5%9B%BE%E4%B9%A6%E5%80%9F%E9%98%85%E7%AE%A1%E7%90%86.html#%E6%8A%80%E6%9C%AF%E6%A0%88',
-                        },
-                        {
-                            id: 55,
-                            name: '外聘教师管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20241213133741.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E5%A4%96%E8%81%98%E6%95%99%E5%B8%88%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F.html#%E6%8A%80%E6%9C%AF%E6%A0%88',
-                        },
-                        {
-                            id: 56,
-                            name: '餐厅下单助手系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241226010703917.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E9%A4%90%E5%8E%85%E4%B8%8B%E5%8D%95%E5%8A%A9%E6%89%8B%E7%B3%BB%E7%BB%9F.html#%E9%83%A8%E5%88%86%E6%88%AA%E5%9B%BE',
-                        },
-                        {
-                            id: 57,
-                            name: '体育场地预订管理系统',
-                            tags: ['Swing', 'MySQL'],
-                            category: 'Java GUI项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241228171110288.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E4%BD%93%E9%AA%8C%E5%9C%BA%E5%9C%B0%E9%A2%84%E7%BA%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F.html#%E8%A6%81%E7%82%B9',
-                        },
-
-                        {
-                            id: 58,
-                            name: '医院就诊排队',
-                            tags: ['小程序', 'MySQL','SpringBoot'],
-                            category: '微信小程序',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240603173606.png',
-                            detailLink: 'https://www.liyansheng.top/project/hospital_mini.html',
-                        },
-                        {
-                            id: 59,
-                            name: '图书管理系统',
-                            tags: ['python'],
-                            category: 'Python项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240603225651.png',
-                            detailLink: 'https://www.liyansheng.top/project/book_py.html',
-                        },
-                        {
-                            id: 60,
-                            name: '航空订票管理系统',
-                            tags: ['python'],
-                            category: 'Python项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/0e63f8440eb241f488a6050b53b31e1c.png',
-                            detailLink: 'https://www.liyansheng.top/project/ticket_py.html',
-                        },
-                        {
-                            id: 61,
-                            name: '银行ATM管理系统',
-                            tags: ['python'],
-                            category: 'Python项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/c1ad454d1ace48d022adbf86b55389d8.png',
-                            detailLink: 'https://www.liyansheng.top/project/atm_py.html',
-                        },
-                        {
-                            id: 62,
-                            name: '爬虫-可视化-豆瓣电影数据',
-                            tags: ['爬虫','大数据分析'],
-                            category: 'Python项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240607015233.png',
-                            detailLink: 'https://www.liyansheng.top/project/Reptiles_douban.html',
-                        },
-                        {
-                            id: 63,
-                            name: '小说分词统计-数据可视化',
-                            tags: ['爬虫','大数据分析'],
-                            category: 'Python项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240613115113.png',
-                            detailLink: 'https://www.liyansheng.top/project/Participle_analysis.html',
-                        },
-                        {
-                            id: 64,
-                            name: '批量简历数据采集',
-                            tags: ['爬虫','资源下载'],
-                            category: 'Python项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-08-22_14-38-28.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E7%AE%80%E5%8E%86%E6%A8%A1%E6%9D%BF%E6%89%B9%E9%87%8F%E9%87%87%E9%9B%86.html',
-                        },
-
-                        {
-                            id: 65,
-                            name: '阅览室选座管理系统',
-                            tags: ['SpringBoot','MySQL','SSM','有报告(可选)'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20231223230416281.png',
-                            detailLink: 'https://www.liyansheng.top/project/sams.html',
-                        },
-                        {
-                            id: 66,
-                            name: '微友圈',
-                            tags: ['SpringBoot','MySQL','SSM','有报告(可选)'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20240109163545234.png',
-                            detailLink: 'https://www.liyansheng.top/project/vbos.html',
-                        },
-                        {
-                            id: 67,
-                            name: '租车行者网站',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/d9f77b800b900da935b237de57e81df0.png',
-                            detailLink: '123',
-                        },
-                        {
-                            id: 68,
-                            name: '在线小说网',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240611102811.png',
-                            detailLink: 'https://www.liyansheng.top/project/readVerse.html',
-                        },
-                        {
-                            id: 69,
-                            name: '人脸识别',
-                            tags: ['SpringBoot'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240604004418.png',
-                            detailLink: 'https://www.liyansheng.top/project/face_api.html',
-                        },
-                        {
-                            id: 70,
-                            name: '简单web图书管理',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240609183501.png',
-                            detailLink: 'https://www.liyansheng.top/project/easy_book_web.html',
-                        },
-                        {
-                            id: 71,
-                            name: '文件上传下载-加密',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240609161715.png',
-                            detailLink: 'https://www.liyansheng.top/project/file_share.html',
-                        },
-                        {
-                            id: 72,
-                            name: '校园任务互助平台',
-                            tags: ['Servlet','Jsp','MySQL'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/typora/image-20230608135758340.png',
-                            detailLink: 'https://www.liyansheng.top/project/school_help.html',
-                        },
-                        {
-                            id: 73,
-                            name: '运动会信息管理系统',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240602223506.png',
-                            detailLink: 'https://www.liyansheng.top/project/sport_meeting.html',
-                        },
-                        {
-                            id: 74,
-                            name: '图书借阅管理',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240610021250.png',
-                            detailLink: 'https://www.liyansheng.top/project/lend_book_web.html',
-                        },
-                        {
-                            id: 75,
-                            name: '大学生社团管理系统',
-                            tags: ['SpringBoot','MySQL','Vue'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240612112809.png',
-                            detailLink: 'https://www.liyansheng.top/project/stu_club.html',
-                        },
-                        {
-                            id: 76,
-                            name: '点餐服务系统',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240623235559.png',
-                            detailLink: 'https://www.liyansheng.top/project/ordering_meal_web.html',
-                        },
-                        {
-                            id: 77,
-                            name: '图书-购物商城',
-                            tags: ['SpringBoot','MySQL','Vue'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240624021040.png',
-                            detailLink: 'https://www.liyansheng.top/project/bookstore_vue.html',
-                        },
-                        {
-                            id: 78,
-                            name: '在线朋友圈',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240625133233.png',
-                            detailLink: 'https://www.liyansheng.top/project/social_circle_web.html',
-                        },
-                        {
-                            id: 79,
-                            name: '花店商城',
-                            tags: ['Servlet','Jsp','MySQL','开放'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240705152027.png',
-                            detailLink: 'https://www.liyansheng.top/project/flower_store.html',
-                        },
-                                                
-                        {
-                            id: 80,
-                            name: '新闻网站',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240705162002.png',
-                            detailLink: 'https://www.liyansheng.top/project/news_web.html',
-                        },
-                        {
-                            id: 81,
-                            name: '人事管理系统',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240709125502.png',
-                            detailLink: 'https://www.liyansheng.top/project/employee_butler.html',
-                        },
-                        {
-                            id: 82,
-                            name: '党务信息管理',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240709144456.png',
-                            detailLink: 'https://www.liyansheng.top/project/party_member.html',
-                        },
-                        {
-                            id: 83,
-                            name: '简单web图书管理',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240709161819.png',
-                            detailLink: 'https://www.liyansheng.top/project/book_info_web.html',
-                        },
-                        {
-                            id: 84,
-                            name: '演唱会售票系统',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240709230111.png',
-                            detailLink: 'https://www.liyansheng.top/project/ticket_tune.html',
-                        },
-                        {
-                            id: 85,
-                            name: '家务接发管家系统 ',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240710233651.png',
-                            detailLink: 'https://www.liyansheng.top/project/work_connect.html',
-                        },
-                        {
-                            id: 86,
-                            name: '就业信息管理系统  ',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240712181142.png',
-                            detailLink: 'https://www.liyansheng.top/project/carrer_cloud.html',
-                        },
-                        {
-                            id: 87,
-                            name: '在线旅游网站  ',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240713150706.png',
-                            detailLink: 'https://www.liyansheng.top/project/travel_ease.html',
-                        },
-                        {
-                            id: 88,
-                            name: '博客系统',
-                            tags: ['SpringBoot','MySQL','SSM'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241111150031052.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F.html',
-                        },
-                        {
-                            id: 89,
-                            name: '体质检测管理系统',
-                            tags: ['SpringBoot','MySQL','Vue'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/20240904184026.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E4%BD%93%E8%B4%A8%E6%A3%80%E6%B5%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F.html',
-                        },
-                        {
-                            id: 90,
-                            name: '畅读新闻圈',
-                            tags: ['Servlet','Jsp','MySQL'],
-                            category: 'Web项目',
-                            cover: 'http://cdn.qiniu.liyansheng.top/img/image-20241114001004432.png',
-                            detailLink: 'https://www.liyansheng.top/project/%E7%95%85%E8%AF%BB%E6%96%B0%E9%97%BB%E5%9C%88.html',
-                        },
-
-
-                    ],
+                    projects: [] // 初始为空数组
                 };
             },
             computed: {
+                // 动态生成分类
                 categories() {
                     return [...new Set(this.projects.map(project => project.category))];
                 },
+                // 根据搜索框和分类过滤项目
                 filteredProjects() {
                     return this.projects.filter(project => {
                         const matchesSearch = project.name.includes(this.searchQuery);
@@ -963,13 +218,33 @@
                 },
             },
             methods: {
+                // 点击分类按钮过滤
                 filterByCategory(category) {
                     this.selectedCategory = category;
                 },
+                // 格式化接口数据
+                formatProjects(data) {
+                    return data.map(project => ({
+                        ...project,
+                        tags: JSON.parse(project.tags) // 将字符串解析为数组
+                    }));
+                },
+                // 获取项目数据
+                async fetchProjects() {
+                    try {
+                        const response = await fetch('http://liyansheng.top:8082/v1/projects/list');
+                        const data = await response.json();
+                        this.projects = this.formatProjects(data);
+                    } catch (error) {
+                        console.error('获取项目数据失败:', error);
+                    }
+                }
+            },
+            // 生命周期钩子：组件挂载时获取数据
+            mounted() {
+                this.fetchProjects();
             },
         });
-
-        app.mount('#app');
     </script>
 </body>
 
