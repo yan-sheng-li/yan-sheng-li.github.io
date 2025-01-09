@@ -397,7 +397,8 @@ module.exports = {
             '基于JQuery的步骤条',
             'Dropzonejs实现文件上传',
             'flatpicker时间选择',
-            '三级地图跳转'
+            '三级地图跳转',
+            'Fetch请求封装'
 
           ]
         },
