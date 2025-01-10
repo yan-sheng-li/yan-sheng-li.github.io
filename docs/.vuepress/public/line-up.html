@@ -132,7 +132,7 @@
 
                 fetchLineUp() {
                     return new Promise((resolve, reject) => {
-                        $.get('http://liyansheng.top:8082/v1/line-up/processing', (res) => {
+                        $.get('https://mini.liyansheng.top/v1/line-up/processing', (res) => {
                             this.queue = res;
                             if (this.queue.length > 0) {
                                 if (!this.timer) {

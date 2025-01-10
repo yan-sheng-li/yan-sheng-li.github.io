@@ -191,7 +191,7 @@
                     return device.replace(/(?<=\d{2})\d(?=\d{3})/g, '*');
                 },
                 fetchLineUp() {
-                    $.get('http://liyansheng.top:8082/v1/line-up/processing', (res) => {
+                    $.get('https://mini.liyansheng.top/v1/line-up/processing', (res) => {
                         this.queue = res;
                     }).fail((error) => {
                         console.error('Error fetching data:', error);
@@ -202,7 +202,7 @@
                         alert('请完整填写表单信息！');
                         return;
                     }
-                    $.get('http://liyansheng.top:8082/v1/line-up/add', this.formData, (res) => {
+                    $.get('https://mini.liyansheng.top/v1/line-up/add', this.formData, (res) => {
                         alert('添加成功！');
                         this.fetchLineUp();
                     }).fail((error) => {
@@ -210,7 +210,7 @@
                     });
                 },
                 markAsComplete(id) {
-                    $.get(`http://liyansheng.top:8082/v1/line-up/ok/${id}`, {}, (res) => {
+                    $.get(`https://mini.liyansheng.top/v1/line-up/ok/${id}`, {}, (res) => {
                         alert('标记完成！');
                         this.fetchLineUp();
                     }).fail((error) => {

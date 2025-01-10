@@ -232,7 +232,7 @@
                 // 获取项目数据
                 async fetchProjects() {
                     try {
-                        const response = await fetch('http://liyansheng.top:8082/v1/projects/list');
+                        const response = await fetch('https://mini.liyansheng.top/v1/projects/list');
                         const data = await response.json();
                         this.projects = this.formatProjects(data);
                     } catch (error) {
