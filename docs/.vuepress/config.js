@@ -109,7 +109,7 @@ module.exports = {
       },
       {
         text: '🔥远程调试🔥',
-        link: 'https://www.liyansheng.top/blog/remote_help/'
+        link: 'https://www.liyansheng.top/blog/help'
       },
       {
         text: '⚙工具环境',
