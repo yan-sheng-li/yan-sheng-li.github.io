@@ -549,6 +549,7 @@ module.exports = {
             'game_sys',
             'task_sys',
             'book_simple',
+            'book_simple2',
             'goods_sys',
             'parking_sys',
             'stu_status',
