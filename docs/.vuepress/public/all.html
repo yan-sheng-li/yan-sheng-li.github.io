@@ -57,7 +57,7 @@
         }
 
         .buttons button {
-            padding: 6px 6px;
+            padding: 6px 12px;
             border: none;
             border-radius: 30px;
             cursor: pointer;
@@ -82,6 +82,7 @@
         }
 
         .card {
+            position: relative;
             background: #e3ecee;
             border: 1px solid #88def3;
             border-radius: 12px;
@@ -144,8 +145,24 @@
         }
 
         .details:hover {
-            /* color: #0056b3; */
             color: red;
+        }
+
+        /* 飘带样式 */
+        .card .ribbon {
+            position: absolute;
+            top: 10px;
+            left: -30px;
+            width: 120px;
+            height: 30px;
+            background: linear-gradient(45deg, #FF512F, #F09819);
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 30px;
+            transform: rotate(-45deg);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -163,12 +180,9 @@
 
         <!-- 固定在页面顶部的搜索框和分类按钮 -->
         <div class="sticky-header">
-            <!-- 搜索框 -->
             <div class="search">
                 <input v-model="searchQuery" type="text" placeholder="搜索项目名称...">
             </div>
-
-            <!-- 分类按钮 -->
             <div class="buttons">
                 <button v-for="category in visibleCategories" :key="category" @click="filterByCategory(category)"
                     :class="{ active: selectedCategory === category }">
@@ -185,6 +199,8 @@
         <!-- 项目卡片 -->
         <div class="grid">
             <div class="card" v-for="project in filteredProjects" :key="project.id">
+                <!-- 飘带 -->
+                <div class="ribbon" v-if="project.ribbon">{{ project.ribbon }}</div>
                 <a :href="project.detailLink" target="_blank" class="details">
                     <img :src="project.cover" :alt="project.name">
                     <div class="content">
@@ -212,13 +228,9 @@
                 };
             },
             computed: {
-                // 显示的分类按钮（排除报告）
                 visibleCategories() {
-                    return [...new Set(this.allProjects
-                        .filter(project => project.category !== '报告')
-                        .map(project => project.category))];
+                    return [...new Set(this.allProjects.map(project => project.category))];
                 },
-                // 根据搜索框和分类过滤项目
                 filteredProjects() {
                     return this.projects.filter(project => {
                         const matchesSearch = project.name.includes(this.searchQuery);
@@ -230,29 +242,22 @@
             methods: {
                 filterByCategory(category) {
                     this.selectedCategory = category;
-                    if (category) {
-                        this.projects = this.allProjects.filter(project => project.category === category);
-                    } else {
-                        this.projects = this.allProjects.filter(project => project.category !== '报告');
-                    }
+                    this.projects = category ? this.allProjects.filter(p => p.category === category) : [...this.allProjects];
                 },
                 filterReports() {
                     this.selectedCategory = '报告';
-                    this.projects = this.allProjects.filter(project => project.category === '报告');
-                },
-                formatProjects(data) {
-                    return data.map(project => ({
-                        ...project,
-                        tags: JSON.parse(project.tags)
-                    }));
+                    this.projects = this.allProjects.filter(p => p.category === '报告');
                 },
                 async fetchProjects() {
                     try {
                         const response = await fetch('https://mini.liyansheng.top/v1/projects/list');
                         const data = await response.json();
-                        const formattedProjects = this.formatProjects(data);
-                        this.allProjects = formattedProjects;
-                        this.projects = formattedProjects.filter(project => project.category !== '报告');
+                        this.allProjects = data.map(project => ({
+                            ...project,
+                            tags: JSON.parse(project.tags),
+                            ribbon: project.ribbon || '' // 动态飘带内容
+                        }));
+                        this.projects = this.allProjects;
                     } catch (error) {
                         console.error('获取项目数据失败:', error);
                     }
