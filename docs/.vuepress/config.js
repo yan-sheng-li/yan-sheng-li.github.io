@@ -119,6 +119,7 @@ module.exports = {
             items: [
               { text: '科学上网', link: 'https://www.liyansheng.top/blog/posts/40617.html' },
               { text: '浏览器插件', link: '/tool/Plugins' },
+              { text: '自制视频流', link: '/tool/自制视频流' },
               { text: '免费看电视', link: 'https://www.liyansheng.top/blog/posts/18883.html' },
               { text: '搭建内网穿透', link: 'https://www.liyansheng.top/blog/posts/57913.html' },
             ]
