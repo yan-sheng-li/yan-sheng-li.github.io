@@ -108,6 +108,10 @@ module.exports = {
         link: '/project/'
       },
       {
+        text: '📑博主名片',
+        link: 'https://www.liyansheng.top/me'
+      },
+      {
         text: '🔥远程调试🔥',
         link: 'https://www.liyansheng.top/blog/remote_help'
       },
