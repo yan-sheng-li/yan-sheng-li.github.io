@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人名片</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0d0d0d;
+            overflow-x: hidden;
+        }
+
+        /* 粒子背景 */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        /* 顶部导航 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: cyan;
+        }
+
+        /* 主页 */
+        #home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid cyan;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px cyan;
+        }
+
+        .typing {
+            font-size: 24px;
+            margin-top: 10px;
+            color: cyan;
+            border-right: 3px solid cyan;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(40, end) infinite alternate, blink 0.7s infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: cyan;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+            box-shadow: 0 0 15px cyan;
+        }
+
+        .btn:hover {
+            background: black;
+            color: cyan;
+            box-shadow: 0 0 25px cyan;
+        }
+
+        /* 技术栈 */
+        #skills,
+        #services,
+        #social {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .card-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px cyan;
+        }
+
+        /* 底部 */
+        footer {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* 联系方式 */
+        #contact {
+            text-align: center;
+            padding: 80px 20px;
+
+        }
+
+        .contact-item {
+            display: inline-block;
+            padding: 12px 24px;
+            background: rgba(0, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: 18px;
+            margin: 10px;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .contact-item:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 粒子背景 -->
+    <div id="particles-js"></div>
+
+    <!-- Vue 绑定 -->
+    <div id="app">
+        <!-- 顶部导航 -->
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#services">服务</a></li>
+                <li><a href="#social">足迹</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </nav>
+
+        <!-- 主页 -->
+        <section id="home">
+            <img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" alt="个人头像" class="avatar">
+            <h1>你好，我是 {{ name }}</h1>
+            <p class="typing">{{ description }}</p>
+            <a href="#social" class="btn">关注我</a>
+        </section>
+
+        <!-- 技术栈 -->
+        <section id="skills">
+            <h2>技能</h2>
+            <div class="card-list">
+                <div v-for="skill in skills" class="card">{{ skill }}</div>
+            </div>
+        </section>
+
+        <!-- 服务 -->
+        <section id="services">
+            <h2>服务</h2>
+            <div class="card-list">
+                <div v-for="service in services" class="card">{{ service }}</div>
+            </div>
+        </section>
+
+        <!-- 社交平台 -->
+        <section id="social">
+            <h2>足迹</h2>
+            <div class="card-list">
+                <a v-for="(url, platform) in socialLinks" :href="url" class="card" target="_blank">{{ platform }}</a>
+            </div>
+        </section>
+
+        <!-- 联系方式 -->
+        <section id="contact">
+            <h2>联系</h2>
+            <div class="contact-item">QQ: 1761724207</div>
+            <div class="contact-item">微信/电话: 17641244340</div>
+            <div class="contact-item">公众号: 编程亿点有趣</div>
+        </section>
+    </div>
+
+    <!-- Vue + 粒子效果 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                name: "程序开发-木子",
+                description: "山高水远，看世界，也找自己🤳_",
+                skills: ["Vue.js", "Java", "Spring Boot", "Python", "AI","MySQL","Redis","微信小程序","Linux","Docker"],
+                services: ["项目定制开发", "远程调试", "代码优化", "技术咨询","项目讲解","图文定做"],
+                socialLinks: {
+                    GitHub: "https://github.com/yan-sheng-li",
+                    Gitee: "https://gitee.com/yan-sheng-li",
+                    CSDN博客:'https://blog.csdn.net/weixin_44107140',
+                    木子空间:'https://www.liyansheng.top',
+                    简忆博客:'https://www.liyansheng.top/blog'
+                }
+            }
+        });
+
+        particlesJS.load("particles-js", "https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/demo/particles.json");
+    </script>
+
+</body>
+
+</html>
