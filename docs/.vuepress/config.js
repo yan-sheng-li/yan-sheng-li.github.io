@@ -286,7 +286,8 @@ module.exports = {
           title: '微信小程序',
           collapsable: false,
           children: [
-            '微信登录'
+            '微信登录',
+            '选择位置',
           ]
         },
       ],
