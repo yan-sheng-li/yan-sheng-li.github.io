@@ -377,7 +377,8 @@ module.exports = {
           collapsable: false,
           children: [
             '常用技法',
-            '基于Flask写API'
+            '基于Flask写API',
+            'FastAPI快速上手'
           ]
         },
         {
