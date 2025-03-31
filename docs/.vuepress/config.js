@@ -50,6 +50,10 @@ module.exports = {
         link: '/collection/'
       },
       {
+        text: '开源宝藏',
+        link: '/openhub/'
+      },
+      {
         text: '💻 编程笔记',
         items: [
           {
@@ -166,6 +170,15 @@ module.exports = {
     ],
 
     sidebar: {
+      '/openhub/': [
+        {
+          title: '开源宝藏库',
+          collapsable: false,
+          children: [
+            'Shields徽章指南',
+          ]
+        },
+      ],
       '/swing/': [
         {
           title: 'swing',
