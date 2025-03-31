@@ -378,7 +378,8 @@ module.exports = {
           children: [
             '常用技法',
             '基于Flask写API',
-            'FastAPI快速上手'
+            'FastAPI快速上手',
+            'FastAPI整合MySQL'
           ]
         },
         {
