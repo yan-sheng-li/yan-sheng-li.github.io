@@ -252,7 +252,8 @@ module.exports = {
             '整合xxl-job定时任务',
             '服务开启HTTPS访问',
             '配置热部署',
-            '文件上传-下载'
+            '文件上传-下载',
+            '整合WebSocket'
 
           ]
         },
