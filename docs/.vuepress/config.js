@@ -531,7 +531,8 @@ module.exports = {
           collapsable: false,
           children: [
             'mybatis-plus动态组合SQL',
-            'MyBatis 自带的动态 SQL 语法'
+            'MyBatis 自带的动态 SQL 语法',
+            '手动分页',
           ]
         },
       ],
