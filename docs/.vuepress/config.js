@@ -154,7 +154,7 @@ module.exports = {
               { text: '📙CSDN博客', link: 'https://blog.csdn.net/weixin_44107140' },
               { text: 'GitHub', link: 'https://github.com/yan-sheng-li' },
               { text: 'Gitee', link: 'https://gitee.com/yan-sheng-li' },
-              { text: '公众号《编程亿点有趣》', link: 'http://cdn.qiniu.liyansheng.top/img/2-ezgif.com-png-to-webp-converter.webp' }
+              { text: '公众号《木子空间Pro》', link: 'http://cdn.qiniu.liyansheng.top/img/gzh_muzikongjianPro.png' }
             ]
           }
         ]
@@ -559,7 +559,6 @@ module.exports = {
           title: '------定制------',
           collapsable: false,
           children: [
-            '微信与支付宝的收款码二合一',
             '博客or个人站点or网站-搭建',
             '项目-预测-分析评估-扩展'
           ]
