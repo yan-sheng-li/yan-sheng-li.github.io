@@ -9,7 +9,7 @@
     <div v-if="showCard" class="product-card">
       <h2>{{ product.name }}</h2>
       <p><strong>描述：</strong>{{ product.description }}</p>
-      <p><strong>价格：</strong>¥{{ product.price }}</p>
+      <p><strong>价格：</strong><span  style="color:red;font-size:25px;font-weight: 200;">¥{{ product.price }}</span></p>
       <button @click="initiatePayment" class="order-button">点击下单</button>
     </div>
 
