@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>远程调试-排队管理</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                background-color: #ffeedf;
+            }
+
+            50% {
+                transform: scale(1.05);
+                background-color: #ffe4cc;
+            }
+
+            100% {
+                transform: scale(1);
+                background-color: #ffeedf;
+            }
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #4a90e2;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            width: auto;
+            background-color: #4a90e2;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #357ab8;
+        }
+
+        .queue-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 12px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+
+        .queue-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-item {
+            animation: pulse 2s infinite;
+        }
+
+        .device-id {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .queue-item button {
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        .queue-item button:hover {
+            background-color: #e86439;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="header">
+                <h1>远程操作-排队管理</h1>
+                <img src="http://cdn.qiniu.liyansheng.top/img/undraw_programming_65t2.png" style="width: 40%;" alt="">
+                <p><a href="https://www.liyansheng.top/line-up">客户端</a></p>
+            </div>
+
+            <!-- 表单输入区域 -->
+            <div class="form-group">
+                <label for="name">用户标识名</label>
+                <input type="text" id="name" v-model="formData.name" placeholder="请输入用户名">
+                <label for="device">设备号</label>
+                <input type="text" id="device" v-model="formData.device" placeholder="请输入设备号">
+                <label for="type">来自</label>
+                <select id="type" v-model="formData.type">
+                    <option value="" disabled>请选择类型</option>
+                    <option value="QQ">QQ</option>
+                    <option value="微信">微信</option>
+                    <option value="小程序">小程序</option>
+                    <option value="其他">其他</option>
+                </select>
+                <button @click="addToQueue">新增排队</button>
+            </div>
+
+            <!-- 排队列表 -->
+            <div v-for="(customer, index) in queue" :key="customer.id" class="queue-item"
+                :class="{ 'highlight-item': index === 0 }">
+                <div>
+                    <span v-if="index === 0" style="color: blue; font-weight: bold; font-size: 1.2em;">当前💻: </span>
+                    {{ anonymizeName(customer.name) }}
+                    <div class="device-id">设备号: {{ anonymizeDeviceId(customer.device) }}</div>
+                    <div>来自: {{ customer.type }}</div>
+                    <div>创建于: {{ customer.createdAt }}</div>
+                </div>
+                <div>
+                    <span>排队号: {{ index + 1 }}</span>
+                    <button @click="markAsComplete(customer.id)">完成</button>
+                </div>
+            </div>
+
+            <div v-if="queue.length === 0" class="queue-item">
+                暂无排队同学😃。
+            </div>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                queue: [],
+                timer: null,
+                formData: {
+                    name: '',
+                    device: '',
+                    type: ''
+                }
+            },
+            methods: {
+                anonymizeName(name) {
+                    return name.replace(/(?<=.)./g, '*');
+                },
+                anonymizeDeviceId(device) {
+                    return device.replace(/(?<=\d{2})\d(?=\d{3})/g, '*');
+                },
+                fetchLineUp() {
+                    $.get('https://mini.liyansheng.top/v1/line-up/processing', (res) => {
+                        this.queue = res;
+                    }).fail((error) => {
+                        console.error('Error fetching data:', error);
+                    });
+                },
+                addToQueue() {
+                    if (!this.formData.name || !this.formData.device || !this.formData.type) {
+                        alert('请完整填写表单信息！');
+                        return;
+                    }
+                    $.get('https://mini.liyansheng.top/v1/line-up/add', this.formData, (res) => {
+                        alert('添加成功！');
+                        this.fetchLineUp();
+                    }).fail((error) => {
+                        console.error('Error adding to queue:', error);
+                    });
+                },
+                markAsComplete(id) {
+                    $.get(`https://mini.liyansheng.top/v1/line-up/ok/${id}`, {}, (res) => {
+                        alert('标记完成！');
+                        this.fetchLineUp();
+                    }).fail((error) => {
+                        console.error('Error marking as complete:', error);
+                    });
+                }
+            },
+            created() {
+                this.fetchLineUp();
+                this.timer = setInterval(this.fetchLineUp, 60000); // 每分钟刷新
+            },
+            beforeDestroy() {
+                clearInterval(this.timer);
+            }
+        });
+    </script>
+</body>
+
+</html>
