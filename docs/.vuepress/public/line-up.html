@@ -93,17 +93,43 @@
     <div id="app">
         <div class="container">
             <div class="header">
-                <h1>服务接待-排队状态</h1>
-                <div >
-                    <img src="http://cdn.qiniu.liyansheng.top/img/undraw_programming_65t2.png" style="width: 40%;" alt="">
+
+                <div>
+                    <img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" style="width: 25%;" alt="">
+                    <div>
+                        <span>
+                            <a href="http://www.liyansheng.top/blog"><img
+                                    src="https://img.shields.io/badge/木子空间-自营博客-00dfbf" alt="自营博客"></a>
+                            <a href="https://yan-sheng-li.github.io/project/"><img
+                                    src="https://img.shields.io/badge/木子空间-项目&资料-1e90ff" alt="项目合集"></a>
+                            <a href="https://blog.csdn.net/weixin_44107140"><img
+                                    src="https://img.shields.io/badge/木子空间-CSDN&粉丝1.5w+-FC5531" alt="CSDN博客"></a>
+                            <a href="https://gitee.com/yan-sheng-li"><img
+                                    src="https://img.shields.io/badge/木子空间-Gitee-orange" alt="Gitee"></a>
+                            <a href="https://github.com/yan-sheng-li"><img
+                                    src="https://img.shields.io/badge/木子空间-GitHub-black" alt="GitHub"></a>
+                            <a href="http://cdn.qiniu.liyansheng.top/img/gzh_muzikongjianPro.png"><img
+                                    src="https://img.shields.io/badge/木子空间Pro-公众号&粉丝6k+-brightgreen" alt="公众号"></a>
+                            <a
+                                href="https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC"><img
+                                    src="https://img.shields.io/badge/木子空间-QQ社群(450+人)-18a2ea" alt="QQ Group"></a>
+                            <img src="https://img.shields.io/badge/博主-QQ：1761724207-29a1db" alt="QQ">
+                            <img src="https://img.shields.io/badge/博主-微信：17641244340-07c261" alt="微信">
+                            <a href="https://www.xiaohongshu.com/user/profile/668f634100000000030315a1"><img
+                                    src="https://img.shields.io/badge/木子空间-小红书-FF2842" alt="小红书"></a>
+                            <a href="http://cdn.qiniu.liyansheng.top/img/20250423150441.png"><img
+                                    src="https://img.shields.io/badge/木子空间-闲鱼-ffe10f" alt="闲鱼"></a>
+                            <a href="http://cdn.qiniu.liyansheng.top/img/20250423145452.png"><img
+                                    src="https://img.shields.io/badge/木子空间-小程序商店-green" alt="小程序商店"></a>
+                        </span>
+                    </div>
                 </div>
-                <p><a href="https://www.liyansheng.top/blog/remote_help">需要远程调试?点我预约</a></p>
-                <p><a href="https://www.liyansheng.top/blog/all/">找项目?点我</a></p>
+                <h1>一对一服务序列</h1>
             </div>
             <div v-for="(customer, index) in queue" :key="customer.id" class="queue-item"
                 :class="{ 'highlight-item': index === 0 }">
                 <div>
-                    <span v-if="index === 0" style="color: blue; font-weight: bold; font-size: 1.2em;">当前💻: </span>
+                    <span v-if="index === 0" style="color: blue; font-weight: bold; font-size: 1.2em;">当前💻<—>💻</span>
                     {{ anonymizeName(customer.name) }}
                     <div class="device-id">设备号: {{ anonymizeDeviceId(customer.device) }}</div>
                 </div>
@@ -127,7 +153,8 @@
                     return name.replace(/(?<=.)./g, '*');
                 },
                 anonymizeDeviceId(device) {
-                    return device.replace(/(?<=\d{2})\d(?=\d{3})/g, '*');
+                    if (!device) return '其他类型';
+                    return device.replace(/(\d{1})(\d+)(\d{1})/, '$1' + '*'.repeat(device.length - 2) + '$3');
                 },
 
                 fetchLineUp() {
@@ -148,7 +175,7 @@
                     });
                 },
                 startAutoFetch() {
-                    const interval = 60*1000; // 5秒
+                    const interval = 60 * 1000; // 5秒
                     this.timer = setInterval(() => {
                         this.fetchLineUp();
                     }, interval);
