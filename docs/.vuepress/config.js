@@ -170,6 +170,15 @@ module.exports = {
     ],
 
     sidebar: {
+      '/gitea/': [
+        {
+          title: '自建版本控制库',
+          collapsable: false,
+          children: [
+            '自定义issue模板',
+          ]
+        },
+      ],
       '/openhub/': [
         {
           title: '开源宝藏库',
