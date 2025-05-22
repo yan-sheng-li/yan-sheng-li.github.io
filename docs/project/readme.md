@@ -8,4 +8,4 @@
 
 <MyGlobalComponent />
 
-![](http://cdn.qiniu.liyansheng.top/img/20241122020156.png)
+![](http://cdn.qiniu.liyansheng.top/img/20250522145954.png)
