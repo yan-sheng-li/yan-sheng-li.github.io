@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人社交简介</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* body {
+            background-color: #f8f9fa;
+        } */
+
+        .scroll-gallery {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .scroll-gallery .image-track {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-left 10s linear infinite;
+        }
+
+        /* 鼠标指针悬浮图片，画廊暂停 */
+        /* .scroll-gallery:hover .image-track {
+            animation-play-state: paused;
+        } */
+
+        .scroll-gallery .item {
+            display: inline-block;
+            text-align: center;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .scroll-gallery .item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .scroll-gallery img {
+            height: 300px;
+            border-radius: 20px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .scroll-gallery .caption {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .scroll-gallery .tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .scroll-gallery .item:hover .tooltip {
+            opacity: 1;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-50% - 15px));
+            }
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        /* 为每个平台添加特定的样式 */
+        .item[data-platform="gitee"] {
+            background: linear-gradient(45deg, #c71d23 0%, #fc575e 100%);
+            padding: 10px;
+            border-radius: 25px;
+        }
+
+        .item[data-platform="xianyu"] {
+            background: linear-gradient(45deg, #FF8C00 0%, #FFA500 100%);
+            padding: 10px;
+            border-radius: 25px;
+        }
+
+        .item[data-platform="miniprogram"] {
+            background: linear-gradient(45deg, #07c160 0%, #10d673 100%);
+            padding: 10px;
+            border-radius: 25px;
+        }
+
+        .item[data-platform="xiaohongshu"] {
+            background: linear-gradient(45deg, #fe2c55 0%, #ff4d6d 100%);
+            padding: 10px;
+            border-radius: 25px;
+        }
+
+        .item[data-platform="github"] {
+            background: linear-gradient(45deg, #24292e 0%, #404448 100%);
+            padding: 10px;
+            border-radius: 25px;
+        }
+
+        .item[data-platform="csdn"] {
+            background: linear-gradient(45deg, #c71d23 0%, #fc575e 100%);
+            padding: 10px;
+            border-radius: 25px;
+        }
+
+        /* 修改caption样式 */
+        .scroll-gallery .caption {
+            margin-top: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <!-- 横向循环滚动图片，带链接和标题 -->
+        <div class="scroll-gallery mb-5">
+            <div class="image-track">
+                <!-- 第一组 -->
+                <div class="item" data-platform="gitee">
+                    <a href="https://gitee.com/yourusername" target="_blank">
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525112344590.png" alt="Gitee">
+                        <div class="caption">Gitee</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="xianyu">
+                    <a href="https://2.taobao.com" target="_blank">
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525113615067.png" alt="闲鱼">
+                        <div class="caption">闲鱼</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="miniprogram">
+                    <a href="https://yourwechatpage.com" target="_blank">
+
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525113547505.png" alt="微信公众号">
+                        <div class="caption">小程序商店</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="xiaohongshu">
+                    <a href="https://yourportfolio.com" target="_blank">
+
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525113656298.png" alt="博客">
+                        <div class="caption">小红书</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="github">
+                    <a href="https://yourportfolio.com" target="_blank">
+
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525122717931.png" alt="博客">
+                        <div class="caption">GitHub</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="csdn">
+                    <a href="https://yourportfolio.com" target="_blank">
+
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525122137354.png" alt="博客">
+                        <div class="caption">CSDN博客</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="miniprogram">
+                    <a href="https://yourportfolio.com" target="_blank">
+
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525130739065.png" alt="博客">
+                        <div class="caption">微信公众号</div>
+                    </a>
+                </div>
+                                <!-- 第2组 -->
+                <div class="item" data-platform="gitee">
+                    <a href="https://gitee.com/yourusername" target="_blank">
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525112344590.png" alt="Gitee">
+                        <div class="caption">Gitee</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="xianyu">
+                    <a href="https://2.taobao.com" target="_blank">
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525113615067.png" alt="闲鱼">
+                        <div class="caption">闲鱼</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="miniprogram">
+                    <a href="https://yourwechatpage.com" target="_blank">
+
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525113547505.png" alt="微信公众号">
+                        <div class="caption">小程序商店</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="xiaohongshu">
+                    <a href="https://yourportfolio.com" target="_blank">
+
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525113656298.png" alt="博客">
+                        <div class="caption">小红书</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="github">
+                    <a href="https://yourportfolio.com" target="_blank">
+
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525122717931.png" alt="博客">
+                        <div class="caption">GitHub</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="csdn">
+                    <a href="https://yourportfolio.com" target="_blank">
+
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525122137354.png" alt="博客">
+                        <div class="caption">CSDN博客</div>
+                    </a>
+                </div>
+                <div class="item" data-platform="miniprogram">
+                    <a href="https://yourportfolio.com" target="_blank">
+
+                        <img src="http://cdn.qiniu.liyansheng.top/img/image-20250525130739065.png" alt="博客">
+                        <div class="caption">微信公众号</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -211,9 +211,10 @@
             <img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" alt="个人头像" class="avatar">
             <h1>你好，我是 {{ name }}</h1>
             <p class="typing">{{ description }}</p>
-            <a href="#social" class="btn">关注我</a>
-        </section>
+            <a href="#social" class="btn">欢迎来访👇</a>
+                        <iframe src="/my-info.html" width="100%" height="400px" frameborder="0" scrolling="no"></iframe>
 
+        </section>
         <!-- 技术栈 -->
         <section id="skills">
             <h2>技能</h2>
@@ -230,13 +231,7 @@
             </div>
         </section>
 
-        <!-- 社交平台 -->
-        <section id="social">
-            <h2>足迹</h2>
-            <div class="card-list">
-                <a v-for="(url, platform) in socialLinks" :href="url" class="card" target="_blank">{{ platform }}</a>
-            </div>
-        </section>
+
 
         <!-- 联系方式 -->
         <section id="contact">
@@ -256,15 +251,8 @@
             data: {
                 name: "程序开发-木子",
                 description: "山高水远，看世界，也找自己🤳_",
-                skills: ["Vue.js", "Java", "Spring Boot", "Python", "AI","MySQL","Redis","微信小程序","Linux","Docker"],
-                services: ["项目定制开发", "远程调试", "代码优化", "技术咨询","项目讲解","图文定做"],
-                socialLinks: {
-                    GitHub: "https://github.com/yan-sheng-li",
-                    Gitee: "https://gitee.com/yan-sheng-li",
-                    CSDN博客:'https://blog.csdn.net/weixin_44107140',
-                    木子空间:'https://www.liyansheng.top',
-                    简忆博客:'https://www.liyansheng.top/blog'
-                }
+                skills: ["Vue.js", "Java", "Spring Boot", "Python", "AI", "MySQL", "Redis", "微信小程序", "Linux", "Docker"],
+                services: ["项目定制开发", "远程调试", "代码优化", "技术咨询", "项目讲解", "图文定做"],
             }
         });
 
