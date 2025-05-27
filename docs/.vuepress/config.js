@@ -262,7 +262,8 @@ module.exports = {
             '服务开启HTTPS访问',
             '配置热部署',
             '文件上传-下载',
-            '整合WebSocket'
+            '整合WebSocket',
+            '整合JWT'
 
           ]
         },
