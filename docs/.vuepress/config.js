@@ -342,7 +342,8 @@ module.exports = {
             '整合应用VueLeaflet',
             '二维码生成器应用',
             '集成滑动验证码',
-            '词云图'
+            '词云图',
+            '插件-vue-toastification'
           ]
         },
       ],
