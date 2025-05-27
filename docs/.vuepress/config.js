@@ -263,7 +263,8 @@ module.exports = {
             '配置热部署',
             '文件上传-下载',
             '整合WebSocket',
-            '整合JWT'
+            '整合JWT',
+            '简洁版的Result类'
 
           ]
         },
