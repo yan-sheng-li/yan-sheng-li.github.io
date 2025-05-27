@@ -18,6 +18,10 @@ sidebar: false
   max-width: 100% !important;
   padding: 0;
 }
+.home .hero {
+    text-align: center;
+    padding-top: 30px;
+}
 </style>
 <iframe src="/my-info.html" width="100%" height="400px" frameborder="0"   scrolling="no"></iframe>
 <CustomFooter/> 
