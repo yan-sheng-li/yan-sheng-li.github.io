@@ -11,12 +11,15 @@ import SlideVerify from 'vue-monoplasty-slide-verify';
 import SlideProtected from './components/SlideProtected.vue'
 import FloatingImage from './components/FloatingImage.vue'
 import PaymentButton from './components/PaymentButton.vue'
+// 引入 Toast 插件和样式
+import Toast from "vue-toastification";
+import "vue-toastification/dist/index.css";
 
 
 
 
 
-export default ({ Vue  }) => {
+export default ({ Vue }) => {
   // 全局注册组件
   Vue.component('MyGlobalComponent', MyGlobalComponent);
   Vue.component('gzh', gzh)
@@ -29,6 +32,14 @@ export default ({ Vue  }) => {
   Vue.component('SlideProtected', SlideProtected)
   Vue.component('FloatingImage', FloatingImage);
   Vue.component('PaymentButton', PaymentButton)
+  // 注册 Toast 插件
+  Vue.use(Toast, {
+    // 可选的配置项
+    position: "top-right",
+    timeout: 10000,
+    closeOnClick: true,
+    pauseOnHover: true,
+  });
 }
 
 import $ from "jquery";

@@ -9,7 +9,7 @@
     <div v-if="showCard" class="product-card">
       <h2>{{ product.name }}</h2>
       <p><strong>描述：</strong>{{ product.description }}</p>
-      <p><strong>价格：</strong><span  style="color:red;font-size:25px;font-weight: 200;">¥{{ product.price }}</span></p>
+      <p><strong>价格：</strong><span style="color:red;font-size:25px;font-weight: 200;">¥{{ product.price }}</span></p>
       <button @click="initiatePayment" class="order-button">点击下单</button>
     </div>
 
@@ -90,6 +90,7 @@ export default {
           // 根据实际需求处理错误
           this.showCard = false; // 隐藏卡片
           this.msg = "无法获取作品信息，请联系作者！"
+          this.$toast.error("出错了，请稍后再试！");
         });
     },
     initiatePayment() {
@@ -98,14 +99,21 @@ export default {
         this.msg = res.msg;
         this.qrCodeUrl = res.QRcode_url;
         $('.order-button').hide();
+        this.$toast.success("订单创建成功，请扫码支付！");
       }).catch((err) => {
         console.error("Error fetching product data:", err);
+        this.$toast.error("出错了，请稍后再试！");
       })
     },
     checkPaymentStatus() {
       $.get(this.baseUrl + "/orders/status/" + this.orderId).then((res) => {
         this.paymentStatus = res.msg;
-        this.productUrl = res.url;
+        if (res.url && res.url !== "") {
+          this.productUrl = res.url;
+          this.$toast.success("支付成功，感谢您的支持！");
+        } else {
+          this.$toast.error("支付未完成，请重新扫码支付！");
+        }
       });
     },
   },
