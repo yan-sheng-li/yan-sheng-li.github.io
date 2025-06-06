@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>快速入门与部署 | 木子空间</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-VTCF7WPSRK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VTCF7WPSRK');
+      </script>
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="各类项目汇总,涵盖JavaGUI,servlet+jsp,SSM,SpringBoot+Vue,Python,微信小程序...">
+    <meta name="keywords" content="编程知识, 项目案例, 技术文档,难点解析">
+    <meta name="baidu-site-verification" content="codeva-ZjLnH1tXq1">
+    
+    <link rel="preload" href="/assets/css/0.styles.bbaca70b.css" as="style"><link rel="preload" href="/assets/js/app.62442ca5.js" as="script"><link rel="preload" href="/assets/js/2.9c2857b2.js" as="script"><link rel="preload" href="/assets/js/1.765bb458.js" as="script"><link rel="preload" href="/assets/js/30.4cc01506.js" as="script"><link rel="prefetch" href="/assets/js/10.cadad380.js"><link rel="prefetch" href="/assets/js/100.8f2d58ed.js"><link rel="prefetch" href="/assets/js/101.9dd04a2e.js"><link rel="prefetch" href="/assets/js/102.90376d62.js"><link rel="prefetch" href="/assets/js/103.3160bbbb.js"><link rel="prefetch" href="/assets/js/104.22791e1d.js"><link rel="prefetch" href="/assets/js/105.e515cf9d.js"><link rel="prefetch" href="/assets/js/106.cb218539.js"><link rel="prefetch" href="/assets/js/107.0eaf7b78.js"><link rel="prefetch" href="/assets/js/108.d4f6998d.js"><link rel="prefetch" href="/assets/js/109.04bebf2b.js"><link rel="prefetch" href="/assets/js/11.4adf8fa7.js"><link rel="prefetch" href="/assets/js/110.6cc2f558.js"><link rel="prefetch" href="/assets/js/111.4a2f5799.js"><link rel="prefetch" href="/assets/js/112.8956c321.js"><link rel="prefetch" href="/assets/js/113.2fe04a71.js"><link rel="prefetch" href="/assets/js/114.f881501a.js"><link rel="prefetch" href="/assets/js/115.8d4dab21.js"><link rel="prefetch" href="/assets/js/116.55042124.js"><link rel="prefetch" href="/assets/js/117.10e0d5e1.js"><link rel="prefetch" href="/assets/js/118.6ddfb0a0.js"><link rel="prefetch" href="/assets/js/119.be5e57e7.js"><link rel="prefetch" href="/assets/js/12.43881d46.js"><link rel="prefetch" href="/assets/js/120.d6926bc3.js"><link rel="prefetch" href="/assets/js/121.a5b4a44e.js"><link rel="prefetch" href="/assets/js/122.b29928ed.js"><link rel="prefetch" href="/assets/js/123.de51a5fd.js"><link rel="prefetch" href="/assets/js/124.3c9df30e.js"><link rel="prefetch" href="/assets/js/125.cdcd2333.js"><link rel="prefetch" href="/assets/js/126.db806845.js"><link rel="prefetch" href="/assets/js/127.dbd6fa1f.js"><link rel="prefetch" href="/assets/js/128.919f2a7f.js"><link rel="prefetch" href="/assets/js/129.c41dbc44.js"><link rel="prefetch" href="/assets/js/13.8aa99d2f.js"><link rel="prefetch" href="/assets/js/130.98f59b76.js"><link rel="prefetch" href="/assets/js/131.400a0205.js"><link rel="prefetch" href="/assets/js/132.89c67b30.js"><link rel="prefetch" href="/assets/js/133.36148832.js"><link rel="prefetch" href="/assets/js/134.6910cf95.js"><link rel="prefetch" href="/assets/js/135.bf19cb40.js"><link rel="prefetch" href="/assets/js/136.958751de.js"><link rel="prefetch" href="/assets/js/137.d9efac72.js"><link rel="prefetch" href="/assets/js/138.34ae73b9.js"><link rel="prefetch" href="/assets/js/139.f54e665e.js"><link rel="prefetch" href="/assets/js/14.9bbcc61c.js"><link rel="prefetch" href="/assets/js/140.cba50ccb.js"><link rel="prefetch" href="/assets/js/141.8536570a.js"><link rel="prefetch" href="/assets/js/142.9dc74cfb.js"><link rel="prefetch" href="/assets/js/143.b5f85109.js"><link rel="prefetch" href="/assets/js/144.5c286f18.js"><link rel="prefetch" href="/assets/js/145.5ec9afbf.js"><link rel="prefetch" href="/assets/js/146.c6fdb503.js"><link rel="prefetch" href="/assets/js/147.e66481ec.js"><link rel="prefetch" href="/assets/js/148.743631fd.js"><link rel="prefetch" href="/assets/js/149.8227772e.js"><link rel="prefetch" href="/assets/js/15.211d989a.js"><link rel="prefetch" href="/assets/js/150.39328698.js"><link rel="prefetch" href="/assets/js/151.254556dc.js"><link rel="prefetch" href="/assets/js/152.e996ae4c.js"><link rel="prefetch" href="/assets/js/153.1b22ec0e.js"><link rel="prefetch" href="/assets/js/154.fc83a6cf.js"><link rel="prefetch" href="/assets/js/155.4743c168.js"><link rel="prefetch" href="/assets/js/156.81914614.js"><link rel="prefetch" href="/assets/js/157.e39feae2.js"><link rel="prefetch" href="/assets/js/158.69deb8a8.js"><link rel="prefetch" href="/assets/js/159.dc0f94ed.js"><link rel="prefetch" href="/assets/js/16.8390880c.js"><link rel="prefetch" href="/assets/js/160.5b29aa98.js"><link rel="prefetch" href="/assets/js/161.d57f7e28.js"><link rel="prefetch" href="/assets/js/162.d7dac40f.js"><link rel="prefetch" href="/assets/js/163.d6f843a5.js"><link rel="prefetch" href="/assets/js/164.5165aaa9.js"><link rel="prefetch" href="/assets/js/165.2e0e230b.js"><link rel="prefetch" href="/assets/js/166.c645c7d1.js"><link rel="prefetch" href="/assets/js/167.e18b76a7.js"><link rel="prefetch" href="/assets/js/168.9c6b59cb.js"><link rel="prefetch" href="/assets/js/169.7c1d20f4.js"><link rel="prefetch" href="/assets/js/17.c2b9e0c3.js"><link rel="prefetch" href="/assets/js/170.d0a10e09.js"><link rel="prefetch" href="/assets/js/171.0a1bd71a.js"><link rel="prefetch" href="/assets/js/172.cc5c66fb.js"><link rel="prefetch" href="/assets/js/173.fd5e9067.js"><link rel="prefetch" href="/assets/js/174.8776a71d.js"><link rel="prefetch" href="/assets/js/175.980d9a69.js"><link rel="prefetch" href="/assets/js/176.d85b0766.js"><link rel="prefetch" href="/assets/js/177.480b5d00.js"><link rel="prefetch" href="/assets/js/178.02fecacb.js"><link rel="prefetch" href="/assets/js/179.2dee0ec0.js"><link rel="prefetch" href="/assets/js/18.cb5449ba.js"><link rel="prefetch" href="/assets/js/180.77ba8594.js"><link rel="prefetch" href="/assets/js/181.d05dfd76.js"><link rel="prefetch" href="/assets/js/182.11c08b4f.js"><link rel="prefetch" href="/assets/js/183.e46e454d.js"><link rel="prefetch" href="/assets/js/184.8043babd.js"><link rel="prefetch" href="/assets/js/185.2105c72e.js"><link rel="prefetch" href="/assets/js/186.b4ed220a.js"><link rel="prefetch" href="/assets/js/187.7938dd0d.js"><link rel="prefetch" href="/assets/js/188.bc12a04a.js"><link rel="prefetch" href="/assets/js/189.354b5bb0.js"><link rel="prefetch" href="/assets/js/19.c8f10e86.js"><link rel="prefetch" href="/assets/js/190.0b1c7fd6.js"><link rel="prefetch" href="/assets/js/191.f7349aad.js"><link rel="prefetch" href="/assets/js/192.983b6c5f.js"><link rel="prefetch" href="/assets/js/193.3629a35a.js"><link rel="prefetch" href="/assets/js/194.8694a1f7.js"><link rel="prefetch" href="/assets/js/195.0966c7a6.js"><link rel="prefetch" href="/assets/js/196.39ad1bec.js"><link rel="prefetch" href="/assets/js/197.acf2b610.js"><link rel="prefetch" href="/assets/js/198.5c3b3f8e.js"><link rel="prefetch" href="/assets/js/199.ba02a5f7.js"><link rel="prefetch" href="/assets/js/20.5fe9c931.js"><link rel="prefetch" href="/assets/js/200.65afc2ba.js"><link rel="prefetch" href="/assets/js/201.30511053.js"><link rel="prefetch" href="/assets/js/202.43bcfe34.js"><link rel="prefetch" href="/assets/js/203.ec13451f.js"><link rel="prefetch" href="/assets/js/204.46c5926f.js"><link rel="prefetch" href="/assets/js/205.976257fe.js"><link rel="prefetch" href="/assets/js/206.ceb69291.js"><link rel="prefetch" href="/assets/js/207.af0f81ec.js"><link rel="prefetch" href="/assets/js/208.3f88cb30.js"><link rel="prefetch" href="/assets/js/209.9ac64282.js"><link rel="prefetch" href="/assets/js/21.a1e20d55.js"><link rel="prefetch" href="/assets/js/210.fcb13bbd.js"><link rel="prefetch" href="/assets/js/211.ca2cb780.js"><link rel="prefetch" href="/assets/js/212.ccc2c847.js"><link rel="prefetch" href="/assets/js/213.25fbaa1c.js"><link rel="prefetch" href="/assets/js/214.e068c71f.js"><link rel="prefetch" href="/assets/js/215.c1cccd54.js"><link rel="prefetch" href="/assets/js/216.b22cc7c6.js"><link rel="prefetch" href="/assets/js/217.344bfe09.js"><link rel="prefetch" href="/assets/js/218.44b7253e.js"><link rel="prefetch" href="/assets/js/219.e73ab8a0.js"><link rel="prefetch" href="/assets/js/22.5fb9de0d.js"><link rel="prefetch" href="/assets/js/220.8d02396d.js"><link rel="prefetch" href="/assets/js/221.55dea2f2.js"><link rel="prefetch" href="/assets/js/222.e175a0d8.js"><link rel="prefetch" href="/assets/js/223.a650516b.js"><link rel="prefetch" href="/assets/js/224.f98d6a15.js"><link rel="prefetch" href="/assets/js/225.5188bb6b.js"><link rel="prefetch" href="/assets/js/226.d2dc247b.js"><link rel="prefetch" href="/assets/js/227.2d50e5fa.js"><link rel="prefetch" href="/assets/js/228.5dddc2e6.js"><link rel="prefetch" href="/assets/js/229.91947744.js"><link rel="prefetch" href="/assets/js/23.56c68b9a.js"><link rel="prefetch" href="/assets/js/230.2215469c.js"><link rel="prefetch" href="/assets/js/231.b210fe37.js"><link rel="prefetch" href="/assets/js/232.04b63564.js"><link rel="prefetch" href="/assets/js/233.f4e72222.js"><link rel="prefetch" href="/assets/js/234.c2e046cc.js"><link rel="prefetch" href="/assets/js/235.35f14d35.js"><link rel="prefetch" href="/assets/js/236.8aec0473.js"><link rel="prefetch" href="/assets/js/237.7f50089b.js"><link rel="prefetch" href="/assets/js/238.37f7248a.js"><link rel="prefetch" href="/assets/js/239.4ac79f32.js"><link rel="prefetch" href="/assets/js/24.86ab1470.js"><link rel="prefetch" href="/assets/js/240.eb87d823.js"><link rel="prefetch" href="/assets/js/241.0f590fe3.js"><link rel="prefetch" href="/assets/js/242.627a0e09.js"><link rel="prefetch" href="/assets/js/243.1a8367b0.js"><link rel="prefetch" href="/assets/js/244.5af07655.js"><link rel="prefetch" href="/assets/js/245.5529f3f0.js"><link rel="prefetch" href="/assets/js/246.fbe7661c.js"><link rel="prefetch" href="/assets/js/247.326b9e9d.js"><link rel="prefetch" href="/assets/js/248.cefe00c7.js"><link rel="prefetch" href="/assets/js/249.c11a95f6.js"><link rel="prefetch" href="/assets/js/25.682e6646.js"><link rel="prefetch" href="/assets/js/250.3cef79b9.js"><link rel="prefetch" href="/assets/js/251.ad27fa8d.js"><link rel="prefetch" href="/assets/js/252.a41f5f83.js"><link rel="prefetch" href="/assets/js/253.59f64d89.js"><link rel="prefetch" href="/assets/js/254.3fbb70c7.js"><link rel="prefetch" href="/assets/js/255.24326f31.js"><link rel="prefetch" href="/assets/js/256.bed11bfb.js"><link rel="prefetch" href="/assets/js/257.acf7d467.js"><link rel="prefetch" href="/assets/js/258.dd0bc67a.js"><link rel="prefetch" href="/assets/js/259.ed69f547.js"><link rel="prefetch" href="/assets/js/26.114c8433.js"><link rel="prefetch" href="/assets/js/260.e72d9cb8.js"><link rel="prefetch" href="/assets/js/261.e7396638.js"><link rel="prefetch" href="/assets/js/262.655253c6.js"><link rel="prefetch" href="/assets/js/263.ec8366e7.js"><link rel="prefetch" href="/assets/js/264.b98a1c56.js"><link rel="prefetch" href="/assets/js/265.4f4a6956.js"><link rel="prefetch" href="/assets/js/266.947b3788.js"><link rel="prefetch" href="/assets/js/267.0f9c5ebd.js"><link rel="prefetch" href="/assets/js/268.169bb894.js"><link rel="prefetch" href="/assets/js/269.8661cc4c.js"><link rel="prefetch" href="/assets/js/27.6818e90b.js"><link rel="prefetch" href="/assets/js/270.f488c2a8.js"><link rel="prefetch" href="/assets/js/271.031c0336.js"><link rel="prefetch" href="/assets/js/272.9cd91650.js"><link rel="prefetch" href="/assets/js/273.041c182e.js"><link rel="prefetch" href="/assets/js/274.57a9e9d3.js"><link rel="prefetch" href="/assets/js/275.bbb26730.js"><link rel="prefetch" href="/assets/js/276.7c1966d3.js"><link rel="prefetch" href="/assets/js/277.f4a82ee7.js"><link rel="prefetch" href="/assets/js/278.48b40d31.js"><link rel="prefetch" href="/assets/js/279.b7c55fcb.js"><link rel="prefetch" href="/assets/js/28.5dc65553.js"><link rel="prefetch" href="/assets/js/280.91ead84c.js"><link rel="prefetch" href="/assets/js/281.1922a4c2.js"><link rel="prefetch" href="/assets/js/282.9677ed13.js"><link rel="prefetch" href="/assets/js/283.f68e2e1f.js"><link rel="prefetch" href="/assets/js/284.00970400.js"><link rel="prefetch" href="/assets/js/285.572ee3e8.js"><link rel="prefetch" href="/assets/js/286.11846713.js"><link rel="prefetch" href="/assets/js/287.be6ed4ff.js"><link rel="prefetch" href="/assets/js/288.f29b664f.js"><link rel="prefetch" href="/assets/js/289.c397884f.js"><link rel="prefetch" href="/assets/js/29.f66ecd93.js"><link rel="prefetch" href="/assets/js/290.7bfbbe53.js"><link rel="prefetch" href="/assets/js/291.4f499925.js"><link rel="prefetch" href="/assets/js/292.57fb18d1.js"><link rel="prefetch" href="/assets/js/293.5fd9ed68.js"><link rel="prefetch" href="/assets/js/294.367d67da.js"><link rel="prefetch" href="/assets/js/295.d8fa42de.js"><link rel="prefetch" href="/assets/js/296.e7e3bd0a.js"><link rel="prefetch" href="/assets/js/297.0578ff43.js"><link rel="prefetch" href="/assets/js/298.a63bfe53.js"><link rel="prefetch" href="/assets/js/299.cdbd4d9a.js"><link rel="prefetch" href="/assets/js/3.6021ffee.js"><link rel="prefetch" href="/assets/js/300.aab64880.js"><link rel="prefetch" href="/assets/js/301.6f2eb0d6.js"><link rel="prefetch" href="/assets/js/302.a50704ea.js"><link rel="prefetch" href="/assets/js/303.5b332940.js"><link rel="prefetch" href="/assets/js/304.3df4e813.js"><link rel="prefetch" href="/assets/js/305.e58abcb1.js"><link rel="prefetch" href="/assets/js/306.2bb94ac6.js"><link rel="prefetch" href="/assets/js/307.450090d4.js"><link rel="prefetch" href="/assets/js/308.fdc43302.js"><link rel="prefetch" href="/assets/js/309.b5f75b6c.js"><link rel="prefetch" href="/assets/js/31.3942e8f5.js"><link rel="prefetch" href="/assets/js/310.1568cdbe.js"><link rel="prefetch" href="/assets/js/311.5bf8676d.js"><link rel="prefetch" href="/assets/js/312.703b3964.js"><link rel="prefetch" href="/assets/js/313.18eca86c.js"><link rel="prefetch" href="/assets/js/314.ae06a880.js"><link rel="prefetch" href="/assets/js/315.d3389390.js"><link rel="prefetch" href="/assets/js/316.54a6f34d.js"><link rel="prefetch" href="/assets/js/317.b4e72a03.js"><link rel="prefetch" href="/assets/js/318.f604142b.js"><link rel="prefetch" href="/assets/js/319.012b856f.js"><link rel="prefetch" href="/assets/js/32.79db3ae9.js"><link rel="prefetch" href="/assets/js/320.26f020dd.js"><link rel="prefetch" href="/assets/js/321.781dc87c.js"><link rel="prefetch" href="/assets/js/322.18e2ebba.js"><link rel="prefetch" href="/assets/js/323.05121803.js"><link rel="prefetch" href="/assets/js/324.056fa3f1.js"><link rel="prefetch" href="/assets/js/325.c5d339cc.js"><link rel="prefetch" href="/assets/js/326.d06c0512.js"><link rel="prefetch" href="/assets/js/327.34a5eeb7.js"><link rel="prefetch" href="/assets/js/328.e7f3516e.js"><link rel="prefetch" href="/assets/js/329.0c93bbc9.js"><link rel="prefetch" href="/assets/js/33.8ab483d9.js"><link rel="prefetch" href="/assets/js/330.1be892dd.js"><link rel="prefetch" href="/assets/js/331.5882268f.js"><link rel="prefetch" href="/assets/js/332.53bac3d5.js"><link rel="prefetch" href="/assets/js/333.baceaa1c.js"><link rel="prefetch" href="/assets/js/334.73462c6c.js"><link rel="prefetch" href="/assets/js/335.fb68d6a6.js"><link rel="prefetch" href="/assets/js/336.1165218d.js"><link rel="prefetch" href="/assets/js/337.13857624.js"><link rel="prefetch" href="/assets/js/338.1983f420.js"><link rel="prefetch" href="/assets/js/339.8318bf07.js"><link rel="prefetch" href="/assets/js/34.60d59cd0.js"><link rel="prefetch" href="/assets/js/340.5249a3d4.js"><link rel="prefetch" href="/assets/js/341.04c4c777.js"><link rel="prefetch" href="/assets/js/342.015d59cd.js"><link rel="prefetch" href="/assets/js/343.3cccf2a8.js"><link rel="prefetch" href="/assets/js/344.c0a7d1d9.js"><link rel="prefetch" href="/assets/js/345.b8178b68.js"><link rel="prefetch" href="/assets/js/346.6ed52a25.js"><link rel="prefetch" href="/assets/js/347.1dfb258e.js"><link rel="prefetch" href="/assets/js/348.7dd50b13.js"><link rel="prefetch" href="/assets/js/349.fe003a02.js"><link rel="prefetch" href="/assets/js/35.28af9c98.js"><link rel="prefetch" href="/assets/js/350.5311403b.js"><link rel="prefetch" href="/assets/js/36.c6ae7a23.js"><link rel="prefetch" href="/assets/js/37.d372bd8a.js"><link rel="prefetch" href="/assets/js/38.7f8915bb.js"><link rel="prefetch" href="/assets/js/39.f613deac.js"><link rel="prefetch" href="/assets/js/4.3d116ad4.js"><link rel="prefetch" href="/assets/js/40.63190021.js"><link rel="prefetch" href="/assets/js/41.1614b733.js"><link rel="prefetch" href="/assets/js/42.08c88e5b.js"><link rel="prefetch" href="/assets/js/43.538efe82.js"><link rel="prefetch" href="/assets/js/44.dce8d7aa.js"><link rel="prefetch" href="/assets/js/45.96db2e06.js"><link rel="prefetch" href="/assets/js/46.da73fa45.js"><link rel="prefetch" href="/assets/js/47.10dba881.js"><link rel="prefetch" href="/assets/js/48.729e5cfa.js"><link rel="prefetch" href="/assets/js/49.a6253180.js"><link rel="prefetch" href="/assets/js/5.05fae68c.js"><link rel="prefetch" href="/assets/js/50.e37d3a83.js"><link rel="prefetch" href="/assets/js/51.73cd70fe.js"><link rel="prefetch" href="/assets/js/52.1e15f17c.js"><link rel="prefetch" href="/assets/js/53.3a5dd0d8.js"><link rel="prefetch" href="/assets/js/54.43c49681.js"><link rel="prefetch" href="/assets/js/55.8cf7567c.js"><link rel="prefetch" href="/assets/js/56.442c4b45.js"><link rel="prefetch" href="/assets/js/57.114bda20.js"><link rel="prefetch" href="/assets/js/58.60f7735a.js"><link rel="prefetch" href="/assets/js/59.ebe090c9.js"><link rel="prefetch" href="/assets/js/6.40353cdd.js"><link rel="prefetch" href="/assets/js/60.8f0d219d.js"><link rel="prefetch" href="/assets/js/61.fcef7f84.js"><link rel="prefetch" href="/assets/js/62.5519ca91.js"><link rel="prefetch" href="/assets/js/63.d35eaac9.js"><link rel="prefetch" href="/assets/js/64.bca84d83.js"><link rel="prefetch" href="/assets/js/65.a09d990e.js"><link rel="prefetch" href="/assets/js/66.0d14a23b.js"><link rel="prefetch" href="/assets/js/67.3907f21d.js"><link rel="prefetch" href="/assets/js/68.545cdc3e.js"><link rel="prefetch" href="/assets/js/69.1bd28ce6.js"><link rel="prefetch" href="/assets/js/7.a0e7f492.js"><link rel="prefetch" href="/assets/js/70.c33910c6.js"><link rel="prefetch" href="/assets/js/71.a96f827e.js"><link rel="prefetch" href="/assets/js/72.1cab775b.js"><link rel="prefetch" href="/assets/js/73.ffcda274.js"><link rel="prefetch" href="/assets/js/74.39b74afb.js"><link rel="prefetch" href="/assets/js/75.94c10c49.js"><link rel="prefetch" href="/assets/js/76.bbd613d0.js"><link rel="prefetch" href="/assets/js/77.2e75f6ef.js"><link rel="prefetch" href="/assets/js/78.f04d17c4.js"><link rel="prefetch" href="/assets/js/79.3a17e55c.js"><link rel="prefetch" href="/assets/js/80.1b2b1d61.js"><link rel="prefetch" href="/assets/js/81.98e7b027.js"><link rel="prefetch" href="/assets/js/82.14bb7ca3.js"><link rel="prefetch" href="/assets/js/83.35b52800.js"><link rel="prefetch" href="/assets/js/84.9e6f52c8.js"><link rel="prefetch" href="/assets/js/85.6588f91a.js"><link rel="prefetch" href="/assets/js/86.79bd9296.js"><link rel="prefetch" href="/assets/js/87.8b9dbc43.js"><link rel="prefetch" href="/assets/js/88.47fbff33.js"><link rel="prefetch" href="/assets/js/89.40482b30.js"><link rel="prefetch" href="/assets/js/90.a7a9cae2.js"><link rel="prefetch" href="/assets/js/91.4a410cca.js"><link rel="prefetch" href="/assets/js/92.ba5e98ad.js"><link rel="prefetch" href="/assets/js/93.6bd59a19.js"><link rel="prefetch" href="/assets/js/94.b43779e4.js"><link rel="prefetch" href="/assets/js/95.5e79eb85.js"><link rel="prefetch" href="/assets/js/96.d6a5b9ef.js"><link rel="prefetch" href="/assets/js/97.4f5efbd1.js"><link rel="prefetch" href="/assets/js/98.b0eb5e80.js"><link rel="prefetch" href="/assets/js/99.62566f26.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.f7f71fb4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.bbaca70b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" alt="木子空间" class="logo"> <span class="site-name can-hide">木子空间</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/collection/" class="nav-link">
+  精品网址
+</a></div><div class="nav-item"><a href="/openhub/" class="nav-link">
+  开源宝藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="💻 编程笔记" class="dropdown-title"><span class="title">💻 编程笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="💻 编程笔记" class="mobile-dropdown-title"><span class="title">💻 编程笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Java
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/" class="nav-link">
+  Java SE
+</a></li><li class="dropdown-subitem"><a href="/Javaee/" class="nav-link">
+  Java EE
+</a></li><li class="dropdown-subitem"><a href="/springboot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-subitem"><a href="/mybatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-subitem"><a href="/swing/" class="nav-link">
+  Swing
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepress/" class="nav-link">
+  VuePress
+</a></li><li class="dropdown-subitem"><a href="/Js/" class="nav-link">
+  JavaScript库
+</a></li><li class="dropdown-subitem"><a href="/bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/vue/" class="nav-link">
+  Vue
+</a></li></ul></li><li class="dropdown-item"><h4>
+          版本控制与容器化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  Docker
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-subitem"><a href="/ElasticSearch/" class="nav-link router-link-active">
+  ElasticSearch
+</a></li><li class="dropdown-subitem"><a href="/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-subitem"><a href="/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/微信小程序/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Report
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/report/" class="nav-link">
+  一般
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/project/" class="nav-link">
+  📦项目合集
+</a></div><div class="nav-item"><a href="https://www.liyansheng.top/me" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📑博主名片
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.liyansheng.top/blog/remote_help" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🔥远程调试🔥
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🎃更多玩法" class="dropdown-title"><span class="title">🎃更多玩法</span> <span class="arrow down"></span></button> <button type="button" aria-label="🎃更多玩法" class="mobile-dropdown-title"><span class="title">🎃更多玩法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          酷玩机
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/40617.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  科学上网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/tool/Plugins.html" class="nav-link">
+  浏览器插件
+</a></li><li class="dropdown-subitem"><a href="/tool/自制视频流.html" class="nav-link">
+  自制视频流
+</a></li><li class="dropdown-subitem"><a href="/tool/好用API.html" class="nav-link">
+  好用API
+</a></li><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/18883.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  免费看电视
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/57913.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建内网穿透
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🚀滴滴作者" class="dropdown-title"><span class="title">🚀滴滴作者</span> <span class="arrow down"></span></button> <button type="button" aria-label="🚀滴滴作者" class="mobile-dropdown-title"><span class="title">🚀滴滴作者</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          联系方式
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&amp;jump_from=webapi&amp;authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  一键私聊
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20240715004059.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  加QQ
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20240715004147.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  加微信
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20250522145954.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  打赏支持
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          足迹
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="http://www.liyansheng.top/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📗木子博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/weixin_44107140" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📙CSDN博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/yan-sheng-li" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://gitee.com/yan-sheng-li" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/gzh_muzikongjianPro.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  公众号《木子空间Pro》
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="💖兴趣爱好" class="dropdown-title"><span class="title">💖兴趣爱好</span> <span class="arrow down"></span></button> <button type="button" aria-label="💖兴趣爱好" class="mobile-dropdown-title"><span class="title">💖兴趣爱好</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guitar/" class="nav-link">
+  吉他（探索中）
+</a></li><li class="dropdown-item"><!----> <a href="/qupu/" class="nav-link">
+  曲谱
+</a></li><li class="dropdown-item"><!----> <a href="/cooking/" class="nav-link">
+  菜谱
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/collection/" class="nav-link">
+  精品网址
+</a></div><div class="nav-item"><a href="/openhub/" class="nav-link">
+  开源宝藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="💻 编程笔记" class="dropdown-title"><span class="title">💻 编程笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="💻 编程笔记" class="mobile-dropdown-title"><span class="title">💻 编程笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Java
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/" class="nav-link">
+  Java SE
+</a></li><li class="dropdown-subitem"><a href="/Javaee/" class="nav-link">
+  Java EE
+</a></li><li class="dropdown-subitem"><a href="/springboot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-subitem"><a href="/mybatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-subitem"><a href="/swing/" class="nav-link">
+  Swing
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepress/" class="nav-link">
+  VuePress
+</a></li><li class="dropdown-subitem"><a href="/Js/" class="nav-link">
+  JavaScript库
+</a></li><li class="dropdown-subitem"><a href="/bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/vue/" class="nav-link">
+  Vue
+</a></li></ul></li><li class="dropdown-item"><h4>
+          版本控制与容器化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  Docker
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-subitem"><a href="/ElasticSearch/" class="nav-link router-link-active">
+  ElasticSearch
+</a></li><li class="dropdown-subitem"><a href="/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-subitem"><a href="/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/微信小程序/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Report
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/report/" class="nav-link">
+  一般
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/project/" class="nav-link">
+  📦项目合集
+</a></div><div class="nav-item"><a href="https://www.liyansheng.top/me" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📑博主名片
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.liyansheng.top/blog/remote_help" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🔥远程调试🔥
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🎃更多玩法" class="dropdown-title"><span class="title">🎃更多玩法</span> <span class="arrow down"></span></button> <button type="button" aria-label="🎃更多玩法" class="mobile-dropdown-title"><span class="title">🎃更多玩法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          酷玩机
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/40617.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  科学上网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/tool/Plugins.html" class="nav-link">
+  浏览器插件
+</a></li><li class="dropdown-subitem"><a href="/tool/自制视频流.html" class="nav-link">
+  自制视频流
+</a></li><li class="dropdown-subitem"><a href="/tool/好用API.html" class="nav-link">
+  好用API
+</a></li><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/18883.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  免费看电视
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/57913.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建内网穿透
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🚀滴滴作者" class="dropdown-title"><span class="title">🚀滴滴作者</span> <span class="arrow down"></span></button> <button type="button" aria-label="🚀滴滴作者" class="mobile-dropdown-title"><span class="title">🚀滴滴作者</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          联系方式
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&amp;jump_from=webapi&amp;authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  一键私聊
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20240715004059.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  加QQ
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20240715004147.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  加微信
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20250522145954.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  打赏支持
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          足迹
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="http://www.liyansheng.top/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📗木子博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/weixin_44107140" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📙CSDN博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/yan-sheng-li" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://gitee.com/yan-sheng-li" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/gzh_muzikongjianPro.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  公众号《木子空间Pro》
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="💖兴趣爱好" class="dropdown-title"><span class="title">💖兴趣爱好</span> <span class="arrow down"></span></button> <button type="button" aria-label="💖兴趣爱好" class="mobile-dropdown-title"><span class="title">💖兴趣爱好</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guitar/" class="nav-link">
+  吉他（探索中）
+</a></li><li class="dropdown-item"><!----> <a href="/qupu/" class="nav-link">
+  曲谱
+</a></li><li class="dropdown-item"><!----> <a href="/cooking/" class="nav-link">
+  菜谱
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>ElasticSearch</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ElasticSearch/快速入门与部署.html" class="active sidebar-link">快速入门与部署</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ElasticSearch/快速入门与部署.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/ElasticSearch/快速入门与部署.html#一、如何启动" class="sidebar-link">一、如何启动</a></li><li class="sidebar-sub-header"><a href="/ElasticSearch/快速入门与部署.html#二、基本操作" class="sidebar-link">二、基本操作</a></li><li class="sidebar-sub-header"><a href="/ElasticSearch/快速入门与部署.html#三、条件查询" class="sidebar-link">三、条件查询</a></li><li class="sidebar-sub-header"><a href="/ElasticSearch/快速入门与部署.html#四、环境搭建" class="sidebar-link">四、环境搭建</a></li><li class="sidebar-sub-header"><a href="/ElasticSearch/快速入门与部署.html#五、安全认证" class="sidebar-link">五、安全认证</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="快速入门与部署"><a href="#快速入门与部署" class="header-anchor">#</a> 快速入门与部署</h1> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <blockquote><p>这段时间因工作需要，学习了ElasticSearch的相关知识。下面就自己在实践中遇到问题以及操作要点做一个总结。</p></blockquote> <h2 id="一、如何启动"><a href="#一、如何启动" class="header-anchor">#</a> 一、如何启动</h2> <h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h3> <p>官网 =》 <a href="https://www.elastic.co/cn/elasticsearch/" target="_blank" rel="noopener noreferrer">Elasticsearch：官方分布式搜索和分析引擎 | Elastic<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>下载压缩包，解压</p> <p>进入配置，修改配置，主要有两个文件需要修改。</p> <p>1.<code>elasticsearch.yml</code>(里面的配置默认都是注释了的，将下面的四个配置的打开，名称可以自定义)</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>application
+
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> node<span class="token punctuation">-</span><span class="token number">1</span>
+
+<span class="token key atrule">network.host</span><span class="token punctuation">:</span> 0.0.0.0
+
+<span class="token key atrule">cluster.initial_master_nodes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;node-1&quot;</span><span class="token punctuation">]</span>
+
+</code></pre></div><p>2.<code>jvm.options</code>(默认配置内存是1G，可以修改小点，如我修改成256m，具体根据你的机器配置)</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token parameter variable">-Xms256m</span>
+<span class="token parameter variable">-Xmx256m</span>
+</code></pre></div><h3 id="启动报错1"><a href="#启动报错1" class="header-anchor">#</a> 启动报错1</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>@VM-16-12-centos bin<span class="token punctuation">]</span>$ ./elasticsearch could not <span class="token function">find</span> <span class="token function">java</span> <span class="token keyword">in</span> bundled jdk at <span class="token punctuation">..</span>.
+</code></pre></div><p>解决：上述报错并非没有装jdk，而是你从root用户切换到普通用户时，ES安装目录的所有者还是root，普通用户没有权限，因此先给非root用户授权，使用<code>chmod -R 组：成员 文件名</code>，之后再切换到该用户启动ES</p> <h3 id="启动报错2"><a href="#启动报错2" class="header-anchor">#</a> 启动报错2</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>ERROR: <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> bootstrap checks failed
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: max virtual memory areas vm.max_map_count <span class="token punctuation">[</span><span class="token number">65530</span><span class="token punctuation">]</span> is too low, increase to at least <span class="token punctuation">[</span><span class="token number">262144</span><span class="token punctuation">]</span>
+ERROR: Elasticsearch did not <span class="token builtin class-name">exit</span> normally - check the logs at /usr/local/ES/logs/my-application.log
+<span class="token punctuation">[</span><span class="token number">2022</span>-10-17T16:53:35,547<span class="token punctuation">]</span><span class="token punctuation">[</span>INFO <span class="token punctuation">]</span><span class="token punctuation">[</span>o.e.n.Node               <span class="token punctuation">]</span> <span class="token punctuation">[</span>node-1<span class="token punctuation">]</span> stopping <span class="token punctuation">..</span>.
+<span class="token punctuation">[</span><span class="token number">2022</span>-10-17T16:53:35,556<span class="token punctuation">]</span><span class="token punctuation">[</span>INFO <span class="token punctuation">]</span><span class="token punctuation">[</span>o.e.n.Node               <span class="token punctuation">]</span> <span class="token punctuation">[</span>node-1<span class="token punctuation">]</span> stopped
+<span class="token punctuation">[</span><span class="token number">2022</span>-10-17T16:53:35,557<span class="token punctuation">]</span><span class="token punctuation">[</span>INFO <span class="token punctuation">]</span><span class="token punctuation">[</span>o.e.n.Node               <span class="token punctuation">]</span> <span class="token punctuation">[</span>node-1<span class="token punctuation">]</span> closing <span class="token punctuation">..</span>.
+<span class="token punctuation">[</span><span class="token number">2022</span>-10-17T16:53:35,581<span class="token punctuation">]</span><span class="token punctuation">[</span>INFO <span class="token punctuation">]</span><span class="token punctuation">[</span>o.e.n.Node               <span class="token punctuation">]</span> <span class="token punctuation">[</span>node-1<span class="token punctuation">]</span> closed
+<span class="token punctuation">[</span><span class="token number">2022</span>-10-17T16:53:35,583<span class="token punctuation">]</span><span class="token punctuation">[</span>INFO <span class="token punctuation">]</span><span class="token punctuation">[</span>o.e.x.m.p.NativeController<span class="token punctuation">]</span> <span class="token punctuation">[</span>node-1<span class="token punctuation">]</span> Native controller process has stopped - no new native processes can be started
+</code></pre></div><p>解决：内存不足。用root身份编辑<code>/etc/sysctl.conf</code>，在里面添加一行：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token assign-left variable">vm.max_map_count</span><span class="token operator">=</span><span class="token number">655360</span>
+</code></pre></div><p>保存，切换到非root用户，再次启动ES即可。</p> <h3 id="后台启动"><a href="#后台启动" class="header-anchor">#</a> 后台启动</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 下面的方式后台启动不好使</span>
+<span class="token punctuation">[</span>wyp@VM-16-12-centos bin<span class="token punctuation">]</span>$ <span class="token function">nohup</span> <span class="token builtin class-name">.</span> elasticsearch <span class="token operator">&amp;</span>
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token number">25834</span>
+<span class="token punctuation">[</span>wyp@VM-16-12-centos bin<span class="token punctuation">]</span>$ nohup: 忽略输入并把输出追加到<span class="token string">&quot;nohup.out&quot;</span>
+nohup: 无法运行命令<span class="token string">&quot;.&quot;</span><span class="token builtin class-name">:</span> 权限不够
+^C
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>+  退出 <span class="token number">126</span>              <span class="token function">nohup</span> <span class="token builtin class-name">.</span> elasticsearch
+<span class="token punctuation">[</span>wyp@VM-16-12-centos bin<span class="token punctuation">]</span>$ <span class="token function">sudo</span>  <span class="token function">nohup</span> <span class="token builtin class-name">.</span> elasticsearch <span class="token operator">&amp;</span>
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token number">26670</span>
+<span class="token punctuation">[</span>wyp@VM-16-12-centos bin<span class="token punctuation">]</span>$ <span class="token function">curl</span> http://localhost:9200
+curl: <span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span> Failed connect to localhost:9200<span class="token punctuation">;</span> 拒绝连接
+
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>+  已停止               <span class="token function">sudo</span> <span class="token function">nohup</span> <span class="token builtin class-name">.</span> elasticsearch
+<span class="token punctuation">[</span>wyp@VM-16-12-centos bin<span class="token punctuation">]</span>$ <span class="token function">ps</span>
+  PID TTY          TIME CMD
+<span class="token number">24627</span> pts/0    00:00:00 <span class="token function">bash</span>
+<span class="token number">29107</span> pts/0    00:00:00 <span class="token function">ps</span>
+<span class="token punctuation">[</span>wyp@VM-16-12-centos bin<span class="token punctuation">]</span>$ jps
+<span class="token number">30835</span> Jps
+
+<span class="token comment"># 后台启动，直接在命令后面加上'-d'即可</span>
+<span class="token punctuation">[</span>wyp@VM-16-12-centos bin<span class="token punctuation">]</span>$ ./elasticsearch <span class="token parameter variable">-d</span>
+<span class="token punctuation">[</span>wuyanping@VM-16-12-centos bin<span class="token punctuation">]</span>$ jps
+<span class="token number">806</span> Jps
+<span class="token number">31831</span> Elasticsearch
+</code></pre></div><h3 id="测试es是否启动成功"><a href="#测试es是否启动成功" class="header-anchor">#</a> 测试ES是否启动成功</h3> <p>格式：<code>[ip]:[端口]</code> ，（get请求）</p> <p>如果是云服务器，记得先去开放相应的端口。</p> <p>如：http://localhost:9200，响应如下：(安装ok)</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;LIYANSHENG&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;cluster_name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;elasticsearch&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;cluster_uuid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;o7KAFPvPTA-d75SUy_TuOQ&quot;</span><span class="token punctuation">,</span>
+-<span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+<span class="token property">&quot;number&quot;</span><span class="token operator">:</span> <span class="token string">&quot;7.8.0&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;build_flavor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;default&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;build_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;zip&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;build_hash&quot;</span><span class="token operator">:</span> <span class="token string">&quot;757314695644ea9a1dc2fecd26d1a43856725e65&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;build_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-06-14T19:35:50.234439Z&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;build_snapshot&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+<span class="token property">&quot;lucene_version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8.5.1&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;minimum_wire_compatibility_version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;6.8.0&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;minimum_index_compatibility_version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;6.0.0-beta1&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token property">&quot;tagline&quot;</span><span class="token operator">:</span> <span class="token string">&quot;You Know, for Search&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="二、基本操作"><a href="#二、基本操作" class="header-anchor">#</a> 二、基本操作</h2> <h3 id="创建索引-put"><a href="#创建索引-put" class="header-anchor">#</a> 创建索引（put)</h3> <p>格式：<code>[ip]:[端口]/[索引名称]</code></p> <p>如我要创建一个&quot;teacher&quot;索引，往  http://localhost:9200/teacher 发送put请求即可，响应如下：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;acknowledged&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;shards_acknowledged&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;teacher&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如果索引已经存在了，会看到如下的响应：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;error&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;root_cause&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;resource_already_exists_exception&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;reason&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index [teacher/n0laWxSFQmaMYSKDF5WFhw] already exists&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;index_uuid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;n0laWxSFQmaMYSKDF5WFhw&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;teacher&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;resource_already_exists_exception&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;reason&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index [teacher/n0laWxSFQmaMYSKDF5WFhw] already exists&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;index_uuid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;n0laWxSFQmaMYSKDF5WFhw&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;teacher&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token number">400</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="获取索引消息-get"><a href="#获取索引消息-get" class="header-anchor">#</a> 获取索引消息（get）</h3> <p>格式：<code>[ip]:[端口]/[索引名称]</code></p> <p>http://localhost:9200/shop</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+     <span class="token property">&quot;shop&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;aliases&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;mappings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+               <span class="token property">&quot;properties&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;age&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                         <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;long&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;category&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                         <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+                         <span class="token property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                              <span class="token property">&quot;keyword&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                                   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+                                   <span class="token property">&quot;ignore_above&quot;</span><span class="token operator">:</span> <span class="token number">256</span>
+                              <span class="token punctuation">}</span>
+                         <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;images&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                         <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+                         <span class="token property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                              <span class="token property">&quot;keyword&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                                   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+                                   <span class="token property">&quot;ignore_above&quot;</span><span class="token operator">:</span> <span class="token number">256</span>
+                              <span class="token punctuation">}</span>
+                         <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                         <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+                         <span class="token property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                              <span class="token property">&quot;keyword&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                                   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+                                   <span class="token property">&quot;ignore_above&quot;</span><span class="token operator">:</span> <span class="token number">256</span>
+                              <span class="token punctuation">}</span>
+                         <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                         <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;float&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                         <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+                         <span class="token property">&quot;fields&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                              <span class="token property">&quot;keyword&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                                   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+                                   <span class="token property">&quot;ignore_above&quot;</span><span class="token operator">:</span> <span class="token number">256</span>
+                              <span class="token punctuation">}</span>
+                         <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+               <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;settings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+               <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;creation_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1663133757735&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;number_of_shards&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;number_of_replicas&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;uuid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;nbTbT1AOT2aSXAn3-uchJQ&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                         <span class="token property">&quot;created&quot;</span><span class="token operator">:</span> <span class="token string">&quot;7080099&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;provided_name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;shop&quot;</span>
+               <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="查询所有的索引-get"><a href="#查询所有的索引-get" class="header-anchor">#</a> 查询所有的索引（get)</h3> <p>格式：<code>[ip]:[端口]/_cat/indices?v</code></p> <p>如：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>health status index   uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow <span class="token function">open</span>   shop    <span class="token parameter variable">-cxpw_nYQCegHFdLfmmGYg</span>   <span class="token number">1</span>   <span class="token number">1</span>          <span class="token number">1</span>            <span class="token number">0</span>      <span class="token number">8</span>.5kb          <span class="token number">8</span>.5kb
+yellow <span class="token function">open</span>   teacher n0laWxSFQmaMYSKDF5WFhw   <span class="token number">1</span>   <span class="token number">1</span>          <span class="token number">0</span>            <span class="token number">0</span>       208b           208b
+yellow <span class="token function">open</span>   student nimW9qq5RMmgST1VQKbjNQ   <span class="token number">1</span>   <span class="token number">1</span>          <span class="token number">0</span>            <span class="token number">0</span>       208b           208b
+</code></pre></div><h3 id="创建文档-添加数据-post"><a href="#创建文档-添加数据-post" class="header-anchor">#</a> 创建文档（添加数据）（post）</h3> <p>格式：<code>[ip]:[端口]/[索引名称]/_doc</code>，数据放在body里面</p> <p>如：http://localhost:9200/teacher/_doc</p> <p>body的json数据：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;liming&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;age&quot;</span><span class="token operator">:</span><span class="token number">20</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>发送请求反馈：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;_index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;teacher&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;_doc&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;u-no7YMBmUlMW95VUwbG&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_version&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;created&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_shards&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;successful&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;failed&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_seq_no&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_primary_term&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="发送数据时自定义主键-post"><a href="#发送数据时自定义主键-post" class="header-anchor">#</a> 发送数据时自定义主键（post）</h3> <p>格式：<code>[ip]:[端口]/[索引名称]/_doc/[键名称]</code></p> <p>如：http://localhost:9200/teacher/_doc/1001 （在后面接上主键名即可，同样在body里提供要提交的数据）</p> <h3 id="根据主键查询信息-get"><a href="#根据主键查询信息-get" class="header-anchor">#</a> 根据主键查询信息（get)</h3> <p>格式：<code>[ip]:[端口]/[索引名称]/_doc/[键名称]</code></p> <p>如：http://localhost:9200/teacher/_doc/1001</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;_index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;teacher&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;_doc&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1001&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_version&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_seq_no&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_primary_term&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;found&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_source&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;zhangsan&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;age&quot;</span><span class="token operator">:</span> <span class="token number">20</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="更新文档-post"><a href="#更新文档-post" class="header-anchor">#</a> 更新文档（post）</h3> <p>格式：<code>[ip]:[端口]/[索引名称]/_doc/[键名称]</code>，（在body附上数据即可）</p> <h3 id="查询全部"><a href="#查询全部" class="header-anchor">#</a> 查询全部</h3> <p>格式：<code>[ip]:[端口]/[索引名称]/_search</code></p> <p>发送get请求：http://localhost:9200/teacher/_search</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;took&quot;</span><span class="token operator">:</span> <span class="token number">633</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;timed_out&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_shards&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;successful&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;skipped&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;failed&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;hits&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;relation&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eq&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;max_score&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;hits&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;_index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;teacher&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;_doc&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;u-no7YMBmUlMW95VUwbG&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_score&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_source&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;liming&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;age&quot;</span><span class="token operator">:</span> <span class="token number">20</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;_index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;teacher&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;_doc&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1001&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_score&quot;</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_source&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lisi&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;age&quot;</span><span class="token operator">:</span> <span class="token number">20</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="三、条件查询"><a href="#三、条件查询" class="header-anchor">#</a> 三、条件查询</h2> <p>可以直接在地址栏后接查询参数，<code>q=[key][value]</code></p> <p>直接在url拼接：如  http://localhost:9200/shop/_search?q=title:苹果</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;took&quot;</span><span class="token operator">:</span> <span class="token number">47</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;timed_out&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_shards&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;successful&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;skipped&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;failed&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;hits&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;relation&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eq&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;max_score&quot;</span><span class="token operator">:</span> <span class="token number">1.9616582</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;hits&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;_index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;shop&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;_doc&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;daDNOoMBS9TfkFcrrh5_&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_score&quot;</span><span class="token operator">:</span> <span class="token number">1.9616582</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;_source&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;苹果手机&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;category&quot;</span><span class="token operator">:</span> <span class="token string">&quot;苹果&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;images&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://www.gulixueyuan.com/xm.jpg&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token number">6999.00</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在请求体给参数，如：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;query&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;match&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+            <span class="token property">&quot;title&quot;</span><span class="token operator">:</span><span class="token string">&quot;华&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>补充</code>：</p> <p>查询全部也可以这样：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;query&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+		<span class="token property">&quot;match_all&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>查指定字段：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;query&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+		<span class="token property">&quot;match_all&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;_source&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;title&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="分页"><a href="#分页" class="header-anchor">#</a> 分页</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;query&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+		<span class="token property">&quot;match_all&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;from&quot;</span><span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;size&quot;</span><span class="token operator">:</span><span class="token number">2</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="排序"><a href="#排序" class="header-anchor">#</a> 排序</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;query&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+		<span class="token property">&quot;match_all&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;sort&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+		<span class="token property">&quot;price&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+			<span class="token property">&quot;order&quot;</span><span class="token operator">:</span><span class="token string">&quot;desc&quot;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="多条件匹配"><a href="#多条件匹配" class="header-anchor">#</a> 多条件匹配</h3> <p>用到<code>must</code>相当于数据库的&amp;&amp;，举例：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;query&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;bool&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+            <span class="token property">&quot;must&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;match&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+                        <span class="token property">&quot;title&quot;</span><span class="token operator">:</span><span class="token string">&quot;小米手机&quot;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;match&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+					<span class="token property">&quot;price&quot;</span><span class="token operator">:</span><span class="token number">3999.00</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>should</code>相当于数据库的||，如：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;query&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+		<span class="token property">&quot;bool&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+			<span class="token property">&quot;should&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;match&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+					<span class="token property">&quot;category&quot;</span><span class="token operator">:</span><span class="token string">&quot;小米&quot;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;match&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+					<span class="token property">&quot;category&quot;</span><span class="token operator">:</span><span class="token string">&quot;华为&quot;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="范围查询"><a href="#范围查询" class="header-anchor">#</a> 范围查询</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;query&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;filter&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+            <span class="token property">&quot;range&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+                <span class="token property">&quot;price&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+                    <span class="token property">&quot;gt&quot;</span><span class="token operator">:</span><span class="token number">2000</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="匹配"><a href="#匹配" class="header-anchor">#</a> 匹配</h3> <p>半匹配：类似模糊查询，只要命中条件关键字，都给提出来</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;query&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;match&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+            <span class="token property">&quot;title&quot;</span><span class="token operator">:</span><span class="token string">&quot;手机&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>完全匹配</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;query&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+		<span class="token property">&quot;match_phrase&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+			<span class="token property">&quot;category&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;小米&quot;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="高亮"><a href="#高亮" class="header-anchor">#</a> 高亮</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;query&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;match&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+            <span class="token property">&quot;title&quot;</span><span class="token operator">:</span><span class="token string">&quot;手机&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;highlight&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;fields&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+            <span class="token property">&quot;title&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span>   <span class="token comment">//要高亮的字段</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="聚合"><a href="#聚合" class="header-anchor">#</a> 聚合</h3> <p>聚合允许使用者对 es 文档进行统计分析，类似与关系型数据库中的 group by，当然还有很多其他的聚合，例如取最大值max、平均值avg等等。</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;aggs&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token comment">//聚合操作</span>
+		<span class="token property">&quot;price_group&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token comment">//名称，随意起名</span>
+			<span class="token property">&quot;terms&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token comment">//分组</span>
+				<span class="token property">&quot;field&quot;</span><span class="token operator">:</span><span class="token string">&quot;price&quot;</span><span class="token comment">//分组字段</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="映射关系"><a href="#映射关系" class="header-anchor">#</a> 映射关系</h3> <p>（就好比数据库的“表结构”）</p> <p>创建数据库表需要设置字段名称，类型，长度，约束等；索引库也一样，需要知道这个类型下有哪些字段，每个字段有哪些约束信息，这就叫做映射(mapping)。</p> <h3 id="查询"><a href="#查询" class="header-anchor">#</a> 查询</h3> <p>http://localhost:9200/shop/_mapping （ index/ _mapping 即可）</p> <p>创建</p> <ol><li><p>先创建一个索引：http://localhost:9200/stu</p></li> <li><p>创建映射： http://localhost:9200/stu/_mapping (post请求)</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;properties&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;index&quot;</span><span class="token operator">:</span><span class="token boolean">true</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;tel&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;index&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>     <span class="token comment">//查询时不能以此为关键字命中</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>添加数据：http://localhost:9200/stu/_create/1005   (post)</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;liyansheng&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;tel&quot;</span><span class="token operator">:</span><span class="token number">17236723</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>查询：http://localhost:9200/stu/_doc/1005</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;_index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;stu&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;_doc&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1005&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_version&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_seq_no&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_primary_term&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;found&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_source&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;liyansheng&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;tel&quot;</span><span class="token operator">:</span> <span class="token number">17236723</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ol> <h3 id="修改"><a href="#修改" class="header-anchor">#</a> 修改</h3> <h3 id="全量"><a href="#全量" class="header-anchor">#</a> 全量</h3> <p>同样的请求，直接覆盖原来的数据</p> <h3 id="局部"><a href="#局部" class="header-anchor">#</a> 局部</h3> <p>修改一条数据的局部信息（<code>注意</code>：局部修改只能用post请求完成，由于局部更新, 每次更新的结果不是相同的, 因此不是幂等性操作, 因此不支持put操作, 只支持post请求操作.）</p> <h3 id="删除"><a href="#删除" class="header-anchor">#</a> 删除</h3> <p>（逻辑删除）</p> <p>http://localhost:9200/shop/_doc/aqCwOoMBS9TfkFcreB4E  （  /index / _doc / key_name）</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;_index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;shop&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;_doc&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;aqCwOoMBS9TfkFcreB4E&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_version&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;deleted&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_shards&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;successful&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;failed&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_seq_no&quot;</span><span class="token operator">:</span> <span class="token number">11</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;_primary_term&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="四、环境搭建"><a href="#四、环境搭建" class="header-anchor">#</a> 四、环境搭建</h2> <h3 id="win集群"><a href="#win集群" class="header-anchor">#</a> win集群</h3> <p>三台服务器启动：（记得修改各自的端口和服务名），三台的<code>elasticsearch.yml</code>配置如下：</p> <p>node-1：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>application
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> node<span class="token punctuation">-</span><span class="token number">1</span>
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.port</span><span class="token punctuation">:</span> <span class="token number">9201</span>
+<span class="token key atrule">transport.tcp.port</span><span class="token punctuation">:</span> <span class="token number">9301</span>
+<span class="token key atrule">http.cors.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.cors.allow-origin</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+</code></pre></div><p>node-2：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>application
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> node<span class="token punctuation">-</span><span class="token number">2</span>
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.port</span><span class="token punctuation">:</span> <span class="token number">9202</span>
+<span class="token key atrule">transport.tcp.port</span><span class="token punctuation">:</span> <span class="token number">9302</span>
+<span class="token key atrule">discovery.seed_hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;localhost:9301&quot;</span><span class="token punctuation">]</span>
+<span class="token key atrule">discovery.zen.fd.ping_timeout</span><span class="token punctuation">:</span> 1m
+<span class="token key atrule">discovery.zen.fd.ping_retries</span><span class="token punctuation">:</span> <span class="token number">5</span>
+<span class="token key atrule">http.cors.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.cors.allow-origin</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+</code></pre></div><p>node-3：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>application
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> node<span class="token punctuation">-</span><span class="token number">3</span>
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.port</span><span class="token punctuation">:</span> <span class="token number">9203</span>
+<span class="token key atrule">transport.tcp.port</span><span class="token punctuation">:</span> <span class="token number">9303</span>
+<span class="token key atrule">discovery.seed_hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;localhost:9301&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;localhost:9302&quot;</span><span class="token punctuation">]</span>
+<span class="token key atrule">discovery.zen.fd.ping_timeout</span><span class="token punctuation">:</span> 1m
+<span class="token key atrule">discovery.zen.fd.ping_retries</span><span class="token punctuation">:</span> <span class="token number">5</span>
+<span class="token key atrule">http.cors.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.cors.allow-origin</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+</code></pre></div><p><code>注意</code>：如果你的内存不是很足，可以给es分配少一些内存，其默认是1G的，在<code>jvm.options</code>里面修改即可</p> <p>默认如下：</p> <div class="language-options extra-class"><pre class="language-text"><code>-Xms1g
+-Xmx1g
+</code></pre></div><p>假如我要将分配内存修改为256m，如下：</p> <div class="language-options extra-class"><pre class="language-text"><code>-Xms256m
+-Xmx256m
+</code></pre></div><p>启动测试：</p> <p><img src="http://cdn.qiniu.liyansheng.top/typora/image-20220915142412626.png" alt=""></p> <p>查看集群状态</p> <blockquote><p>http://localhost:9203/_cluster/health</p></blockquote> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;cluster_name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;my-application&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;green&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;timed_out&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;number_of_nodes&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;number_of_data_nodes&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;active_primary_shards&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;active_shards&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;relocating_shards&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;initializing_shards&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;unassigned_shards&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;delayed_unassigned_shards&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;number_of_pending_tasks&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;number_of_in_flight_fetch&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;task_max_waiting_in_queue_millis&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;active_shards_percent_as_number&quot;</span><span class="token operator">:</span> <span class="token number">100.0</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="linux集群"><a href="#linux集群" class="header-anchor">#</a> linux集群</h3> <p>方式：</p> <p>1.一台机器上装多个ES</p> <p>2.多台机器上装多个ES</p> <p>不管是哪个方式，集群操作都是差不多的。</p> <p><img src="http://cdn.qiniu.liyansheng.top/typora/image-20220915171748795.png" alt=""></p> <p><img src="http://cdn.qiniu.liyansheng.top/typora/image-20220915171948319.png" alt=""></p> <p>创建索引</p> <p><img src="http://cdn.qiniu.liyansheng.top/typora/image-20220915172126101.png" alt=""></p> <p>在另一个节点获取节点</p> <p><img src="http://cdn.qiniu.liyansheng.top/typora/image-20220915172158462.png" alt=""></p> <p><img src="http://cdn.qiniu.liyansheng.top/typora/image-20220915172220077.png" alt=""></p> <p>可以看出，两个节点的数据是同步的。</p> <h2 id="五、安全认证"><a href="#五、安全认证" class="header-anchor">#</a> 五、安全认证</h2> <ol><li><p>进入安装目录，添加认证信息。编辑<code>config/elasticsearch.yml</code></p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">http.cors.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">http.cors.allow-origin</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+<span class="token key atrule">xpack.security.enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">xpack.license.self_generated.type</span><span class="token punctuation">:</span> trial
+</code></pre></div></li> <li><p>重启es</p></li> <li><p>根据提示依次设置elastic、apm_system、kibana、logstash_system、beats_system和remote_monitoring_user的认证密码。进入安装目录下，执行<code>./bin/elasticsearch-setup-passwords interactive</code>，按提示操作。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>bash-4.2$ ./elasticsearch-setup-passwords interactive
+Initiating the setup of passwords <span class="token keyword">for</span> reserved <span class="token function">users</span> elastic,apm_system,kibana,logstash_system,beats_system,remote_monitoring_user.
+You will be prompted to enter passwords as the process progresses.
+Please confirm that you would like to <span class="token builtin class-name">continue</span> <span class="token punctuation">[</span>y/N<span class="token punctuation">]</span>y
+
+
+Enter password <span class="token keyword">for</span> <span class="token punctuation">[</span>elastic<span class="token punctuation">]</span>: 
+Reenter password <span class="token keyword">for</span> <span class="token punctuation">[</span>elastic<span class="token punctuation">]</span>: 
+Enter password <span class="token keyword">for</span> <span class="token punctuation">[</span>apm_system<span class="token punctuation">]</span>: 
+Reenter password <span class="token keyword">for</span> <span class="token punctuation">[</span>apm_system<span class="token punctuation">]</span>: 
+Passwords <span class="token keyword">do</span> not match.
+Try again.
+Enter password <span class="token keyword">for</span> <span class="token punctuation">[</span>apm_system<span class="token punctuation">]</span>: 
+Reenter password <span class="token keyword">for</span> <span class="token punctuation">[</span>apm_system<span class="token punctuation">]</span>: 
+Enter password <span class="token keyword">for</span> <span class="token punctuation">[</span>kibana<span class="token punctuation">]</span>: 
+Reenter password <span class="token keyword">for</span> <span class="token punctuation">[</span>kibana<span class="token punctuation">]</span>: 
+Enter password <span class="token keyword">for</span> <span class="token punctuation">[</span>logstash_system<span class="token punctuation">]</span>: 
+Reenter password <span class="token keyword">for</span> <span class="token punctuation">[</span>logstash_system<span class="token punctuation">]</span>: 
+Enter password <span class="token keyword">for</span> <span class="token punctuation">[</span>beats_system<span class="token punctuation">]</span>: 
+Reenter password <span class="token keyword">for</span> <span class="token punctuation">[</span>beats_system<span class="token punctuation">]</span>: 
+Enter password <span class="token keyword">for</span> <span class="token punctuation">[</span>remote_monitoring_user<span class="token punctuation">]</span>: 
+Reenter password <span class="token keyword">for</span> <span class="token punctuation">[</span>remote_monitoring_user<span class="token punctuation">]</span>: 
+Passwords <span class="token keyword">do</span> not match.
+Try again.
+Enter password <span class="token keyword">for</span> <span class="token punctuation">[</span>remote_monitoring_user<span class="token punctuation">]</span>: 
+Reenter password <span class="token keyword">for</span> <span class="token punctuation">[</span>remote_monitoring_user<span class="token punctuation">]</span>: 
+Changed password <span class="token keyword">for</span> user <span class="token punctuation">[</span>apm_system<span class="token punctuation">]</span>
+Changed password <span class="token keyword">for</span> user <span class="token punctuation">[</span>kibana<span class="token punctuation">]</span>
+Changed password <span class="token keyword">for</span> user <span class="token punctuation">[</span>logstash_system<span class="token punctuation">]</span>
+Changed password <span class="token keyword">for</span> user <span class="token punctuation">[</span>beats_system<span class="token punctuation">]</span>
+Changed password <span class="token keyword">for</span> user <span class="token punctuation">[</span>remote_monitoring_user<span class="token punctuation">]</span>
+Changed password <span class="token keyword">for</span> user <span class="token punctuation">[</span>elastic<span class="token punctuation">]</span>
+
+</code></pre></div></li> <li><p>测试</p> <p>账号密码设置后，你直接就访问不到es了，需要输入账号密码。</p> <div class="language-shell extra-class"><pre class="language-shell"><code> <span class="token function">curl</span> <span class="token parameter variable">-u</span> elastic <span class="token number">192.168</span>.220.137:9200/_cluster/health?pretty
+Enter <span class="token function">host</span> password <span class="token keyword">for</span> user <span class="token string">'elastic'</span><span class="token builtin class-name">:</span>
+</code></pre></div><p>或者直接在访问路径上加上密码，即可</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">curl</span> elastic:elastic123@192.168.220.137:9200/_cluster/health?pretty
+</code></pre></div></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><CursorEffects></CursorEffects><GoTop></GoTop><ReadingProgress></ReadingProgress><DynamicTitle></DynamicTitle></div></div>
+    <script src="/assets/js/app.62442ca5.js" defer></script><script src="/assets/js/2.9c2857b2.js" defer></script><script src="/assets/js/1.765bb458.js" defer></script><script src="/assets/js/30.4cc01506.js" defer></script>
+  </body>
+</html>
