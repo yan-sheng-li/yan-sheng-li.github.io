@@ -15,11 +15,40 @@ import PaymentButton from './components/PaymentButton.vue'
 import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";
 
+// 新增：创建客服按钮的函数
+function createCustomerServiceButton() {
+  const btn = document.createElement('div');
+  btn.innerHTML = `
+    <span class="cs-text">联系博主🚀</span>
+    <div class="cs-pulse"></div>
+  `;
+  btn.className = 'customer-service-btn';
+
+  // 点击事件（可配合你的Toast提示）
+  btn.onclick = () => {
+    window.open('https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC', '_blank');
+
+    // 按钮点击动画
+    btn.classList.add('cs-click');
+    setTimeout(() => btn.classList.remove('cs-click'), 300);
+  };
+
+  // 鼠标悬浮动画控制
+  btn.addEventListener('mouseenter', () => {
+    btn.classList.add('cs-hover');
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.classList.remove('cs-hover');
+  });
+
+  document.body.appendChild(btn);
+}
 
 
 
 
-export default ({ Vue }) => {
+
+export default ({ Vue,isServer}) => {
   // 全局注册组件
   Vue.component('MyGlobalComponent', MyGlobalComponent);
   Vue.component('gzh', gzh)
@@ -40,6 +69,10 @@ export default ({ Vue }) => {
     closeOnClick: true,
     pauseOnHover: true,
   });
+    // 新增：只在客户端添加按钮
+  if (!isServer) {
+    window.addEventListener('DOMContentLoaded', createCustomerServiceButton);
+  }
 }
 
 import $ from "jquery";

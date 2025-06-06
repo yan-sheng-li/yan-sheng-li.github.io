@@ -9,3 +9,79 @@
 .theme-default-content blockquote p {
   color: #2c3e50;  // 深色字体
 }
+
+// 更新后的动态客服按钮样式
+.customer-service-btn
+  /* 原有基础样式保持不变 */
+  position fixed
+  right 30px
+  bottom 30px
+  padding 15px 25px
+  background linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)
+  color white
+  border-radius 50px
+  cursor pointer
+  z-index 9999
+  box-shadow 0 8px 25px rgba(255, 107, 107, 0.4)
+  font-size 16px
+  font-weight bold
+  display flex
+  align-items center
+  justify-content center
+  transition all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+  overflow visible // 改为 visible 让脉冲溢出可见
+  border none
+  outline none
+
+  .cs-text
+    position relative
+    z-index 2
+    text-shadow 0 2px 3px rgba(0,0,0,0.3) // 新增文字阴影增强对比
+
+  // 强化版脉冲效果
+  .cs-pulse
+    position absolute
+    width calc(100% + 20px) // 扩大脉冲范围
+    height calc(100% + 20px)
+    background rgba(255,255,255,0.4) // 提高透明度
+    border-radius 60px // 更大的圆角
+    z-index -1 // 置于底层
+    opacity 0
+    animation cs-pulse 1.5s infinite ease-out // 加快动画速度
+    border 2px solid rgba(255,255,255,0.6) // 新增发光边框
+    box-sizing content-box
+
+  // 悬浮效果增强
+  &.cs-hover
+    transform scale(1.1)
+    box-shadow 0 12px 30px rgba(255, 107, 107, 0.8) // 更强烈的阴影
+    .cs-pulse
+      animation-duration 1s // 悬停时加快脉冲速度
+
+  // 点击效果
+  &.cs-click
+    transform scale(0.95)
+
+// 强化版脉冲动画
+@keyframes cs-pulse
+  0%
+    transform scale(0.7)
+    opacity 0.7 // 初始更亮
+    border-width 3px
+  70%
+    opacity 0.4 // 保持更长时间可见
+  100%
+    transform scale(1.5) // 扩大到更大尺寸
+    opacity 0
+    border-width 0
+
+// 手机端适配
+@media (max-width: 768px)
+  .customer-service-btn
+    right 15px
+    bottom 20px
+    padding 12px 20px
+    font-size 14px
+    .cs-pulse
+      width calc(100% + 16px)
+      height calc(100% + 16px)
