@@ -76,7 +76,9 @@
 
 <gzh />
 
-> 回复关键字：考勤系统
+<ClientOnly>
+  <KeywordTip keyword="考勤系统" />
+</ClientOnly>
 
 ## 配套报告
 ::: warning

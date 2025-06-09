@@ -11,6 +11,8 @@ import SlideVerify from 'vue-monoplasty-slide-verify';
 import SlideProtected from './components/SlideProtected.vue'
 import FloatingImage from './components/FloatingImage.vue'
 import PaymentButton from './components/PaymentButton.vue'
+import KeywordTip from './components/KeywordTip.vue'
+
 // 引入 Toast 插件和样式
 import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";
@@ -61,6 +63,7 @@ export default ({ Vue,isServer}) => {
   Vue.component('SlideProtected', SlideProtected)
   Vue.component('FloatingImage', FloatingImage);
   Vue.component('PaymentButton', PaymentButton)
+  Vue.component('KeywordTip',KeywordTip)
   // 注册 Toast 插件
   Vue.use(Toast, {
     // 可选的配置项

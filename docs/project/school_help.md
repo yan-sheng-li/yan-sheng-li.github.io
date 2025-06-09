@@ -84,7 +84,9 @@
 ## 源码👇
 <gzh />
 
-> 回复关键字：校园互助
+<ClientOnly>
+  <KeywordTip keyword="校园互助" />
+</ClientOnly>
 
 
 

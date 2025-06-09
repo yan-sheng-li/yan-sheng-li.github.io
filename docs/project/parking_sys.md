@@ -64,7 +64,9 @@
 
 <gzh />
 
-> 回复关键字：停车场系统
+<ClientOnly>
+  <KeywordTip keyword="停车场系统" />
+</ClientOnly>
 
 
 ## 配套报告

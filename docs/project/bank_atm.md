@@ -97,7 +97,9 @@
 
 <gzh />
 
-> 回复关键字：银行系统
+<ClientOnly>
+  <KeywordTip keyword="银行系统" />
+</ClientOnly>
 
 
 
