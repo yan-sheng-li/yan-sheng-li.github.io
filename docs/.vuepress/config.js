@@ -15,9 +15,9 @@ module.exports = {
     [
       'dynamic-title',
       {
-        showIcon: 'http://cdn.qiniu.liyansheng.top/img/muzi_favicon.ico',
+        showIcon: 'https://cdn.qiniu.liyansheng.top/img/muzi_favicon.ico',
         showText: '\(@^0^@)/ 欢迎回来！！',
-        hideIcon: 'http://cdn.qiniu.liyansheng.top/img/muzi_favicon.ico',
+        hideIcon: 'https://cdn.qiniu.liyansheng.top/img/muzi_favicon.ico',
         hideText: '(っ °Д °;)っ 不要走呀！',
         recoverTime: 2000,
       },
