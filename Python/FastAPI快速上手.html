@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title># FastAPI 快速上手 | 木子空间</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-VTCF7WPSRK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VTCF7WPSRK');
+      </script>
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="各类项目汇总,涵盖JavaGUI,servlet+jsp,SSM,SpringBoot+Vue,Python,微信小程序...">
+    <meta name="keywords" content="编程知识, 项目案例, 技术文档,难点解析">
+    <meta name="baidu-site-verification" content="codeva-ZjLnH1tXq1">
+    
+    <link rel="preload" href="/assets/css/0.styles.ee9df7b3.css" as="style"><link rel="preload" href="/assets/js/app.f0bc36e9.js" as="script"><link rel="preload" href="/assets/js/2.2a5f83c2.js" as="script"><link rel="preload" href="/assets/js/1.ea25edcb.js" as="script"><link rel="preload" href="/assets/js/113.f5dc1a3a.js" as="script"><link rel="prefetch" href="/assets/js/10.ea46c9a4.js"><link rel="prefetch" href="/assets/js/100.7225b29e.js"><link rel="prefetch" href="/assets/js/101.efafa27d.js"><link rel="prefetch" href="/assets/js/102.e7d494b1.js"><link rel="prefetch" href="/assets/js/103.911f685a.js"><link rel="prefetch" href="/assets/js/104.fdb3ded4.js"><link rel="prefetch" href="/assets/js/105.d0168d81.js"><link rel="prefetch" href="/assets/js/106.c73114e7.js"><link rel="prefetch" href="/assets/js/107.e0144f6c.js"><link rel="prefetch" href="/assets/js/108.8282afca.js"><link rel="prefetch" href="/assets/js/109.4a9245fd.js"><link rel="prefetch" href="/assets/js/11.a1a25d32.js"><link rel="prefetch" href="/assets/js/110.525de177.js"><link rel="prefetch" href="/assets/js/111.3a10b13f.js"><link rel="prefetch" href="/assets/js/112.ede7f7da.js"><link rel="prefetch" href="/assets/js/114.67f02c4b.js"><link rel="prefetch" href="/assets/js/115.bbd699ad.js"><link rel="prefetch" href="/assets/js/116.46bf9a11.js"><link rel="prefetch" href="/assets/js/117.9c64bb52.js"><link rel="prefetch" href="/assets/js/118.95a96112.js"><link rel="prefetch" href="/assets/js/119.2db5285a.js"><link rel="prefetch" href="/assets/js/12.a9fd5468.js"><link rel="prefetch" href="/assets/js/120.85966958.js"><link rel="prefetch" href="/assets/js/121.92bb347d.js"><link rel="prefetch" href="/assets/js/122.535a5eaa.js"><link rel="prefetch" href="/assets/js/123.f8b3680a.js"><link rel="prefetch" href="/assets/js/124.83d2f8d4.js"><link rel="prefetch" href="/assets/js/125.c9f7a443.js"><link rel="prefetch" href="/assets/js/126.b53a5b8c.js"><link rel="prefetch" href="/assets/js/127.bc3a5a0e.js"><link rel="prefetch" href="/assets/js/128.11e22a5b.js"><link rel="prefetch" href="/assets/js/129.1ac8471c.js"><link rel="prefetch" href="/assets/js/13.4af3f31e.js"><link rel="prefetch" href="/assets/js/130.1488e5f5.js"><link rel="prefetch" href="/assets/js/131.0b35ce3e.js"><link rel="prefetch" href="/assets/js/132.9fb027a2.js"><link rel="prefetch" href="/assets/js/133.bdb87ca5.js"><link rel="prefetch" href="/assets/js/134.de1e1ae5.js"><link rel="prefetch" href="/assets/js/135.b22c51bc.js"><link rel="prefetch" href="/assets/js/136.33f54a09.js"><link rel="prefetch" href="/assets/js/137.34c99f83.js"><link rel="prefetch" href="/assets/js/138.54cea968.js"><link rel="prefetch" href="/assets/js/139.f0b4df2e.js"><link rel="prefetch" href="/assets/js/14.133e8a65.js"><link rel="prefetch" href="/assets/js/140.e82f9699.js"><link rel="prefetch" href="/assets/js/141.2fb518d1.js"><link rel="prefetch" href="/assets/js/142.f4d9bbcc.js"><link rel="prefetch" href="/assets/js/143.8999815a.js"><link rel="prefetch" href="/assets/js/144.9f24d7db.js"><link rel="prefetch" href="/assets/js/145.0c067454.js"><link rel="prefetch" href="/assets/js/146.bb799bfc.js"><link rel="prefetch" href="/assets/js/147.aa3dd424.js"><link rel="prefetch" href="/assets/js/148.6a8dc293.js"><link rel="prefetch" href="/assets/js/149.c90d7176.js"><link rel="prefetch" href="/assets/js/15.dbed2b89.js"><link rel="prefetch" href="/assets/js/150.b8bf2201.js"><link rel="prefetch" href="/assets/js/151.3d87cf15.js"><link rel="prefetch" href="/assets/js/152.fc7ebdd9.js"><link rel="prefetch" href="/assets/js/153.66c2ca8d.js"><link rel="prefetch" href="/assets/js/154.a24f7e52.js"><link rel="prefetch" href="/assets/js/155.ad5592b5.js"><link rel="prefetch" href="/assets/js/156.8be5bda6.js"><link rel="prefetch" href="/assets/js/157.66536b95.js"><link rel="prefetch" href="/assets/js/158.dbaa652a.js"><link rel="prefetch" href="/assets/js/159.9021ed2f.js"><link rel="prefetch" href="/assets/js/16.bb93ca7e.js"><link rel="prefetch" href="/assets/js/160.728af4c6.js"><link rel="prefetch" href="/assets/js/161.0a417995.js"><link rel="prefetch" href="/assets/js/162.9d04721d.js"><link rel="prefetch" href="/assets/js/163.bbf230ff.js"><link rel="prefetch" href="/assets/js/164.feb769e7.js"><link rel="prefetch" href="/assets/js/165.0123fb3e.js"><link rel="prefetch" href="/assets/js/166.b8a1097f.js"><link rel="prefetch" href="/assets/js/167.294b4e5a.js"><link rel="prefetch" href="/assets/js/168.c78e0d9a.js"><link rel="prefetch" href="/assets/js/169.d8467432.js"><link rel="prefetch" href="/assets/js/17.b565ae64.js"><link rel="prefetch" href="/assets/js/170.f872ae1a.js"><link rel="prefetch" href="/assets/js/171.4b9b3467.js"><link rel="prefetch" href="/assets/js/172.c6b8812a.js"><link rel="prefetch" href="/assets/js/173.e5f66d51.js"><link rel="prefetch" href="/assets/js/174.7f53196e.js"><link rel="prefetch" href="/assets/js/175.60da7593.js"><link rel="prefetch" href="/assets/js/176.048093c5.js"><link rel="prefetch" href="/assets/js/177.045bba12.js"><link rel="prefetch" href="/assets/js/178.bc752c97.js"><link rel="prefetch" href="/assets/js/179.6b34c31a.js"><link rel="prefetch" href="/assets/js/18.92da33ad.js"><link rel="prefetch" href="/assets/js/180.298ceac7.js"><link rel="prefetch" href="/assets/js/181.a66b59c6.js"><link rel="prefetch" href="/assets/js/182.ab24aa52.js"><link rel="prefetch" href="/assets/js/183.e46e454d.js"><link rel="prefetch" href="/assets/js/184.53d543a3.js"><link rel="prefetch" href="/assets/js/185.e3234b49.js"><link rel="prefetch" href="/assets/js/186.8d20181f.js"><link rel="prefetch" href="/assets/js/187.d59d1343.js"><link rel="prefetch" href="/assets/js/188.2e03dc19.js"><link rel="prefetch" href="/assets/js/189.c62b9ae7.js"><link rel="prefetch" href="/assets/js/19.67f553c4.js"><link rel="prefetch" href="/assets/js/190.5e100f6d.js"><link rel="prefetch" href="/assets/js/191.cceef950.js"><link rel="prefetch" href="/assets/js/192.d4dc5419.js"><link rel="prefetch" href="/assets/js/193.946c3c2c.js"><link rel="prefetch" href="/assets/js/194.8405413a.js"><link rel="prefetch" href="/assets/js/195.8ddc87a4.js"><link rel="prefetch" href="/assets/js/196.b1e4922b.js"><link rel="prefetch" href="/assets/js/197.e8ba1bf1.js"><link rel="prefetch" href="/assets/js/198.911ce2c6.js"><link rel="prefetch" href="/assets/js/199.66ebbedb.js"><link rel="prefetch" href="/assets/js/20.6a109861.js"><link rel="prefetch" href="/assets/js/200.70061244.js"><link rel="prefetch" href="/assets/js/201.7c45dfc5.js"><link rel="prefetch" href="/assets/js/202.9f1688bc.js"><link rel="prefetch" href="/assets/js/203.ec13451f.js"><link rel="prefetch" href="/assets/js/204.ac77bc8c.js"><link rel="prefetch" href="/assets/js/205.0a1d6ca7.js"><link rel="prefetch" href="/assets/js/206.eaac56c9.js"><link rel="prefetch" href="/assets/js/207.6e448c82.js"><link rel="prefetch" href="/assets/js/208.922f5c9a.js"><link rel="prefetch" href="/assets/js/209.af2baeff.js"><link rel="prefetch" href="/assets/js/21.a94a2946.js"><link rel="prefetch" href="/assets/js/210.227e28f5.js"><link rel="prefetch" href="/assets/js/211.77a69e01.js"><link rel="prefetch" href="/assets/js/212.414d9a29.js"><link rel="prefetch" href="/assets/js/213.2fc1c407.js"><link rel="prefetch" href="/assets/js/214.357034ef.js"><link rel="prefetch" href="/assets/js/215.ab6c13dd.js"><link rel="prefetch" href="/assets/js/216.707e8549.js"><link rel="prefetch" href="/assets/js/217.4f1a4950.js"><link rel="prefetch" href="/assets/js/218.44b7253e.js"><link rel="prefetch" href="/assets/js/219.be0fa5b8.js"><link rel="prefetch" href="/assets/js/22.1469e018.js"><link rel="prefetch" href="/assets/js/220.ad160ba4.js"><link rel="prefetch" href="/assets/js/221.3d380e7d.js"><link rel="prefetch" href="/assets/js/222.472c912c.js"><link rel="prefetch" href="/assets/js/223.72e7a563.js"><link rel="prefetch" href="/assets/js/224.ccd6a765.js"><link rel="prefetch" href="/assets/js/225.2c234201.js"><link rel="prefetch" href="/assets/js/226.da6d8743.js"><link rel="prefetch" href="/assets/js/227.9009beb7.js"><link rel="prefetch" href="/assets/js/228.bf20ed44.js"><link rel="prefetch" href="/assets/js/229.493dcce9.js"><link rel="prefetch" href="/assets/js/23.047e35fb.js"><link rel="prefetch" href="/assets/js/230.02952c50.js"><link rel="prefetch" href="/assets/js/231.3cc5fa87.js"><link rel="prefetch" href="/assets/js/232.845aa4dd.js"><link rel="prefetch" href="/assets/js/233.216c0c0a.js"><link rel="prefetch" href="/assets/js/234.5e63f6b5.js"><link rel="prefetch" href="/assets/js/235.39e7be39.js"><link rel="prefetch" href="/assets/js/236.64a209d1.js"><link rel="prefetch" href="/assets/js/237.90c2dc7c.js"><link rel="prefetch" href="/assets/js/238.4b619d2a.js"><link rel="prefetch" href="/assets/js/239.cb668762.js"><link rel="prefetch" href="/assets/js/24.fb4490f9.js"><link rel="prefetch" href="/assets/js/240.d9e201cc.js"><link rel="prefetch" href="/assets/js/241.0abcd0cc.js"><link rel="prefetch" href="/assets/js/242.0996e376.js"><link rel="prefetch" href="/assets/js/243.ebca319e.js"><link rel="prefetch" href="/assets/js/244.d49e3bcf.js"><link rel="prefetch" href="/assets/js/245.788007d0.js"><link rel="prefetch" href="/assets/js/246.b4fb56b8.js"><link rel="prefetch" href="/assets/js/247.c26d6c48.js"><link rel="prefetch" href="/assets/js/248.50f6ce0e.js"><link rel="prefetch" href="/assets/js/249.1189a76f.js"><link rel="prefetch" href="/assets/js/25.14388f8a.js"><link rel="prefetch" href="/assets/js/250.f240ba52.js"><link rel="prefetch" href="/assets/js/251.ec7f72bd.js"><link rel="prefetch" href="/assets/js/252.0b91af34.js"><link rel="prefetch" href="/assets/js/253.f110aa21.js"><link rel="prefetch" href="/assets/js/254.cf909deb.js"><link rel="prefetch" href="/assets/js/255.179883b4.js"><link rel="prefetch" href="/assets/js/256.f01c8a54.js"><link rel="prefetch" href="/assets/js/257.b1eec20b.js"><link rel="prefetch" href="/assets/js/258.7b61aaa9.js"><link rel="prefetch" href="/assets/js/259.e6d74a35.js"><link rel="prefetch" href="/assets/js/26.f604170e.js"><link rel="prefetch" href="/assets/js/260.d16a116e.js"><link rel="prefetch" href="/assets/js/261.7db07d44.js"><link rel="prefetch" href="/assets/js/262.a2698b21.js"><link rel="prefetch" href="/assets/js/263.e47c107a.js"><link rel="prefetch" href="/assets/js/264.e3ef1103.js"><link rel="prefetch" href="/assets/js/265.a7535339.js"><link rel="prefetch" href="/assets/js/266.93e3a567.js"><link rel="prefetch" href="/assets/js/267.0796123e.js"><link rel="prefetch" href="/assets/js/268.03ad5bdf.js"><link rel="prefetch" href="/assets/js/269.f105e8f6.js"><link rel="prefetch" href="/assets/js/27.6ab34386.js"><link rel="prefetch" href="/assets/js/270.58b6bc31.js"><link rel="prefetch" href="/assets/js/271.c2d65355.js"><link rel="prefetch" href="/assets/js/272.c4b82114.js"><link rel="prefetch" href="/assets/js/273.f4e9331b.js"><link rel="prefetch" href="/assets/js/274.3fecf56e.js"><link rel="prefetch" href="/assets/js/275.bbb26730.js"><link rel="prefetch" href="/assets/js/276.f27b011f.js"><link rel="prefetch" href="/assets/js/277.7ac37284.js"><link rel="prefetch" href="/assets/js/278.8ed09064.js"><link rel="prefetch" href="/assets/js/279.3ceb8126.js"><link rel="prefetch" href="/assets/js/28.e9475e1c.js"><link rel="prefetch" href="/assets/js/280.36e9fcfd.js"><link rel="prefetch" href="/assets/js/281.0b417aed.js"><link rel="prefetch" href="/assets/js/282.5179292c.js"><link rel="prefetch" href="/assets/js/283.8ef69647.js"><link rel="prefetch" href="/assets/js/284.12e369fb.js"><link rel="prefetch" href="/assets/js/285.2aed01b5.js"><link rel="prefetch" href="/assets/js/286.7ca3fce3.js"><link rel="prefetch" href="/assets/js/287.cab46e88.js"><link rel="prefetch" href="/assets/js/288.954fb75e.js"><link rel="prefetch" href="/assets/js/289.169c02df.js"><link rel="prefetch" href="/assets/js/29.dfc622a3.js"><link rel="prefetch" href="/assets/js/290.5ea9460f.js"><link rel="prefetch" href="/assets/js/291.00bb8006.js"><link rel="prefetch" href="/assets/js/292.a108999e.js"><link rel="prefetch" href="/assets/js/293.02131b04.js"><link rel="prefetch" href="/assets/js/294.865aba57.js"><link rel="prefetch" href="/assets/js/295.f14ec499.js"><link rel="prefetch" href="/assets/js/296.f20f0d66.js"><link rel="prefetch" href="/assets/js/297.a65abc8b.js"><link rel="prefetch" href="/assets/js/298.10268144.js"><link rel="prefetch" href="/assets/js/299.96271d88.js"><link rel="prefetch" href="/assets/js/3.6c55cfd8.js"><link rel="prefetch" href="/assets/js/30.f5e1dcfc.js"><link rel="prefetch" href="/assets/js/300.baf55ce7.js"><link rel="prefetch" href="/assets/js/301.6f2eb0d6.js"><link rel="prefetch" href="/assets/js/302.2a5dcab2.js"><link rel="prefetch" href="/assets/js/303.157e8d98.js"><link rel="prefetch" href="/assets/js/304.0b5286b5.js"><link rel="prefetch" href="/assets/js/305.ab7311ea.js"><link rel="prefetch" href="/assets/js/306.b9e3225f.js"><link rel="prefetch" href="/assets/js/307.5ae3107b.js"><link rel="prefetch" href="/assets/js/308.f91865cb.js"><link rel="prefetch" href="/assets/js/309.0430c7c4.js"><link rel="prefetch" href="/assets/js/31.3942e8f5.js"><link rel="prefetch" href="/assets/js/310.1568cdbe.js"><link rel="prefetch" href="/assets/js/311.f52cfd56.js"><link rel="prefetch" href="/assets/js/312.c06ba6fb.js"><link rel="prefetch" href="/assets/js/313.055c40af.js"><link rel="prefetch" href="/assets/js/314.bff4e720.js"><link rel="prefetch" href="/assets/js/315.d622bfcc.js"><link rel="prefetch" href="/assets/js/316.5dd19368.js"><link rel="prefetch" href="/assets/js/317.04f99454.js"><link rel="prefetch" href="/assets/js/318.aa777cd9.js"><link rel="prefetch" href="/assets/js/319.926b01bb.js"><link rel="prefetch" href="/assets/js/32.a6b65515.js"><link rel="prefetch" href="/assets/js/320.43e195ad.js"><link rel="prefetch" href="/assets/js/321.e75e383b.js"><link rel="prefetch" href="/assets/js/322.ecb84c7b.js"><link rel="prefetch" href="/assets/js/323.08f1b9ee.js"><link rel="prefetch" href="/assets/js/324.f4c5148e.js"><link rel="prefetch" href="/assets/js/325.675b99fb.js"><link rel="prefetch" href="/assets/js/326.dda59aac.js"><link rel="prefetch" href="/assets/js/327.bbcd6aa7.js"><link rel="prefetch" href="/assets/js/328.a06ee4e0.js"><link rel="prefetch" href="/assets/js/329.993d97c8.js"><link rel="prefetch" href="/assets/js/33.25147434.js"><link rel="prefetch" href="/assets/js/330.51d50c58.js"><link rel="prefetch" href="/assets/js/331.0be008df.js"><link rel="prefetch" href="/assets/js/332.d0029830.js"><link rel="prefetch" href="/assets/js/333.42f45f3b.js"><link rel="prefetch" href="/assets/js/334.139059e9.js"><link rel="prefetch" href="/assets/js/335.fac62d88.js"><link rel="prefetch" href="/assets/js/336.b98db191.js"><link rel="prefetch" href="/assets/js/337.0cfe0332.js"><link rel="prefetch" href="/assets/js/338.3f7a6b77.js"><link rel="prefetch" href="/assets/js/339.c22bb917.js"><link rel="prefetch" href="/assets/js/34.c93c0dff.js"><link rel="prefetch" href="/assets/js/340.cedd1a11.js"><link rel="prefetch" href="/assets/js/341.fa9809fd.js"><link rel="prefetch" href="/assets/js/342.97c5c22f.js"><link rel="prefetch" href="/assets/js/343.d4c61679.js"><link rel="prefetch" href="/assets/js/344.8d925225.js"><link rel="prefetch" href="/assets/js/345.82680d73.js"><link rel="prefetch" href="/assets/js/346.64fecd16.js"><link rel="prefetch" href="/assets/js/347.bc89be2b.js"><link rel="prefetch" href="/assets/js/348.24497a47.js"><link rel="prefetch" href="/assets/js/349.7fd6da65.js"><link rel="prefetch" href="/assets/js/35.e41c6b9d.js"><link rel="prefetch" href="/assets/js/350.24670495.js"><link rel="prefetch" href="/assets/js/36.ececc385.js"><link rel="prefetch" href="/assets/js/37.81b888d9.js"><link rel="prefetch" href="/assets/js/38.b8eb04d2.js"><link rel="prefetch" href="/assets/js/39.46baa293.js"><link rel="prefetch" href="/assets/js/4.83447f98.js"><link rel="prefetch" href="/assets/js/40.7f2f77f6.js"><link rel="prefetch" href="/assets/js/41.fc306247.js"><link rel="prefetch" href="/assets/js/42.d89a58c2.js"><link rel="prefetch" href="/assets/js/43.03f87dd0.js"><link rel="prefetch" href="/assets/js/44.0d2f10bb.js"><link rel="prefetch" href="/assets/js/45.209dade6.js"><link rel="prefetch" href="/assets/js/46.649f5398.js"><link rel="prefetch" href="/assets/js/47.698ab942.js"><link rel="prefetch" href="/assets/js/48.79f3e48f.js"><link rel="prefetch" href="/assets/js/49.01bd89b6.js"><link rel="prefetch" href="/assets/js/5.2033a90c.js"><link rel="prefetch" href="/assets/js/50.da8fbf1e.js"><link rel="prefetch" href="/assets/js/51.55043c34.js"><link rel="prefetch" href="/assets/js/52.a32e059b.js"><link rel="prefetch" href="/assets/js/53.04bb86e1.js"><link rel="prefetch" href="/assets/js/54.22b49f29.js"><link rel="prefetch" href="/assets/js/55.72060b85.js"><link rel="prefetch" href="/assets/js/56.4140ce70.js"><link rel="prefetch" href="/assets/js/57.0e317d67.js"><link rel="prefetch" href="/assets/js/58.4a23a1c5.js"><link rel="prefetch" href="/assets/js/59.5c2ed50f.js"><link rel="prefetch" href="/assets/js/6.2a03327d.js"><link rel="prefetch" href="/assets/js/60.f67708cb.js"><link rel="prefetch" href="/assets/js/61.8708f61d.js"><link rel="prefetch" href="/assets/js/62.5519ca91.js"><link rel="prefetch" href="/assets/js/63.1401084f.js"><link rel="prefetch" href="/assets/js/64.5ec443f7.js"><link rel="prefetch" href="/assets/js/65.73129e43.js"><link rel="prefetch" href="/assets/js/66.769e64e8.js"><link rel="prefetch" href="/assets/js/67.58f07939.js"><link rel="prefetch" href="/assets/js/68.c9ea1fd7.js"><link rel="prefetch" href="/assets/js/69.33aa776b.js"><link rel="prefetch" href="/assets/js/7.183488c0.js"><link rel="prefetch" href="/assets/js/70.5be314dc.js"><link rel="prefetch" href="/assets/js/71.a939c807.js"><link rel="prefetch" href="/assets/js/72.68cbd147.js"><link rel="prefetch" href="/assets/js/73.b706271e.js"><link rel="prefetch" href="/assets/js/74.b6018e6d.js"><link rel="prefetch" href="/assets/js/75.d9507040.js"><link rel="prefetch" href="/assets/js/76.36af63aa.js"><link rel="prefetch" href="/assets/js/77.f9907e94.js"><link rel="prefetch" href="/assets/js/78.4b3cf9ad.js"><link rel="prefetch" href="/assets/js/79.0d3ae12a.js"><link rel="prefetch" href="/assets/js/80.137b87d1.js"><link rel="prefetch" href="/assets/js/81.4ad527f1.js"><link rel="prefetch" href="/assets/js/82.29bccdec.js"><link rel="prefetch" href="/assets/js/83.5b66e17a.js"><link rel="prefetch" href="/assets/js/84.da89b045.js"><link rel="prefetch" href="/assets/js/85.d10367e2.js"><link rel="prefetch" href="/assets/js/86.a9cf54f7.js"><link rel="prefetch" href="/assets/js/87.c5d59d1a.js"><link rel="prefetch" href="/assets/js/88.a85e1c24.js"><link rel="prefetch" href="/assets/js/89.84ae98e4.js"><link rel="prefetch" href="/assets/js/90.634081c3.js"><link rel="prefetch" href="/assets/js/91.626d860f.js"><link rel="prefetch" href="/assets/js/92.ba5630b9.js"><link rel="prefetch" href="/assets/js/93.477ccbd0.js"><link rel="prefetch" href="/assets/js/94.18ab5b9a.js"><link rel="prefetch" href="/assets/js/95.910a52f4.js"><link rel="prefetch" href="/assets/js/96.522b4157.js"><link rel="prefetch" href="/assets/js/97.bbcbd628.js"><link rel="prefetch" href="/assets/js/98.65f95e99.js"><link rel="prefetch" href="/assets/js/99.d1e426eb.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.56aacafd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ee9df7b3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" alt="木子空间" class="logo"> <span class="site-name can-hide">木子空间</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/collection/" class="nav-link">
+  精品网址
+</a></div><div class="nav-item"><a href="/openhub/" class="nav-link">
+  开源宝藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="💻 编程笔记" class="dropdown-title"><span class="title">💻 编程笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="💻 编程笔记" class="mobile-dropdown-title"><span class="title">💻 编程笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Java
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/" class="nav-link">
+  Java SE
+</a></li><li class="dropdown-subitem"><a href="/Javaee/" class="nav-link">
+  Java EE
+</a></li><li class="dropdown-subitem"><a href="/springboot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-subitem"><a href="/mybatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-subitem"><a href="/swing/" class="nav-link">
+  Swing
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepress/" class="nav-link">
+  VuePress
+</a></li><li class="dropdown-subitem"><a href="/Js/" class="nav-link">
+  JavaScript库
+</a></li><li class="dropdown-subitem"><a href="/bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/vue/" class="nav-link">
+  Vue
+</a></li></ul></li><li class="dropdown-item"><h4>
+          版本控制与容器化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  Docker
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Python/" class="nav-link router-link-active">
+  Python
+</a></li><li class="dropdown-subitem"><a href="/ElasticSearch/" class="nav-link">
+  ElasticSearch
+</a></li><li class="dropdown-subitem"><a href="/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-subitem"><a href="/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/微信小程序/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Report
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/report/" class="nav-link">
+  一般
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/project/" class="nav-link">
+  📦项目合集
+</a></div><div class="nav-item"><a href="https://www.liyansheng.top/me" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📑博主名片
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.liyansheng.top/blog/remote_help" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🔥远程调试🔥
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🎃更多玩法" class="dropdown-title"><span class="title">🎃更多玩法</span> <span class="arrow down"></span></button> <button type="button" aria-label="🎃更多玩法" class="mobile-dropdown-title"><span class="title">🎃更多玩法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          酷玩机
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/40617.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  科学上网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/tool/Plugins.html" class="nav-link">
+  浏览器插件
+</a></li><li class="dropdown-subitem"><a href="/tool/自制视频流.html" class="nav-link">
+  自制视频流
+</a></li><li class="dropdown-subitem"><a href="/tool/好用API.html" class="nav-link">
+  好用API
+</a></li><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/18883.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  免费看电视
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/57913.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建内网穿透
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🚀滴滴作者" class="dropdown-title"><span class="title">🚀滴滴作者</span> <span class="arrow down"></span></button> <button type="button" aria-label="🚀滴滴作者" class="mobile-dropdown-title"><span class="title">🚀滴滴作者</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          联系方式
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&amp;jump_from=webapi&amp;authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  一键私聊
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20240715004059.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  加QQ
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20240715004147.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  加微信
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20250522145954.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  打赏支持
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          足迹
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="http://www.liyansheng.top/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📗木子博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/weixin_44107140" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📙CSDN博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/yan-sheng-li" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://gitee.com/yan-sheng-li" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/gzh_muzikongjianPro.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  公众号《木子空间Pro》
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="💖兴趣爱好" class="dropdown-title"><span class="title">💖兴趣爱好</span> <span class="arrow down"></span></button> <button type="button" aria-label="💖兴趣爱好" class="mobile-dropdown-title"><span class="title">💖兴趣爱好</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guitar/" class="nav-link">
+  吉他（探索中）
+</a></li><li class="dropdown-item"><!----> <a href="/qupu/" class="nav-link">
+  曲谱
+</a></li><li class="dropdown-item"><!----> <a href="/cooking/" class="nav-link">
+  菜谱
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/collection/" class="nav-link">
+  精品网址
+</a></div><div class="nav-item"><a href="/openhub/" class="nav-link">
+  开源宝藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="💻 编程笔记" class="dropdown-title"><span class="title">💻 编程笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="💻 编程笔记" class="mobile-dropdown-title"><span class="title">💻 编程笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Java
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/" class="nav-link">
+  Java SE
+</a></li><li class="dropdown-subitem"><a href="/Javaee/" class="nav-link">
+  Java EE
+</a></li><li class="dropdown-subitem"><a href="/springboot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-subitem"><a href="/mybatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-subitem"><a href="/swing/" class="nav-link">
+  Swing
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vuepress/" class="nav-link">
+  VuePress
+</a></li><li class="dropdown-subitem"><a href="/Js/" class="nav-link">
+  JavaScript库
+</a></li><li class="dropdown-subitem"><a href="/bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/vue/" class="nav-link">
+  Vue
+</a></li></ul></li><li class="dropdown-item"><h4>
+          版本控制与容器化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/docker/" class="nav-link">
+  Docker
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Python/" class="nav-link router-link-active">
+  Python
+</a></li><li class="dropdown-subitem"><a href="/ElasticSearch/" class="nav-link">
+  ElasticSearch
+</a></li><li class="dropdown-subitem"><a href="/kafka/" class="nav-link">
+  Kafka
+</a></li><li class="dropdown-subitem"><a href="/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/微信小程序/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-subitem"><a href="/node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Report
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/report/" class="nav-link">
+  一般
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/project/" class="nav-link">
+  📦项目合集
+</a></div><div class="nav-item"><a href="https://www.liyansheng.top/me" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📑博主名片
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.liyansheng.top/blog/remote_help" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🔥远程调试🔥
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🎃更多玩法" class="dropdown-title"><span class="title">🎃更多玩法</span> <span class="arrow down"></span></button> <button type="button" aria-label="🎃更多玩法" class="mobile-dropdown-title"><span class="title">🎃更多玩法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          酷玩机
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/40617.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  科学上网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/tool/Plugins.html" class="nav-link">
+  浏览器插件
+</a></li><li class="dropdown-subitem"><a href="/tool/自制视频流.html" class="nav-link">
+  自制视频流
+</a></li><li class="dropdown-subitem"><a href="/tool/好用API.html" class="nav-link">
+  好用API
+</a></li><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/18883.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  免费看电视
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.liyansheng.top/blog/posts/57913.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  搭建内网穿透
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🚀滴滴作者" class="dropdown-title"><span class="title">🚀滴滴作者</span> <span class="arrow down"></span></button> <button type="button" aria-label="🚀滴滴作者" class="mobile-dropdown-title"><span class="title">🚀滴滴作者</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          联系方式
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&amp;jump_from=webapi&amp;authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  一键私聊
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20240715004059.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  加QQ
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20240715004147.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  加微信
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/20250522145954.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  打赏支持
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          足迹
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="http://www.liyansheng.top/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📗木子博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/weixin_44107140" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  📙CSDN博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/yan-sheng-li" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://gitee.com/yan-sheng-li" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://cdn.qiniu.liyansheng.top/img/gzh_muzikongjianPro.png" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  公众号《木子空间Pro》
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="💖兴趣爱好" class="dropdown-title"><span class="title">💖兴趣爱好</span> <span class="arrow down"></span></button> <button type="button" aria-label="💖兴趣爱好" class="mobile-dropdown-title"><span class="title">💖兴趣爱好</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guitar/" class="nav-link">
+  吉他（探索中）
+</a></li><li class="dropdown-item"><!----> <a href="/qupu/" class="nav-link">
+  曲谱
+</a></li><li class="dropdown-item"><!----> <a href="/cooking/" class="nav-link">
+  菜谱
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Python</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Python/1/" class="sidebar-link">常用技法</a></li><li><a href="/Python/基于Flask写API.html" class="sidebar-link">基于Flask写API</a></li><li><a href="/Python/FastAPI快速上手.html" class="active sidebar-link"># FastAPI 快速上手</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_1-安装-fastapi" class="sidebar-link">1. 安装 FastAPI</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_2-创建第一个-fastapi-应用" class="sidebar-link">2. 创建第一个 FastAPI 应用</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_3-运行应用" class="sidebar-link">3. 运行应用</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_4-访问-api" class="sidebar-link">4. 访问 API</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_5-自动生成的交互式文档" class="sidebar-link">5. 自动生成的交互式文档</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_6-请求体和-post-方法" class="sidebar-link">6. 请求体和 POST 方法</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_7-路径参数和查询参数" class="sidebar-link">7. 路径参数和查询参数</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_8-响应模型" class="sidebar-link">8. 响应模型</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_9-错误处理" class="sidebar-link">9. 错误处理</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_10-异步支持" class="sidebar-link">10. 异步支持</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_11-依赖注入系统" class="sidebar-link">11. 依赖注入系统</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_12-数据库集成-sqlalchemy" class="sidebar-link">12. 数据库集成 (SQLAlchemy)</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_13-文件上传" class="sidebar-link">13. 文件上传</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_14-表单数据处理" class="sidebar-link">14. 表单数据处理</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_15-cookie-和-header-参数" class="sidebar-link">15. Cookie 和 Header 参数</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_16-中间件" class="sidebar-link">16. 中间件</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_17-cors-跨域资源共享" class="sidebar-link">17. CORS (跨域资源共享)</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_18-后台任务" class="sidebar-link">18. 后台任务</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_19-静态文件服务" class="sidebar-link">19. 静态文件服务</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_20-测试-fastapi-应用" class="sidebar-link">20. 测试 FastAPI 应用</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_21-安全性-oauth2-和-jwt" class="sidebar-link">21. 安全性 (OAuth2 和 JWT)</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_22-websocket-支持" class="sidebar-link">22. WebSocket 支持</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_23-部署-fastapi-应用" class="sidebar-link">23. 部署 FastAPI 应用</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_24-使用-docker-容器化" class="sidebar-link">24. 使用 Docker 容器化</a></li><li class="sidebar-sub-header"><a href="/Python/FastAPI快速上手.html#_25-性能优化技巧" class="sidebar-link">25. 性能优化技巧</a></li></ul></li><li><a href="/Python/FastAPI整合MySQL.html" class="sidebar-link">FastAPI整合MySQL</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>数据可视化</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Python/PyEcharts.html" class="sidebar-link">PyEcharts</a></li><li><a href="/Python/Matplotlib使用.html" class="sidebar-link">Matplotlib使用</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>爬虫</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Python/BeautifulSoup运用.html" class="sidebar-link">BeautifulSoup运用</a></li><li><a href="/Python/Selenium运用.html" class="sidebar-link">Selenium运用</a></li><li><a href="/Python/requests+正则匹配.html" class="sidebar-link">requests+正则匹配</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="fastapi-快速上手"><a href="#fastapi-快速上手" class="header-anchor">#</a> # FastAPI 快速上手</h1> <p>FastAPI 是一个现代、快速（高性能）的 Web 框架，用于基于标准 Python 类型提示构建 API。它基于 Python 3.6+ 类型提示，使用 Starlette 和 Pydantic 构建。</p> <h2 id="_1-安装-fastapi"><a href="#_1-安装-fastapi" class="header-anchor">#</a> 1. 安装 FastAPI</h2> <p>首先，确保你已安装 Python 3.6+，然后安装 FastAPI 和 Uvicorn（ASGI 服务器）：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>pip <span class="token function">install</span> fastapi uvicorn
+</code></pre></div><h2 id="_2-创建第一个-fastapi-应用"><a href="#_2-创建第一个-fastapi-应用" class="header-anchor">#</a> 2. 创建第一个 FastAPI 应用</h2> <p>创建一个名为 <code>main.py</code> 的文件：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">read_root</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">&quot;Hello&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;World&quot;</span><span class="token punctuation">}</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/items/{item_id}&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">read_item</span><span class="token punctuation">(</span>item_id<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> q<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">&quot;item_id&quot;</span><span class="token punctuation">:</span> item_id<span class="token punctuation">,</span> <span class="token string">&quot;q&quot;</span><span class="token punctuation">:</span> q<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_3-运行应用"><a href="#_3-运行应用" class="header-anchor">#</a> 3. 运行应用</h2> <p>使用 Uvicorn 运行你的应用：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>uvicorn main:app <span class="token parameter variable">--reload</span>
+</code></pre></div><ul><li><code>main</code>: 文件名（不含 <code>.py</code>）</li> <li><code>app</code>: FastAPI 实例的名称</li> <li><code>--reload</code>: 开发时自动重载代码</li></ul> <h2 id="_4-访问-api"><a href="#_4-访问-api" class="header-anchor">#</a> 4. 访问 API</h2> <p>打开浏览器访问：</p> <ul><li><code>http://127.0.0.1:8000/</code> - 返回 <code>{&quot;Hello&quot;: &quot;World&quot;}</code></li> <li><code>http://127.0.0.1:8000/items/5?q=test</code> - 返回 <code>{&quot;item_id&quot;: 5, &quot;q&quot;: &quot;test&quot;}</code></li></ul> <h2 id="_5-自动生成的交互式文档"><a href="#_5-自动生成的交互式文档" class="header-anchor">#</a> 5. 自动生成的交互式文档</h2> <p>FastAPI 自动生成 API 文档：</p> <ul><li>Swagger UI: <code>http://127.0.0.1:8000/docs</code></li> <li>ReDoc: <code>http://127.0.0.1:8000/redoc</code></li></ul> <h2 id="_6-请求体和-post-方法"><a href="#_6-请求体和-post-方法" class="header-anchor">#</a> 6. 请求体和 POST 方法</h2> <p>添加 POST 方法处理请求体：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI
+<span class="token keyword">from</span> pydantic <span class="token keyword">import</span> BaseModel
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Item</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    name<span class="token punctuation">:</span> <span class="token builtin">str</span>
+    price<span class="token punctuation">:</span> <span class="token builtin">float</span>
+    is_offer<span class="token punctuation">:</span> <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">None</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>post</span><span class="token punctuation">(</span><span class="token string">&quot;/items/{item_id}&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">update_item</span><span class="token punctuation">(</span>item_id<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> item<span class="token punctuation">:</span> Item<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">&quot;item_name&quot;</span><span class="token punctuation">:</span> item<span class="token punctuation">.</span>name<span class="token punctuation">,</span> <span class="token string">&quot;item_id&quot;</span><span class="token punctuation">:</span> item_id<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_7-路径参数和查询参数"><a href="#_7-路径参数和查询参数" class="header-anchor">#</a> 7. 路径参数和查询参数</h2> <div class="language-python extra-class"><pre class="language-python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/users/{user_id}/items/{item_id}&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">read_user_item</span><span class="token punctuation">(</span>
+    user_id<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> 
+    item_id<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> 
+    q<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">,</span> 
+    short<span class="token punctuation">:</span> <span class="token builtin">bool</span> <span class="token operator">=</span> <span class="token boolean">False</span>
+<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    item <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;item_id&quot;</span><span class="token punctuation">:</span> item_id<span class="token punctuation">,</span> <span class="token string">&quot;owner_id&quot;</span><span class="token punctuation">:</span> user_id<span class="token punctuation">}</span>
+    <span class="token keyword">if</span> q<span class="token punctuation">:</span>
+        item<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;q&quot;</span><span class="token punctuation">:</span> q<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> short<span class="token punctuation">:</span>
+        item<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;description&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;This is a long description&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> item
+</code></pre></div><h2 id="_8-响应模型"><a href="#_8-响应模型" class="header-anchor">#</a> 8. 响应模型</h2> <p>你可以定义返回数据的模型：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> typing <span class="token keyword">import</span> List
+
+<span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    username<span class="token punctuation">:</span> <span class="token builtin">str</span>
+    email<span class="token punctuation">:</span> <span class="token builtin">str</span>
+    full_name<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token boolean">None</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>post</span><span class="token punctuation">(</span><span class="token string">&quot;/users/&quot;</span><span class="token punctuation">,</span> response_model<span class="token operator">=</span>User<span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">create_user</span><span class="token punctuation">(</span>user<span class="token punctuation">:</span> User<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> user
+</code></pre></div><h2 id="_9-错误处理"><a href="#_9-错误处理" class="header-anchor">#</a> 9. 错误处理</h2> <p>FastAPI 提供了内置的错误处理：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> HTTPException
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/items/{item_id}&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">read_item</span><span class="token punctuation">(</span>item_id<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> item_id <span class="token operator">==</span> <span class="token number">42</span><span class="token punctuation">:</span>
+        <span class="token keyword">raise</span> HTTPException<span class="token punctuation">(</span>status_code<span class="token operator">=</span><span class="token number">404</span><span class="token punctuation">,</span> detail<span class="token operator">=</span><span class="token string">&quot;Item not found&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">&quot;item_id&quot;</span><span class="token punctuation">:</span> item_id<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_10-异步支持"><a href="#_10-异步支持" class="header-anchor">#</a> 10. 异步支持</h2> <p>FastAPI 原生支持异步：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/async/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">read_async</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">await</span> some_async_function<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">&quot;message&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Async endpoint&quot;</span><span class="token punctuation">}</span>
+</code></pre></div><h2 id="_11-依赖注入系统"><a href="#_11-依赖注入系统" class="header-anchor">#</a> 11. 依赖注入系统</h2> <p>FastAPI 强大的依赖注入系统可以简化代码复用：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> Depends<span class="token punctuation">,</span> FastAPI
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 简单依赖</span>
+<span class="token keyword">def</span> <span class="token function">common_parameters</span><span class="token punctuation">(</span>q<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">,</span> skip<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> limit<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">&quot;q&quot;</span><span class="token punctuation">:</span> q<span class="token punctuation">,</span> <span class="token string">&quot;skip&quot;</span><span class="token punctuation">:</span> skip<span class="token punctuation">,</span> <span class="token string">&quot;limit&quot;</span><span class="token punctuation">:</span> limit<span class="token punctuation">}</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/items/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">read_items</span><span class="token punctuation">(</span>commons<span class="token punctuation">:</span> <span class="token builtin">dict</span> <span class="token operator">=</span> Depends<span class="token punctuation">(</span>common_parameters<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> commons
+
+<span class="token comment"># 类作为依赖</span>
+<span class="token keyword">class</span> <span class="token class-name">QueryParams</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> q<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">,</span> skip<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> limit<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>q <span class="token operator">=</span> q
+        self<span class="token punctuation">.</span>skip <span class="token operator">=</span> skip
+        self<span class="token punctuation">.</span>limit <span class="token operator">=</span> limit
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/users/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">read_users</span><span class="token punctuation">(</span>params<span class="token punctuation">:</span> QueryParams <span class="token operator">=</span> Depends<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> params
+</code></pre></div><h2 id="_12-数据库集成-sqlalchemy"><a href="#_12-数据库集成-sqlalchemy" class="header-anchor">#</a> 12. 数据库集成 (SQLAlchemy)</h2> <p>集成 SQLAlchemy ORM 的完整示例：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI<span class="token punctuation">,</span> Depends<span class="token punctuation">,</span> HTTPException
+<span class="token keyword">from</span> sqlalchemy <span class="token keyword">import</span> create_engine<span class="token punctuation">,</span> Column<span class="token punctuation">,</span> Integer<span class="token punctuation">,</span> String
+<span class="token keyword">from</span> sqlalchemy<span class="token punctuation">.</span>ext<span class="token punctuation">.</span>declarative <span class="token keyword">import</span> declarative_base
+<span class="token keyword">from</span> sqlalchemy<span class="token punctuation">.</span>orm <span class="token keyword">import</span> sessionmaker<span class="token punctuation">,</span> Session
+
+SQLALCHEMY_DATABASE_URL <span class="token operator">=</span> <span class="token string">&quot;sqlite:///./test.db&quot;</span>
+engine <span class="token operator">=</span> create_engine<span class="token punctuation">(</span>SQLALCHEMY_DATABASE_URL<span class="token punctuation">,</span> connect_args<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">&quot;check_same_thread&quot;</span><span class="token punctuation">:</span> <span class="token boolean">False</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+SessionLocal <span class="token operator">=</span> sessionmaker<span class="token punctuation">(</span>autocommit<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> autoflush<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> bind<span class="token operator">=</span>engine<span class="token punctuation">)</span>
+Base <span class="token operator">=</span> declarative_base<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 定义模型</span>
+<span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">(</span>Base<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    __tablename__ <span class="token operator">=</span> <span class="token string">&quot;users&quot;</span>
+    <span class="token builtin">id</span> <span class="token operator">=</span> Column<span class="token punctuation">(</span>Integer<span class="token punctuation">,</span> primary_key<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    username <span class="token operator">=</span> Column<span class="token punctuation">(</span>String<span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    email <span class="token operator">=</span> Column<span class="token punctuation">(</span>String<span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+Base<span class="token punctuation">.</span>metadata<span class="token punctuation">.</span>create_all<span class="token punctuation">(</span>bind<span class="token operator">=</span>engine<span class="token punctuation">)</span>
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 依赖获取数据库会话</span>
+<span class="token keyword">def</span> <span class="token function">get_db</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    db <span class="token operator">=</span> SessionLocal<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        <span class="token keyword">yield</span> db
+    <span class="token keyword">finally</span><span class="token punctuation">:</span>
+        db<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 用户模型</span>
+<span class="token keyword">class</span> <span class="token class-name">UserCreate</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    username<span class="token punctuation">:</span> <span class="token builtin">str</span>
+    email<span class="token punctuation">:</span> <span class="token builtin">str</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>post</span><span class="token punctuation">(</span><span class="token string">&quot;/users/&quot;</span><span class="token punctuation">,</span> response_model<span class="token operator">=</span>UserCreate<span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">create_user</span><span class="token punctuation">(</span>user<span class="token punctuation">:</span> UserCreate<span class="token punctuation">,</span> db<span class="token punctuation">:</span> Session <span class="token operator">=</span> Depends<span class="token punctuation">(</span>get_db<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    db_user <span class="token operator">=</span> User<span class="token punctuation">(</span><span class="token operator">**</span>user<span class="token punctuation">.</span><span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    db<span class="token punctuation">.</span>add<span class="token punctuation">(</span>db_user<span class="token punctuation">)</span>
+    db<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    db<span class="token punctuation">.</span>refresh<span class="token punctuation">(</span>db_user<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> db_user
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/users/{user_id}&quot;</span><span class="token punctuation">,</span> response_model<span class="token operator">=</span>UserCreate<span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">read_user</span><span class="token punctuation">(</span>user_id<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> db<span class="token punctuation">:</span> Session <span class="token operator">=</span> Depends<span class="token punctuation">(</span>get_db<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    user <span class="token operator">=</span> db<span class="token punctuation">.</span>query<span class="token punctuation">(</span>User<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>User<span class="token punctuation">.</span><span class="token builtin">id</span> <span class="token operator">==</span> user_id<span class="token punctuation">)</span><span class="token punctuation">.</span>first<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> user <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">raise</span> HTTPException<span class="token punctuation">(</span>status_code<span class="token operator">=</span><span class="token number">404</span><span class="token punctuation">,</span> detail<span class="token operator">=</span><span class="token string">&quot;User not found&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> user
+</code></pre></div><h2 id="_13-文件上传"><a href="#_13-文件上传" class="header-anchor">#</a> 13. 文件上传</h2> <p>处理文件上传的示例：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI<span class="token punctuation">,</span> UploadFile<span class="token punctuation">,</span> File
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>post</span><span class="token punctuation">(</span><span class="token string">&quot;/uploadfile/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">create_upload_file</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">:</span> UploadFile <span class="token operator">=</span> File<span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;filename&quot;</span><span class="token punctuation">:</span> <span class="token builtin">file</span><span class="token punctuation">.</span>filename<span class="token punctuation">,</span>
+        <span class="token string">&quot;content_type&quot;</span><span class="token punctuation">:</span> <span class="token builtin">file</span><span class="token punctuation">.</span>content_type<span class="token punctuation">,</span>
+        <span class="token string">&quot;size&quot;</span><span class="token punctuation">:</span> <span class="token builtin">len</span><span class="token punctuation">(</span><span class="token keyword">await</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h2 id="_14-表单数据处理"><a href="#_14-表单数据处理" class="header-anchor">#</a> 14. 表单数据处理</h2> <p>处理 HTML 表单数据：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI<span class="token punctuation">,</span> Form
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>post</span><span class="token punctuation">(</span><span class="token string">&quot;/login/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">login</span><span class="token punctuation">(</span>username<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> Form<span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">,</span> password<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> Form<span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">:</span> username<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_15-cookie-和-header-参数"><a href="#_15-cookie-和-header-参数" class="header-anchor">#</a> 15. Cookie 和 Header 参数</h2> <p>访问 Cookie 和 Header：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI<span class="token punctuation">,</span> Cookie<span class="token punctuation">,</span> Header
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/items/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">read_items</span><span class="token punctuation">(</span>
+    ads_id<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> Cookie<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    user_agent<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> Header<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    x_token<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> Header<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;ads_id&quot;</span><span class="token punctuation">:</span> ads_id<span class="token punctuation">,</span>
+        <span class="token string">&quot;User-Agent&quot;</span><span class="token punctuation">:</span> user_agent<span class="token punctuation">,</span>
+        <span class="token string">&quot;X-Token&quot;</span><span class="token punctuation">:</span> x_token
+    <span class="token punctuation">}</span>
+</code></pre></div><h2 id="_16-中间件"><a href="#_16-中间件" class="header-anchor">#</a> 16. 中间件</h2> <p>添加自定义中间件：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI<span class="token punctuation">,</span> Request
+<span class="token keyword">import</span> time
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>middleware</span><span class="token punctuation">(</span><span class="token string">&quot;http&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">add_process_time_header</span><span class="token punctuation">(</span>request<span class="token punctuation">:</span> Request<span class="token punctuation">,</span> call_next<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    start_time <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    response <span class="token operator">=</span> <span class="token keyword">await</span> call_next<span class="token punctuation">(</span>request<span class="token punctuation">)</span>
+    process_time <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> start_time
+    response<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">&quot;X-Process-Time&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>process_time<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> response
+</code></pre></div><h2 id="_17-cors-跨域资源共享"><a href="#_17-cors-跨域资源共享" class="header-anchor">#</a> 17. CORS (跨域资源共享)</h2> <p>启用 CORS 支持：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI
+<span class="token keyword">from</span> fastapi<span class="token punctuation">.</span>middleware<span class="token punctuation">.</span>cors <span class="token keyword">import</span> CORSMiddleware
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span>add_middleware<span class="token punctuation">(</span>
+    CORSMiddleware<span class="token punctuation">,</span>
+    allow_origins<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  <span class="token comment"># 生产环境应更严格</span>
+    allow_credentials<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    allow_methods<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    allow_headers<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h2 id="_18-后台任务"><a href="#_18-后台任务" class="header-anchor">#</a> 18. 后台任务</h2> <p>在响应后运行后台任务：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI<span class="token punctuation">,</span> BackgroundTasks
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">write_notification</span><span class="token punctuation">(</span>email<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;log.txt&quot;</span><span class="token punctuation">,</span> mode<span class="token operator">=</span><span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> email_file<span class="token punctuation">:</span>
+        content <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f&quot;notification for </span><span class="token interpolation"><span class="token punctuation">{</span>email<span class="token punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">{</span>message<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span>
+        email_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span>content<span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>post</span><span class="token punctuation">(</span><span class="token string">&quot;/send-notification/{email}&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">send_notification</span><span class="token punctuation">(</span>email<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> background_tasks<span class="token punctuation">:</span> BackgroundTasks<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    background_tasks<span class="token punctuation">.</span>add_task<span class="token punctuation">(</span>write_notification<span class="token punctuation">,</span> email<span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;some notification&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">&quot;message&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Notification sent in the background&quot;</span><span class="token punctuation">}</span>
+</code></pre></div><h2 id="_19-静态文件服务"><a href="#_19-静态文件服务" class="header-anchor">#</a> 19. 静态文件服务</h2> <p>提供静态文件服务：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI
+<span class="token keyword">from</span> fastapi<span class="token punctuation">.</span>staticfiles <span class="token keyword">import</span> StaticFiles
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span>mount<span class="token punctuation">(</span><span class="token string">&quot;/static&quot;</span><span class="token punctuation">,</span> StaticFiles<span class="token punctuation">(</span>directory<span class="token operator">=</span><span class="token string">&quot;static&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">&quot;static&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_20-测试-fastapi-应用"><a href="#_20-测试-fastapi-应用" class="header-anchor">#</a> 20. 测试 FastAPI 应用</h2> <p>使用 TestClient 进行测试</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI
+<span class="token keyword">from</span> fastapi<span class="token punctuation">.</span>testclient <span class="token keyword">import</span> TestClient
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">read_main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">&quot;msg&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Hello World&quot;</span><span class="token punctuation">}</span>
+
+client <span class="token operator">=</span> TestClient<span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">test_read_main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    response <span class="token operator">=</span> client<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span>
+    <span class="token keyword">assert</span> response<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token punctuation">{</span><span class="token string">&quot;msg&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Hello World&quot;</span><span class="token punctuation">}</span>
+</code></pre></div><h2 id="_21-安全性-oauth2-和-jwt"><a href="#_21-安全性-oauth2-和-jwt" class="header-anchor">#</a> 21. 安全性 (OAuth2 和 JWT)</h2> <p>实现基于 JWT 的身份验证：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> datetime <span class="token keyword">import</span> datetime<span class="token punctuation">,</span> timedelta
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> Optional
+<span class="token keyword">from</span> fastapi <span class="token keyword">import</span> Depends<span class="token punctuation">,</span> FastAPI<span class="token punctuation">,</span> HTTPException<span class="token punctuation">,</span> status
+<span class="token keyword">from</span> fastapi<span class="token punctuation">.</span>security <span class="token keyword">import</span> OAuth2PasswordBearer<span class="token punctuation">,</span> OAuth2PasswordRequestForm
+<span class="token keyword">from</span> jose <span class="token keyword">import</span> JWTError<span class="token punctuation">,</span> jwt
+<span class="token keyword">from</span> passlib<span class="token punctuation">.</span>context <span class="token keyword">import</span> CryptContext
+<span class="token keyword">from</span> pydantic <span class="token keyword">import</span> BaseModel
+
+<span class="token comment"># 配置</span>
+SECRET_KEY <span class="token operator">=</span> <span class="token string">&quot;your-secret-key&quot;</span>
+ALGORITHM <span class="token operator">=</span> <span class="token string">&quot;HS256&quot;</span>
+ACCESS_TOKEN_EXPIRE_MINUTES <span class="token operator">=</span> <span class="token number">30</span>
+
+fake_users_db <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;johndoe&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;username&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;johndoe&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;hashed_password&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Token</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    access_token<span class="token punctuation">:</span> <span class="token builtin">str</span>
+    token_type<span class="token punctuation">:</span> <span class="token builtin">str</span>
+
+<span class="token keyword">class</span> <span class="token class-name">TokenData</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    username<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">None</span>
+
+<span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    username<span class="token punctuation">:</span> <span class="token builtin">str</span>
+
+pwd_context <span class="token operator">=</span> CryptContext<span class="token punctuation">(</span>schemes<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;bcrypt&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> deprecated<span class="token operator">=</span><span class="token string">&quot;auto&quot;</span><span class="token punctuation">)</span>
+oauth2_scheme <span class="token operator">=</span> OAuth2PasswordBearer<span class="token punctuation">(</span>tokenUrl<span class="token operator">=</span><span class="token string">&quot;token&quot;</span><span class="token punctuation">)</span>
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">verify_password</span><span class="token punctuation">(</span>plain_password<span class="token punctuation">,</span> hashed_password<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> pwd_context<span class="token punctuation">.</span>verify<span class="token punctuation">(</span>plain_password<span class="token punctuation">,</span> hashed_password<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">get_user</span><span class="token punctuation">(</span>db<span class="token punctuation">,</span> username<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> username <span class="token keyword">in</span> db<span class="token punctuation">:</span>
+        user_dict <span class="token operator">=</span> db<span class="token punctuation">[</span>username<span class="token punctuation">]</span>
+        <span class="token keyword">return</span> User<span class="token punctuation">(</span><span class="token operator">**</span>user_dict<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">authenticate_user</span><span class="token punctuation">(</span>fake_db<span class="token punctuation">,</span> username<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> password<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    user <span class="token operator">=</span> get_user<span class="token punctuation">(</span>fake_db<span class="token punctuation">,</span> username<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> user<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> verify_password<span class="token punctuation">(</span>password<span class="token punctuation">,</span> user<span class="token punctuation">.</span>hashed_password<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+    <span class="token keyword">return</span> user
+
+<span class="token keyword">def</span> <span class="token function">create_access_token</span><span class="token punctuation">(</span>data<span class="token punctuation">:</span> <span class="token builtin">dict</span><span class="token punctuation">,</span> expires_delta<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>timedelta<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    to_encode <span class="token operator">=</span> data<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> expires_delta<span class="token punctuation">:</span>
+        expire <span class="token operator">=</span> datetime<span class="token punctuation">.</span>utcnow<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> expires_delta
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        expire <span class="token operator">=</span> datetime<span class="token punctuation">.</span>utcnow<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> timedelta<span class="token punctuation">(</span>minutes<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
+    to_encode<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;exp&quot;</span><span class="token punctuation">:</span> expire<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    encoded_jwt <span class="token operator">=</span> jwt<span class="token punctuation">.</span>encode<span class="token punctuation">(</span>to_encode<span class="token punctuation">,</span> SECRET_KEY<span class="token punctuation">,</span> algorithm<span class="token operator">=</span>ALGORITHM<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> encoded_jwt
+
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">get_current_user</span><span class="token punctuation">(</span>token<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> Depends<span class="token punctuation">(</span>oauth2_scheme<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    credentials_exception <span class="token operator">=</span> HTTPException<span class="token punctuation">(</span>
+        status_code<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_401_UNAUTHORIZED<span class="token punctuation">,</span>
+        detail<span class="token operator">=</span><span class="token string">&quot;Could not validate credentials&quot;</span><span class="token punctuation">,</span>
+        headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">&quot;WWW-Authenticate&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Bearer&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        payload <span class="token operator">=</span> jwt<span class="token punctuation">.</span>decode<span class="token punctuation">(</span>token<span class="token punctuation">,</span> SECRET_KEY<span class="token punctuation">,</span> algorithms<span class="token operator">=</span><span class="token punctuation">[</span>ALGORITHM<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        username<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> payload<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;sub&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> username <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> credentials_exception
+        token_data <span class="token operator">=</span> TokenData<span class="token punctuation">(</span>username<span class="token operator">=</span>username<span class="token punctuation">)</span>
+    <span class="token keyword">except</span> JWTError<span class="token punctuation">:</span>
+        <span class="token keyword">raise</span> credentials_exception
+    user <span class="token operator">=</span> get_user<span class="token punctuation">(</span>fake_users_db<span class="token punctuation">,</span> username<span class="token operator">=</span>token_data<span class="token punctuation">.</span>username<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> user <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">raise</span> credentials_exception
+    <span class="token keyword">return</span> user
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>post</span><span class="token punctuation">(</span><span class="token string">&quot;/token&quot;</span><span class="token punctuation">,</span> response_model<span class="token operator">=</span>Token<span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">login_for_access_token</span><span class="token punctuation">(</span>form_data<span class="token punctuation">:</span> OAuth2PasswordRequestForm <span class="token operator">=</span> Depends<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    user <span class="token operator">=</span> authenticate_user<span class="token punctuation">(</span>fake_users_db<span class="token punctuation">,</span> form_data<span class="token punctuation">.</span>username<span class="token punctuation">,</span> form_data<span class="token punctuation">.</span>password<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> user<span class="token punctuation">:</span>
+        <span class="token keyword">raise</span> HTTPException<span class="token punctuation">(</span>
+            status_code<span class="token operator">=</span>status<span class="token punctuation">.</span>HTTP_401_UNAUTHORIZED<span class="token punctuation">,</span>
+            detail<span class="token operator">=</span><span class="token string">&quot;Incorrect username or password&quot;</span><span class="token punctuation">,</span>
+            headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">&quot;WWW-Authenticate&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Bearer&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span>
+    access_token_expires <span class="token operator">=</span> timedelta<span class="token punctuation">(</span>minutes<span class="token operator">=</span>ACCESS_TOKEN_EXPIRE_MINUTES<span class="token punctuation">)</span>
+    access_token <span class="token operator">=</span> create_access_token<span class="token punctuation">(</span>
+        data<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">&quot;sub&quot;</span><span class="token punctuation">:</span> user<span class="token punctuation">.</span>username<span class="token punctuation">}</span><span class="token punctuation">,</span> expires_delta<span class="token operator">=</span>access_token_expires
+    <span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">&quot;access_token&quot;</span><span class="token punctuation">:</span> access_token<span class="token punctuation">,</span> <span class="token string">&quot;token_type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;bearer&quot;</span><span class="token punctuation">}</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/users/me/&quot;</span><span class="token punctuation">,</span> response_model<span class="token operator">=</span>User<span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">read_users_me</span><span class="token punctuation">(</span>current_user<span class="token punctuation">:</span> User <span class="token operator">=</span> Depends<span class="token punctuation">(</span>get_current_user<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> current_user
+</code></pre></div><h2 id="_22-websocket-支持"><a href="#_22-websocket-支持" class="header-anchor">#</a> 22. WebSocket 支持</h2> <p>实现 WebSocket 端点：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI<span class="token punctuation">,</span> WebSocket
+<span class="token keyword">from</span> fastapi<span class="token punctuation">.</span>responses <span class="token keyword">import</span> HTMLResponse
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+html <span class="token operator">=</span> <span class="token triple-quoted-string string">&quot;&quot;&quot;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;WebSocket Demo&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;WebSocket Demo&lt;/h1&gt;
+        &lt;form action=&quot;&quot; onsubmit=&quot;sendMessage(event)&quot;&gt;
+            &lt;input type=&quot;text&quot; id=&quot;messageText&quot; autocomplete=&quot;off&quot;/&gt;
+            &lt;button&gt;Send&lt;/button&gt;
+        &lt;/form&gt;
+        &lt;ul id='messages'&gt;
+        &lt;/ul&gt;
+        &lt;script&gt;
+            var ws = new WebSocket(&quot;ws://localhost:8000/ws&quot;);
+            ws.onmessage = function(event) {
+                var messages = document.getElementById('messages')
+                var message = document.createElement('li')
+                var content = document.createTextNode(event.data)
+                message.appendChild(content)
+                messages.appendChild(message)
+            };
+            function sendMessage(event) {
+                var input = document.getElementById(&quot;messageText&quot;)
+                ws.send(input.value)
+                input.value = ''
+                event.preventDefault()
+            }
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+&quot;&quot;&quot;</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>get</span><span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> HTMLResponse<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>websocket</span><span class="token punctuation">(</span><span class="token string">&quot;/ws&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">websocket_endpoint</span><span class="token punctuation">(</span>websocket<span class="token punctuation">:</span> WebSocket<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">await</span> websocket<span class="token punctuation">.</span>accept<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        data <span class="token operator">=</span> <span class="token keyword">await</span> websocket<span class="token punctuation">.</span>receive_text<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">await</span> websocket<span class="token punctuation">.</span>send_text<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Message text was: </span><span class="token interpolation"><span class="token punctuation">{</span>data<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_23-部署-fastapi-应用"><a href="#_23-部署-fastapi-应用" class="header-anchor">#</a> 23. 部署 FastAPI 应用</h2> <p>使用 Uvicorn 和 Gunicorn 部署生产环境：</p> <ol><li>安装 Gunicorn：</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code>pip <span class="token function">install</span> gunicorn
+</code></pre></div><ol><li>创建 <code>gunicorn_conf.py</code> 配置文件：</li></ol> <div class="language-python extra-class"><pre class="language-python"><code>workers <span class="token operator">=</span> <span class="token number">4</span>
+worker_class <span class="token operator">=</span> <span class="token string">&quot;uvicorn.workers.UvicornWorker&quot;</span>
+bind <span class="token operator">=</span> <span class="token string">&quot;0.0.0.0:8000&quot;</span>
+</code></pre></div><ol><li>使用 Gunicorn 运行：</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code>gunicorn <span class="token parameter variable">-c</span> gunicorn_conf.py main:app
+</code></pre></div><h2 id="_24-使用-docker-容器化"><a href="#_24-使用-docker-容器化" class="header-anchor">#</a> 24. 使用 Docker 容器化</h2> <p>创建 <code>Dockerfile</code>：</p> <div class="language-dockerfile extra-class"><pre class="language-dockerfile"><code><span class="token instruction"><span class="token keyword">FROM</span> python:3.9</span>
+
+<span class="token instruction"><span class="token keyword">WORKDIR</span> /app</span>
+
+<span class="token instruction"><span class="token keyword">COPY</span> requirements.txt .</span>
+<span class="token instruction"><span class="token keyword">RUN</span> pip install --no-cache-dir -r requirements.txt</span>
+
+<span class="token instruction"><span class="token keyword">COPY</span> . .</span>
+
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">&quot;gunicorn&quot;</span>, <span class="token string">&quot;-c&quot;</span>, <span class="token string">&quot;gunicorn_conf.py&quot;</span>, <span class="token string">&quot;main:app&quot;</span>]</span>
+</code></pre></div><p>创建 <code>docker-compose.yml</code>：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;3.8&quot;</span>
+
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">web</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span> .
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;8000:8000&quot;</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> APP_ENV=production
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+</code></pre></div><h2 id="_25-性能优化技巧"><a href="#_25-性能优化技巧" class="header-anchor">#</a> 25. 性能优化技巧</h2> <ol><li><strong>使用异步数据库驱动</strong>：如 asyncpg 用于 PostgreSQL，aiomysql 用于 MySQL</li> <li><strong>启用 Gzip 压缩</strong>：</li></ol> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi<span class="token punctuation">.</span>middleware<span class="token punctuation">.</span>gzip <span class="token keyword">import</span> GZipMiddleware
+app<span class="token punctuation">.</span>add_middleware<span class="token punctuation">(</span>GZipMiddleware<span class="token punctuation">,</span> minimum_size<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">)</span>
+</code></pre></div><ol><li><strong>缓存响应</strong>：使用 <code>@lru_cache</code> 或 Redis</li> <li><strong>使用 Pydantic 的 ORM 模式</strong>：减少数据转换开销</li> <li><strong>限制请求体大小</strong>：</li></ol> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI<span class="token punctuation">,</span> Request
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span>max_request_size<span class="token operator">=</span><span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span><span class="token punctuation">)</span>  <span class="token comment"># 1MB</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Python/基于Flask写API.html" class="prev">
+        基于Flask写API
+      </a></span> <span class="next"><a href="/Python/FastAPI整合MySQL.html">
+        FastAPI整合MySQL
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><CursorEffects></CursorEffects><GoTop></GoTop><ReadingProgress></ReadingProgress><DynamicTitle></DynamicTitle></div></div>
+    <script src="/assets/js/app.f0bc36e9.js" defer></script><script src="/assets/js/2.2a5f83c2.js" defer></script><script src="/assets/js/1.ea25edcb.js" defer></script><script src="/assets/js/113.f5dc1a3a.js" defer></script>
+  </body>
+</html>
