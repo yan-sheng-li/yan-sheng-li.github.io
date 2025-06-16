@@ -59,5 +59,6 @@
 
 ::: warning
 ![](http://cdn.qiniu.liyansheng.top/img/20240618164912.png)
-![](http://cdn.qiniu.liyansheng.top/img/20240618165214.png)
 :::
+
+<PaymentButton :productId="167" />
