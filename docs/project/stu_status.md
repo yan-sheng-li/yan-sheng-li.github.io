@@ -61,4 +61,4 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240618164912.png)
 :::
 
-<PaymentButton :productId="167" />
+<PaymentButton :productId="167"  :buttonText="'点我获取-报告'"/>
