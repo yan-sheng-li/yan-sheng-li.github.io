@@ -19,37 +19,34 @@
 - 售货自动结算
 - 多条件信息查询（库存、进货、售货）
 
-## 效果图
+## 部分图示
 
-> 登录验证：
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240609010458.png)
 
-> 界面一览：
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240609010516.png)
 
-> 进货：
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240609010538.png)
 
-> 售货：
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240609010607.png)
 
-> 查询：
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240609010636.png)
 
 
 
-以上是部分演示，代码有亿点点多，就不在这里展示代码了，详细的可以下载源码来自己看一下哦！
-
 ## 源码👇
 
 <gzh />
 
-![](http://cdn.qiniu.liyansheng.top/img/20240526170926.png)
+<ClientOnly>
+  <KeywordTip keyword="超市系统" />
+</ClientOnly>
 
 
 ## 配套报告
