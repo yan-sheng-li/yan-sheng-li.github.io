@@ -7,35 +7,43 @@
 - MySQL数据库
 - SwingUI
 - JDBC
+
+## 要点
+- 两个角色： 员工、管理员
+- 登录认证
+- 用户注册
+- 工资信息
+- 请假申请
+- 离职申请
+- 员工管理
+- 离职审批
+- 请假审批
 ## 效果预览
-> 登录验证
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240607202443.png)
-> 用户注册
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240607202705.png)
-> 员工工资详情
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240607202527.png)
 
-> 员工请假申请
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240607202549.png)
 
-> 员工离职申请
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240607202607.png)
 
-> 员工管理
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240607202636.png)
-> 员工信息修改
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240607202732.png)
-> 请假审批
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240607202804.png)
-> 离职审批
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240607202826.png)
 
