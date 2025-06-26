@@ -2,16 +2,11 @@
 
 <MyGlobalComponent />
 
-## 需求分析
-
-> 1. 系统分为管理员账户，学生（读者）账户
-> 2. 管理员账户可以进行书籍，学生（读者）信息的维护(CRUD)
-> 3. 学生（读者）账户可以借书，还书，检索图书，个人借阅信息浏览
 ## 开发环境
 
-`开发语言`：Java   (jdk版本12+)
+`开发语言`：Java
 
-`数据库`：MySQL  (版本8.0+)
+`数据库`：MySQL
 
 `工具`：JDBC
 
@@ -229,7 +224,11 @@ id  isbn  书名  作者  出版社  馆藏数量
 ## 源码获取
 <gzh />
 
-![](http://cdn.qiniu.liyansheng.top/img/20240527005122.png)
+<ClientOnly>
+
+ <KeywordTip keyword="借阅管理" />
+
+</ClientOnly>
 
 ## 配套报告
 
