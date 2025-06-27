@@ -264,7 +264,8 @@ module.exports = {
             '文件上传-下载',
             '整合WebSocket',
             '整合JWT',
-            '简洁版的Result类'
+            '简洁版的Result类',
+            '整合redis'
 
           ]
         },
