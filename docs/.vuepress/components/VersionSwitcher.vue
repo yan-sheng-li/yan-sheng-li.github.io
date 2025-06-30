@@ -2,8 +2,7 @@
   <div class="version-switcher">
     <label for="version"><span style="color: red;font-size: larger;">版本切换👉</span></label>
     <select id="version" v-model="version" class="version-select">
-      <option value="v1">v1.0</option>
-      <option value="v2">v2.0</option>
+      <option v-for="ver in versions" :key="ver" :value="ver">{{ ver }}</option>
     </select>
     <div class="version-content">
       <slot />
@@ -15,13 +14,24 @@
 export default {
   data() {
     return {
-      version: 'v1',
+      version: '',
+      versions: [],
     };
   },
   provide() {
     return {
       currentVersion: this,
+      registerVersion: this.registerVersion,
     };
+  },
+  methods: {
+    registerVersion(ver) {
+      if (!this.versions.includes(ver)) {
+        this.versions.push(ver);
+        // 默认选中第一个注册的版本
+        if (!this.version) this.version = ver;
+      }
+    },
   },
 };
 </script>

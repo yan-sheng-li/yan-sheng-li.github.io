@@ -8,12 +8,15 @@
 
 <script>
 export default {
-  inject: ['currentVersion'],
+  inject: ['currentVersion', 'registerVersion'],
   props: {
     target: {
       type: String,
       required: true,
     },
+  },
+  mounted() {
+    this.registerVersion(this.target);
   },
 };
 </script>
