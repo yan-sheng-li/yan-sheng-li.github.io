@@ -641,6 +641,7 @@ module.exports = {
             '餐厅下单助手系统',
             '体验场地预约管理系统',
             'MakeBricks',
+            'GoldMiner'
 
           ]
         },
