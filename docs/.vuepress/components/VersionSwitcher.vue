@@ -1,6 +1,8 @@
 <template>
   <div class="version-switcher">
-    <label for="version"><span style="color: red;font-size: larger;">版本切换👉</span></label>
+    <label for="version">
+      <span class="version-switch-label">版本切换👉</span>
+    </label>
     <select id="version" v-model="version" class="version-select">
       <option v-for="ver in versions" :key="ver" :value="ver">{{ ver }}</option>
     </select>
@@ -47,7 +49,6 @@ export default {
 
 <style scoped>
 .version-switcher {
-/* 调大上边距 */
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   font-family: Arial, sans-serif;
@@ -57,6 +58,27 @@ export default {
   font-weight: bold;
   margin-right: 0.5rem;
   font-size: 1.1rem;
+}
+
+.version-switch-label {
+  color: #ff4d4f;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff4d4f 30%, #ffb347 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shake 1.2s infinite alternate;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0);}
+  20% { transform: translateX(-2px);}
+  40% { transform: translateX(2px);}
+  60% { transform: translateX(-2px);}
+  80% { transform: translateX(2px);}
+  100% { transform: translateX(0);}
 }
 
 .version-select {
