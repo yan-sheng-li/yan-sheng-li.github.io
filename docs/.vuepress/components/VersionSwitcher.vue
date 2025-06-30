@@ -24,11 +24,20 @@ export default {
       registerVersion: this.registerVersion,
     };
   },
+  mounted() {
+    // 获取URL中的v参数
+    const params = new URLSearchParams(window.location.search);
+    const urlVersion = params.get('v');
+    if (urlVersion) {
+      this.version = urlVersion;
+    }
+    // 如果没有参数，等registerVersion注册时自动选第一个
+  },
   methods: {
     registerVersion(ver) {
       if (!this.versions.includes(ver)) {
         this.versions.push(ver);
-        // 默认选中第一个注册的版本
+        // 如果没有选中的版本，默认选第一个
         if (!this.version) this.version = ver;
       }
     },
