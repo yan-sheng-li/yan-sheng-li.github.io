@@ -9,7 +9,23 @@
     <div v-if="showCard" class="product-card">
       <h2>{{ product.name }}</h2>
       <p><strong>描述：</strong>{{ product.description }}</p>
-      <p><strong>价格：</strong><span style="color:red;font-size:25px;font-weight: 200;">¥{{ product.price }}</span></p>
+      <!-- 只有商品名不包含“报告”时才显示规格选择 -->
+      <p v-if="!product.name.includes('报告')">
+        <strong>选择规格：</strong>
+        <select v-model="selectedSpec" class="spec-select">
+          <option v-for="spec in specOptions" :key="spec.value" :value="spec.value">
+            {{ spec.label }}（{{ spec.extra === 0 ? '原价' : '加' + spec.extra + '元' }}）
+          </option>
+        </select>
+      </p>
+      <p>
+        <strong>价格：</strong>
+        <span style="color:red;font-size:25px;font-weight: 200;">
+          <!-- 如果是报告，直接显示原价，否则按规格加价 -->
+          ¥{{product.name.includes('报告') ? product.price : (product.price + (specOptions.find(s => s.value ===
+            selectedSpec)?.extra || 0)) }}
+        </span>
+      </p>
       <button @click="initiatePayment" class="order-button">点击下单</button>
     </div>
 
@@ -43,6 +59,13 @@
         <div style="border: 1px solid red;padding: 5px;">
           <h3 class="download-link">{{ productUrl }}</h3>
         </div>
+        <!-- 提示 -->
+        <p style="color: red; font-weight: bold;">请复制链接到浏览器下载
+          <hr>
+          <span style="color: yellowgreen;">
+            👉远程调试，请联系作者
+          </span>
+        </p>
       </div>
     </div>
   </div>
@@ -75,6 +98,12 @@ export default {
         price: null,
       },
       showCard: false,
+      // 新增：规格相关
+      specOptions: [
+        { label: "仅源码", value: "code", extra: 0 },
+        { label: "源码+远程调试部署", value: "code_debug", extra: 35 }
+      ],
+      selectedSpec: "code"
     };
   },
   methods: {
@@ -87,14 +116,27 @@ export default {
         })
         .catch((err) => {
           console.error("Error fetching product data:", err);
-          // 根据实际需求处理错误
-          this.showCard = false; // 隐藏卡片
+          this.showCard = false;
           this.msg = "无法获取作品信息，请联系作者！"
           this.$toast.error("出错了，请稍后再试！");
         });
     },
     initiatePayment() {
-      $.get(this.baseUrl + "/orders/create/" + this.productId).then((res) => {
+      let finalPrice = this.product.price;
+      let specParam = undefined;
+      // 如果不是报告，才处理规格
+      if (!this.product.name.includes('报告')) {
+        const spec = this.specOptions.find(s => s.value === this.selectedSpec);
+        finalPrice = this.product.price + (spec ? spec.extra : 0);
+        specParam = this.selectedSpec;
+      }
+      // 组装请求参数
+      const params = { price: finalPrice };
+      if (specParam) params.spec = specParam;
+
+      console.log("请求参数：", params);
+
+      $.get(this.baseUrl + "/orders/create/" + this.productId, params).then((res) => {
         this.orderId = res.orderId;
         this.msg = res.msg;
         this.qrCodeUrl = res.QRcode_url;
@@ -216,5 +258,24 @@ export default {
   color: #f56c6c;
   font-weight: bold;
   margin-top: 10px;
+}
+
+.spec-select {
+  font-size: 18px;
+  padding: 6px 18px;
+  border-radius: 6px;
+  border: 1.5px solid #07c160;
+  outline: none;
+  background: #f6ffed;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.spec-select:focus {
+  border-color: #05a14e;
+}
+
+.spec-select option {
+  font-size: 16px;
 }
 </style>
