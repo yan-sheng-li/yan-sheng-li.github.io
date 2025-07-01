@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务-排队预约</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                background-color: #ffeedf;
+            }
+
+            50% {
+                transform: scale(1.05);
+                background-color: #ffe4cc;
+            }
+
+            100% {
+                transform: scale(1);
+                background-color: #ffeedf;
+            }
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #4a90e2;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .queue-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 12px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+
+        .queue-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .queue-item span {
+            font-size: 14px;
+        }
+
+        .highlight-item {
+            animation: pulse 2s infinite;
+        }
+
+        .device-id {
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="header">
+
+                <div>
+                    <img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" style="width: 25%;" alt="">
+                    <div>
+                        <span>
+                            <a href="http://www.liyansheng.top/blog"><img
+                                    src="https://img.shields.io/badge/木子空间-自营博客-00dfbf" alt="自营博客"></a>
+                            <a href="https://yan-sheng-li.github.io/project/"><img
+                                    src="https://img.shields.io/badge/木子空间-项目&资料-1e90ff" alt="项目合集"></a>
+                            <a href="https://blog.csdn.net/weixin_44107140"><img
+                                    src="https://img.shields.io/badge/木子空间-CSDN&粉丝1.5w+-FC5531" alt="CSDN博客"></a>
+                            <a href="https://gitee.com/yan-sheng-li"><img
+                                    src="https://img.shields.io/badge/木子空间-Gitee-orange" alt="Gitee"></a>
+                            <a href="https://github.com/yan-sheng-li"><img
+                                    src="https://img.shields.io/badge/木子空间-GitHub-black" alt="GitHub"></a>
+                            <a href="http://cdn.qiniu.liyansheng.top/img/gzh_muzikongjianPro.png"><img
+                                    src="https://img.shields.io/badge/木子空间Pro-公众号&粉丝6k+-brightgreen" alt="公众号"></a>
+                            <a
+                                href="https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC"><img
+                                    src="https://img.shields.io/badge/木子空间-QQ社群(450+人)-18a2ea" alt="QQ Group"></a>
+                            <img src="https://img.shields.io/badge/博主-QQ：1761724207-29a1db" alt="QQ">
+                            <img src="https://img.shields.io/badge/博主-微信：17641244340-07c261" alt="微信">
+                            <a href="https://www.xiaohongshu.com/user/profile/668f634100000000030315a1"><img
+                                    src="https://img.shields.io/badge/木子空间-小红书-FF2842" alt="小红书"></a>
+                            <a href="http://cdn.qiniu.liyansheng.top/img/20250423150441.png"><img
+                                    src="https://img.shields.io/badge/木子空间-闲鱼-ffe10f" alt="闲鱼"></a>
+                            <a href="http://cdn.qiniu.liyansheng.top/img/20250423145452.png"><img
+                                    src="https://img.shields.io/badge/木子空间-小程序商店-green" alt="小程序商店"></a>
+                        </span>
+                    </div>
+                </div>
+                <h1>一对一服务序列</h1>
+            </div>
+            <div v-for="(customer, index) in queue" :key="customer.id" class="queue-item"
+                :class="{ 'highlight-item': index === 0 }">
+                <div>
+                    <span v-if="index === 0" style="color: blue; font-weight: bold; font-size: 1.2em;">当前💻<—>💻</span>
+                    {{ anonymizeName(customer.name) }}
+                    <div class="device-id">设备号: {{ anonymizeDeviceId(customer.device) }}</div>
+                </div>
+                <span>排队号: {{ index + 1 }}</span>
+            </div>
+            <div v-if="queue.length === 0" class="queue-item">
+                暂无排队同学😃。
+            </div>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                queue: [],
+                timer: null
+            },
+            methods: {
+                anonymizeName(name) {
+                    return name.replace(/(?<=.)./g, '*');
+                },
+                anonymizeDeviceId(device) {
+                    if (!device) return '其他类型';
+                    return device.replace(/(\d{1})(\d+)(\d{1})/, '$1' + '*'.repeat(device.length - 2) + '$3');
+                },
+
+                fetchLineUp() {
+                    return new Promise((resolve, reject) => {
+                        $.get('https://mini.liyansheng.top/v1/line-up/processing', (res) => {
+                            this.queue = res;
+                            if (this.queue.length > 0) {
+                                if (!this.timer) {
+                                    this.startAutoFetch();
+                                }
+                            } else {
+                                this.stopAutoFetch();
+                            }
+                            resolve();
+                        }).fail((error) => {
+                            reject(error);
+                        });
+                    });
+                },
+                startAutoFetch() {
+                    const interval = 60 * 1000; // 5秒
+                    this.timer = setInterval(() => {
+                        this.fetchLineUp();
+                    }, interval);
+                },
+                stopAutoFetch() {
+                    if (this.timer) {
+                        clearInterval(this.timer);
+                        this.timer = null;
+                    }
+                }
+            },
+            created() {
+                this.fetchLineUp().catch((error) => {
+                    console.error('Error fetching initial data:', error);
+                });
+            },
+            beforeDestroy() {
+                this.stopAutoFetch();
+            }
+        });
+    </script>
+</body>
+
+</html>
