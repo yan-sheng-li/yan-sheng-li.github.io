@@ -332,3 +332,35 @@ public class GlobalExceptionHandler {
 页面文件加命名空间：
 
 xmlns:sa="http://www.thymeleaf.org/extras/sa-token"
+
+## 结合redis
+### 依赖
+```xml
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-redis-jackson</artifactId>
+            <version>1.37.0</version>
+        </dependency>
+        <!-- 提供Redis连接池 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+```
+
+```yml
+spring:
+  redis:
+    host: liyansheng.top       # Redis服务器地址
+    port: 6379            # Redis服务器端口
+    password: liyansheng        # Redis密码（没有密码可不填）
+    database: 3           # 使用的数据库索引
+    timeout: 5000         # 连接超时时间（毫秒）
+    lettuce:
+      pool:
+        max-active: 8     # 连接池最大连接数
+        max-idle: 8       # 连接池最大空闲连接数
+        min-idle: 0       # 连接池最小空闲连接数
+        max-wait: 1000ms 
+```
+如此一来，用户登录后的token信息就会存到redis，方便实现分布式
