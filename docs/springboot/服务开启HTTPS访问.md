@@ -1,4 +1,4 @@
-# SpringBoot服务开启HTTPS访问
+# 开启HTTPS访问
 
 > 申请了正规厂商颁发的域名证书后，可以按照以下步骤将其下载并配置到 Spring Boot 服务中。
 

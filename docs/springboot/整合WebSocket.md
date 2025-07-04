@@ -1,6 +1,6 @@
 
 
-# Spring Boot 整合 WebSocket 教程笔记
+# 整合 WebSocket 教程笔记
 
 > WebSocket 是一种在客户端和服务端之间建立持久连接的通信协议，非常适合实时聊天、在线通知等应用场景。下面我们将通过一个简单的 Demo 来介绍如何在 Spring Boot 中集成 WebSocket。
 

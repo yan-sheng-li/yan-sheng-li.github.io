@@ -1,4 +1,4 @@
-# Spring Boot整合Redis完整指南
+# 整合Redis
 
 ## 一、环境准备
 
