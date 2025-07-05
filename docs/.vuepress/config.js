@@ -265,7 +265,8 @@ module.exports = {
             '整合WebSocket',
             '整合JWT',
             '简洁版的Result类',
-            '整合redis'
+            '整合redis',
+            '整合webhook自动部署'
 
           ]
         },
