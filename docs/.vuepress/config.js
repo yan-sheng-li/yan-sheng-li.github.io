@@ -347,7 +347,8 @@ module.exports = {
             '集成滑动验证码',
             '词云图',
             '插件-vue-toastification',
-            '插件-vuex-persistedstate'
+            '插件-vuex-persistedstate',
+            '插件实现自动部署'
           ]
         },
       ],
