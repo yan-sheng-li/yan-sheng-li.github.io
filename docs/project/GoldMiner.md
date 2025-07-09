@@ -34,11 +34,15 @@
 - 按`回车键`重新开始游戏
 - 可自定义贴图素材
 
+<PaymentButton :productId="217" />
+
 ## 效果图
 
 ![GIF 2025-6-30 16-28-50](http://cdn.qiniu.liyansheng.top/img/GIF%202025-6-30%2016-28-50.gif)
 
 ![image-20250630162723308](http://cdn.qiniu.liyansheng.top/img/image-20250630162723308.png)
+
+
 
 </VersionBlock>
 
@@ -56,6 +60,8 @@
 - 共5个关卡，每关目标分数和时间不同，难度逐步提升（物品数量和分值递增）。
 - 钩子随人物可以左右移动
 
+<PaymentButton :productId="218" />
+
 ## 效果图
 
 ![image-20250630171758814](http://cdn.qiniu.liyansheng.top/img/image-20250630171758814.png)
@@ -63,6 +69,7 @@
 ![GIF 2025-6-30 17-19-57](http://cdn.qiniu.liyansheng.top/img/GIF%202025-6-30%2017-19-57.gif)
 
 ![image-20250630165347645](http://cdn.qiniu.liyansheng.top/img/image-20250630165347645.png)
+
 
 
 </VersionBlock>
