@@ -6,6 +6,9 @@
     <select id="version" v-model="version" class="version-select">
       <option v-for="ver in versions" :key="ver" :value="ver">{{ ver }}</option>
     </select>
+
+    <p class="current-version-tip">当前版本：<strong>{{ version }}</strong></p>
+
     <div class="version-content">
       <slot />
     </div>
@@ -27,19 +30,23 @@ export default {
     };
   },
   mounted() {
-    // 获取URL中的v参数
     const params = new URLSearchParams(window.location.search);
     const urlVersion = params.get('v');
     if (urlVersion) {
       this.version = urlVersion;
     }
-    // 如果没有参数，等registerVersion注册时自动选第一个
+  },
+  watch: {
+    version(newVer) {
+      const url = new URL(window.location);
+      url.searchParams.set('v', newVer);
+      window.history.replaceState({}, '', url);
+    },
   },
   methods: {
     registerVersion(ver) {
       if (!this.versions.includes(ver)) {
         this.versions.push(ver);
-        // 如果没有选中的版本，默认选第一个
         if (!this.version) this.version = ver;
       }
     },
@@ -54,12 +61,7 @@ export default {
   font-family: Arial, sans-serif;
 }
 
-.version-switcher label {
-  font-weight: bold;
-  margin-right: 0.5rem;
-  font-size: 1.1rem;
-}
-
+/* 标签文字样式加强 */
 .version-switch-label {
   color: #ff4d4f;
   font-size: 1.25rem;
@@ -69,32 +71,60 @@ export default {
   -webkit-text-fill-color: transparent;
   animation: shake 1.2s infinite alternate;
   display: inline-block;
-  transition: color 0.3s;
+  margin-right: 0.5rem;
 }
 
 @keyframes shake {
-  0% { transform: translateX(0);}
-  20% { transform: translateX(-2px);}
-  40% { transform: translateX(2px);}
-  60% { transform: translateX(-2px);}
-  80% { transform: translateX(2px);}
-  100% { transform: translateX(0);}
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-1.5px); }
+  40% { transform: translateX(1.5px); }
+  60% { transform: translateX(-1.5px); }
+  80% { transform: translateX(1.5px); }
+  100% { transform: translateX(0); }
 }
 
+/* select按钮优化 */
 .version-select {
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   font-size: 1.05rem;
   border-radius: 6px;
-  border: 1px solid #ccc;
-  background-color: white;
-  transition: border-color 0.2s ease;
+  border: 2px solid #ffa94d;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 .version-select:hover {
-  border-color: #888;
+  border-color: #ff7a00;
+  box-shadow: 0 0 4px rgba(255, 122, 0, 0.3);
+}
+
+.version-select:focus {
+  outline: none;
+  border-color: #ff6f00;
+  box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.2);
+}
+
+.current-version-tip {
+  font-size: 0.95rem;
+  margin-top: 0.6rem;
+  color: #dd1111;
 }
 
 .version-content {
   margin-top: 1.2rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
