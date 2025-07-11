@@ -684,7 +684,8 @@ module.exports = {
             '社区垃圾分类管理系统',
             '个人博客网站',
             '畅读新闻圈',
-            'computer-web'
+            'computer-web',
+            'computer-html-web'
           ]
         },
         {
