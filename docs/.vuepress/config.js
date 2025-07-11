@@ -362,7 +362,8 @@ module.exports = {
             'JDBC常用方法封装',
             '使用JFileChooser',
             '文字转化图片',
-            '普通项目打jar'
+            '普通项目打jar',
+            'Java项目CMD启动指南'
           ]
         },
       ],

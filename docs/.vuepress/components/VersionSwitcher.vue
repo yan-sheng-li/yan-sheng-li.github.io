@@ -56,15 +56,10 @@ export default {
 
 <style scoped>
 .version-switcher {
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* 确保它压在内容上面 */
-  background-color: #fff;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #f0f0f0;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: Arial, sans-serif;
 }
-
 
 /* 标签文字样式加强 */
 .version-switch-label {
