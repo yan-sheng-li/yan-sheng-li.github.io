@@ -64,7 +64,7 @@ export default {
 /* 标签文字样式加强 */
 .version-switch-label {
   color: #ff4d4f;
-  font-size: 1.25rem;
+  font-size: 1.65rem;
   font-weight: bold;
   background: linear-gradient(90deg, #ff4d4f 30%, #ffb347 100%);
   -webkit-background-clip: text;

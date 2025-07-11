@@ -3,8 +3,6 @@
 
 <VersionSwitcher>
 
-<VersionBlock target="v1">
-
 ## 技术栈
 - Java
 - Swing
@@ -13,6 +11,12 @@
 - 按`空格键`放钩子
 - 物品：黄金，石头 ，炸弹
 - 按`回车键`重新开始游戏
+
+
+
+<VersionBlock target="v1">
+
+
 
 ## 效果图
 
@@ -24,14 +28,6 @@
 
 <VersionBlock target="v2">
 
-## 技术栈
-- Java
-- Swing
-
-## 操作
-- 按`空格键`放钩子
-- 物品：黄金，石头 ，炸弹
-- 按`回车键`重新开始游戏
 - 可自定义贴图素材
 
 <PaymentButton :productId="217" />
@@ -48,14 +44,6 @@
 
 <VersionBlock target="v3">
 
-## 技术栈
-- Java
-- Swing
-
-## 操作
-- 按`空格键`放钩子
-- 物品：黄金，石头 ，炸弹
-- 按`回车键`重新开始游戏
 - 可自定义贴图素材
 - 共5个关卡，每关目标分数和时间不同，难度逐步提升（物品数量和分值递增）。
 - 钩子随人物可以左右移动
