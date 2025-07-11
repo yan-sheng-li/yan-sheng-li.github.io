@@ -710,6 +710,7 @@ module.exports = {
           collapsable: false,
           children: [
             'hospital_mini',
+            'chat_bot_mini',
           ]
         },
         {
