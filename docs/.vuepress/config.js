@@ -711,6 +711,7 @@ module.exports = {
           children: [
             'hospital_mini',
             'chat_bot_mini',
+            'lose_found_mini',
           ]
         },
         {
