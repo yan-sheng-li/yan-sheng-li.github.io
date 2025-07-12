@@ -645,7 +645,8 @@ module.exports = {
             '体验场地预约管理系统',
             'MakeBricks',
             'GoldMiner',
-            'room-reserve-gui'
+            'room-reserve-gui',
+            'HomeworkSystem'
 
           ]
         },
