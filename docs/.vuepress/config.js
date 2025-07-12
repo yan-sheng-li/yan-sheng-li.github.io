@@ -687,7 +687,8 @@ module.exports = {
             'computer-web',
             'computer-html-web',
             'score-system-web',
-            'YunnanTourismWeb'
+            'YunnanTourismWeb',
+            'FlowerTreeSystem'
           ]
         },
         {
