@@ -685,7 +685,8 @@ module.exports = {
             '个人博客网站',
             '畅读新闻圈',
             'computer-web',
-            'computer-html-web'
+            'computer-html-web',
+            'score-system-web'
           ]
         },
         {
