@@ -646,7 +646,8 @@ module.exports = {
             'MakeBricks',
             'GoldMiner',
             'room-reserve-gui',
-            'HomeworkSystem'
+            'HomeworkSystem',
+            'BookBorrowingSystem'
 
           ]
         },
