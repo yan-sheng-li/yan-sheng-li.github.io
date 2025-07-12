@@ -686,7 +686,8 @@ module.exports = {
             '畅读新闻圈',
             'computer-web',
             'computer-html-web',
-            'score-system-web'
+            'score-system-web',
+            'YunnanTourismWeb'
           ]
         },
         {
