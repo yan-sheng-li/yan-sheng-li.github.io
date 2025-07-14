@@ -647,7 +647,8 @@ module.exports = {
             'GoldMiner',
             'room-reserve-gui',
             'HomeworkSystem',
-            'BookBorrowingSystem'
+            'BookBorrowingSystem',
+            'employee_system'
 
           ]
         },
