@@ -19,6 +19,8 @@
 - 学科管理
 - 成绩分析
 
+<PaymentButton :productId="230" />
+
 ## 效果图
 
 ![image-20250114212854827](http://cdn.qiniu.liyansheng.top/img/image-20250114212854827.png)
