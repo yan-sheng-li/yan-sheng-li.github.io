@@ -18,6 +18,8 @@
 - **个人中心**：用户信息管理和功能入口。
 - **我的发布**：查看和管理用户发布的所有信息。
 
+<PaymentButton :productId="224" />
+
 ## 效果图
 
 ![image-20250607205712824](http://cdn.qiniu.liyansheng.top/img/image-20250607205712824.png)
