@@ -29,6 +29,8 @@
 <!-- 版本1 -->
 <VersionBlock target="v1">
 
+<PaymentButton :productId="225" />
+
 ## 效果图
 
 ![image-20250114151119288](http://cdn.qiniu.liyansheng.top/img/image-20250114151119288.png)
@@ -54,6 +56,8 @@
 
 <!-- 版本2 -->
 <VersionBlock target="v2">
+
+<PaymentButton :productId="226" />
 
 ## 效果图
 
