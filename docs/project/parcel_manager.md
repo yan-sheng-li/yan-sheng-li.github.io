@@ -21,6 +21,8 @@
 <!-- 版本1 -->
 <VersionBlock target="v1">
 
+<PaymentButton :productId="228" />
+
 ## 部分效果
 ![](http://cdn.qiniu.liyansheng.top/img/20240711231006.png)
 ![](http://cdn.qiniu.liyansheng.top/img/20240712123801.png)
@@ -56,6 +58,8 @@
 - 自适应贴图
 - 操作日志
 - 触发器，存储过程，视图，数据备份与恢复
+
+<PaymentButton :productId="229" />
 
 
 ## 部分效果
