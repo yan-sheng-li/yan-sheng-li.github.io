@@ -28,6 +28,8 @@
 - 促销管理
 - 数据统计
 
+<PaymentButton :productId="231" />
+
 ## 效果预览
 
 ![image-20250616114854408](http://cdn.qiniu.liyansheng.top/img/image-20250616114854408.png)
