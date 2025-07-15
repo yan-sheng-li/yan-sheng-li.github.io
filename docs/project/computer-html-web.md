@@ -25,6 +25,8 @@
 
 可继续扩展~
 
+<PaymentButton :productId="227" />
+
 ## 效果图
 ![](http://cdn.qiniu.liyansheng.top/img/20240707010332.png)
 ![](http://cdn.qiniu.liyansheng.top/img/20240707010400.png)
