@@ -23,29 +23,36 @@ function createCustomerServiceButton() {
   btn.innerHTML = `
     <span class="cs-text">联系博主🚀</span>
     <div class="cs-pulse"></div>
+    <div class="cs-tooltip">
+      <img src="http://cdn.qiniu.liyansheng.top/img/image-20250723143552500.png" alt="联系博主" class="cs-tooltip-img">
+    </div>
   `;
   btn.className = 'customer-service-btn';
 
-  // 点击事件（可配合你的Toast提示）
+  // 点击事件
   btn.onclick = () => {
     window.open('https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC', '_blank');
-
-    // 按钮点击动画
     btn.classList.add('cs-click');
     setTimeout(() => btn.classList.remove('cs-click'), 300);
   };
 
-  // 鼠标悬浮动画控制
+  // 鼠标悬浮控制
   btn.addEventListener('mouseenter', () => {
     btn.classList.add('cs-hover');
+    // 显示工具提示图片
+    const tooltip = btn.querySelector('.cs-tooltip');
+    tooltip.style.display = 'block';
   });
+  
   btn.addEventListener('mouseleave', () => {
     btn.classList.remove('cs-hover');
+    // 隐藏工具提示图片
+    const tooltip = btn.querySelector('.cs-tooltip');
+    tooltip.style.display = 'none';
   });
 
   document.body.appendChild(btn);
 }
-
 
 
 
