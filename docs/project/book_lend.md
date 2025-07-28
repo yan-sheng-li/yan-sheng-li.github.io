@@ -3,30 +3,38 @@
 <MyGlobalComponent />
 
 ##  技术栈
-- Java语言
-- MySQL数据库
-- Swing窗口视图(GBK编码)
-- JDBC依赖包
+- Java
+- MySQL
+- Swing
+- JDBC
+
+## 要点
+- 管理登录认证
+- 图书检索
+- 图书管理
+- 图书借出
+- 图书归还
+- 图书流动记录
 
 ## 效果
-> 管理登录
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240606160709.png)
 
-> 主页
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240606020632.png)
 
-> 图书管理
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240606020705.png)
 
-> 图书借出
+
 > 
 ![](http://cdn.qiniu.liyansheng.top/img/20240606161532.png)
 
 
-> 归还图书
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240606020740.png)
 
