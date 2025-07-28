@@ -7,6 +7,8 @@
 
 - Java
 
+- SwingGUI
+
 - MySQL
 
 - JDBC
@@ -47,7 +49,7 @@
 
 ![](http://cdn.qiniu.liyansheng.top/img/2308bde760e9896d4470f90c10c5d5ac.jpeg)
 
-。
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/8c4ba3fd3af2c2f39f05f109d6a64810.jpeg)
 
@@ -55,7 +57,7 @@
 
 ![](http://cdn.qiniu.liyansheng.top/img/9076b9a735a12df89f55226523495467.jpeg)
 
-。
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/fd188a7a13c16dd9fe86dc91ee2cb1d1.jpeg)
 
