@@ -1,9 +1,10 @@
 <template>
   <div>
     <!-- 如果已授权，展示 slot 内容 -->
-    <div v-if="isAuthorized">
+    <div v-if="isAuthorized" class="authorized-content">
       <slot></slot>
     </div>
+
 
     <!-- 如果未授权，展示触发按钮 -->
     <div v-else>
@@ -20,12 +21,7 @@
         <h2 style="background-color: yellow; color: red;">
           微信扫一扫，关注公众号，获取验证码
         </h2>
-        <input
-          v-model="password"
-          type="password"
-          placeholder="请输入验证码~"
-          class="input"
-        />
+        <input v-model="password" type="password" placeholder="请输入验证码~" class="input" />
         <button @click="checkPassword" class="btn">确认</button>
         <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
       </div>
@@ -130,5 +126,32 @@ export default {
 
 .trigger-btn:hover {
   background-color: #0056b3;
+}
+
+.authorized-content {
+  border: 3px dashed #a708b6;
+  background-color: #f0fff5;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeInScale 0.6s ease;
+  max-width: 700px;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 </style>
