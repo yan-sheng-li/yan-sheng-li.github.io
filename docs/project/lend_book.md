@@ -62,13 +62,11 @@
 ![](http://cdn.qiniu.liyansheng.top/img/fd188a7a13c16dd9fe86dc91ee2cb1d1.jpeg)
 
 ## 源码获取
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
+仓库地址：https://gitee.com/yan-sheng-li/lend-system-win
 
- <KeywordTip keyword="图书借阅" />
-
-</ClientOnly>
+</PasswordProtected>
 
 
 ## 配套报告

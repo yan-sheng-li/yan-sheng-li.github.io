@@ -42,11 +42,11 @@
 
 ## 源码👇
 
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
-  <KeywordTip keyword="超市系统" />
-</ClientOnly>
+仓库地址：https://gitee.com/yan-sheng-li/SuperMarketSystem
+
+</PasswordProtected>
 
 
 ## 配套报告

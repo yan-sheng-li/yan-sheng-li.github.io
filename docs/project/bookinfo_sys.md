@@ -33,12 +33,11 @@
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20220611203057204.png)
 
 ## 源码
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
-  <KeywordTip keyword="图书系统" />
-</ClientOnly>
+仓库地址：https://gitee.com/yan-sheng-li/book-information-management-system.git
 
+</PasswordProtected>
 
 
 

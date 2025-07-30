@@ -23,9 +23,11 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240704011737.png)
 
 ## 源码
-<gzh />
+<PasswordProtected>
 
-![](http://cdn.qiniu.liyansheng.top/img/20240704012640.png)
+仓库地址：https://gitee.com/yan-sheng-li/course-mate
+
+</PasswordProtected>
 
 
 ## 配套报告

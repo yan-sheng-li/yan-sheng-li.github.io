@@ -42,11 +42,9 @@
 
 
 ## 源码👇
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
+仓库地址：https://gitcode.net/weixin_44107140/smp_sys/-/tree/dev-v2
 
- <KeywordTip keyword="商品系统" />
-
-</ClientOnly>
+</PasswordProtected>
 

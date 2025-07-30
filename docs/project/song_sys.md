@@ -38,11 +38,12 @@
 ![](http://cdn.qiniu.liyansheng.top/typora/7367b080b3fb43459b686ae07b97b4b2.png)
 
 ## 源码👇
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
-  <KeywordTip keyword="歌曲系统" />
-</ClientOnly>
+链接: https://pan.baidu.com/s/16I4jx_YaSQax00Q8tBf62Q?pwd=h467 
+提取码: h467
+
+</PasswordProtected>
 
 ## 配套报告
 

@@ -41,13 +41,12 @@
 
 
 ## 源码👇
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
+仓库地址：https://gitee.com/yan-sheng-li/student-status
 
- <KeywordTip keyword="学籍系统" />
 
-</ClientOnly>
+</PasswordProtected>
 
 ## 配套报告
 

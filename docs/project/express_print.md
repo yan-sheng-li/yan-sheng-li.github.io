@@ -24,6 +24,8 @@
 
 ## 程序
 
-<gzh />
+<PasswordProtected>
 
-![](http://cdn.qiniu.liyansheng.top/img/20240705144652.png)
+仓库地址：https://gitee.com/yan-sheng-li/express-print
+
+</PasswordProtected>

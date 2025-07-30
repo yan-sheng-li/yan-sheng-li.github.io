@@ -20,9 +20,11 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240624221207.png)
 
 ## 源码
-<gzh />
+<PasswordProtected>
 
-![](http://cdn.qiniu.liyansheng.top/img/20240629012751.png)
+https://gitee.com/yan-sheng-li/ball-player-gui
+
+</PasswordProtected>
 
 
 

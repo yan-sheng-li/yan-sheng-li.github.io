@@ -44,6 +44,8 @@
 
 ## 程序
 
-<gzh />
+<PasswordProtected>
 
-![](http://cdn.qiniu.liyansheng.top/img/20240705152944.png)
+仓库地址：https://gitee.com/yan-sheng-li/flower-store
+
+</PasswordProtected>

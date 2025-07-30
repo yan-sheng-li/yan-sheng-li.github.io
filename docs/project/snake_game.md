@@ -19,7 +19,9 @@
 
 ## 程序
 
-<gzh />
+<PasswordProtected>
 
-![](http://cdn.qiniu.liyansheng.top/img/20240705165520.png)
+仓库地址：https://gitee.com/yan-sheng-li/gui_-snake
+
+</PasswordProtected>
 

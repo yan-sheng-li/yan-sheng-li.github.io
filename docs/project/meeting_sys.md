@@ -34,11 +34,11 @@
 
 
 ## 源码👇
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
-  <KeywordTip keyword="会议系统" />
-</ClientOnly>
+仓库地址：https://gitee.com/yan-sheng-li/meeting.git
+
+</PasswordProtected>
 
 ## 配套报告
 

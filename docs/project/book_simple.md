@@ -43,14 +43,11 @@
 
 
 ## 源码程序
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
+仓库地址：https://gitcode.net/weixin_44107140/book_sys/-/tree/books2.0
 
- <KeywordTip keyword="图书管理" />
-
-</ClientOnly>
-
+</PasswordProtected>
 
 ## 对应报告
 

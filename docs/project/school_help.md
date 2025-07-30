@@ -82,13 +82,9 @@
 ![image-20230608142613016](http://cdn.qiniu.liyansheng.top/typora/image-20230608142613016.png)
 
 ## 源码👇
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
-  <KeywordTip keyword="校园互助" />
-</ClientOnly>
+仓库地址：https://gitee.com/yan-sheng-li/campus-gang
 
+</PasswordProtected>
 
-
-
-## [点我请求-远程协助调试](http://liyansheng.top/remote_help/)

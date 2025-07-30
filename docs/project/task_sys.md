@@ -63,11 +63,11 @@
 
 ## 源码
 
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
-  <KeywordTip keyword="考勤系统" />
-</ClientOnly>
+仓库地址：https://gitee.com/yan-sheng-li/dorm-check/tree/2.0-dev
+
+</PasswordProtected>
 
 ## 配套报告
 ::: warning

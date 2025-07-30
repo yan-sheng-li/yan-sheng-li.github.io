@@ -222,13 +222,11 @@ id  isbn  书名  作者  出版社  馆藏数量
 ```
 
 ## 源码获取
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
+仓库地址：https://gitee.com/yan-sheng-li/lending_system
 
- <KeywordTip keyword="借阅管理" />
-
-</ClientOnly>
+</PasswordProtected>
 
 ## 配套报告
 

@@ -22,6 +22,8 @@
 
 > 可以根据需要继续扩展~
 ## 源码
-<gzh />
+<PasswordProtected>
 
-![](http://cdn.qiniu.liyansheng.top/img/20240609184553.png)
+仓库地址：https://gitee.com/yan-sheng-li/easy_book_web
+
+</PasswordProtected>

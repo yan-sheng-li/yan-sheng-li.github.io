@@ -20,6 +20,8 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240629011134.png)
 
 ## 程序
-<gzh />
+<PasswordProtected>
 
-![](http://cdn.qiniu.liyansheng.top/img/20240629012431.png)
+仓库地址：https://gitee.com/yan-sheng-li/student_info_manage/tree/v2-hotel/
+
+</PasswordProtected>

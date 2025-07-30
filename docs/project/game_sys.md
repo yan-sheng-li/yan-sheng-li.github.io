@@ -40,11 +40,11 @@
 
 
 ## 源码获取
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
-  <KeywordTip keyword="游戏系统" />
-</ClientOnly>
+仓库地址：https://gitcode.net/weixin_44107140/games_sys/-/tree/dev-v2
+
+</PasswordProtected>
 
 ## 配套报告
 

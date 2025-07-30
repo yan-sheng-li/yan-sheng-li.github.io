@@ -38,12 +38,11 @@
 
 ## 源码获取
 
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
-  <KeywordTip keyword="停车场系统" />
-</ClientOnly>
+仓库地址：https://gitee.com/yan-sheng-li/park-ease/tree/v2.0-dev/
 
+</PasswordProtected>
 
 ## 配套报告
 

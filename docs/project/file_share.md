@@ -27,9 +27,11 @@
 
 
 ## 源码获取
-<gzh />
+<PasswordProtected>
 
-![](http://cdn.qiniu.liyansheng.top/img/20240609164727.png)
+仓库地址：https://gitee.com/yan-sheng-li/encrypt-xshare
+
+</PasswordProtected>
 
 ::: danger
 项目灵感来源于网络，经过改进。如有侵权，请联系删除 **QQ:1761724207**。

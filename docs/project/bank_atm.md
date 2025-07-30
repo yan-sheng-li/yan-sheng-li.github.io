@@ -64,12 +64,11 @@
 
 ## 源码
 
-<gzh />
+<PasswordProtected>
 
-<ClientOnly>
-  <KeywordTip keyword="银行系统" />
-</ClientOnly>
+仓库地址：https://gitee.com/yan-sheng-li/atm-sys/archive/refs/tags/v1.0.0.zip
 
+</PasswordProtected>
 
 
 

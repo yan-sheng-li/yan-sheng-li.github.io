@@ -22,9 +22,11 @@
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240104133353779.png)
 
 ## 程序
-<gzh />
+<PasswordProtected>
 
-![](http://cdn.qiniu.liyansheng.top/img/20240609010314.png)
+仓库地址：https://gitee.com/yan-sheng-li/student-socre
+
+</PasswordProtected>
 
 
 

@@ -31,6 +31,10 @@
 
 ## 程序
 
-<gzh />
+<PasswordProtected>
 
-![](http://cdn.qiniu.liyansheng.top/img/20240707183333.png)
+链接：https://pan.baidu.com/s/1s6cKn5O6Bkdf4e63jQx52w?pwd=8q98 
+提取码：8q98
+
+
+</PasswordProtected>

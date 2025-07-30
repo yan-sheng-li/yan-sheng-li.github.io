@@ -28,7 +28,9 @@
 
 ## 源码
 
-<gzh />
+<PasswordProtected>
 
-![](http://cdn.qiniu.liyansheng.top/img/20240713003257.png)
+仓库地址：https://gitee.com/yan-sheng-li/tour-pal
+
+</PasswordProtected>
 
