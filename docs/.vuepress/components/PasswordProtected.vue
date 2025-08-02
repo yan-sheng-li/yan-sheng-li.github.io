@@ -115,18 +115,41 @@ export default {
 }
 
 .trigger-btn {
-  background-color: #007bff;
+  background: linear-gradient(45deg, #007bff, #00c6ff);
   color: white;
   font-size: 16px;
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+  animation: pulse 2s infinite;
 }
 
 .trigger-btn:hover {
-  background-color: #0056b3;
+  background: linear-gradient(45deg, #0056b3, #00aaff);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
 }
+
+.trigger-btn:active {
+  transform: scale(0.95);
+}
+
+/* 呼吸动画效果 */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
 
 .authorized-content {
   border: 3px dashed #a708b6;
