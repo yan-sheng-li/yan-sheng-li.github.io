@@ -23,7 +23,7 @@
 
 <PaymentButton :productId="228" />
 
-## 部分效果
+
 ![](http://cdn.qiniu.liyansheng.top/img/20240711231006.png)
 ![](http://cdn.qiniu.liyansheng.top/img/20240712123801.png)
 ![](http://cdn.qiniu.liyansheng.top/img/20240711231048.png)
@@ -39,7 +39,7 @@
 
 <PaymentButton :productId="148" />
 
-## 部分效果
+
 ![](http://cdn.qiniu.liyansheng.top/img/20240712142815.png)
 ![](http://cdn.qiniu.liyansheng.top/img/20240712142857.png)
 ![](http://cdn.qiniu.liyansheng.top/img/20240712142920.png)
@@ -62,7 +62,7 @@
 <PaymentButton :productId="229" />
 
 
-## 部分效果
+
 ![](http://cdn.qiniu.liyansheng.top/img/20240712142815.png)
 ![](http://cdn.qiniu.liyansheng.top/img/20240712142857.png)
 ![](http://cdn.qiniu.liyansheng.top/img/20240712142920.png)
