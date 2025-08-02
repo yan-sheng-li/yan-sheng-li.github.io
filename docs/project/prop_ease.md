@@ -2,6 +2,8 @@
 
 <MyGlobalComponent />
 
+<VersionSwitcher>
+
 
 ## 技术栈
 - Java
@@ -18,6 +20,27 @@
 - 缴费管理
 - 留言管理
 
+
+<!-- 版本1 -->
+<VersionBlock target="v1">
+
+
+<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240707233737.png) -->
+
+<PaymentButton :productId="154" />
+
+
+</VersionBlock>
+
+<!-- 版本2 -->
+<VersionBlock target="v2">
+
+- 扩展触发器，存储过程，视图，备份与恢复，外键关联
+
+<PaymentButton :productId="244" />
+
+</VersionBlock>
+
 ## 部分效果
 ![](http://cdn.qiniu.liyansheng.top/img/20240707231021.png)
 ![](http://cdn.qiniu.liyansheng.top/img/20240707231040.png)
@@ -28,7 +51,6 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240707231212.png)
 ![](http://cdn.qiniu.liyansheng.top/img/20240707231224.png)
 
-## 程序
-<!-- ![](http://cdn.qiniu.liyansheng.top/img/20240707233737.png) -->
 
-<PaymentButton :productId="154" />
+
+</VersionSwitcher>
