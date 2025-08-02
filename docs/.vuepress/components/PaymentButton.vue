@@ -176,21 +176,46 @@ export default {
 .payment-button,
 .order-button,
 .check-payment-button {
-  background-color: #07c160;
+  background: linear-gradient(135deg, #07c160, #0bd07d);
   color: white;
   padding: 15px 35px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   margin-top: 10px;
-  transition: background-color 0.3s;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(7, 193, 96, 0.3);
+  transition: all 0.3s ease;
+  animation: buttonPulse 2.5s infinite;
 }
 
 .payment-button:hover,
 .order-button:hover,
 .check-payment-button:hover {
-  background-color: #05a14e;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(7, 193, 96, 0.4);
 }
+
+.payment-button:active,
+.order-button:active,
+.check-payment-button:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 8px rgba(7, 193, 96, 0.25);
+}
+
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(7, 193, 96, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(7, 193, 96, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(7, 193, 96, 0);
+  }
+}
+
 
 .product-card {
   border: 1px solid #ccc;
