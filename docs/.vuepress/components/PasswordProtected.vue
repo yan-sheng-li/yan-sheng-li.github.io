@@ -7,7 +7,7 @@
 
 
     <!-- 如果未授权，展示触发按钮 -->
-    <div v-else>
+    <div v-else style="text-align: center;margin-top: 20px;">
       <button class="trigger-btn" @click="showModal = true">
         {{ buttonText }}
       </button>
@@ -34,7 +34,7 @@ export default {
   props: {
     buttonText: {
       type: String,
-      default: '点我获取'
+      default: '点我-获取源码'
     }
   },
   data() {
