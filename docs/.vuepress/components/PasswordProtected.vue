@@ -115,6 +115,7 @@ export default {
 }
 
 .trigger-btn {
+  position: relative;
   background: linear-gradient(45deg, #007bff, #00c6ff);
   color: white;
   font-size: 16px;
@@ -142,9 +143,11 @@ export default {
   0% {
     box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
   }
+
   70% {
     box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
   }
@@ -176,5 +179,21 @@ export default {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.trigger-btn::after {
+  content: "免费";
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: rgb(235, 107, 2);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 </style>
