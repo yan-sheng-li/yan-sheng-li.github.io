@@ -197,6 +197,33 @@ export default {
   box-shadow: 0 6px 18px rgba(7, 193, 96, 0.4);
 }
 
+.payment-button {
+  position: relative; /* 必需：让伪元素相对于按钮定位 */
+}
+
+.payment-button::before {
+  content: "付费";
+  position: absolute;
+  top: 13px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 7px;
+  transform: rotate(45deg);
+  transform-origin: top right;
+  border-radius: 2px;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  will-change: transform;
+}
+
+
+
 .payment-button:active,
 .order-button:active,
 .check-payment-button:active {
