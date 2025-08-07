@@ -47,12 +47,12 @@ module.exports = {
     nav: [
       {
         text: '精品网址',
-        link: '/collection/'
+        link: 'https://www.liyansheng.top/cdn/guide'
       },
-      {
-        text: '开源宝藏',
-        link: '/openhub/'
-      },
+      // {
+      //   text: '开源宝藏',
+      //   link: '/openhub/'
+      // },
       {
         text: '💻 编程笔记',
         items: [
