@@ -18,7 +18,13 @@
 
 <VersionBlock target="v1">
 
+<PasswordProtected>
 
+【打砖块游戏v1】
+------自助获取地址-------
+https://liyansheng.lanzoub.com/b009hdb0na 密码:7c8q
+
+</PasswordProtected>
 
 ## 效果图
 

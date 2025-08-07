@@ -16,6 +16,15 @@
 
 <VersionBlock target="v1">
 
+<PasswordProtected>
+
+【黄金矿工游戏v1】
+------自助获取地址-------
+https://liyansheng.lanzoub.com/b009hdb1qj 密码:bltx
+
+</PasswordProtected>
+
+
 
 
 ## 效果图
