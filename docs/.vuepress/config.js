@@ -46,7 +46,7 @@ module.exports = {
     logo: 'http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png',
     nav: [
       {
-        text: '精品网址',
+        text: '网址导航',
         link: 'https://www.liyansheng.top/cdn/guide'
       },
       // {
