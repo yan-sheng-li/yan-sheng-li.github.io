@@ -43,7 +43,7 @@ function createCustomerServiceButton() {
     const tooltip = btn.querySelector('.cs-tooltip');
     tooltip.style.display = 'block';
   });
-  
+
   btn.addEventListener('mouseleave', () => {
     btn.classList.remove('cs-hover');
     // 隐藏工具提示图片
@@ -57,7 +57,7 @@ function createCustomerServiceButton() {
 
 
 
-export default ({ Vue,isServer}) => {
+export default ({ Vue, isServer }) => {
   // 全局注册组件
   Vue.component('MyGlobalComponent', MyGlobalComponent);
   Vue.component('gzh', gzh)
@@ -70,7 +70,7 @@ export default ({ Vue,isServer}) => {
   Vue.component('SlideProtected', SlideProtected)
   Vue.component('FloatingImage', FloatingImage);
   Vue.component('PaymentButton', PaymentButton)
-  Vue.component('KeywordTip',KeywordTip)
+  Vue.component('KeywordTip', KeywordTip)
   // 注册 Toast 插件
   Vue.use(Toast, {
     // 可选的配置项
@@ -79,7 +79,7 @@ export default ({ Vue,isServer}) => {
     closeOnClick: true,
     pauseOnHover: true,
   });
-    // 新增：只在客户端添加按钮
+  // 新增：只在客户端添加按钮
   if (!isServer) {
     window.addEventListener('DOMContentLoaded', createCustomerServiceButton);
   }
@@ -89,4 +89,9 @@ import $ from "jquery";
 
 if (typeof window !== "undefined") {
   window.$ = $;
+  // 插入不蒜子统计脚本
+  const script = document.createElement('script')
+  script.src = 'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+  script.async = true
+  document.body.appendChild(script)
 }
