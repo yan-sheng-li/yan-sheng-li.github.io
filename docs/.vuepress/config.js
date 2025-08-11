@@ -331,7 +331,8 @@ module.exports = {
             '初学shell常用操作',
             '玩转Linux虚拟机',
             'pm2进程管理工具',
-            'Crontab定时任务'
+            'Crontab定时任务',
+            'aria2'
           ]
         },
       ],
