@@ -2,6 +2,8 @@
 
 <MyGlobalComponent />
 
+<VersionSwitcher>
+
 ## 开发环境与工具
 
 - 开发工具：IDEA社区版
@@ -10,9 +12,9 @@
 - 编码格式：UTF-8
 - 辅助工具：Navicat数据库可视化
 
-## 功能要求
 
-**用户管理功能**
+
+## 功能要点
 - 登录验证
 - 主页
 - 歌曲新增
@@ -20,7 +22,17 @@
 - 歌曲查询
 - 歌曲编辑
 
-## 实现效果
+
+<VersionBlock target="v1">
+
+<PasswordProtected>
+
+链接: https://pan.baidu.com/s/16I4jx_YaSQax00Q8tBf62Q?pwd=h467 
+提取码: h467
+
+</PasswordProtected>
+
+## 效果图
 
 
 ![](http://cdn.qiniu.liyansheng.top/typora/f3891b47cfc1462591687ce12d73cc1c.png)
@@ -37,13 +49,7 @@
 
 ![](http://cdn.qiniu.liyansheng.top/typora/7367b080b3fb43459b686ae07b97b4b2.png)
 
-## 源码👇
-<PasswordProtected>
 
-链接: https://pan.baidu.com/s/16I4jx_YaSQax00Q8tBf62Q?pwd=h467 
-提取码: h467
-
-</PasswordProtected>
 
 ## 配套报告
 
@@ -52,3 +58,36 @@
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-53-19.png) -->
 :::
 <PaymentButton :productId="162" :buttonText="'点我获取-报告'"/>
+
+</VersionBlock>
+
+<VersionBlock target="v2">
+
+- 新用户注册
+- MP3播放支持
+- 歌曲类型下拉选择
+- 文件路径自定义
+- 不同用户的歌曲信息相互隔离
+
+<PaymentButton :productId="251" />
+
+---
+
+
+![image-20250812224533280](http://cdn.qiniu.liyansheng.top/img/image-20250812224533280.png)
+
+![image-20250812224548550](http://cdn.qiniu.liyansheng.top/img/image-20250812224548550.png)
+
+![image-20250812224705135](http://cdn.qiniu.liyansheng.top/img/image-20250812224705135.png)
+
+![image-20250812224607061](http://cdn.qiniu.liyansheng.top/img/image-20250812224607061.png)
+
+![image-20250812224623770](http://cdn.qiniu.liyansheng.top/img/image-20250812224623770.png)
+
+</VersionBlock>
+
+
+
+
+
+</VersionSwitcher>
