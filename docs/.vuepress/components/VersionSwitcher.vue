@@ -1,14 +1,14 @@
 <template>
   <div class="version-switcher">
-    <label for="version">
-      <span class="version-switch-label">版本切换👉</span>
-    </label>
-    <select id="version" v-model="version" class="version-select">
-      <option v-for="ver in versions" :key="ver" :value="ver">{{ ver }}</option>
-    </select>
-
-    <p class="current-version-tip">当前版本：<strong>{{ version }}</strong></p>
-
+    <div class="version-header">
+      <label for="version">
+        <span class="version-switch-label">切换版本</span>
+      </label>
+      <select id="version" v-model="version" class="version-select">
+        <option v-for="ver in versions" :key="ver" :value="ver">{{ ver }}</option>
+      </select>
+      <p class="current-version-tip">当前版本：<strong>{{ version }}</strong></p>
+    </div>
     <div class="version-content">
       <slot />
     </div>
@@ -55,10 +55,21 @@ export default {
 </script>
 
 <style scoped>
+
 .version-switcher {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   font-family: Arial, sans-serif;
+}
+
+.version-header {
+  position: sticky;
+  top: 50px;
+  z-index: 100;
+  background: #fff;
+  width: 35%;
+  padding: 0.2rem 1rem;
+  border: 2px solid #ffe0b2;
 }
 
 /* 标签文字样式加强 */
