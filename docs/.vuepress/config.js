@@ -267,7 +267,8 @@ module.exports = {
             '整合JWT',
             '简洁版的Result类',
             '整合redis',
-            '整合webhook自动部署'
+            '整合webhook自动部署',
+            '整合支付宝沙箱支付'
 
           ]
         },
