@@ -63,11 +63,11 @@ export default {
 }
 
 .version-header {
-  position: sticky;
+  /* position: sticky; */
   top: 50px;
-  z-index: 100;
+  /* z-index: 100; */
   background: #fff;
-  width: 35%;
+
   padding: 0.2rem 1rem;
   border: 2px solid #ffe0b2;
 }
