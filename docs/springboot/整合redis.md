@@ -23,6 +23,13 @@
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-pool2</artifactId>
 </dependency>
+
+
+<!-- 可选：用于对象序列化（更推荐 Jackson JSON 序列化而不是 JDK 序列化） -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+</dependency>
 ```
 
 ## 三、配置Redis连接
@@ -200,3 +207,153 @@ Double score = stringRedisTemplate.opsForZSet().score("ranking", "Tom");
 5. **过期时间**：为缓存数据设置合理的过期时间
 
 通过以上配置和示例，您可以在Spring Boot项目中轻松集成Redis，实现高效的数据缓存和存储功能。
+
+## 实战
+
+### 登录接口缓存token
+
+举例：
+
+```java
+public User login(Account account) {
+    User dbUser = userMapper.selectByUsername(account.getUsername());
+    if (ObjectUtil.isNull(dbUser)) {
+        throw new CustomException(ResultCodeEnum.USER_NOT_EXIST_ERROR);
+    }
+    if (!dbUser.getPassword().equals(account.getPassword())) {
+        throw new CustomException(ResultCodeEnum.USER_ACCOUNT_ERROR);
+    }
+    // 生成token
+    String token = TokenUtils.createToken(dbUser.getId() + "-" + dbUser.getRole(), dbUser.getPassword());
+    dbUser.setToken(token);
+    stringRedisTemplate.opsForValue().set("token_"+dbUser.getRole()+dbUser.getId(),token,6, TimeUnit.DAYS);
+    return dbUser;
+}
+```
+
+校验：
+
+```java
+package com.example.common.config;
+
+import cn.hutool.core.util.ObjectUtil;
+import com.auth0.jwt.JWT;
+import com.example.common.Constants;
+import com.example.common.enums.ResultCodeEnum;
+import com.example.common.enums.RoleEnum;
+import com.example.entity.Account;
+import com.example.exception.CustomException;
+import com.example.service.AdminService;
+import com.example.service.UserService;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerInterceptor;
+
+@Component
+public class JWTInterceptor implements HandlerInterceptor {
+
+    @Resource
+    private AdminService adminService;
+    @Resource
+    private UserService userService;
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
+
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        // 1. 从 http 请求标头拿到 token
+        String token = request.getHeader(Constants.TOKEN);
+        if (ObjectUtil.isEmpty(token)) {
+            token = request.getParameter(Constants.TOKEN);
+        }
+        if (ObjectUtil.isEmpty(token)) {
+            throw new CustomException(ResultCodeEnum.TOKEN_INVALID_ERROR);
+        }
+
+        String userId;
+        String role;
+        try {
+            String audience = JWT.decode(token).getAudience().get(0);
+            userId = audience.split("-")[0];
+            role = audience.split("-")[1];
+        } catch (Exception e) {
+            throw new CustomException(ResultCodeEnum.TOKEN_CHECK_ERROR);
+        }
+
+        // 2. 校验 Redis 里是否有这个 token
+        String redisToken = stringRedisTemplate.opsForValue().get("token_" +role+ userId);
+        if (ObjectUtil.isEmpty(redisToken) || !redisToken.equals(token)) {
+            throw new CustomException(ResultCodeEnum.TOKEN_CHECK_ERROR);
+        }
+
+        // 3. 再查一下数据库里是否有这个账号（防止用户被删了）
+        Account account = null;
+        if (RoleEnum.ADMIN.name().equals(role)) {
+            account = adminService.selectById(Integer.valueOf(userId));
+        } else if (RoleEnum.USER.name().equals(role)) {
+            account = userService.selectById(Integer.valueOf(userId));
+        }
+        if (ObjectUtil.isNull(account)) {
+            throw new CustomException(ResultCodeEnum.USER_NOT_EXIST_ERROR);
+        }
+
+        return true;
+    }
+}
+```
+
+### 高频查询接口做缓存
+
+**配置 Redis 序列化方式（推荐 JSON）**
+
+默认是 JDK 序列化，不直观也不高效。我们改成 **Jackson JSON 序列化**：
+
+```java
+@Configuration
+public class RedisConfig {
+
+    @Bean
+    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
+        template.setConnectionFactory(connectionFactory);
+
+        // key 使用 String
+        StringRedisSerializer stringSerializer = new StringRedisSerializer();
+        template.setKeySerializer(stringSerializer);
+        template.setHashKeySerializer(stringSerializer);
+
+        // value 使用 JSON
+        GenericJackson2JsonRedisSerializer jsonSerializer = new GenericJackson2JsonRedisSerializer();
+        template.setValueSerializer(jsonSerializer);
+        template.setHashValueSerializer(jsonSerializer);
+
+        template.afterPropertiesSet();
+        return template;
+    }
+}
+```
+
+**Spring Cache 注解**
+
+```
+@Service
+public class UserService {
+
+    // 查询用户详情并缓存到 Redis
+    @Cacheable(value = "userCache", key = "#id", unless = "#result == null")
+    public User getUserById(Long id) {
+        // 假设这里是数据库查询
+        return userRepository.findById(id).orElse(null);
+    }
+}
+```
+
+- `@Cacheable`：先查缓存，缓存有就直接返回，没有再执行方法并缓存结果。
+- `value`：缓存的命名空间（Redis里的前缀）。
+- `key`：缓存的 key，可以用 SpEL 表达式。
+- `unless`：返回值满足条件时不缓存。
+
+缓存失效时间可以在 `application.yml` 中统一配置，也可以通过 **自定义 CacheManager** 来设置 TTL。
