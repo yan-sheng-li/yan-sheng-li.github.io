@@ -352,7 +352,8 @@ module.exports = {
             '词云图',
             '插件-vue-toastification',
             '插件-vuex-persistedstate',
-            '插件实现自动部署'
+            '插件实现自动部署',
+            'CommentBox'
           ]
         },
       ],
