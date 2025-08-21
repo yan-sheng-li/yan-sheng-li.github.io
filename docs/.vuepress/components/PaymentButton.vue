@@ -214,7 +214,7 @@ export default {
   transform: rotate(45deg);
   transform-origin: top right;
   border-radius: 2px;
-  z-index: 2;
+  z-index: 1;
   pointer-events: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   -webkit-font-smoothing: antialiased;
