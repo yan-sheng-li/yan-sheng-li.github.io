@@ -1,4 +1,4 @@
-// .vuepress/enhanceApp.js
+// path: docs/.vuepress/enhanceApp.js
 import MyGlobalComponent from './components/MyGlobalComponent.vue'
 
 import gzh from './components/gzh.vue'
@@ -13,11 +13,14 @@ import FloatingImage from './components/FloatingImage.vue'
 import PaymentButton from './components/PaymentButton.vue'
 import KeywordTip from './components/KeywordTip.vue'
 
-// 引入 Toast 插件和样式
-import Toast from "vue-toastification";
-import "vue-toastification/dist/index.css";
+// 只在浏览器端才加载 Toast 插件和样式
+let Toast
+if (typeof window !== 'undefined') {
+  Toast = require("vue-toastification").default
+  require("vue-toastification/dist/index.css")
+}
 
-// 新增：创建客服按钮的函数
+// 新增：创建客服按钮的函数（只在浏览器端会被调用）
 function createCustomerServiceButton() {
   const btn = document.createElement('div');
   btn.innerHTML = `
@@ -39,23 +42,18 @@ function createCustomerServiceButton() {
   // 鼠标悬浮控制
   btn.addEventListener('mouseenter', () => {
     btn.classList.add('cs-hover');
-    // 显示工具提示图片
     const tooltip = btn.querySelector('.cs-tooltip');
     tooltip.style.display = 'block';
   });
 
   btn.addEventListener('mouseleave', () => {
     btn.classList.remove('cs-hover');
-    // 隐藏工具提示图片
     const tooltip = btn.querySelector('.cs-tooltip');
     tooltip.style.display = 'none';
   });
 
   document.body.appendChild(btn);
 }
-
-
-
 
 export default ({ Vue, isServer }) => {
   // 全局注册组件
@@ -71,20 +69,24 @@ export default ({ Vue, isServer }) => {
   Vue.component('FloatingImage', FloatingImage);
   Vue.component('PaymentButton', PaymentButton)
   Vue.component('KeywordTip', KeywordTip)
-  // 注册 Toast 插件
-  Vue.use(Toast, {
-    // 可选的配置项
-    position: "top-right",
-    timeout: 10000,
-    closeOnClick: true,
-    pauseOnHover: true,
-  });
-  // 新增：只在客户端添加按钮
+
+  // 只在客户端注册 Toast 插件
+  if (!isServer && Toast) {
+    Vue.use(Toast, {
+      position: "top-right",
+      timeout: 10000,
+      closeOnClick: true,
+      pauseOnHover: true,
+    });
+  }
+
+  // 只在客户端挂载客服按钮
   if (!isServer) {
     window.addEventListener('DOMContentLoaded', createCustomerServiceButton);
   }
 }
 
+// jQuery 相关逻辑也只在浏览器端执行
 import $ from "jquery";
 
 if (typeof window !== "undefined") {
