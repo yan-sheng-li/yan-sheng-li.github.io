@@ -1,7 +1,7 @@
 <template>
   <div class="version-switcher">
     <div class="version-header">
-      <span class="version-switch-label">切换版本</span>
+      <span class="version-switch-label">切换版本👉</span>
 
       <div class="version-button-group">
         <button v-for="ver in versions" :key="ver" :class="['version-button', { 'active': version === ver }]"
@@ -11,7 +11,7 @@
       </div>
 
       <p class="current-version-tip" v-if="version">
-        当前版本：<strong>{{ version }}</strong>
+        当前：<strong>{{ version }}</strong>
         <span class="version-change-indicator" v-if="showChangeIndicator" />
       </p>
     </div>
@@ -108,7 +108,6 @@ export default {
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem 1.5rem;
-  padding: 1rem;
   border: 2px solid #ffe0b2;
   border-radius: 8px;
   background: #fff;
@@ -253,8 +252,8 @@ export default {
 /* 响应式调整 */
 @media (max-width: 600px) {
   .version-header {
-    flex-direction: column;
-    align-items: flex-start;
+    /* flex-direction: column; */
+    align-items: center;
     gap: 0.75rem;
   }
 
