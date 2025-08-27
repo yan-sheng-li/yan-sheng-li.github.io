@@ -24,7 +24,7 @@
 
 
 ![](http://cdn.qiniu.liyansheng.top/img/1275d35c0bd24febaae6eb4c3e1f0f08.png)
-。
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/6df2a9a18a9842d58fb1ea9a9725a1b5.png)
 
