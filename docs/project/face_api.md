@@ -14,11 +14,11 @@
 - 可捕获图像画面
 
 ## 效果图
-> 测试1
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240604004418.png)
 
-> 测试2
+
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240604004439.png)
 ## 源码👇
