@@ -1,5 +1,6 @@
 # 🛌酒店客房管理2.0
 <MyGlobalComponent />
+
 ## 技术栈
 - Java
 - Swing GUI

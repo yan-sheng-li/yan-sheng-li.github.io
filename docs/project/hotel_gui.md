@@ -22,6 +22,7 @@
 ## 程序
 <PasswordProtected>
 
-仓库地址：https://gitee.com/yan-sheng-li/student_info_manage/tree/v2-hotel/
+https://liyansheng.lanzoub.com/b009hcf0oj
+密码:480n
 
 </PasswordProtected>
