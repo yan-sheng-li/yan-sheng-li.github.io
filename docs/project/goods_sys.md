@@ -5,9 +5,10 @@
 
 ## 选用技术栈
 
-1. 开发语言：Java
-2. 数据库：MySQL
-3. 窗体构建：Swing
+- Java
+- MySQL
+- JDBC
+- SwingGUI
 
 ## 要点
 - 登录验证

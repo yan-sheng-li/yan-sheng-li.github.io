@@ -33,30 +33,19 @@
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240127222845733.png)
 
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240127222904437.png)
-
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240127222914135.png)
 
-
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240127222919812.png)
-
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240127222941630.png)
 
-
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240127222948379.png)
-
-
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240127222954770.png)
 
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240127223003750.png)
-
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240127230121008.png)
 
@@ -65,7 +54,8 @@
 
 <PasswordProtected>
 
-仓库地址：https://gitee.com/yan-sheng-li/dorm-check/tree/2.0-dev
+	
+https://liyansheng.lanzoub.com/b009hbw6cj 密码:45m9
 
 </PasswordProtected>
 

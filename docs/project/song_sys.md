@@ -4,14 +4,12 @@
 
 <VersionSwitcher>
 
-## 开发环境与工具
+## 技术栈
 
-- 开发工具：IDEA社区版
-- 数据库：MySQL 8.0+
-- 编程语言：Java8
-- 编码格式：UTF-8
-- 辅助工具：Navicat数据库可视化
-
+- Java
+- MySQL
+- JDBC
+- SwingGUI
 
 
 ## 功能要点
@@ -27,8 +25,8 @@
 
 <PasswordProtected>
 
-链接: https://pan.baidu.com/s/16I4jx_YaSQax00Q8tBf62Q?pwd=h467 
-提取码: h467
+	
+https://liyansheng.lanzoub.com/b009hb1fje 密码:h5of
 
 </PasswordProtected>
 

@@ -5,13 +5,13 @@
 
 ## 开发环境
 
-- 开发语言：Java，
-- 数据库：MySQL，
-- 数据库连接与交互：JDBC
-- 窗口构建：Swing
-- 开发工具：IntelliJ IDEA
+- Java
+- MySQL
+- JDBC
+- SwingUI
 
 ## 要点
+
 - 登录认证
 - 图书新增
 - 图书删除
@@ -25,18 +25,11 @@
 
 ![](http://cdn.qiniu.liyansheng.top/img/1275d35c0bd24febaae6eb4c3e1f0f08.png)
 
-
 ![](http://cdn.qiniu.liyansheng.top/img/6df2a9a18a9842d58fb1ea9a9725a1b5.png)
-
-
 
 ![](http://cdn.qiniu.liyansheng.top/img/2aa4261d5cbc4dd9adf3cb884ffe7468.png)
 
-
-
 ![](http://cdn.qiniu.liyansheng.top/img/871e66d1a0cf47498061ff8b11aa7d8a.png)
-
-
 
 ![](http://cdn.qiniu.liyansheng.top/img/70fe5f5bf24a469aba8777e784d80e20.png)
 

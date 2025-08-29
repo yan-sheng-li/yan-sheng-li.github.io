@@ -4,10 +4,10 @@
 
 ## 技术栈
 
-- Java语言
-- MySQL数据库
-- SwingGUI
+- Java
+- MySQL
 - JDBC
+- SwingGUI
 
 ## 要点提炼
 

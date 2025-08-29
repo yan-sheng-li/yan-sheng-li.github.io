@@ -25,37 +25,21 @@
 
 ![](http://cdn.qiniu.liyansheng.top/typora/GIF%202024-1-10%2017-59-20.gif)
 
-
-
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240110174706480.png)
-
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240110174716078.png)
 
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240110174732028.png)
-
-
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240110174829725.png)
 
-
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240110174837436.png)
-
-
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240110174846225.png)
 
-
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240110174857152.png)
 
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240110174907645.png)
-
-
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20240110174920662.png)
 
@@ -66,7 +50,8 @@
 
 <PasswordProtected>
 
-仓库地址：https://gitee.com/yan-sheng-li/atm-sys/archive/refs/tags/v1.0.0.zip
+	
+https://liyansheng.lanzoub.com/b009hajvra 密码:hskd
 
 </PasswordProtected>
 

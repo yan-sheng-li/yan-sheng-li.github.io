@@ -3,32 +3,23 @@
 <MyGlobalComponent />
 
 ## 技术栈
-- Java语言
+
+- Java
+- MySQL
 - JDBC
-- MySQL数据库
 - SwingGUI
 
 
 
 ## 效果图
 
-
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20220611202747601.png)
-
-
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20220611202946279.png)
 
-
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20220611203012901.png)
 
-
-
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20220611203036093.png)
-
-
 
 ![](http://cdn.qiniu.liyansheng.top/typora/image-20220611203057204.png)
 

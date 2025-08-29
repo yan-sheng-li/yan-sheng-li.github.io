@@ -6,11 +6,11 @@
 
 ## 开发环境
 
-- 开发工具：Eclipse或者IDEA
-- 数据库：MySQL 8.0+
-- 编程语言：Java
-- 编码格式：UTF-8
-- 辅助工具：Navicat数据库可视化
+- Java
+- MySQL
+- JDBC
+- SwingGUI
+
 
 ## 要点
 - 登录认证

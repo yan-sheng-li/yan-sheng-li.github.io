@@ -7,11 +7,11 @@
 :::
 
 ## 技术栈
-- 开发语言：Java
-- 数据库：MySQL
-- 依赖：JDBC
-- 交互：Swing
-- 编码：GBK
+
+- Java
+- MySQL
+- JDBC
+- SwingGUI
 
 ## 要点
 - 登录认证
@@ -25,9 +25,7 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240609010458.png)
 
 
-
 ![](http://cdn.qiniu.liyansheng.top/img/20240609010516.png)
-
 
 
 ![](http://cdn.qiniu.liyansheng.top/img/20240609010538.png)
@@ -44,7 +42,8 @@
 
 <PasswordProtected>
 
-仓库地址：https://gitee.com/yan-sheng-li/SuperMarketSystem
+https://liyansheng.lanzoub.com/b009heypwd
+密码:cmlu
 
 </PasswordProtected>
 

@@ -2,11 +2,12 @@
 
 <MyGlobalComponent />
 
-## 环境说明
-- JDK8
-- MySQL8
-- IDEA社区版
-- 编码：UTF-8
+## 技术栈
+
+- Java
+- MySQL
+- JDBC
+- SwingGUI
 
 
 ## 要点

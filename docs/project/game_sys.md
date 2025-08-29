@@ -6,8 +6,8 @@
 ## 技术选型
 
 - Java
-- MySQL数据库
-- Swing界面库
+- MySQL
+- Swing
 
 ## 要点
 - 登录认证
@@ -19,16 +19,11 @@
 
 ## 实现效果图
 
-
-
 ![](http://cdn.qiniu.liyansheng.top/img/0903e16096d640b5b497dedb241523d1.png)
-
 
 ![](http://cdn.qiniu.liyansheng.top/img/e184249f4f2b4442885a03b08a67d3b5.png)
 
-
 ![](http://cdn.qiniu.liyansheng.top/img/dfa7c9543100400f88101077522c0ae2.png)
-
 
 ![](http://cdn.qiniu.liyansheng.top/img/3c22442fcd084b51bf54d2f0b9da5b14.png)
 
