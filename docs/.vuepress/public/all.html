@@ -1,299 +1,270 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>项目展示页面</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7fb;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>木子空间-项目源码案例</title>
+  <script src="https://cdn.staticfile.org/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 30px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        }
+    header {
+      background-color: #ff6f61;
+      color: white;
+      padding: 5px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
 
-        .sticky-header {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            background-color: #fff;
-            padding: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
+    nav {
+      margin-top: 6px;
+    }
 
-        .search {
-            margin-bottom: 20px;
-            padding: 0 20px;
-        }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
 
-        .search input {
-            width: 100%;
-            padding: 12px 20px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        .buttons {
-            margin-bottom: 10px;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            padding: 0 20px;
-        }
+    /* 搜索框样式 */
+    .search-container {
+      text-align: center;
+      /* margin: 16px 0; */
+      position: sticky;
+      top: 101px;
+      z-index: 2;
+    }
 
-        .buttons button {
-            padding: 6px 12px;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            font-size: 13px;
-            transition: background-color 0.3s;
-        }
+    .search-container input {
+      width: 50%;
+      max-width: 500px;
+      padding: 8px 12px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
 
-        .buttons button.active {
-            background-color: #0056b3;
-        }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px auto;
+      width: 94%;
+    }
 
-        .buttons button:hover {
-            background-color: #0056b3;
-        }
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      width: 220px;
+      text-align: center;
+      padding: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      flex: 0 1 auto;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-        }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
 
-        .card {
-            position: relative;
-            background: #e3ecee;
-            border: 1px solid #88def3;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
+    .img-container {
+      position: relative;
+      width: 100%;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #f8f8f8;
+      border-radius: 8px;
+    }
 
-        .card:hover {
-            transform: translateY(-8px);
-            border: rgb(5, 1, 233) 3px solid;
-        }
+    .img-container img {
+      width: auto;
+      height: 100%;
+      max-width: 100%;
+      display: block;
+      object-fit: cover;
+    }
 
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+      color: white;
+      padding: 8px;
+      border-radius: 0 0 10px 10px;
+      text-align: center;
+      font-size: 0.85em;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
 
-        .card .content {
-            padding: 20px;
-        }
+    .product-card h3 {
+      font-size: 1em;
+      margin: 8px 0 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-        .card .content h3 {
-            font-size: 20px;
-            color: #333;
-            margin: 0 0 10px;
-            font-weight: 600;
-        }
+    .product-card p {
+      color: #ff6f61;
+      font-weight: bold;
+      margin: 4px 0;
+    }
 
-        .card .content p {
-            font-size: 14px;
-            color: #777;
-            margin: 0 0 15px;
-        }
+    footer {
+      text-align: center;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #333;
+      color: white;
+      font-size: 0.85em;
+    }
 
-        .tags {
-            margin-top: 10px;
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
+    .badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #ff6f61;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.75em;
+      font-weight: bold;
+    }
 
-        .tags span {
-            background-color: #e7f3ff;
-            color: #007BFF;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 13px;
-        }
+    /* 移动端优化 */
+    @media (max-width: 480px) {
+      nav a {
+        font-size: 0.8em;
+        margin: 0 6px;
+      }
 
-        .details {
-            margin-top: 12px;
-            color: #007BFF;
-            font-size: 14px;
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-block;
-            transition: color 0.3s;
-        }
+      .search-container input {
+        width: 90%;
+      }
 
-        .details:hover {
-            color: red;
-        }
+      .products {
+        justify-content: center;
+      }
 
-        /* 飘带样式 */
-        .card .ribbon {
-            position: absolute;
-            top: 10px;
-            left: -30px;
-            width: 120px;
-            height: 30px;
-            background: linear-gradient(45deg, #FF512F, #F09819);
-            color: #fff;
-            font-size: 14px;
-            font-weight: bold;
-            text-align: center;
-            line-height: 30px;
-            transform: rotate(-45deg);
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+      .product-card {
+        width: 100%;
+        max-width: 320px;
+        margin: 10px auto;
+      }
+
+      .img-container {
+        height: 180px;
+      }
+
+      .product-card h3 {
+        font-size: 0.95em;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div id="app" class="container">
-        <div style="text-align: center;">
-            <span>
-                <h1 style="display: inline-block;">项目</h1>
-                <img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" alt=""
-                    style="width: 10%; height: auto; display: inline-block;">
-                <h1 style="display: inline-block;">搜搜</h1>
-            </span>
-            <br/>
-            <span>
-                <a href="http://www.liyansheng.top/blog"><img src="https://img.shields.io/badge/木子空间-自营博客-00dfbf"
-                        alt="自营博客"></a>
-                <a href="https://yan-sheng-li.github.io/project/"><img
-                        src="https://img.shields.io/badge/木子空间-项目&资料-1e90ff" alt="项目合集"></a>
-                <a href="https://blog.csdn.net/weixin_44107140"><img
-                        src="https://img.shields.io/badge/木子空间-CSDN&粉丝1.5w+-FC5531" alt="CSDN博客"></a>
-                <a href="https://gitee.com/yan-sheng-li"><img src="https://img.shields.io/badge/木子空间-Gitee-orange"
-                        alt="Gitee"></a>
-                <a href="https://github.com/yan-sheng-li"><img src="https://img.shields.io/badge/木子空间-GitHub-black"
-                        alt="GitHub"></a>
-                <a href="http://cdn.qiniu.liyansheng.top/img/gzh_muzikongjianPro.png"><img
-                        src="https://img.shields.io/badge/木子空间Pro-公众号&粉丝6k+-brightgreen" alt="公众号"></a>
-                <a
-                    href="https://qm.qq.com/cgi-bin/qm/qr?k=NZUoWMzd3PQLWwxRGMiBNYEnVkEdNq__&jump_from=webapi&authKey=kgAofDqUzgwMCSX+UQQwxf837zMeWFGGmo4iIcbgkklW2pdfmVOlxPWAK6sMYMaC"><img
-                        src="https://img.shields.io/badge/木子空间-QQ社群(450+人)-18a2ea" alt="QQ Group"></a>
-                <img src="https://img.shields.io/badge/博主-QQ：1761724207-29a1db" alt="QQ">
-                <img src="https://img.shields.io/badge/博主-微信：17641244340-07c261" alt="微信">
-                <a href="https://www.xiaohongshu.com/user/profile/668f634100000000030315a1"><img
-                        src="https://img.shields.io/badge/木子空间-小红书-FF2842" alt="小红书"></a>
-                <a href="http://cdn.qiniu.liyansheng.top/img/20250423150441.png"><img
-                        src="https://img.shields.io/badge/木子空间-闲鱼-ffe10f" alt="闲鱼"></a>
-                <a href="http://cdn.qiniu.liyansheng.top/img/20250423145452.png"><img
-                        src="https://img.shields.io/badge/木子空间-小程序商店-green" alt="小程序商店"></a>
-            </span>
-        </div>
-
-        <!-- 固定在页面顶部的搜索框和分类按钮 -->
-        <div class="sticky-header">
-            <div class="search">
-                <input v-model="searchQuery" type="text" placeholder="搜索项目名称...">
+  <header>
+    <h1>木子空间-项目案例</h1>
+    <nav>
+      <a href="https://www.liyansheng.top/home">全部项目</a>
+      <a href="https://www.liyansheng.top/history_order">我的订单</a>
+    </nav>
+  </header>
+  <!-- 搜索框 -->
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="搜索项目名称或描述...">
+  </div>
+  <div class="products" id="product-list"></div>
+  <footer>
+    &copy; 2025 简易商城 | All rights reserved
+  </footer>
+  <script>
+    // 商品数据通过接口动态获取
+    let products = [];
+    $(document).ready(function () {
+      const $list = $("#product-list");
+      // 渲染商品列表
+      function renderProducts(data) {
+        $list.empty();
+        data.forEach(product => {
+          let tags = [];
+          try {
+            tags = JSON.parse(product.tags);
+          } catch (e) {
+            tags = [];
+          }
+          const description = tags.join(" + ");
+          const badge = product.ribbon ? product.ribbon : "";
+          const card = $(`
+            <div class="product-card" data-id="${product.id}">
+              <div class="img-container">
+                <img src="${product.cover}" alt="${product.name}">
+                ${badge ? `<div class="badge">${badge}</div>` : ""}
+                <div class="overlay">${description}</div>
+              </div>
+              <h3>${product.name}</h3>
             </div>
-            <div class="buttons">
-                <button v-for="category in visibleCategories" :key="category" @click="filterByCategory(category)"
-                    :class="{ active: selectedCategory === category }">
-                    {{ category }}
-                </button>
-                <button @click="filterByCategory('')" :class="{ active: selectedCategory === '' }">全部</button>
-                <button @click="filterReports" :class="{ active: selectedCategory === '报告' }"
-                    style="background-color: rgb(4, 189, 19);">
-                    只看报告
-                </button>
-            </div>
-        </div>
-
-        <!-- 项目卡片 -->
-        <div class="grid">
-            <div class="card" v-for="project in filteredProjects" :key="project.id">
-                <!-- 飘带 -->
-                <div class="ribbon" v-if="project.ribbon">{{ project.ribbon }}</div>
-                <a :href="project.detailLink" target="_blank" class="details">
-                    <img :src="project.cover" :alt="project.name">
-                    <div class="content">
-                        <h3>{{ project.name }}</h3>
-                        <div class="tags">
-                            <span v-for="tag in project.tags" :key="tag">{{ tag }}</span>
-                        </div>
-                        <br />
-                        查看详情
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        new Vue({
-            el: '#app',
-            data() {
-                return {
-                    searchQuery: '',
-                    selectedCategory: '',
-                    projects: [], // 当前显示的项目数据
-                    allProjects: [] // 保存所有项目数据
-                };
-            },
-            computed: {
-                visibleCategories() {
-                    return [...new Set(this.allProjects.map(project => project.category))];
-                },
-                filteredProjects() {
-                    return this.projects.filter(project => {
-                        const matchesSearch = project.name.includes(this.searchQuery);
-                        const matchesCategory = !this.selectedCategory || project.category === this.selectedCategory;
-                        return matchesSearch && matchesCategory;
-                    });
-                },
-            },
-            methods: {
-                filterByCategory(category) {
-                    this.selectedCategory = category;
-                    this.projects = category ? this.allProjects.filter(p => p.category === category) : [...this.allProjects];
-                },
-                filterReports() {
-                    this.selectedCategory = '报告';
-                    this.projects = this.allProjects.filter(p => p.category === '报告');
-                },
-                async fetchProjects() {
-                    try {
-                        const response = await fetch('https://mini.liyansheng.top/v1/projects/list');
-                        const data = await response.json();
-                        this.allProjects = data.map(project => ({
-                            ...project,
-                            tags: JSON.parse(project.tags),
-                            ribbon: project.ribbon || '' // 动态飘带内容
-                        }));
-                        this.projects = this.allProjects;
-                    } catch (error) {
-                        console.error('获取项目数据失败:', error);
-                    }
-                }
-            },
-            mounted() {
-                this.fetchProjects();
-            }
+          `);
+          card.on("click", function () {
+            localStorage.setItem("selectedProductId", $(this).data("id"));
+            window.location.href = "product_detail.html";
+          });
+          $list.append(card);
         });
-    </script>
+      }
+
+      function fetchProducts() {
+        $.get("https://mini.liyansheng.top/v1/projects/list2", function (res) {
+          if (res.code === 200 && Array.isArray(res.data)) {
+            products = res.data;
+            renderProducts(products);
+          } else {
+            $list.html("<div style='color:red;text-align:center;'>商品数据加载失败</div>");
+          }
+        }).fail(function () {
+          $list.html("<div style='color:red;text-align:center;'>无法连接商品接口</div>");
+        });
+      }
+
+      $("#search-input").on("input", function () {
+        const keyword = $(this).val().trim().toLowerCase();
+        if (keyword === "") {
+          renderProducts(products);
+          return;
+        }
+        const filtered = products.filter(p =>
+          p.name.toLowerCase().includes(keyword) ||
+          (p.tags && p.tags.toLowerCase().includes(keyword))
+        );
+        renderProducts(filtered);
+      });
+
+      fetchProducts();
+    });
+  </script>
 </body>
 
 </html>

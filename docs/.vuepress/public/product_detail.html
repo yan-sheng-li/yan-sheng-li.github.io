@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>项目详情页</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tabs {
+            margin: 10px 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .version-select-bar {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+            /* 吸顶 */
+            position: sticky;
+            top: 11%;
+            background: white;
+            z-index: 10;
+            text-align: center;
+            border: 1px solid #e65a50;
+        }
+
+        .version-select-bar .tabs {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .tab {
+            display: inline-block;
+            padding: 6px 15px;
+            margin-right: 10px;
+            border: 1px solid #ff6f61;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #ff6f61;
+        }
+
+        .tab.active {
+            background-color: #ff6f61;
+            color: white;
+        }
+
+        .compare-btn {
+            display: inline-block;
+            margin-left: 12px;
+            padding: 6px 12px;
+            border: 1px solid #ff6f61;
+            background: #fff;
+            color: #782af5;
+            border-radius: 5px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        .compare-btn:hover {
+            background: #fff3f1;
+        }
+
+        .project-img {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .price {
+            font-size: 1.2em;
+            color: #ff6f61;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        .buy-btn:hover {
+            background-color: #e65a50;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Markdown 样式 */
+        .markdown-body {
+            line-height: 1.6;
+        }
+
+        .markdown-body h1,
+        .markdown-body h2,
+        .markdown-body h3 {
+            color: #333;
+        }
+
+        .markdown-body img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .markdown-body pre {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .markdown-body code {
+            background: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        /* 对比弹窗 */
+        .compare-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            display: none;
+            /* 默认隐藏 */
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .compare-modal.active {
+            display: flex;
+        }
+
+        .compare-box {
+            width: 95%;
+            max-width: 1200px;
+            max-height: 85vh;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .compare-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+        }
+
+        .compare-title {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .compare-close {
+            border: none;
+            background: transparent;
+            font-size: 20px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .compare-body {
+            padding: 12px;
+            overflow: auto;
+            /* 整体滚动 */
+        }
+
+        .compare-grid {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .compare-col {
+            flex: 1 1 0;
+            min-width: 280px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background: #fafafa;
+            padding: 0 15px;
+            max-height: 70vh;
+            /* 每列自身也可滚动 */
+            overflow: auto;
+        }
+
+        .compare-col .col-title {
+            position: sticky;
+            top: 0;
+            background: #fafafa;
+            padding: 6px 2px 8px;
+            margin: -10px -10px 10px -10px;
+            /* 扩展到卡片边缘 */
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            color: #ff6f61;
+            text-align: center;
+        }
+
+        .compare-col .markdown-body img {
+            max-width: 100%;
+            /* 弹窗里可铺满列宽 */
+        }
+
+        /* 底部渐变遮罩按钮 */
+        .bottom-float {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+            text-align: center;
+            padding: 15px 0 25px;
+            box-sizing: border-box;
+            display: none;
+            z-index: 1000;
+        }
+
+        .bottom-float button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s;
+        }
+
+        .bottom-float button:hover {
+            background-color: #e65a50;
+        }
+
+        /* 自选套餐区域优化 */
+        #packages {
+            background: linear-gradient(90deg, #fff7f5 0%, #ffe3db 100%);
+            border: 2px solid #ff6f61;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(255, 111, 97, 0.08);
+            padding: 28px 24px 22px 24px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            position: relative;
+        }
+
+        #packages h3 {
+            color: #ff6f61;
+            font-size: 1.35em;
+            font-weight: bold;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+
+        #package-options label {
+            background: #fff;
+            border-radius: 7px;
+            border: 1px solid #ffd1c4;
+            padding: 8px 16px;
+            margin-bottom: 10px;
+            display: inline-block;
+            font-size: 1em;
+            color: #ff6f61;
+            cursor: pointer;
+            transition: box-shadow 0.2s;
+        }
+
+        #package-options label:hover {
+            box-shadow: 0 2px 8px rgba(255, 111, 97, 0.12);
+            background: #fff3f1;
+        }
+
+        #package-options input[type="checkbox"] {
+            accent-color: #ff6f61;
+            margin-right: 8px;
+        }
+
+        #packages .price {
+            font-size: 1.3em;
+            color: #e65a50;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 10px;
+        }
+
+        #packages .buy-btn {
+            display: block;
+            width: 100%;
+            padding: 13px 0;
+            font-size: 1.15em;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff6f61 0%, #ffb199 100%);
+            box-shadow: 0 2px 8px rgba(255, 111, 97, 0.13);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        #packages .buy-btn:hover {
+            background: linear-gradient(90deg, #e65a50 0%, #ffb199 100%);
+        }
+
+        /* 移动端响应式调整 */
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 0.9em;
+            }
+
+            .container {
+                width: 95%;
+                padding: 15px;
+                margin: 10px auto;
+            }
+
+            #project-title {
+                font-size: 1.5em;
+                margin-top: 0;
+            }
+
+            .version-select-bar {
+                padding: 8px 0;
+                font-size: 0.9em;
+            }
+
+            .tab {
+                padding: 5px 10px;
+                margin-right: 5px;
+                margin-bottom: 8px;
+                font-size: 0.9em;
+            }
+
+            .compare-btn {
+                margin-left: 0;
+                margin-top: 8px;
+                padding: 5px 10px;
+                font-size: 0.9em;
+                display: block;
+            }
+
+            .markdown-body h1 {
+                font-size: 1.5em;
+            }
+
+            .markdown-body h2 {
+                font-size: 1.3em;
+            }
+
+            .markdown-body h3 {
+                font-size: 1.1em;
+            }
+
+            .markdown-body img {
+                max-width: 100%;
+            }
+
+            #packages {
+                padding: 20px 15px;
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+
+            #packages h3 {
+                font-size: 1.2em;
+                margin-bottom: 15px;
+            }
+
+            #package-options label {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 10px 15px;
+                font-size: 0.95em;
+            }
+
+            #packages .price {
+                font-size: 1.2em;
+                margin-top: 15px;
+            }
+
+            #packages .buy-btn {
+                padding: 12px 0;
+                font-size: 1.1em;
+            }
+
+            .bottom-float {
+                padding: 12px 0 20px;
+            }
+
+            .bottom-float button {
+                padding: 12px 30px;
+                font-size: 15px;
+                width: 90%;
+                max-width: 300px;
+            }
+
+            /* 对比弹窗在移动端的优化 */
+            .compare-modal {
+                padding: 10px;
+                align-items: flex-start;
+                padding-top: 20px;
+            }
+
+            .compare-box {
+                width: 100%;
+                max-height: 90vh;
+                height: 90vh;
+            }
+
+            .compare-header {
+                padding: 15px;
+            }
+
+            .compare-title {
+                font-size: 18px;
+            }
+
+            .compare-close {
+                font-size: 24px;
+            }
+
+            .compare-body {
+                padding: 15px;
+                flex-grow: 1;
+                box-sizing: border-box;
+            }
+
+            .compare-grid {
+                flex-direction: column;
+                gap: 15px;
+                height: 100%;
+            }
+
+            .compare-col {
+                min-width: auto;
+                max-height: none;
+                margin-bottom: 0;
+                padding: 15px;
+                flex-grow: 1;
+            }
+
+            .compare-col .col-title {
+                padding: 12px 10px;
+                font-size: 16px;
+                margin: -15px -15px 15px -15px;
+            }
+
+            .compare-col .markdown-body {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .compare-col .markdown-body p {
+                margin-bottom: 12px;
+            }
+        }
+
+        /* 小屏手机额外调整 */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.4em;
+                margin: 0 0 10px 0;
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 0.85em;
+            }
+
+            .version-select-bar {
+                font-size: 0.85em;
+                top: 9%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .tab {
+                padding: 4px 8px;
+                font-size: 0.85em;
+            }
+
+            .markdown-body {
+                font-size: 0.95em;
+                line-height: 1.5;
+            }
+
+            #packages .buy-btn {
+                padding: 11px 0;
+                font-size: 1.05em;
+            }
+
+            /* 小屏手机弹窗优化 */
+            .compare-col .markdown-body {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            .compare-header {
+                padding: 12px 15px;
+            }
+
+            .compare-title {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="project-header">木子空间-项目详情</h1>
+        <nav>
+            <a href="https://www.liyansheng.top/home">全部项目</a>
+            <a href="https://www.liyansheng.top/history_order">我的订单</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="version-select-bar">
+            可选版本👉
+            <div class="tabs" id="version-tabs"></div>
+            <!-- 版本对比按钮会在有多个版本时插入到这里 -->
+        </div>
+
+        <canvas id="project-canvas" class="project-img"></canvas>
+
+
+        <div class="section markdown-body" id="project-content">
+            <!-- Markdown 渲染内容 -->
+        </div>
+
+        <!-- 渐变遮罩按钮 -->
+        <div class="bottom-float" id="buy-now-bar">
+            <button id="buy-now-btn">立即选购</button>
+        </div>
+
+
+        <div class="section" id="packages">
+            <h3>自选套餐</h3>
+            <div class="checkbox-group" id="package-options"></div>
+            <div class="price">总价: ￥<span id="total-price">0</span></div>
+            <button class="buy-btn">立即购买</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 简易商城 | All rights reserved
+    </footer>
+
+    <!-- 版本对比弹窗 -->
+    <div class="compare-modal" id="compare-modal" aria-hidden="true">
+        <div class="compare-box">
+            <div class="compare-header">
+                <h3 class="compare-title">版本对比</h3>
+                <button class="compare-close" id="compare-close" aria-label="关闭">×</button>
+            </div>
+            <div class="compare-body">
+                <div class="compare-grid" id="compare-grid">
+                    <!-- 动态插入每个版本的 Markdown 渲染 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            const $bar = $("#buy-now-bar");
+            const $btn = $("#buy-now-btn");
+
+            // 滚动监听
+            $(window).on("scroll", function () {
+                let scrollTop = $(window).scrollTop();
+                let windowHeight = $(window).height();
+                let docHeight = $(document).height();
+
+                // 距离底部小于 100px 时隐藏
+                if (scrollTop + windowHeight >= docHeight - 100) {
+                    $bar.fadeOut();
+                } else {
+                    $bar.fadeIn();
+                }
+            });
+
+            // 点击按钮滚动到自选套餐
+            $btn.on("click", function () {
+                let targetOffset = $("#packages").offset().top;
+                $("html, body").animate({ scrollTop: targetOffset - 20 }, 500);
+            });
+
+            let projectJSON = null;
+
+            // 获取 id 参数
+            function getIdFromUrl() {
+                const match = window.location.search.match(/[?&]id=(\d+)/);
+                return match ? match[1] : null;
+            }
+
+            // 渲染页面所有内容
+            function renderAll(data) {
+                $('#project-title').text(data.name || '项目名称');
+
+                const $bar = $('.version-select-bar');
+                const $tabs = $('#version-tabs');
+                $tabs.empty();
+
+                const versionList = data.projectVersionVOList || [];
+                let firstVersion = versionList.length ? versionList[0].versionName : '';
+
+                // 版本数量判断
+                if (versionList.length <= 1) {
+                    $bar.hide(); // 只有一个版本时隐藏整个板块
+                } else {
+                    $bar.show(); // 多于一个版本时显示
+                    versionList.forEach(ver => {
+                        $tabs.append(`<div class="tab" data-version="${ver.versionName}">${ver.versionName}</div>`);
+                    });
+
+                    // 版本对比按钮
+                    if ($('#compare-btn').length === 0) {
+                        const $btn = $('<button class="compare-btn" id="compare-btn">版本对比</button>');
+                        $tabs.after($btn);
+
+                        // 移动端隐藏
+                        if ($(window).width() <= 768) {
+                            $btn.hide();
+                        }
+
+                        $btn.on('click', openCompareModal);
+                    }
+                }
+
+                // 默认渲染第一个版本
+                if (firstVersion) renderVersion(firstVersion);
+
+                // 监听窗口大小变化，动态显示/隐藏按钮
+                $(window).on('resize', function () {
+                    if ($('#compare-btn').length) {
+                        if ($(window).width() <= 768) {
+                            $('#compare-btn').hide();
+                        } else {
+                            $('#compare-btn').show();
+                        }
+                    }
+                });
+
+                // 渲染某个版本
+                function renderVersion(versionName) {
+                    const ver = versionList.find(v => v.versionName === versionName) || versionList[0];
+                    if (!ver) return;
+
+                    const canvas = document.getElementById('project-canvas');
+                    const ctx = canvas.getContext('2d');
+                    const img = new Image();
+                    img.crossOrigin = "anonymous"; // 允许跨域加载图片
+                    img.src = ver.coverImage || data.cover || '';
+
+                    img.onload = function () {
+                        // 固定 canvas 尺寸（不要用图片原始尺寸）
+                        canvas.width = 600;
+                        canvas.height = 400;
+
+                        // 清空画布
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                        // 计算缩放比例，保证图片等比缩放铺满
+                        const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
+                        const x = (canvas.width - img.width * scale) / 2;
+                        const y = (canvas.height - img.height * scale) / 2;
+
+                        // 绘制图片
+                        ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
+
+                        // 遮罩（全屏）
+                        ctx.fillStyle = "rgba(0,0,0,0.70)";
+                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                        // 标题
+                        ctx.fillStyle = "#fff";
+                        ctx.font = "bold 35px Arial"; // 固定大小
+                        ctx.textAlign = "center";
+                        ctx.textBaseline = "middle";
+                        ctx.fillText(data.name + '-' + ver.versionName || '', canvas.width / 2, canvas.height / 2 - 20);
+
+                        // 描述
+                        ctx.font = "18px Arial"; // 固定大小
+                        ctx.fillStyle = "#ffb199";
+                        ctx.fillText(ver.description || "暂无描述", canvas.width / 2, canvas.height / 2 + 25);
+                    };
+
+                    $('#project-content').html(marked.parse(ver.content || ''));
+
+                    // 套餐渲染
+                    const $packages = $('#package-options');
+                    $packages.empty();
+                    (ver.packageList || []).forEach(pkg => {
+                        $packages.append(
+                            `<label><input type="checkbox" data-price="${pkg.price}"  data-id="${pkg.id}"  value="${pkg.name}"> ${pkg.name} (￥${pkg.price})</label> <br>`
+                        );
+                    });
+
+                    // 绑定价格计算
+                    $('.checkbox-group input').off('change').on('change', updatePrice);
+                    $('#total-price').text('0');
+
+                    $('.tab').removeClass('active');
+                    $(`.tab[data-version="${ver.versionName}"]`).addClass('active');
+                }
+
+                function updatePrice() {
+                    let total = 0;
+                    $('.checkbox-group input:checked').each(function () {
+                        total += parseFloat($(this).data('price')) || 0;
+                    });
+                    // 保留两位小数
+                    $('#total-price').text(total.toFixed(2));
+                }
+
+
+                // 默认渲染第一个版本
+                if (firstVersion) {
+                    renderVersion(firstVersion);
+                }
+
+                // 点击切换版本
+                $('.tab').off('click').on('click', function () {
+                    const version = $(this).data('version');
+                    renderVersion(version);
+                });
+
+                // 立即购买
+                $('.buy-btn').off('click').on('click', function () {
+                    const selected = $('.checkbox-group input:checked').map(function () {
+                        return {
+                            id: $(this).data('id'),
+                            name: $(this).val(),
+                            price: $(this).data('price')
+                        };
+                    }).get();
+
+                    if (!selected.length) {
+                        alert('请选择至少一个套餐！');
+                        return;
+                    }
+
+                    const currentVersion = $('.tab.active').data('version');
+
+                    // 只存套餐 id（当然也可以存整个对象，看需求）
+                    const ids = selected.map(s => s.id);
+
+                    // 存入 localStorage
+                    localStorage.setItem('selectedPackages', JSON.stringify({
+                        version: currentVersion,
+                        ids: ids
+                    }));
+
+                    // 跳转到下一个页面
+                    window.location.href = "order_confirm.html";
+                });
+
+
+
+                // 版本对比弹窗逻辑
+                function openCompareModal() {
+                    const $grid = $('#compare-grid');
+                    $grid.empty();
+                    versionList.forEach(ver => {
+                        const contentWithoutImages = (ver.content || '').replace(/!\[.*?\]\(.*?\)/g, '').replace('效果图', '');
+                        const html = marked.parse(contentWithoutImages);
+                        const col = $(`
+                        <div class="compare-col">
+                            <div class="col-title">${ver.versionName}</div>
+                            <div class="markdown-body">${html}</div>
+                        </div>
+                    `);
+                        $grid.append(col);
+                    });
+                    $('#compare-modal').addClass('active').attr('aria-hidden', 'false');
+
+                    // 在移动端自动滚动到弹窗顶部
+                    if ($(window).width() <= 768) {
+                        $('.compare-body').scrollTop(0);
+                    }
+                }
+
+                $('#compare-close').off('click').on('click', closeCompareModal);
+                $('#compare-modal').off('click').on('click', function (e) {
+                    if (e.target === this) closeCompareModal();
+                });
+                $(document).off('keydown').on('keydown', function (e) {
+                    if (e.key === 'Escape') closeCompareModal();
+                });
+
+                function closeCompareModal() {
+                    $('#compare-modal').removeClass('active').attr('aria-hidden', 'true');
+                }
+            }
+
+            // 获取详情数据
+            function fetchDetail() {
+                const id = getIdFromUrl() || localStorage.getItem('selectedProductId');
+                if (!id) {
+                    $('.container').html('<div style="color:red;text-align:center;">未获取到项目ID</div>');
+                    return;
+                }
+                // 动态修改地址栏信息
+                const url = new URL(window.location.href);
+                url.searchParams.set('id', id);
+                window.history.replaceState({}, '', url);
+                $.get(`https://mini.liyansheng.top/v1/projects/detail/${id}`, function (res) {
+                    if (res.code === 200 && res.data) {
+                        projectJSON = res.data;
+                        renderAll(projectJSON);
+                    } else {
+                        $('.container').html('<div style="color:red;text-align:center;">项目详情加载失败</div>');
+                    }
+                }).fail(function () {
+                    $('.container').html('<div style="color:red;text-align:center;">无法连接详情接口</div>');
+                });
+            }
+
+            fetchDetail();
+        });
+    </script>
+
+</body>
+
+</html>

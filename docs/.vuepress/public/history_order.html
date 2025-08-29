@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>历史订单查询 - 木子空间</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+    }
+
+    .container {
+      width: 94%;
+      max-width: 480px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(255, 111, 97, 0.08);
+      padding: 20px 16px;
+    }
+
+    header {
+      background-color: #ff6f61;
+      color: white;
+      padding: 5px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    nav {
+      margin-top: 8px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      color: #ff6f61;
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 1.2em;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+      font-size: 1em;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff6f61 0%, #ffb199 100%);
+      box-shadow: 0 2px 8px rgba(255, 111, 97, 0.13);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-bottom: 15px;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #e65a50 0%, #ffb199 100%);
+    }
+
+    .loading {
+      text-align: center;
+      color: #ff6f61;
+      font-size: 1em;
+      padding: 15px;
+    }
+
+    .error {
+      background: #ffe6e6;
+      border: 1px solid #ffcccc;
+      border-radius: 8px;
+      padding: 12px;
+      color: #cc0000;
+      margin-bottom: 14px;
+      font-size: 0.9em;
+    }
+
+    .order-details {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 14px;
+      border-left: 4px solid #ff6f61;
+    }
+
+    .detail-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 0.9em;
+      word-break: break-word;
+    }
+
+    .detail-label {
+      color: #666;
+      font-weight: 500;
+    }
+
+    .detail-value {
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* 自助提货信息板块 */
+    .pickup-card {
+      background-color: #fff8f0;
+      border: 1px solid #ffb299;
+      border-radius: 12px;
+      padding: 12px;
+      margin-top: 20px;
+      box-shadow: 0 2px 6px rgba(255, 111, 97, 0.1);
+    }
+
+    .pickup-card h2 {
+      font-size: 1em;
+      margin-bottom: 8px;
+      color: #ff6f61;
+      text-align: center;
+    }
+
+    .order-pickup-info {
+      font-size: 0.9em;
+      color: #333;
+      line-height: 1.5;
+      text-align: left;
+      white-space: pre-line;
+    }
+
+    .resource-item {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff4eb;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ffd9c2;
+    }
+
+    .resource-text {
+      flex: 1;
+      word-break: break-word;
+      font-size: 0.9em;
+    }
+
+    .copy-btn {
+      background: #ff6f61;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      padding: 4px 8px;
+      font-size: 0.8em;
+      cursor: pointer;
+      margin-left: 6px;
+      transition: background 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: #e65a50;
+    }
+
+    /* 小屏优化 */
+    @media (max-width: 480px) {
+      .container {
+        padding: 16px 12px;
+      }
+
+      h2 {
+        font-size: 1.1em;
+      }
+
+      .btn {
+        font-size: 0.95em;
+        padding: 10px 0;
+      }
+
+      nav a {
+        font-size: 0.85em;
+        margin: 0 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>木子空间-项目案例</h1>
+    <nav>
+      <a href="https://www.liyansheng.top/home">全部项目</a>
+      <a href="https://www.liyansheng.top/history_order">我的订单</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>历史订单查询</h2>
+    <input type="text" id="orderNo-input" placeholder="请输入: 微信交易单号">
+    <button class="btn" id="query-btn">查询订单</button>
+    <div id="order-details-container"></div>
+    <div id="status-msg" class="error" style="display:none;"></div>
+
+    <!-- 自助提货信息 -->
+    <div id="pickup-section" class="pickup-card" style="display:none;">
+      <h2>自助提货信息</h2>
+      <div class="order-pickup-info"></div>
+    </div>
+  </div>
+
+  <script>
+    const queryBtn = document.getElementById('query-btn');
+    const orderNoInput = document.getElementById('orderNo-input');
+    const orderDetailsContainer = document.getElementById('order-details-container');
+    const statusMsg = document.getElementById('status-msg');
+    const pickupSection = document.getElementById('pickup-section');
+    const pickupInfo = document.querySelector('.order-pickup-info');
+
+    function showLoading() {
+      orderDetailsContainer.innerHTML = '<div class="loading">正在查询订单...</div>';
+      statusMsg.style.display = 'none';
+      pickupSection.style.display = 'none';
+    }
+
+    function showError(msg) {
+      orderDetailsContainer.innerHTML = '';
+      statusMsg.textContent = msg;
+      statusMsg.style.display = 'block';
+      pickupSection.style.display = 'none';
+    }
+
+    function showOrderDetails(data) {
+      statusMsg.style.display = 'none';
+      orderDetailsContainer.innerHTML = `
+        <div class="order-details">
+          <div class="detail-item">
+            <span class="detail-label">订单号：</span>
+            <span class="detail-value">${data.payNo}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">订单名称：</span>
+            <span class="detail-value">${data.spec}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">总金额：</span>
+            <span class="detail-value">￥${data.totalFee}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">支付状态：</span>
+            <span class="detail-value">${data.msg}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">支付时间：</span>
+            <span class="detail-value">${data.successTime}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">创建时间：</span>
+            <span class="detail-value">${data.createdAt}</span>
+          </div>
+        </div>
+      `;
+
+      // 显示自助提货信息
+      pickupInfo.innerHTML = '';
+      if (data.resourceUrl) {
+        const resources = data.resourceUrl.split(';').filter(r => r.trim() !== '');
+        resources.forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'resource-item';
+          div.innerHTML = `
+            <span class="resource-text">${item}</span>
+            <button class="copy-btn">复制</button>
+          `;
+          const btn = div.querySelector('.copy-btn');
+          btn.addEventListener('click', () => {
+            navigator.clipboard.writeText(item).then(() => {
+              btn.textContent = '已复制';
+              setTimeout(() => btn.textContent = '复制', 1000);
+            });
+          });
+          pickupInfo.appendChild(div);
+        });
+      } else {
+        pickupInfo.innerHTML = '暂无提货信息';
+      }
+      pickupSection.style.display = 'block';
+    }
+
+    async function queryOrder() {
+      const orderNo = orderNoInput.value.trim();
+      if (!orderNo) {
+        showError('请输入订单号');
+        return;
+      }
+      showLoading();
+      try {
+        const resp = await fetch(`https://mini.liyansheng.top/v1/orders/history?orderNo=${encodeURIComponent(orderNo)}`);
+        const result = await resp.json();
+        if (result.code === 200 && result.data) {
+          showOrderDetails(result.data);
+        } else {
+          showError(result.msg || '未查询到订单信息');
+        }
+      } catch (err) {
+        console.error(err);
+        showError('网络错误，请稍后重试');
+      }
+    }
+
+    queryBtn.addEventListener('click', queryOrder);
+    orderNoInput.addEventListener('keydown', e => { if (e.key === 'Enter') queryOrder(); });
+  </script>
+</body>
+
+</html>
