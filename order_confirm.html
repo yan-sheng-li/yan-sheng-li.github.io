@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>订单详情 - 木子空间</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+    }
+
+    .container {
+      width: 94%;
+      max-width: 480px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(255, 111, 97, 0.08);
+      padding: 20px 16px;
+    }
+
+    header {
+      background-color: #ff6f61;
+      color: white;
+      padding: 5px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    nav {
+      margin-top: 8px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      color: #ff6f61;
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 1.2em;
+    }
+
+    .order-details {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 14px;
+      border-left: 4px solid #ff6f61;
+    }
+
+    .detail-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 0.9em;
+      word-break: break-word;
+    }
+
+    .detail-label {
+      color: #666;
+      font-weight: 500;
+    }
+
+    .detail-value {
+      color: #333;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+      font-size: 1em;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff6f61 0%, #ffb199 100%);
+      box-shadow: 0 2px 8px rgba(255, 111, 97, 0.13);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #e65a50 0%, #ffb199 100%);
+    }
+
+    .loading {
+      text-align: center;
+      color: #ff6f61;
+      font-size: 1em;
+      padding: 15px;
+    }
+
+    .error {
+      background: #ffe6e6;
+      border: 1px solid #ffcccc;
+      border-radius: 8px;
+      padding: 12px;
+      color: #cc0000;
+      margin-bottom: 14px;
+      font-size: 0.9em;
+    }
+
+    .status-msg {
+      text-align: center;
+      color: #444;
+      font-size: 0.9em;
+      margin-top: 10px;
+    }
+
+    .pickup-card {
+      background-color: #f6fff6;
+      border: 1px solid #b2e0b2;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .pickup-card h2 {
+      font-size: 1em;
+      margin-bottom: 8px;
+      color: #2d862d;
+      text-align: center;
+    }
+
+    .order-pickup-info {
+      font-size: 0.9em;
+      color: #333;
+      line-height: 1.5;
+      text-align: center;
+      white-space: pre-line;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* 移动端小屏优化 */
+    @media (max-width: 480px) {
+      .container {
+        padding: 16px 12px;
+      }
+
+      h2 {
+        font-size: 1.1em;
+      }
+
+      .btn {
+        font-size: 0.95em;
+        padding: 10px 0;
+      }
+
+      nav a {
+        font-size: 0.85em;
+        margin: 0 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>木子空间-项目案例</h1>
+    <nav>
+      <a href="./all.html">全部项目</a>
+      <a href="./history_order.html">我的订单</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h2>订单信息</h2>
+    <div id="order-details-container"></div>
+    <div id="qr-container" style="text-align:center;margin-top:20px;"></div>
+    <button class="btn" id="pay-btn" disabled>我已支付</button>
+    <div class="status-msg" id="status-msg"></div>
+    <!-- 自助提货信息（默认隐藏） -->
+    <div id="pickup-section" style="display:none; margin-top:20px;">
+      <div class="pickup-card">
+        <h2>自助提货信息</h2>
+        <div class="order-pickup-info"></div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script>
+    const orderDetailsContainer = document.getElementById("order-details-container");
+    const qrContainer = document.getElementById("qr-container");
+    const payBtn = document.getElementById("pay-btn");
+    const statusMsg = document.getElementById("status-msg");
+
+    // 获取套餐ids
+    const ids = JSON.parse(localStorage.getItem("selectedPackages")).ids || [];
+    let currentOrderId = null;
+
+    function showLoading() {
+      orderDetailsContainer.innerHTML = '<div class="loading">正在创建订单...</div>';
+    }
+
+    function showError(message) {
+      orderDetailsContainer.innerHTML = `<div class="error">错误：${message}</div>`;
+      payBtn.disabled = true;
+    }
+
+    function showOrderDetails(orderData) {
+      const orderTime = new Date().toLocaleString('zh-CN');
+      const orderDetailsHtml = `
+        <div class="order-details">
+          <div class="detail-item">
+            <span class="detail-label">订单号：</span>
+            <span class="detail-value">${orderData.orderId}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">订单名称：</span>
+            <span class="detail-value">${orderData.orderText || 'N/A'}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">创建时间：</span>
+            <span class="detail-value">${orderTime}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">状态：</span>
+            <span class="detail-value" id="order-status">待支付</span>
+          </div>
+        </div>
+      `;
+      orderDetailsContainer.innerHTML = orderDetailsHtml;
+    }
+
+    async function createOrder() {
+      showLoading();
+      try {
+        const resp = await fetch("https://mini.liyansheng.top/v1/orders/create", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(ids)
+        });
+        const result = await resp.json();
+        console.log("下单返回:", result);
+
+        if (resp.ok && result.orderId) {
+          currentOrderId = result.orderId;
+          showOrderDetails(result);
+
+          if (result.QRcode_url) {
+            qrContainer.innerHTML = `
+                        <div style="
+                            display:inline-block;
+                            padding:16px;
+                            background:#fff;
+                            border:1px solid #e6e6e6;
+                            border-radius:12px;
+                            box-shadow:0 2px 8px rgba(0,0,0,0.08);
+                        ">
+                            <img src="${result.QRcode_url}" alt="支付二维码"
+                            style="width:220px;height:220px;display:block;margin:0 auto;" />
+                            <div style="margin-top:14px;text-align:center;">
+                            <img src="https://cdn.qiniu.liyansheng.top/img/wxpay.png"
+                                alt="微信支付" style="height:22px;vertical-align:middle;margin-right:6px;">
+                            <span style="font-size:15px;color:#07C160;font-weight:bold;vertical-align:middle;">
+                                微信支付
+                            </span>
+                            </div>
+                            <p style="
+                            margin-top:8px;
+                            font-size:13px;
+                            color:#666;
+                            text-align:center;
+                            ">请使用微信扫一扫完成支付</p>
+                        </div>
+                        `;
+          }
+
+          payBtn.disabled = false;
+          payBtn.addEventListener("click", checkOrderStatus);
+        } else {
+          showError(result.msg || "创建订单失败");
+        }
+      } catch (err) {
+        console.error("创建订单错误:", err);
+        showError("网络请求失败，请检查接口是否正常");
+      }
+    }
+
+    async function checkOrderStatus() {
+      if (!currentOrderId) return;
+      try {
+        const resp = await fetch(`https://mini.liyansheng.top/v1/orders/status2/${currentOrderId}`);
+        const result = await resp.json();
+        if (result.code === 200) {
+          statusMsg.textContent = "";
+          // 更新订单状态
+          document.getElementById("order-status").textContent = "已支付";
+
+          // 显示自助提货卡片
+          document.getElementById("pickup-section").style.display = "block";
+
+          // 展示资源信息（以 ; 分隔换行）
+          const pickupInfo = document.querySelector(".order-pickup-info");
+          const resourceInfo = result.msg
+            ? result.msg.split(";").filter(item => item.trim() !== "").join("<br>")
+            : "";
+          pickupInfo.innerHTML = resourceInfo || '暂无提货信息';
+        } else {
+          console.log("订单状态返回:", result);
+          statusMsg.textContent = result.msg || "查询失败";
+        }
+      } catch (err) {
+        console.error("查询订单状态错误:", err);
+        statusMsg.textContent = "查询失败，请稍后重试";
+      }
+    }
+
+
+    createOrder();
+  </script>
+</body>
+
+</html>
