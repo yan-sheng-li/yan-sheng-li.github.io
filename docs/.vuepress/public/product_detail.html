@@ -588,8 +588,8 @@
     <header>
         <h1 id="project-header">木子空间-项目详情</h1>
         <nav>
-            <a href="https://www.liyansheng.top/home">全部项目</a>
-            <a href="https://www.liyansheng.top/history_order">我的订单</a>
+            <a href="./all.html">全部项目</a>
+            <a href="./history_order.html">我的订单</a>
         </nav>
     </header>
 
@@ -622,7 +622,7 @@
     </div>
 
     <footer>
-        &copy; 2025 简易商城 | All rights reserved
+        &copy; 2025 木子空间 | All rights reserved
     </footer>
 
     <!-- 版本对比弹窗 -->
@@ -749,7 +749,7 @@
                         ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
 
                         // 遮罩（全屏）
-                        ctx.fillStyle = "rgba(0,0,0,0.70)";
+                        ctx.fillStyle = "rgba(0,0,0,0.75)";
                         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
                         // 标题
@@ -762,7 +762,7 @@
                         // 描述
                         ctx.font = "18px Arial"; // 固定大小
                         ctx.fillStyle = "#ffb199";
-                        ctx.fillText(ver.description || "暂无描述", canvas.width / 2, canvas.height / 2 + 25);
+                        ctx.fillText(ver.description || "", canvas.width / 2, canvas.height / 2 + 25);
                     };
 
                     $('#project-content').html(marked.parse(ver.content || ''));

@@ -189,8 +189,8 @@
   <header>
     <h1>木子空间-项目案例</h1>
     <nav>
-      <a href="https://www.liyansheng.top/home">全部项目</a>
-      <a href="https://www.liyansheng.top/history_order">我的订单</a>
+      <a href="./all.html">全部项目</a>
+      <a href="./history_order.html">我的订单</a>
     </nav>
   </header>
   <!-- 搜索框 -->
@@ -199,7 +199,7 @@
   </div>
   <div class="products" id="product-list"></div>
   <footer>
-    &copy; 2025 简易商城 | All rights reserved
+    &copy; 2025 木子空间 | All rights reserved
   </footer>
   <script>
     // 商品数据通过接口动态获取
@@ -230,7 +230,7 @@
           `);
           card.on("click", function () {
             localStorage.setItem("selectedProductId", $(this).data("id"));
-            window.location.href = "product_detail.html";
+            window.location.href = "./product_detail.html";
           });
           $list.append(card);
         });
