@@ -1,4 +1,4 @@
-# # FastAPI 快速上手
+# FastAPI 快速上手
 
 FastAPI 是一个现代、快速（高性能）的 Web 框架，用于基于标准 Python 类型提示构建 API。它基于 Python 3.6+ 类型提示，使用 Starlette 和 Pydantic 构建。
 
