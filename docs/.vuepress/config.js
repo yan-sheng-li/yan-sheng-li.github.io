@@ -406,7 +406,9 @@ module.exports = {
             '基于Flask写API',
             'FastAPI快速上手',
             'FastAPI整合MySQL',
-            'pip包管理工具'
+            'pip包管理工具',
+            '虚拟环境venv',
+            'jieba中文分词'
           ]
         },
         {
