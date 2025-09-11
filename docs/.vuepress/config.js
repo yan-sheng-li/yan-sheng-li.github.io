@@ -405,7 +405,8 @@ module.exports = {
             '常用技法',
             '基于Flask写API',
             'FastAPI快速上手',
-            'FastAPI整合MySQL'
+            'FastAPI整合MySQL',
+            'pip包管理工具'
           ]
         },
         {
