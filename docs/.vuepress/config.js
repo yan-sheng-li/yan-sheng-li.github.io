@@ -79,6 +79,7 @@ module.exports = {
               { text: 'JavaScript库', link: '/Js/' }, // 修改标题更具体
               { text: 'Bootstrap', link: '/bootstrap/' },
               { text: 'Vue', link: '/vue/' },
+              { text: 'uniapp', link: '/uniapp/' }
             ]
           },
           {
@@ -170,6 +171,15 @@ module.exports = {
     ],
 
     sidebar: {
+      '/uniapp/': [
+        {
+          title: '多端开发框架',
+          collapsable: false,
+          children: [
+            '打包H5页面本地打开空白的解决办法',
+          ]
+        },
+      ],
       '/gitea/': [
         {
           title: '自建版本控制库',
