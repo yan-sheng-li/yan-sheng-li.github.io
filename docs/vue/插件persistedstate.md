@@ -1,3 +1,5 @@
+# vuex-persistedstate
+
 > `vuex-persistedstate` 是一个用于 **持久化 Vuex 状态** 的插件，可以将 Vuex 中的数据自动保存到本地存储（如 `localStorage` 或 `sessionStorage`），防止页面刷新后数据丢失。以下是它在 **Vue 2 项目**中的详细使用指南：
 
 ------

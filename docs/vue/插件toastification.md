@@ -1,3 +1,4 @@
+# vue-toastification
 > `vue-toastification` 是一个轻量级、高度可定制的 Toast 通知插件，适用于 Vue 2 和 Vue 3。以下是它在 **Vue 2 项目**中的详细使用指南：
 
 
