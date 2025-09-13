@@ -1,7 +1,7 @@
 # Selenium运用
 `Selenium` 是一个浏览器自动化工具，常用于网页抓取和自动化测试。
 
-#### **基本使用流程**
+## 基础
 
 1. **安装**：
 
@@ -97,7 +97,7 @@
 
 ------
 
-### **应用实例：爬取网页内容**
+## 简单案例
 
 结合 `BeautifulSoup` 和 `Selenium`：
 
@@ -127,7 +127,7 @@ driver.quit()
 
 ------
 
-### **总结**
+## 总结
 
 1. **BeautifulSoup**：
    - 适合静态 HTML 的解析和数据提取。
@@ -135,3 +135,75 @@ driver.quit()
 2. **Selenium**：
    - 适合动态网页的数据抓取和操作。
    - 强大的浏览器自动化工具，支持点击、输入等交互操作。
+
+
+## 进阶
+### 调用chrome浏览器
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+
+def test_chrome():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--start-maximized")
+    options.add_experimental_option("detach", True)  # 运行结束后不关闭窗口
+
+    driver = webdriver.Chrome(
+        # 自动下载并管理 ChromeDriver
+        service=Service(ChromeDriverManager(url="https://registry.npmmirror.com/-/binary/chromedriver").install()),
+        options=options
+    )
+
+    driver.get("https://www.baidu.com")
+
+    # 显式等待：等百度搜索框加载完成，最多等10秒
+    try:
+        search_box = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.ID, "kw"))
+        )
+        print("百度首页加载完成，搜索框已找到！")
+    finally:
+        driver.quit()
+
+if __name__ == "__main__":
+    test_chrome()
+```
+
+### 保存登录后的cookies
+在一些需要登录的网站，可以先保存cookies，后面爬数据时可以免登录
+```python
+import json
+import time
+from selenium import webdriver
+
+def save_cookies(url="https://www.zhipin.com", output_file="cookies.json"):
+    # 启动 Edge（你也可以改成 Chrome）
+    options = webdriver.EdgeOptions()
+    driver = webdriver.Edge(options=options)
+
+    # 打开目标网站
+    driver.get(url)
+    print("🌐 请在打开的浏览器里手动完成登录（比如扫码登录）")
+
+    # 给你 60 秒钟时间扫码/登录
+    for i in range(60, 0, -5):
+        print(f"⏳ 请在 {i} 秒内完成登录...")
+        time.sleep(5)
+
+    # 获取 cookies
+    cookies = driver.get_cookies()
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(cookies, f, ensure_ascii=False, indent=2)
+
+    print(f"✅ Cookies 已保存到 {output_file}")
+    driver.quit()
+
+
+if __name__ == "__main__":
+    save_cookies()
+
+```
