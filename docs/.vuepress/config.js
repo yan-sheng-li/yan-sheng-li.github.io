@@ -251,7 +251,7 @@ module.exports = {
           children: [
             '项目打jar包-docker部署',
             '整合knife4j',
-            '开启跨域'
+            '开启跨域',
             '远程仓库源',
             '常规整合',
             '全局异常处理',
@@ -413,6 +413,7 @@ module.exports = {
           title: 'Python',
           collapsable: false,
           children: [
+            '命令行速查表',
             '常用技法',
             '基于Flask写API',
             'FastAPI快速上手',
