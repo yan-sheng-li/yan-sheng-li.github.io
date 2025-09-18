@@ -251,6 +251,7 @@ module.exports = {
           children: [
             '项目打jar包-docker部署',
             '整合knife4j',
+            '开启跨域'
             '远程仓库源',
             '常规整合',
             '全局异常处理',
