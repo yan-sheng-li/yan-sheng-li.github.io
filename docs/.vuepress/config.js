@@ -177,6 +177,7 @@ module.exports = {
           collapsable: false,
           children: [
             '打包H5页面本地打开空白的解决办法',
+            'Vue2与Vue3混用问题'
           ]
         },
       ],
