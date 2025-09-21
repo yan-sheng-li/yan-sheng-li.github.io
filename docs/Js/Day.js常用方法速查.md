@@ -1,5 +1,7 @@
 # Day.js常用方法速查
 
+官网: https://day.js.org/zh-CN/
+
 > Day.js 是一个轻量级的日期处理库，API 和 Moment.js 类似，但体积更小，性能更好。下面整理了常用功能，方便快速上手。
 
 ---
