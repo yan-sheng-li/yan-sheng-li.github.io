@@ -365,7 +365,8 @@ module.exports = {
             '插件toastification',
             '插件persistedstate',
             '插件实现自动部署',
-            'CommentBox'
+            'CommentBox',
+            'Iconify'
           ]
         },
       ],
