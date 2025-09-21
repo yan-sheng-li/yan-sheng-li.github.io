@@ -466,7 +466,8 @@ module.exports = {
             'Dropzonejs实现文件上传',
             'flatpicker时间选择',
             '三级地图跳转',
-            'Fetch请求封装'
+            'Fetch请求封装',
+            'Day.js常用方法速查'
 
           ]
         },
