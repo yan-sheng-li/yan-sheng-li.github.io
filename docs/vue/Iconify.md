@@ -110,3 +110,79 @@ Iconify 的图标集合都以 **前缀**区分，比如：
 - `Iconify` 提供了超大图标库，直接通过前缀调用。
 - 配置好后，只需要写 `<IconMdiHome />` 就能用，非常适合 Vue 项目。
 
+
+--------------
+## 更简洁的配置
+
+### 1. 安装依赖
+
+```bash
+npm install @iconify/vue
+```
+
+或
+
+```bash
+yarn add @iconify/vue
+```
+
+------
+
+### 2. 在项目中注册 Icon 组件
+
+有两种常见方式：
+
+#### ✅ 全局注册（推荐）
+
+在 `main.ts`（或 `main.js`）里：
+
+```ts
+import { createApp } from 'vue'
+import App from './App.vue'
+import { Icon } from '@iconify/vue'
+
+const app = createApp(App)
+app.component('Icon', Icon) // 全局注册
+app.mount('#app')
+```
+
+这样，你就可以在任何地方直接用 `<Icon />` 标签。
+
+------
+
+#### ✅ 局部引入
+
+在需要使用的组件里：
+
+```vue
+<script setup lang="ts">
+import { Icon } from '@iconify/vue'
+</script>
+
+<template>
+  <Icon icon="carbon:building-insights-2" width="32" height="32" style="color: #ec7373" />
+</template>
+```
+
+------
+
+### 3. 使用示例
+
+```vue
+<template>
+  <div>
+    <Icon icon="carbon:building-insights-2" width="32" height="32" style="color: #ec7373" />
+    <Icon icon="mdi:home" width="40" height="40" style="color: #4caf50" />
+  </div>
+</template>
+```
+
+------
+
+### 4. 补充说明
+
+- `icon="carbon:building-insights-2"` → `carbon` 表示图标库，`building-insights-2` 表示具体图标名称。
+- 你可以去 [Iconify 图标库](https://icon-sets.iconify.design/) 搜索需要的图标，直接复制名称。
+- `width` / `height` / `style="color:xxx"` 都可以直接控制图标大小和颜色。
+
+
