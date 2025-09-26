@@ -366,7 +366,8 @@ module.exports = {
             '插件persistedstate',
             '插件实现自动部署',
             'CommentBox',
-            'Iconify'
+            'Iconify',
+            '自定义主题'
           ]
         },
       ],
