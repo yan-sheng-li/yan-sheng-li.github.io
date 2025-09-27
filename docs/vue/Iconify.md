@@ -116,6 +116,8 @@ Iconify 的图标集合都以 **前缀**区分，比如：
 
 ### 1. 安装依赖
 
+> 基于vue3
+
 ```bash
 npm install @iconify/vue
 ```
@@ -126,6 +128,10 @@ npm install @iconify/vue
 yarn add @iconify/vue
 ```
 
+> 基于vue2
+```bash
+npm install @iconify/vue2
+```
 ------
 
 ### 2. 在项目中注册 Icon 组件
