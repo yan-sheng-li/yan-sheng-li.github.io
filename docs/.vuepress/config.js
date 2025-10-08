@@ -592,7 +592,8 @@ module.exports = {
           title: 'Docker',
           collapsable: false,
           children: [
-            '镜像加速'
+            '镜像加速',
+            'WSL2安装',
           ]
         },
       ],
