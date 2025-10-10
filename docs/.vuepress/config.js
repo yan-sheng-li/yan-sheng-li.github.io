@@ -741,6 +741,7 @@ module.exports = {
             '手写数字识别',
             '数据挖掘之预测用户购买意愿',
             'face_recognition',
+            'face_recognition_v2'
           ]
         },
         {
