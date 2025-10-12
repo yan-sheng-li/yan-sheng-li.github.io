@@ -1,5 +1,7 @@
 # 网页爬虫可视化-boss岗位信息
 
+<MyGlobalComponent />
+
 ## 技术栈
 
 - Python
