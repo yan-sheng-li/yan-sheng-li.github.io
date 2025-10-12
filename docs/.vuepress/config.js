@@ -742,7 +742,8 @@ module.exports = {
             '数据挖掘之预测用户购买意愿',
             'face_recognition',
             'face_recognition_v2',
-            'boss_job_spider_v1'
+            'boss_job_spider_v1',
+            'boss_job_spider_v15',
           ]
         },
         {
