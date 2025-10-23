@@ -7,6 +7,8 @@
     <title>项目详情页</title>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -627,9 +629,15 @@
             </div>
             <hr>
             <div style="text-align:center; margin-top:20px;">
-                <a href="#" class="taobao-btn" id="taobao-link"
-                    style="display:none; text-align:center; background: #ff6f61; color: white; text-decoration: none; padding: 12px 0; border-radius: 8px; font-size: 1.15em; font-weight: bold; box-shadow: 0 2px 8px rgba(255, 111, 97, 0.13);">前往淘宝购买</a>
+                <a href="#" class="taobao-btn" id="taobao-link" target="_blank" rel="noopener noreferrer"
+                    style="display:none; text-align:center; background: #ff6f61; color: white; text-decoration: none; padding: 12px 0; border-radius: 8px; font-size: 1.15em; font-weight: bold; box-shadow: 0 2px 8px rgba(255, 111, 97, 0.13); margin-bottom:10px; display:inline-block;">
+                    点击跳转下单
+                </a>
+
+                <p id="qrcode-tip" style="display:none; color:#666;">或使用手机【淘宝】扫码下单：</p>
+                <div id="taobao-qrcode" style="display:none; margin-top:10px; display:inline-block;"></div>
             </div>
+
         </div>
     </div>
 
@@ -786,10 +794,21 @@
                     if (ver.taobaoLink) {
                         $('#packages').hide();
                         $('#taobao-link').show().attr('href', ver.taobaoLink);
+
+                        // 生成二维码
+                        $('#taobao-qrcode').show().empty(); // 清空旧二维码
+                        new QRCode(document.getElementById("taobao-qrcode"), {
+                            text: ver.taobaoLink,
+                            width: 128,
+                            height: 128,
+                        });
+                        $('#qrcode-tip').show();
                     } else {
                         $('#packages').show();
                         $('#taobao-link').hide();
+                        $('#taobao-qrcode').hide();
                     }
+
 
                     // 套餐渲染
                     const $packages = $('#package-options');
