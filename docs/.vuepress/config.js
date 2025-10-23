@@ -469,7 +469,8 @@ module.exports = {
             'flatpicker时间选择',
             '三级地图跳转',
             'Fetch请求封装',
-            'Day.js常用方法速查'
+            'Day.js常用方法速查',
+            'easy-qrcodejs生成二维码'
 
           ]
         },
