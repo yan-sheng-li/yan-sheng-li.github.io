@@ -748,7 +748,8 @@ module.exports = {
             'boss_job_spider_v15',
             'boss_job_spider_v2',
             'animal_classification_v1',
-            'face_calculation_v1'
+            'face_calculation_v1',
+            'cine-graph-analysis',
           ]
         },
         {
