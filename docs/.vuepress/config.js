@@ -97,7 +97,7 @@ module.exports = {
               { text: 'Kafka', link: '/kafka/' },
               { text: 'Linux', link: '/Linux/' },
               { text: '微信小程序', link: '/微信小程序/' },
-              { text: 'Node', link: '/node/' }
+              { text: 'Node', link: '/nodejs/' }
             ]
           },
           {
@@ -509,14 +509,15 @@ module.exports = {
           ]
         },
       ],
-      '/node/': [
+      '/nodejs/': [
         {
           title: 'Node相关',
           collapsable: false,
           children: [
             // '测试',
             // '快速写API',
-            '常用命令'
+            '常用命令',
+            '常见问题'
           ]
         },
       ],
