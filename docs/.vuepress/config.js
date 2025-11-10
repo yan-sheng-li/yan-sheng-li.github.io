@@ -424,7 +424,8 @@ module.exports = {
             'FastAPI快速上手',
             'FastAPI整合MySQL',
             'pip包管理工具',
-            'jieba中文分词'
+            'jieba中文分词',
+            '说说Anaconda'
           ]
         },
         {
