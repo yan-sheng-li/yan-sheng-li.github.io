@@ -1,5 +1,4 @@
 <html lang="zh-CN">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -11,21 +10,18 @@
       margin: 0;
       background-color: #f5f5f5;
     }
-
     header {
       background-color: #ff6f61;
       color: white;
       padding: 5px;
       text-align: center;
       position: sticky;
-      top: 0;
+      top: 45px;
       z-index: 1;
     }
-
     nav {
       margin-top: 6px;
     }
-
     nav a {
       color: white;
       margin: 0 10px;
@@ -33,20 +29,47 @@
       font-weight: bold;
       font-size: 0.9em;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
+    /* 滚动通知样式 */
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      color: white;
+      padding: 8px 0;
+      margin-bottom: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 3;
+    }
+    .marquee-content {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee-scroll 20s linear infinite;
+      padding-left: 100%;
+    }
+    @keyframes marquee-scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    .marquee-container:hover .marquee-content {
+      animation-play-state: paused;
+    }
     /* 搜索框样式 */
     .search-container {
       text-align: center;
       /* margin: 16px 0; */
       position: sticky;
-      top: 101px;
+      top: 150px;
       z-index: 2;
     }
-
     .search-container input {
       width: 50%;
       max-width: 500px;
@@ -55,7 +78,6 @@
       border-radius: 5px;
       border: 1px solid #ccc;
     }
-
     .products {
       display: flex;
       flex-wrap: wrap;
@@ -63,7 +85,6 @@
       margin: 20px auto;
       width: 94%;
     }
-
     .product-card {
       background-color: white;
       border-radius: 10px;
@@ -78,12 +99,10 @@
       color: inherit;
       flex: 0 1 auto;
     }
-
     .product-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
-
     .img-container {
       position: relative;
       width: 100%;
@@ -95,7 +114,6 @@
       background: #f8f8f8;
       border-radius: 8px;
     }
-
     .img-container img {
       width: auto;
       height: 100%;
@@ -103,7 +121,6 @@
       display: block;
       object-fit: cover;
     }
-
     .overlay {
       position: absolute;
       bottom: 0;
@@ -117,7 +134,6 @@
       font-size: 0.85em;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
-
     .product-card h3 {
       font-size: 1em;
       margin: 8px 0 5px;
@@ -125,13 +141,11 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-
     .product-card p {
       color: #ff6f61;
       font-weight: bold;
       margin: 4px 0;
     }
-
     footer {
       text-align: center;
       padding: 12px;
@@ -140,7 +154,6 @@
       color: white;
       font-size: 0.85em;
     }
-
     .badge {
       position: absolute;
       top: 8px;
@@ -152,42 +165,43 @@
       font-size: 0.75em;
       font-weight: bold;
     }
-
     /* 移动端优化 */
     @media (max-width: 480px) {
       nav a {
         font-size: 0.8em;
         margin: 0 6px;
       }
-
       .search-container input {
         width: 90%;
       }
-
       .products {
         justify-content: center;
       }
-
       .product-card {
         width: 100%;
         max-width: 320px;
         margin: 10px auto;
       }
-
       .img-container {
         height: 180px;
       }
-
       .product-card h3 {
         font-size: 0.95em;
       }
     }
   </style>
 </head>
-
 <body>
+  <!-- 滚动通知公告 -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <span>📢 木子空间：项目定制 | 远程调试 | Bug审查修复 | 项目升级改造 | 问题探讨</span>
+    </div>
+  </div>
   <header>
-    <h1>木子空间-项目案例</h1>
+    <h1>木子空间
+      <img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" alt="" style="width:35px; height:35px; vertical-align: middle; margin-left:6px;">
+      项目案例</h1>
     <nav>
       <a href="./all.html">全部项目</a>
       <a href="./history_order.html">我的订单</a>
@@ -236,7 +250,6 @@
           $list.append(card);
         });
       }
-
       function fetchProducts() {
         $.get("https://mini.liyansheng.top/v1/projects/list2", function (res) {
           if (res.code === 200 && Array.isArray(res.data)) {
@@ -249,7 +262,6 @@
           $list.html("<div style='color:red;text-align:center;'>无法连接商品接口</div>");
         });
       }
-
       $("#search-input").on("input", function () {
         const keyword = $(this).val().trim().toLowerCase();
         if (keyword === "") {
@@ -262,10 +274,8 @@
         );
         renderProducts(filtered);
       });
-
       fetchProducts();
     });
   </script>
 </body>
-
 </html>

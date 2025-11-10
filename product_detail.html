@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -8,30 +7,25 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             background-color: #f5f5f5;
         }
-
         header {
             background-color: #ff6f61;
             color: white;
             padding: 5px;
             text-align: center;
             position: sticky;
-            top: 0;
+            top: 45px;
             z-index: 1;
         }
-
         #taobao-link {
             position: relative;
             z-index: 999;
         }
-
-
         nav a {
             color: white;
             margin: 0 10px;
@@ -39,11 +33,39 @@
             font-weight: bold;
             font-size: 0.9em;
         }
-
         nav a:hover {
             text-decoration: underline;
         }
-
+        /* 滚动通知样式 */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            color: white;
+            padding: 8px 0;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 3;
+        }
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee-scroll 20s linear infinite;
+            padding-left: 100%;
+        }
+        @keyframes marquee-scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .marquee-container:hover .marquee-content {
+            animation-play-state: paused;
+        }
         .container {
             width: 80%;
             max-width: 900px;
@@ -53,31 +75,27 @@
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
         .tabs {
             margin: 10px 0;
             display: inline-block;
             vertical-align: middle;
         }
-
         .version-select-bar {
             margin-bottom: 10px;
             font-weight: bold;
             color: #333;
             /* 吸顶 */
             position: sticky;
-            top: 11%;
+            top: 16.5%;
             background: white;
             z-index: 10;
             text-align: center;
             border: 1px solid #e65a50;
         }
-
         .version-select-bar .tabs {
             display: inline-block;
             margin-left: 10px;
         }
-
         .tab {
             display: inline-block;
             padding: 6px 15px;
@@ -87,12 +105,10 @@
             cursor: pointer;
             color: #ff6f61;
         }
-
         .tab.active {
             background-color: #ff6f61;
             color: white;
         }
-
         .compare-btn {
             display: inline-block;
             margin-left: 12px;
@@ -104,11 +120,9 @@
             cursor: pointer;
             vertical-align: middle;
         }
-
         .compare-btn:hover {
             background: #fff3f1;
         }
-
         .project-img {
             width: 100%;
             max-width: 500px;
@@ -116,14 +130,12 @@
             margin: 20px auto;
             border-radius: 10px;
         }
-
         .price {
             font-size: 1.2em;
             color: #ff6f61;
             font-weight: bold;
             margin-top: 15px;
         }
-
         .buy-btn {
             display: inline-block;
             padding: 10px 20px;
@@ -135,11 +147,9 @@
             font-size: 1em;
             margin-top: 10px;
         }
-
         .buy-btn:hover {
             background-color: #e65a50;
         }
-
         footer {
             text-align: center;
             padding: 15px;
@@ -147,38 +157,32 @@
             background-color: #333;
             color: white;
         }
-
         /* Markdown 样式 */
         .markdown-body {
             line-height: 1.6;
         }
-
         .markdown-body h1,
         .markdown-body h2,
         .markdown-body h3 {
             color: #333;
         }
-
         .markdown-body img {
             max-width: 80%;
             height: auto;
             display: block;
             margin: 10px auto;
         }
-
         .markdown-body pre {
             background: #f5f5f5;
             padding: 10px;
             border-radius: 5px;
             overflow-x: auto;
         }
-
         .markdown-body code {
             background: #f5f5f5;
             padding: 2px 4px;
             border-radius: 3px;
         }
-
         /* 对比弹窗 */
         .compare-modal {
             position: fixed;
@@ -191,11 +195,9 @@
             z-index: 1000;
             padding: 20px;
         }
-
         .compare-modal.active {
             display: flex;
         }
-
         .compare-box {
             width: 95%;
             max-width: 1200px;
@@ -207,7 +209,6 @@
             display: flex;
             flex-direction: column;
         }
-
         .compare-header {
             display: flex;
             align-items: center;
@@ -216,14 +217,12 @@
             border-bottom: 1px solid #eee;
             background: #fff;
         }
-
         .compare-title {
             margin: 0;
             font-size: 16px;
             font-weight: bold;
             color: #333;
         }
-
         .compare-close {
             border: none;
             background: transparent;
@@ -231,19 +230,16 @@
             cursor: pointer;
             line-height: 1;
         }
-
         .compare-body {
             padding: 12px;
             overflow: auto;
             /* 整体滚动 */
         }
-
         .compare-grid {
             display: flex;
             gap: 12px;
             align-items: flex-start;
         }
-
         .compare-col {
             flex: 1 1 0;
             min-width: 280px;
@@ -255,7 +251,6 @@
             /* 每列自身也可滚动 */
             overflow: auto;
         }
-
         .compare-col .col-title {
             position: sticky;
             top: 0;
@@ -268,12 +263,10 @@
             color: #ff6f61;
             text-align: center;
         }
-
         .compare-col .markdown-body img {
             max-width: 100%;
             /* 弹窗里可铺满列宽 */
         }
-
         /* 底部渐变遮罩按钮 */
         .bottom-float {
             position: fixed;
@@ -287,7 +280,6 @@
             display: none;
             z-index: 1000;
         }
-
         .bottom-float button {
             background-color: #ff6f61;
             color: white;
@@ -299,11 +291,9 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
             transition: background 0.3s;
         }
-
         .bottom-float button:hover {
             background-color: #e65a50;
         }
-
         /* 自选套餐区域优化 */
         #packages {
             background: linear-gradient(90deg, #fff7f5 0%, #ffe3db 100%);
@@ -315,7 +305,6 @@
             margin-bottom: 32px;
             position: relative;
         }
-
         #packages h3 {
             color: #ff6f61;
             font-size: 1.35em;
@@ -323,7 +312,6 @@
             margin-bottom: 18px;
             letter-spacing: 1px;
         }
-
         #package-options label {
             background: #fff;
             border-radius: 7px;
@@ -336,17 +324,14 @@
             cursor: pointer;
             transition: box-shadow 0.2s;
         }
-
         #package-options label:hover {
             box-shadow: 0 2px 8px rgba(255, 111, 97, 0.12);
             background: #fff3f1;
         }
-
         #package-options input[type="checkbox"] {
             accent-color: #ff6f61;
             margin-right: 8px;
         }
-
         #packages .price {
             font-size: 1.3em;
             color: #e65a50;
@@ -354,7 +339,6 @@
             margin-top: 18px;
             margin-bottom: 10px;
         }
-
         #packages .buy-btn {
             display: block;
             width: 100%;
@@ -370,45 +354,37 @@
             cursor: pointer;
             transition: background 0.2s;
         }
-
         #packages .buy-btn:hover {
             background: linear-gradient(90deg, #e65a50 0%, #ffb199 100%);
         }
-
         /* 移动端响应式调整 */
         @media (max-width: 768px) {
             header {
                 padding: 12px 15px;
             }
-
             nav a {
                 margin: 0 8px;
                 font-size: 0.9em;
             }
-
             .container {
                 width: 95%;
                 padding: 15px;
                 margin: 10px auto;
             }
-
             #project-title {
                 font-size: 1.5em;
                 margin-top: 0;
             }
-
             .version-select-bar {
                 padding: 8px 0;
                 font-size: 0.9em;
             }
-
             .tab {
                 padding: 5px 10px;
                 margin-right: 5px;
                 margin-bottom: 8px;
                 font-size: 0.9em;
             }
-
             .compare-btn {
                 margin-left: 0;
                 margin-top: 8px;
@@ -416,34 +392,27 @@
                 font-size: 0.9em;
                 display: block;
             }
-
             .markdown-body h1 {
                 font-size: 1.5em;
             }
-
             .markdown-body h2 {
                 font-size: 1.3em;
             }
-
             .markdown-body h3 {
                 font-size: 1.1em;
             }
-
             .markdown-body img {
                 max-width: 100%;
             }
-
             #packages {
                 padding: 20px 15px;
                 margin-top: 25px;
                 margin-bottom: 25px;
             }
-
             #packages h3 {
                 font-size: 1.2em;
                 margin-bottom: 15px;
             }
-
             #package-options label {
                 display: block;
                 width: 100%;
@@ -451,65 +420,53 @@
                 padding: 10px 15px;
                 font-size: 0.95em;
             }
-
             #packages .price {
                 font-size: 1.2em;
                 margin-top: 15px;
             }
-
             #packages .buy-btn {
                 padding: 12px 0;
                 font-size: 1.1em;
             }
-
             .bottom-float {
                 padding: 12px 0 20px;
             }
-
             .bottom-float button {
                 padding: 12px 30px;
                 font-size: 15px;
                 width: 90%;
                 max-width: 300px;
             }
-
             /* 对比弹窗在移动端的优化 */
             .compare-modal {
                 padding: 10px;
                 align-items: flex-start;
                 padding-top: 20px;
             }
-
             .compare-box {
                 width: 100%;
                 max-height: 90vh;
                 height: 90vh;
             }
-
             .compare-header {
                 padding: 15px;
             }
-
             .compare-title {
                 font-size: 18px;
             }
-
             .compare-close {
                 font-size: 24px;
             }
-
             .compare-body {
                 padding: 15px;
                 flex-grow: 1;
                 box-sizing: border-box;
             }
-
             .compare-grid {
                 flex-direction: column;
                 gap: 15px;
                 height: 100%;
             }
-
             .compare-col {
                 min-width: auto;
                 max-height: none;
@@ -517,109 +474,95 @@
                 padding: 15px;
                 flex-grow: 1;
             }
-
             .compare-col .col-title {
                 padding: 12px 10px;
                 font-size: 16px;
                 margin: -15px -15px 15px -15px;
             }
-
             .compare-col .markdown-body {
                 font-size: 16px;
                 line-height: 1.7;
             }
-
             .compare-col .markdown-body p {
                 margin-bottom: 12px;
             }
         }
-
         /* 小屏手机额外调整 */
         @media (max-width: 480px) {
             header h1 {
                 font-size: 1.4em;
                 margin: 0 0 10px 0;
             }
-
             nav {
                 display: flex;
                 justify-content: center;
                 gap: 15px;
             }
-
             nav a {
                 font-size: 0.85em;
             }
-
             .version-select-bar {
                 font-size: 0.85em;
-                top: 9%;
+                top: 13%;
                 margin: 0;
                 padding: 0;
             }
-
             .tab {
                 padding: 4px 8px;
                 font-size: 0.85em;
             }
-
             .markdown-body {
                 font-size: 0.95em;
                 line-height: 1.5;
             }
-
             #packages .buy-btn {
                 padding: 11px 0;
                 font-size: 1.05em;
             }
-
             /* 小屏手机弹窗优化 */
             .compare-col .markdown-body {
                 font-size: 15px;
                 line-height: 1.6;
             }
-
             .compare-header {
                 padding: 12px 15px;
             }
-
             .compare-title {
                 font-size: 17px;
             }
         }
     </style>
 </head>
-
 <body>
-
+    <!-- 滚动通知公告 -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>📢 木子空间：项目定制 | 远程调试 | Bug审查修复 | 项目升级改造 | 问题探讨</span>
+        </div>
+    </div>
     <header>
-        <h1 id="project-header">木子空间-项目详情</h1>
+        <h1 id="project-header">木子空间
+            <img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" alt="" style="width:35px; height:35px; vertical-align: middle; margin-left:6px;">
+            项目详情</h1>
         <nav>
             <a href="./all.html">全部项目</a>
             <a href="./history_order.html">我的订单</a>
         </nav>
     </header>
-
     <div class="container">
         <div class="version-select-bar">
             可选版本👉
             <div class="tabs" id="version-tabs"></div>
             <!-- 版本对比按钮会在有多个版本时插入到这里 -->
         </div>
-
         <canvas id="project-canvas" class="project-img"></canvas>
-
-
         <div class="section markdown-body" id="project-content">
             <!-- Markdown 渲染内容 -->
         </div>
-
         <!-- 渐变遮罩按钮 -->
         <div class="bottom-float" id="buy-now-bar">
             <button id="buy-now-btn">立即选购</button>
         </div>
-
-
         <div id="order-area">
             <div class="section" id="packages">
                 <h3>自选套餐</h3>
@@ -633,21 +576,15 @@
                     style="display:none; text-align:center; background: #ff6f61; color: white; text-decoration: none; padding: 12px 0; border-radius: 8px; font-size: 1.15em; font-weight: bold; box-shadow: 0 2px 8px rgba(255, 111, 97, 0.13); margin-bottom:10px; display:inline-block;">
                     点击跳转下单
                 </a>
-
                 <p id="qrcode-tip" style="display:none; color:#666;">或使用手机【淘宝】扫码下单：</p>
                 <div id="taobao-qrcode" style="display:none; margin-top:10px; display:inline-block;"></div>
             </div>
-
         </div>
     </div>
-
     <footer>
         &copy; 2025 木子空间 | All rights reserved
     </footer>
-
     <script src="https://www.liyansheng.top/cdn/backToTop.js"></script>
-
-
     <!-- 版本对比弹窗 -->
     <div class="compare-modal" id="compare-modal" aria-hidden="true">
         <div class="compare-box">
@@ -662,18 +599,15 @@
             </div>
         </div>
     </div>
-
     <script>
         $(function () {
             const $bar = $("#buy-now-bar");
             const $btn = $("#buy-now-btn");
-
             // 滚动监听
             $(window).on("scroll", function () {
                 let scrollTop = $(window).scrollTop();
                 let windowHeight = $(window).height();
                 let docHeight = $(document).height();
-
                 // 距离底部小于 100px 时隐藏
                 if (scrollTop + windowHeight >= docHeight - 100) {
                     $bar.fadeOut();
@@ -681,32 +615,25 @@
                     $bar.fadeIn();
                 }
             });
-
             // 点击按钮滚动到自选套餐
             $btn.on("click", function () {
                 let targetOffset = $("#order-area").offset().top;
                 $("html, body").animate({ scrollTop: targetOffset - 20 }, 500);
             });
-
             let projectJSON = null;
-
             // 获取 id 参数
             function getIdFromUrl() {
                 const match = window.location.search.match(/[?&]id=(\d+)/);
                 return match ? match[1] : null;
             }
-
             // 渲染页面所有内容
             function renderAll(data) {
                 $('#project-title').text(data.name || '项目名称');
-
                 const $bar = $('.version-select-bar');
                 const $tabs = $('#version-tabs');
                 $tabs.empty();
-
                 const versionList = data.projectVersionVOList || [];
                 let firstVersion = versionList.length ? versionList[0].versionName : '';
-
                 // 版本数量判断
                 if (versionList.length <= 1) {
                     $bar.hide(); // 只有一个版本时隐藏整个板块
@@ -715,24 +642,19 @@
                     versionList.forEach(ver => {
                         $tabs.append(`<div class="tab" data-version="${ver.versionName}">${ver.versionName}</div>`);
                     });
-
                     // 版本对比按钮
                     if ($('#compare-btn').length === 0) {
                         const $btn = $('<button class="compare-btn" id="compare-btn">版本对比</button>');
                         $tabs.after($btn);
-
                         // 移动端隐藏
                         if ($(window).width() <= 768) {
                             $btn.hide();
                         }
-
                         $btn.on('click', openCompareModal);
                     }
                 }
-
                 // 默认渲染第一个版本
                 if (firstVersion) renderVersion(firstVersion);
-
                 // 监听窗口大小变化，动态显示/隐藏按钮
                 $(window).on('resize', function () {
                     if ($('#compare-btn').length) {
@@ -743,58 +665,46 @@
                         }
                     }
                 });
-
                 // 渲染某个版本
                 function renderVersion(versionName) {
                     const ver = versionList.find(v => v.versionName === versionName) || versionList[0];
                     if (!ver) return;
-
                     const canvas = document.getElementById('project-canvas');
                     const ctx = canvas.getContext('2d');
                     const img = new Image();
                     img.crossOrigin = "anonymous"; // 允许跨域加载图片
                     img.src = ver.coverImage || data.cover || '';
-
                     img.onload = function () {
                         // 固定 canvas 尺寸（不要用图片原始尺寸）
                         canvas.width = 600;
                         canvas.height = 400;
-
                         // 清空画布
                         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
                         // 计算缩放比例，保证图片等比缩放铺满
                         const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
                         const x = (canvas.width - img.width * scale) / 2;
                         const y = (canvas.height - img.height * scale) / 2;
-
                         // 绘制图片
                         ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
-
                         // 遮罩（全屏）
                         ctx.fillStyle = "rgba(0,0,0,0.75)";
                         ctx.fillRect(0, 0, canvas.width, canvas.height);
-
                         // 标题
                         ctx.fillStyle = "#fff";
                         ctx.font = "bold 35px Arial"; // 固定大小
                         ctx.textAlign = "center";
                         ctx.textBaseline = "middle";
                         ctx.fillText(data.name + '-' + ver.versionName || '', canvas.width / 2, canvas.height / 2 - 20);
-
                         // 描述
                         ctx.font = "18px Arial"; // 固定大小
                         ctx.fillStyle = "#ffb199";
                         ctx.fillText(ver.description || "", canvas.width / 2, canvas.height / 2 + 25);
                     };
-
                     $('#project-content').html(marked.parse(ver.content || ''));
-
                     // 当版本属性taobaoLink存在时，显示跳转淘宝购买的按钮，不再显示自选套餐
                     if (ver.taobaoLink) {
                         $('#packages').hide();
                         $('#taobao-link').show().attr('href', ver.taobaoLink);
-
                         // 生成二维码
                         $('#taobao-qrcode').show().empty(); // 清空旧二维码
                         new QRCode(document.getElementById("taobao-qrcode"), {
@@ -808,8 +718,6 @@
                         $('#taobao-link').hide();
                         $('#taobao-qrcode').hide();
                     }
-
-
                     // 套餐渲染
                     const $packages = $('#package-options');
                     $packages.empty();
@@ -818,15 +726,12 @@
                             `<label><input type="checkbox" data-price="${pkg.price}"  data-id="${pkg.id}"  value="${pkg.name}"> ${pkg.name} (￥${pkg.price})</label> <br>`
                         );
                     });
-
                     // 绑定价格计算
                     $('.checkbox-group input').off('change').on('change', updatePrice);
                     $('#total-price').text('0');
-
                     $('.tab').removeClass('active');
                     $(`.tab[data-version="${ver.versionName}"]`).addClass('active');
                 }
-
                 function updatePrice() {
                     let total = 0;
                     $('.checkbox-group input:checked').each(function () {
@@ -835,19 +740,15 @@
                     // 保留两位小数
                     $('#total-price').text(total.toFixed(2));
                 }
-
-
                 // 默认渲染第一个版本
                 if (firstVersion) {
                     renderVersion(firstVersion);
                 }
-
                 // 点击切换版本
                 $('.tab').off('click').on('click', function () {
                     const version = $(this).data('version');
                     renderVersion(version);
                 });
-
                 // 立即购买
                 $('.buy-btn').off('click').on('click', function () {
                     const selected = $('.checkbox-group input:checked').map(function () {
@@ -857,29 +758,21 @@
                             price: $(this).data('price')
                         };
                     }).get();
-
                     if (!selected.length) {
                         alert('请选择至少一个套餐！');
                         return;
                     }
-
                     const currentVersion = $('.tab.active').data('version');
-
                     // 只存套餐 id（当然也可以存整个对象，看需求）
                     const ids = selected.map(s => s.id);
-
                     // 存入 localStorage
                     localStorage.setItem('selectedPackages', JSON.stringify({
                         version: currentVersion,
                         ids: ids
                     }));
-
                     // 跳转到下一个页面
                     window.location.href = "order_confirm.html";
                 });
-
-
-
                 // 版本对比弹窗逻辑
                 function openCompareModal() {
                     const $grid = $('#compare-grid');
@@ -896,13 +789,11 @@
                         $grid.append(col);
                     });
                     $('#compare-modal').addClass('active').attr('aria-hidden', 'false');
-
                     // 在移动端自动滚动到弹窗顶部
                     if ($(window).width() <= 768) {
                         $('.compare-body').scrollTop(0);
                     }
                 }
-
                 $('#compare-close').off('click').on('click', closeCompareModal);
                 $('#compare-modal').off('click').on('click', function (e) {
                     if (e.target === this) closeCompareModal();
@@ -910,12 +801,10 @@
                 $(document).off('keydown').on('keydown', function (e) {
                     if (e.key === 'Escape') closeCompareModal();
                 });
-
                 function closeCompareModal() {
                     $('#compare-modal').removeClass('active').attr('aria-hidden', 'true');
                 }
             }
-
             // 获取详情数据
             function fetchDetail() {
                 const id = getIdFromUrl() || localStorage.getItem('selectedProductId');
@@ -938,11 +827,8 @@
                     $('.container').html('<div style="color:red;text-align:center;">无法连接详情接口</div>');
                 });
             }
-
             fetchDetail();
         });
     </script>
-
 </body>
-
 </html>
