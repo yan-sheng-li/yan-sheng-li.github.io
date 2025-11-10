@@ -16,7 +16,7 @@
       padding: 5px;
       text-align: center;
       position: sticky;
-      top: 0;
+      top: 45px;
       z-index: 1;
     }
     nav {
@@ -42,7 +42,7 @@
       margin-bottom: 6px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       position: sticky;
-      top: 56px;
+      top: 0;
       z-index: 3;
     }
     .marquee-content {
@@ -67,7 +67,7 @@
       text-align: center;
       /* margin: 16px 0; */
       position: sticky;
-      top: 101px;
+      top: 150px;
       z-index: 2;
     }
     .search-container input {
@@ -192,6 +192,12 @@
   </style>
 </head>
 <body>
+  <!-- 滚动通知公告 -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <span>📢 木子空间：项目定制 | 远程调试 | Bug审查修复 | 项目升级改造 | 问题探讨</span>
+    </div>
+  </div>
   <header>
     <h1>木子空间-项目案例</h1>
     <nav>
@@ -199,12 +205,6 @@
       <a href="./history_order.html">我的订单</a>
     </nav>
   </header>
-  <!-- 滚动通知公告 -->
-  <div class="marquee-container">
-    <div class="marquee-content">
-      <span>📢 木子空间：项目定制 | 远程调试 | Bug审查修复 | 项目升级改造 | 问题探讨</span>
-    </div>
-  </div>
   <!-- 搜索框 -->
   <div class="search-container">
     <input type="text" id="search-input" placeholder="搜索项目名称或描述...">
