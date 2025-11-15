@@ -369,7 +369,8 @@ module.exports = {
             '插件实现自动部署',
             'CommentBox',
             'Iconify',
-            '自定义主题'
+            '自定义主题',
+            'vue3全局中文简体繁体切换'
           ]
         },
       ],
