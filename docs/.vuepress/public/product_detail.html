@@ -565,7 +565,7 @@
         </div>
         <div id="order-area">
             <div class="section" id="packages">
-                <h3>自选套餐</h3>
+                <h3>自由搭配</h3>
                 <div class="checkbox-group" id="package-options"></div>
                 <div class="price">总价: ￥<span id="total-price">0</span></div>
                 <button class="buy-btn">立即购买</button>
@@ -759,7 +759,7 @@
                         };
                     }).get();
                     if (!selected.length) {
-                        alert('请选择至少一个套餐！');
+                        alert('请选择至少一项！');
                         return;
                     }
                     const currentVersion = $('.tab.active').data('version');
