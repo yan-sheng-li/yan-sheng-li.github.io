@@ -64,3 +64,27 @@ public class ExcelToMySQL {
     }
 }
 ```
+
+如果想自由选择文件，可以参考下面：
+```java
+	private void importFromExcel() {
+		JFileChooser fileChooser = new JFileChooser();
+		fileChooser.setDialogTitle("请选择要导入的 Excel 文件");
+		fileChooser.setFileFilter(new javax.swing.filechooser.FileNameExtensionFilter("Excel 文件 (*.xlsx)", "xlsx"));
+
+		int result = fileChooser.showOpenDialog(IndexWin.this);
+		if (result == JFileChooser.APPROVE_OPTION) {
+			File selectedFile = fileChooser.getSelectedFile();
+			try {
+				ExcelImporter.importPersonFromExcel(selectedFile.getAbsolutePath());
+				JOptionPane.showMessageDialog(IndexWin.this, "导入成功！", "提示", JOptionPane.INFORMATION_MESSAGE);
+				init();                     // 刷新表格
+			} catch (Exception ex) {
+				ex.printStackTrace();
+				JOptionPane.showMessageDialog(IndexWin.this,
+						"导入失败：\n" + ex.getMessage(),
+						"错误", JOptionPane.ERROR_MESSAGE);
+			}
+		}
+	}
+```
