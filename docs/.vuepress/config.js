@@ -350,7 +350,8 @@ module.exports = {
             '玩转Linux虚拟机',
             'pm2进程管理工具',
             'Crontab定时任务',
-            'aria2'
+            'aria2',
+            'nginx配置脚本注入'
           ]
         },
       ],
