@@ -376,7 +376,8 @@ module.exports = {
             'vue3全局中文简体繁体切换',
             '把网站部署在一级路径',
             'Pinia使用笔记',
-            '发布npm包到github'
+            '发布npm包到github',
+            '项目从npm到pnpm'
           ]
         },
       ],
