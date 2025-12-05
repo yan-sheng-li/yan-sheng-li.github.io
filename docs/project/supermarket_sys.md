@@ -54,4 +54,4 @@ https://liyansheng.lanzoub.com/b009heypwd
 ![](http://cdn.qiniu.liyansheng.top/img/报告预览.png)
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-15_00-07-14.png) -->
 :::
-<PaymentButton :productId="168" :buttonText="'点我获取-报告'"/>
+<PaymentButton :productId="5" :buttonText="'点我获取-报告'"/>
