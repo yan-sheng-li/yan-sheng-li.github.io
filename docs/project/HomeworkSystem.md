@@ -22,7 +22,7 @@
 
 💡可继续扩展
 
-<PaymentButton :productId="221" />
+<PaymentButton :productId="144" />
 
 ## 部分图示
 

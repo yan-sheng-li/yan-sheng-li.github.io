@@ -28,7 +28,7 @@
 
 💡可继续扩展~
 
-<PaymentButton :productId="220" />
+<PaymentButton :productId="143" />
 
 ## 效果图
 

@@ -27,7 +27,7 @@
 <VersionBlock target="v1">
 
 
-<PaymentButton :productId="222" />
+<PaymentButton :productId="145" />
 
 ## 部分图示
 
@@ -56,7 +56,7 @@
 
 💡可继续扩展
 
-<PaymentButton :productId="238" />
+<PaymentButton :productId="145" />
 
 ![image-20250724120051503](http://cdn.qiniu.liyansheng.top/img/image-20250724120051503.png)
 

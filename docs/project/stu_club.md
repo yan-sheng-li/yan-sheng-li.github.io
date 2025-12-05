@@ -46,8 +46,5 @@
 ## 项目结构
 ![](http://cdn.qiniu.liyansheng.top/img/deb511fe40bdb738268c5c086225acd1.png)
 
-## 程序
-<!-- ![](http://cdn.qiniu.liyansheng.top/img/image-20241021151459201.png) -->
-<PaymentButton :productId="166" />
 
 </SlideProtected>

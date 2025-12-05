@@ -55,7 +55,7 @@ https://liyansheng.lanzoub.com/b009hb1fje 密码:h5of
 ![](http://cdn.qiniu.liyansheng.top/img/展111示3.png)
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-53-19.png) -->
 :::
-<PaymentButton :productId="162" :buttonText="'点我获取-报告'"/>
+<PaymentButton :productId="155" :buttonText="'点我获取-报告'"/>
 
 </VersionBlock>
 
@@ -67,7 +67,7 @@ https://liyansheng.lanzoub.com/b009hb1fje 密码:h5of
 - 文件路径自定义
 - 不同用户的歌曲信息相互隔离
 
-<PaymentButton :productId="251" />
+<PaymentButton :productId="155" />
 
 ---
 

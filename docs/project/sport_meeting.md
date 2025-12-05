@@ -32,5 +32,5 @@
 ## 源码👇
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20240602231331.png) -->
 
-<PaymentButton :productId="165" />
+<PaymentButton :productId="84" />
 

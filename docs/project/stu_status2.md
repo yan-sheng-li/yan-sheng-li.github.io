@@ -37,4 +37,4 @@
 
 ## 完整程序
 
-<PaymentButton :productId="178" />
+<PaymentButton :productId="22" />

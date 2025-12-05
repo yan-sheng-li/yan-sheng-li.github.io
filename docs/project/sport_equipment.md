@@ -43,7 +43,7 @@
 ## 程序
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20240606185229.png) -->
 
-<PaymentButton :productId="163" />
+<PaymentButton :productId="26" />
 
 ## 配套报告
 ::: warning
@@ -51,5 +51,5 @@
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20240614230025.png) -->
 :::
 
-<PaymentButton :productId="164" :buttonText="'点我获取-报告'"/>
+<PaymentButton :productId="26" :buttonText="'点我获取-报告'"/>
 

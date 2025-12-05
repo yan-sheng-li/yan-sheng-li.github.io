@@ -39,7 +39,7 @@ https://liyansheng.lanzoub.com/b009hdb1qj 密码:bltx
 
 - 可自定义贴图素材
 
-<PaymentButton :productId="217" />
+<PaymentButton :productId="133" />
 
 ## 效果图
 
@@ -57,7 +57,7 @@ https://liyansheng.lanzoub.com/b009hdb1qj 密码:bltx
 - 共5个关卡，每关目标分数和时间不同，难度逐步提升（物品数量和分值递增）。
 - 钩子随人物可以左右移动
 
-<PaymentButton :productId="218" />
+<PaymentButton :productId="133" />
 
 ## 效果图
 

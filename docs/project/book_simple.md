@@ -72,7 +72,7 @@ ER 分析
 ![](http://cdn.qiniu.liyansheng.top/img/20241122162929.png)
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20241122162915.png) -->
 
-<PaymentButton :productId="126" :buttonText="'点我获取-报告'"/>
+<PaymentButton :productId="19" :buttonText="'点我获取-报告'"/>
 
 
 

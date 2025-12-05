@@ -31,6 +31,6 @@
 
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20240613122923.png) -->
 
-<PaymentButton :productId="150" />
+<PaymentButton :productId="74" />
 
 

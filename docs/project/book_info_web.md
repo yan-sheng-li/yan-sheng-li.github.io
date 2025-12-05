@@ -22,4 +22,4 @@
 
 ## 程序
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20240709163456.png) -->
-<PaymentButton :productId="123" />
+<PaymentButton :productId="94" />

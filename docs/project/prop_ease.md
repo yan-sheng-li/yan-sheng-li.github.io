@@ -27,7 +27,7 @@
 
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20240707233737.png) -->
 
-<PaymentButton :productId="154" />
+<PaymentButton :productId="47" />
 
 
 </VersionBlock>
@@ -37,7 +37,7 @@
 
 - 扩展触发器，存储过程，视图，备份与恢复，外键关联
 
-<PaymentButton :productId="244" />
+<PaymentButton :productId="47" />
 
 </VersionBlock>
 

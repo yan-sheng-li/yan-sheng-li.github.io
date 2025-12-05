@@ -18,7 +18,7 @@
 - **个人中心**：用户信息管理和功能入口。
 - **我的发布**：查看和管理用户发布的所有信息。
 
-<PaymentButton :productId="224" />
+<PaymentButton :productId="142" />
 
 ## 效果图
 

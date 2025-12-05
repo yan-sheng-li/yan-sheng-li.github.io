@@ -29,14 +29,3 @@
 仓库地址：https://gitee.com/yan-sheng-li/book-information-management-system.git
 
 </PasswordProtected>
-
-
-
-## 配套报告
-
-::: warning
-![](http://cdn.qiniu.liyansheng.top/img/12312预览图.png)
-
-:::
-
-<PaymentButton :productId="126" :buttonText="'点我获取-报告'"/>

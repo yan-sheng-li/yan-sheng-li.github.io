@@ -40,13 +40,3 @@
 仓库地址：https://gitcode.net/weixin_44107140/games_sys/-/tree/dev-v2
 
 </PasswordProtected>
-
-## 配套报告
-
-::: warning
-![](http://cdn.qiniu.liyansheng.top/img/报告1111预览图.png)
-<!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-42-46.png) -->
-:::
-
-<PaymentButton :productId="136" :buttonText="'点我获取-报告'"/>
-

@@ -65,4 +65,4 @@ https://liyansheng.lanzoub.com/b009hbw6cj 密码:45m9
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20240614230609.png) -->
 :::
 
-<PaymentButton :productId="169" :buttonText="'点我获取-报告'"/>
+<PaymentButton :productId="18" :buttonText="'点我获取-报告'"/>

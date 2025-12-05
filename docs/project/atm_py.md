@@ -46,5 +46,4 @@
 
 ![](http://cdn.qiniu.liyansheng.top/img/ad60a7a37ef9ff8a00a10c6c251c196a.png)
 
-<!-- <PaymentButton :productId="120" /> -->
 

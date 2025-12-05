@@ -19,7 +19,7 @@
 - 学科管理
 - 成绩分析
 
-<PaymentButton :productId="230" />
+<PaymentButton :productId="146" />
 
 ## 效果图
 

@@ -43,5 +43,5 @@
 ## 源码
 
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/ce77c8b5ecd17eed91265b9293ce1139.png) -->
-<PaymentButton :productId="156" />
+<PaymentButton :productId="78" />
 

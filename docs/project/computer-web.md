@@ -29,7 +29,7 @@
 <!-- 版本1 -->
 <VersionBlock target="v1">
 
-<PaymentButton :productId="225" />
+<PaymentButton :productId="138" />
 
 ## 效果图
 
@@ -57,7 +57,7 @@
 <!-- 版本2 -->
 <VersionBlock target="v2">
 
-<PaymentButton :productId="226" />
+<PaymentButton :productId="138" />
 
 ## 效果图
 

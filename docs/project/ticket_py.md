@@ -43,4 +43,3 @@
 ## 源码👇
 ![](http://cdn.qiniu.liyansheng.top/img/57d2962d107dec444e7bd527c35c4b38.png)
 
-<!-- <PaymentButton :productId="171" /> -->

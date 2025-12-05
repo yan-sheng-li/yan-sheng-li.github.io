@@ -23,4 +23,4 @@
 ![](http://cdn.qiniu.liyansheng.top/img/20240604004439.png)
 ## 源码👇
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20240604005952.png) -->
-<PaymentButton :productId="135" />
+<PaymentButton :productId="80" />

@@ -65,4 +65,4 @@ https://liyansheng.lanzoub.com/b009hajvra 密码:hskd
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20240614231335.png) -->
 :::
 
-<PaymentButton :productId="122" :buttonText="'点我获取--报告'" />
+<PaymentButton :productId="16" :buttonText="'点我获取--报告'" />

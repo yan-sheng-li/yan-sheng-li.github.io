@@ -11,7 +11,7 @@
 - 部门管理
 - 人员管理
 
-<PaymentButton :productId="223" />
+<PaymentButton :productId="152" />
 
 ## 效果图
 

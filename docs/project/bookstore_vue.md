@@ -49,4 +49,4 @@
 
 ## 程序
 
-<PaymentButton :productId="127" />
+<PaymentButton :productId="88" />

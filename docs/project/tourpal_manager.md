@@ -59,7 +59,7 @@ https://liyansheng.lanzoub.com/b009hcw24d 密码:g0cs
 
 - 可继续扩展
 
-<PaymentButton :productId="246" />
+<PaymentButton :productId="154" />
 
 ![image-20250802215901463](http://cdn.qiniu.liyansheng.top/img/image-20250802215901463.png)
 

@@ -47,7 +47,7 @@
 ## 源码
 
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-38-53.png) -->
-<PaymentButton :productId="158" />
+<PaymentButton :productId="76" />
 
 ## 配套报告
 
@@ -55,6 +55,6 @@
 ![](http://cdn.qiniu.liyansheng.top/img/报告预ere览图.jpg)
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-14_23-33-19.png) -->
 :::
-<PaymentButton :productId="159" :buttonText="'点我获取-报告'"/>
+<PaymentButton :productId="76" :buttonText="'点我获取-报告'"/>
 
 

@@ -28,7 +28,7 @@
 - 促销管理
 - 数据统计
 
-<PaymentButton :productId="231" />
+<PaymentButton :productId="148" />
 
 ## 效果预览
 

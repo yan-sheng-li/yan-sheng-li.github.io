@@ -50,12 +50,3 @@
 
 </PasswordProtected>
 
-
-## 配套报告
-
-::: warning
-![](http://cdn.qiniu.liyansheng.top/img/报告预览.png)
-<!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-15_00-16-33.png) -->
-:::
-
-<PaymentButton :productId="141" :buttonText="'点我获取-报告'"/>

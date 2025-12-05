@@ -32,6 +32,6 @@
 
 ## 源码👇
 
-<PaymentButton :productId="184" />
+<PaymentButton :productId="19" />
 
 

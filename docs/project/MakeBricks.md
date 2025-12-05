@@ -36,7 +36,7 @@ https://liyansheng.lanzoub.com/b009hdb0na 密码:7c8q
 
 - 可自定义游戏界面背景、球、挡板贴图
 
-<PaymentButton :productId="215" />
+<PaymentButton :productId="126" />
 
 ## 效果图
 
@@ -51,7 +51,7 @@ https://liyansheng.lanzoub.com/b009hdb0na 密码:7c8q
 - 支持一次多球，只要球场还有球在，游戏就继续
 - 砖块被击碎时有概率掉落道具（加速球、减速球、加长/缩短挡板）
 
-<PaymentButton :productId="216" />
+<PaymentButton :productId="126" />
 
 ## 效果图
 

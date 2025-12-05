@@ -25,5 +25,5 @@
 ## 程序
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20240608164231.png) -->
 
-<PaymentButton :productId="121" />
+<PaymentButton :productId="29" />
 

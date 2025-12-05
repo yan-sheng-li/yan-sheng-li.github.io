@@ -41,4 +41,4 @@
 
 ## 源码
 
-<PaymentButton :productId="124" />
+<PaymentButton :productId="44" />

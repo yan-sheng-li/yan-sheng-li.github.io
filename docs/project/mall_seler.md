@@ -34,7 +34,7 @@
 
 ## 程序
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-06-09_00-13-25.png) -->
-<PaymentButton :productId="144" />
+<PaymentButton :productId="13" />
 
 ## 对应报告
 
@@ -66,5 +66,5 @@ ER 分析
 ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-11-22_01-39-41.png)
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/20241122015235.png) -->
 
-<PaymentButton :productId="145" :buttonText="'点我获取-报告'"/>
+<PaymentButton :productId="13" :buttonText="'点我获取-报告'"/>
 

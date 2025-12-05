@@ -32,4 +32,4 @@
 
 ## 程序
 <!-- ![](http://cdn.qiniu.liyansheng.top/img/Snipaste_2024-07-09_13-16-11.png) -->
-<PaymentButton :productId="134" />
+<PaymentButton :productId="92" />
