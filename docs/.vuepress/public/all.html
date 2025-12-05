@@ -1,270 +1,241 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>木子空间-项目源码案例</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery（原有代码需要） -->
   <script src="https://cdn.staticfile.org/jquery/3.7.1/jquery.min.js"></script>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
       background-color: #f5f5f5;
     }
-    header {
-      background-color: #ff6f61;
-      color: white;
-      padding: 5px;
-      text-align: center;
-      position: sticky;
-      top: 45px;
-      z-index: 1;
-    }
-    nav {
-      margin-top: 6px;
-    }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 0.9em;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    /* 滚动通知样式 */
+
+    /* 滚动公告 */
     .marquee-container {
-      width: 100%;
-      overflow: hidden;
       background: linear-gradient(90deg, #3b82f6, #60a5fa);
       color: white;
       padding: 8px 0;
-      margin-bottom: 6px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
-      z-index: 3;
+      z-index: 1030;
+      overflow: hidden;
     }
+
     .marquee-content {
       display: inline-block;
       white-space: nowrap;
-      animation: marquee-scroll 20s linear infinite;
+      animation: marquee-scroll 25s linear infinite;
       padding-left: 100%;
     }
+
     @keyframes marquee-scroll {
       0% {
         transform: translateX(0);
       }
+
       100% {
         transform: translateX(-100%);
       }
     }
+
     .marquee-container:hover .marquee-content {
       animation-play-state: paused;
     }
-    /* 搜索框样式 */
-    .search-container {
-      text-align: center;
-      /* margin: 16px 0; */
+
+    .fixed-navbar {
       position: sticky;
-      top: 18%;
-      z-index: 2;
+      top: 36px;
+      /* 公告栏的高度大约 46px（padding + 内容），根据实际调整 */
+      z-index: 1020;
+      /* 比卡片高，但低于公告栏 */
+      background-color: #ff6f61 !important;
     }
-    .search-container input {
-      width: 50%;
-      max-width: 500px;
-      padding: 8px 12px;
-      font-size: 1em;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 20px auto;
-      width: 94%;
-    }
+
+    /* 自定义卡片样式（保留原有美观） */
     .product-card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      margin: 10px;
-      width: 220px;
-      text-align: center;
-      padding: 12px;
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
       text-decoration: none;
       color: inherit;
-      flex: 0 1 auto;
     }
+
     .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
     }
+
     .img-container {
       position: relative;
-      width: 100%;
-      height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: 180px;
       overflow: hidden;
       background: #f8f8f8;
-      border-radius: 8px;
+      border-radius: 0.75rem 0.75rem 0 0;
     }
+
     .img-container img {
-      width: auto;
+      width: 100%;
       height: 100%;
-      max-width: 100%;
-      display: block;
       object-fit: cover;
     }
+
     .overlay {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
       color: white;
-      padding: 8px;
-      border-radius: 0 0 10px 10px;
-      text-align: center;
-      font-size: 0.85em;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      padding: 12px 8px 8px;
+      font-size: 0.9em;
     }
-    .product-card h3 {
-      font-size: 1em;
-      margin: 8px 0 5px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .product-card p {
-      color: #ff6f61;
-      font-weight: bold;
-      margin: 4px 0;
-    }
-    footer {
-      text-align: center;
-      padding: 12px;
-      margin-top: 20px;
-      background-color: #333;
-      color: white;
-      font-size: 0.85em;
-    }
+
     .badge {
       position: absolute;
       top: 8px;
       right: 8px;
       background: #ff6f61;
       color: white;
-      padding: 2px 8px;
-      border-radius: 12px;
-      font-size: 0.75em;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8em;
       font-weight: bold;
     }
-    /* 移动端优化 */
-    @media (max-width: 480px) {
-      nav a {
-        font-size: 0.8em;
-        margin: 0 6px;
-      }
-      .search-container input {
-        width: 90%;
-      }
-      .products {
-        justify-content: center;
-      }
-      .product-card {
-        width: 100%;
-        max-width: 320px;
-        margin: 10px auto;
-      }
-      .img-container {
-        height: 180px;
-      }
-      .product-card h3 {
-        font-size: 0.95em;
-      }
+
+    .card-title {
+      font-size: 1.1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   </style>
 </head>
+
 <body>
-  <!-- 滚动通知公告 -->
+
+  <!-- 滚动公告 -->
   <div class="marquee-container">
     <div class="marquee-content">
-      <span>📢 木子空间：项目定制 | 远程调试 | Bug审查修复 | 项目升级改造 | 问题探讨</span>
+      <span>📢 木子空间：项目定制 | 远程调试 | Bug审查修复 | 项目升级改造 | 问题探讨 | 微信（17641244340）</span>
     </div>
   </div>
-  <header>
-    <h1>木子空间
-      <img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" alt="" style="width:35px; height:35px; vertical-align: middle; margin-left:6px;">
-      项目案例</h1>
-    <nav>
-      <a href="./all.html">全部项目</a>
-      <a href="./history_order.html">我的订单</a>
-    </nav>
-  </header>
-  <!-- 搜索框 -->
-  <div class="search-container">
-    <input type="text" id="search-input" placeholder="搜索项目名称或描述...">
+
+  <!-- Bootstrap Navbar（包含搜索框） -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="http://cdn.qiniu.liyansheng.top/img/graphic-4005286_640.png" alt="" width="35" height="35"
+          class="ms-1">
+        木子空间
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./all.html">全部项目</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./history_order.html">我的订单</a>
+          </li>
+        </ul>
+
+        <!-- 搜索框 -->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" id="search-input" placeholder="搜索项目名称或描述..."
+            aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 商品列表 -->
+  <div class="container my-4">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="product-list">
+      <!-- JS 动态填充 -->
+    </div>
   </div>
-  <div class="products" id="product-list"></div>
-  <footer>
+
+  <footer class="bg-dark text-white text-center py-4 mt-5">
     &copy; 2025 木子空间 | All rights reserved
   </footer>
+
+  <!-- Bootstrap 5 JS（包含 Popper） -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://www.liyansheng.top/cdn/backToTop.js"></script>
+
   <script>
-    // 商品数据通过接口动态获取
     let products = [];
+
     $(document).ready(function () {
       const $list = $("#product-list");
-      // 渲染商品列表
+
       function renderProducts(data) {
         $list.empty();
+        if (data.length === 0) {
+          $list.html('<div class="col-12 text-center text-danger fs-4">未找到匹配的项目</div>');
+          return;
+        }
+
         data.forEach(product => {
           let tags = [];
-          try {
-            tags = JSON.parse(product.tags);
-          } catch (e) {
-            tags = [];
-          }
+          try { tags = JSON.parse(product.tags || '[]'); } catch (e) { }
           const description = tags.join(" + ");
-          const badge = product.ribbon ? product.ribbon : "";
-          const card = $(`
-            <div class="product-card" data-id="${product.id}">
-              <div class="img-container">
-                <img src="${product.cover}" alt="${product.name}">
-                ${badge ? `<div class="badge">${badge}</div>` : ""}
-                <div class="overlay">${description}</div>
+          const badge = product.ribbon ? `<span class="badge">${product.ribbon}</span>` : "";
+
+          const cardHtml = `
+            <div class="col" data-id="${product.id}">
+              <div class="card h-100 product-card">
+                <div class="img-container">
+                  <img src="${product.cover}" class="card-img-top" alt="${product.name}">
+                  ${badge}
+                  <div class="overlay">${description}</div>
+                </div>
+                <div class="card-body d-flex align-items-center justify-content-center py-3">
+                  <h5 class="card-title mb-0">${product.name}</h5>
+                </div>
               </div>
-              <h3>${product.name}</h3>
             </div>
-          `);
-          card.on("click", function () {
+          `;
+
+          const $card = $(cardHtml);
+          $card.on("click", function () {
             localStorage.setItem("selectedProductId", $(this).data("id"));
             window.location.href = "./product_detail.html";
           });
-          $list.append(card);
+
+          $list.append($card);
         });
       }
+
       function fetchProducts() {
         $.get("https://mini.liyansheng.top/v1/projects/list2", function (res) {
           if (res.code === 200 && Array.isArray(res.data)) {
             products = res.data;
             renderProducts(products);
           } else {
-            $list.html("<div style='color:red;text-align:center;'>商品数据加载失败</div>");
+            $list.html('<div class="col-12 text-center text-danger">商品数据加载失败</div>');
           }
         }).fail(function () {
-          $list.html("<div style='color:red;text-align:center;'>无法连接商品接口</div>");
+          $list.html('<div class="col-12 text-center text-danger">无法连接商品接口</div>');
         });
       }
+
+      // 搜索功能
       $("#search-input").on("input", function () {
         const keyword = $(this).val().trim().toLowerCase();
-        if (keyword === "") {
+        if (!keyword) {
           renderProducts(products);
           return;
         }
@@ -274,8 +245,10 @@
         );
         renderProducts(filtered);
       });
+
       fetchProducts();
     });
   </script>
 </body>
+
 </html>
