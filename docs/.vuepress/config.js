@@ -391,6 +391,13 @@ module.exports = {
             '插件vite-plugin-remove-console'
           ]
         },
+        {
+          title: '组件库',
+          collapsable: false,
+          children: [
+            'inspira-ui'
+          ]
+        },
       ],
       '/Java/': [
         {
