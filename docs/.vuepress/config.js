@@ -188,6 +188,7 @@ module.exports = {
           collapsable: false,
           children: [
             'Bulma',
+            'tailwindcss'
           ]
         },
       ],
