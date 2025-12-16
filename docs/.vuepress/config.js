@@ -79,7 +79,8 @@ module.exports = {
               { text: 'JavaScript库', link: '/Js/' }, // 修改标题更具体
               { text: 'Bootstrap', link: '/bootstrap/' },
               { text: 'Vue', link: '/vue/' },
-              { text: 'uniapp', link: '/uniapp/' }
+              { text: 'uniapp', link: '/uniapp/' },
+              { text: 'css库', link: '/css/' },
             ]
           },
           {
@@ -178,6 +179,15 @@ module.exports = {
           children: [
             '打包H5页面本地打开空白的解决办法',
             'Vue2与Vue3混用问题'
+          ]
+        },
+      ],
+      '/css/': [
+        {
+          title: 'CSS库',
+          collapsable: false,
+          children: [
+            'Bulma',
           ]
         },
       ],
