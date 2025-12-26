@@ -16,3 +16,13 @@ pip install matplotlib
 
 ## 具体使用请参考官网，很详细~
 
+
+## 常见问题
+
+### 中文乱码
+在开头加上
+```python
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']
+plt.rcParams['axes.unicode_minus'] = False
+```
+
