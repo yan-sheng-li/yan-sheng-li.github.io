@@ -453,7 +453,7 @@ module.exports = {
             'pip包管理工具',
             'jieba中文分词',
             '说说Anaconda',
-            'colab'
+            'Colab'
           ]
         },
         {
