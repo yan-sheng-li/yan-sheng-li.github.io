@@ -452,7 +452,8 @@ module.exports = {
             'FastAPI整合MySQL',
             'pip包管理工具',
             'jieba中文分词',
-            '说说Anaconda'
+            '说说Anaconda',
+            'colab'
           ]
         },
         {
