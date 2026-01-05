@@ -474,6 +474,14 @@ module.exports = {
             'requests+正则匹配'
           ]
         },
+        {
+          title: '模型与AI',
+          collapsable: false,
+          children: [
+            'YOLO5模型训练实战',
+            
+          ]
+        },
       ],
       '/Js/': [
         {
