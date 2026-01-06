@@ -362,7 +362,8 @@ module.exports = {
             'pm2进程管理工具',
             'Crontab定时任务',
             'aria2',
-            'nginx配置脚本注入'
+            'nginx配置脚本注入',
+            'Nginx HTTPS配置实战'
           ]
         },
       ],
