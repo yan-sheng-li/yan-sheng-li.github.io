@@ -390,7 +390,8 @@ module.exports = {
             'Pinia使用笔记',
             '发布npm包到github',
             '项目从npm到pnpm',
-            '插件vite-plugin-remove-console'
+            '插件vite-plugin-remove-console',
+            'md-editor-v3'
           ]
         },
         {
