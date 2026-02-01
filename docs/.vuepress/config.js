@@ -391,7 +391,8 @@ module.exports = {
             '发布npm包到github',
             '项目从npm到pnpm',
             '插件vite-plugin-remove-console',
-            'md-editor-v3'
+            'md-editor-v3',
+            '集成driverjs'
           ]
         },
         {
@@ -481,7 +482,7 @@ module.exports = {
           collapsable: false,
           children: [
             'YOLO5模型训练实战',
-            
+
           ]
         },
       ],
