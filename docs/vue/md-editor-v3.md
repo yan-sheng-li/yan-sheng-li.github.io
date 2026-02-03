@@ -66,3 +66,46 @@ const text = ref('# Hello Editor');
 -----------
 
 更多用法请参考文档说明~
+
+## 进阶用法
+> 在 MdEditor 编辑器里用鼠标选中一段文本 → 自动触发你的事件（而不是点按钮）。
+
+思路：
+监听编辑器容器的 mouseup（或 keyup），然后调用 getSelectedText()
+
+
+👉 鼠标选中 + 松开时触发
+```vue
+<template>
+  <div @mouseup="handleMouseUp">
+    <MdEditor
+      ref="editorRef"
+      v-model="text"
+    />
+  </div>
+</template>
+
+<script setup>
+import { ref, nextTick } from 'vue'
+import { MdEditor } from 'md-editor-v3'
+import 'md-editor-v3/lib/style.css'
+
+const editorRef = ref(null)
+const text = ref('')
+
+const handleMouseUp = async () => {
+  await nextTick()
+  const selectedText = editorRef.value?.getSelectedText()
+
+  if (selectedText) {
+    console.log('选中的文本:', selectedText)
+    // 👉 在这里触发你的业务逻辑
+    // doSomething(selectedText)
+  }
+}
+</script>
+```
+优势:
+- 鼠标拖选 → 松开 → 立即触发
+- 不需要接触 CodeMirror 内部
+- 官方 API + 原生事件，稳定、安全
